@@ -43,10 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkItem01Status = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.chkItem02Status = new System.Windows.Forms.CheckBox();
+            this.chkItem03Status = new System.Windows.Forms.CheckBox();
             this.txtItem01Grade = new System.Windows.Forms.TextBox();
             this.txtItem01Weight = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,6 +64,26 @@
             this.btnClass04 = new System.Windows.Forms.Button();
             this.btnClass05 = new System.Windows.Forms.Button();
             this.btnClass06 = new System.Windows.Forms.Button();
+            this.txtItem02WeightedGrade = new System.Windows.Forms.TextBox();
+            this.txtItem02Weight = new System.Windows.Forms.TextBox();
+            this.txtItem02Grade = new System.Windows.Forms.TextBox();
+            this.txtItem03WeightedGrade = new System.Windows.Forms.TextBox();
+            this.txtItem03Weight = new System.Windows.Forms.TextBox();
+            this.txtItem03Grade = new System.Windows.Forms.TextBox();
+            this.txtItem04WeightedGrade = new System.Windows.Forms.TextBox();
+            this.txtItem04Weight = new System.Windows.Forms.TextBox();
+            this.txtItem04Grade = new System.Windows.Forms.TextBox();
+            this.chkItem04Status = new System.Windows.Forms.CheckBox();
+            this.txtItem04Possible = new System.Windows.Forms.TextBox();
+            this.txtItem04Earned = new System.Windows.Forms.TextBox();
+            this.txtItem04Name = new System.Windows.Forms.TextBox();
+            this.txtItem05WeightedGrade = new System.Windows.Forms.TextBox();
+            this.txtItem05Weight = new System.Windows.Forms.TextBox();
+            this.txtItem05Grade = new System.Windows.Forms.TextBox();
+            this.chkItem05Status = new System.Windows.Forms.CheckBox();
+            this.txtItem05Possible = new System.Windows.Forms.TextBox();
+            this.txtItem05Earned = new System.Windows.Forms.TextBox();
+            this.txtItem05Name = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSave
@@ -189,14 +209,14 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Possible";
             // 
-            // checkBox1
+            // chkItem01Status
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(102, 100);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkItem01Status.AutoSize = true;
+            this.chkItem01Status.Location = new System.Drawing.Point(102, 100);
+            this.chkItem01Status.Name = "chkItem01Status";
+            this.chkItem01Status.Size = new System.Drawing.Size(15, 14);
+            this.chkItem01Status.TabIndex = 15;
+            this.chkItem01Status.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -208,23 +228,23 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Done";
             // 
-            // checkBox2
+            // chkItem02Status
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(102, 126);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 17;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkItem02Status.AutoSize = true;
+            this.chkItem02Status.Location = new System.Drawing.Point(102, 126);
+            this.chkItem02Status.Name = "chkItem02Status";
+            this.chkItem02Status.Size = new System.Drawing.Size(15, 14);
+            this.chkItem02Status.TabIndex = 17;
+            this.chkItem02Status.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkItem03Status
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(102, 152);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 18;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkItem03Status.AutoSize = true;
+            this.chkItem03Status.Location = new System.Drawing.Point(102, 152);
+            this.chkItem03Status.Name = "chkItem03Status";
+            this.chkItem03Status.Size = new System.Drawing.Size(15, 14);
+            this.chkItem03Status.TabIndex = 18;
+            this.chkItem03Status.UseVisualStyleBackColor = true;
             // 
             // txtItem01Grade
             // 
@@ -375,11 +395,175 @@
             this.btnClass06.UseVisualStyleBackColor = true;
             this.btnClass06.Click += new System.EventHandler(this.btnClass06_Click);
             // 
+            // txtItem02WeightedGrade
+            // 
+            this.txtItem02WeightedGrade.Location = new System.Drawing.Point(430, 123);
+            this.txtItem02WeightedGrade.Name = "txtItem02WeightedGrade";
+            this.txtItem02WeightedGrade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem02WeightedGrade.TabIndex = 38;
+            // 
+            // txtItem02Weight
+            // 
+            this.txtItem02Weight.Location = new System.Drawing.Point(380, 123);
+            this.txtItem02Weight.Name = "txtItem02Weight";
+            this.txtItem02Weight.Size = new System.Drawing.Size(44, 20);
+            this.txtItem02Weight.TabIndex = 37;
+            // 
+            // txtItem02Grade
+            // 
+            this.txtItem02Grade.Location = new System.Drawing.Point(330, 123);
+            this.txtItem02Grade.Name = "txtItem02Grade";
+            this.txtItem02Grade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem02Grade.TabIndex = 36;
+            // 
+            // txtItem03WeightedGrade
+            // 
+            this.txtItem03WeightedGrade.Location = new System.Drawing.Point(430, 149);
+            this.txtItem03WeightedGrade.Name = "txtItem03WeightedGrade";
+            this.txtItem03WeightedGrade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem03WeightedGrade.TabIndex = 41;
+            // 
+            // txtItem03Weight
+            // 
+            this.txtItem03Weight.Location = new System.Drawing.Point(380, 149);
+            this.txtItem03Weight.Name = "txtItem03Weight";
+            this.txtItem03Weight.Size = new System.Drawing.Size(44, 20);
+            this.txtItem03Weight.TabIndex = 40;
+            // 
+            // txtItem03Grade
+            // 
+            this.txtItem03Grade.Location = new System.Drawing.Point(330, 149);
+            this.txtItem03Grade.Name = "txtItem03Grade";
+            this.txtItem03Grade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem03Grade.TabIndex = 39;
+            // 
+            // txtItem04WeightedGrade
+            // 
+            this.txtItem04WeightedGrade.Location = new System.Drawing.Point(430, 175);
+            this.txtItem04WeightedGrade.Name = "txtItem04WeightedGrade";
+            this.txtItem04WeightedGrade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem04WeightedGrade.TabIndex = 48;
+            // 
+            // txtItem04Weight
+            // 
+            this.txtItem04Weight.Location = new System.Drawing.Point(380, 175);
+            this.txtItem04Weight.Name = "txtItem04Weight";
+            this.txtItem04Weight.Size = new System.Drawing.Size(44, 20);
+            this.txtItem04Weight.TabIndex = 47;
+            // 
+            // txtItem04Grade
+            // 
+            this.txtItem04Grade.Location = new System.Drawing.Point(330, 175);
+            this.txtItem04Grade.Name = "txtItem04Grade";
+            this.txtItem04Grade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem04Grade.TabIndex = 46;
+            // 
+            // chkItem04Status
+            // 
+            this.chkItem04Status.AutoSize = true;
+            this.chkItem04Status.Location = new System.Drawing.Point(102, 178);
+            this.chkItem04Status.Name = "chkItem04Status";
+            this.chkItem04Status.Size = new System.Drawing.Size(15, 14);
+            this.chkItem04Status.TabIndex = 45;
+            this.chkItem04Status.UseVisualStyleBackColor = true;
+            // 
+            // txtItem04Possible
+            // 
+            this.txtItem04Possible.Location = new System.Drawing.Point(280, 175);
+            this.txtItem04Possible.Name = "txtItem04Possible";
+            this.txtItem04Possible.Size = new System.Drawing.Size(44, 20);
+            this.txtItem04Possible.TabIndex = 44;
+            // 
+            // txtItem04Earned
+            // 
+            this.txtItem04Earned.Location = new System.Drawing.Point(230, 175);
+            this.txtItem04Earned.Name = "txtItem04Earned";
+            this.txtItem04Earned.Size = new System.Drawing.Size(44, 20);
+            this.txtItem04Earned.TabIndex = 43;
+            // 
+            // txtItem04Name
+            // 
+            this.txtItem04Name.Location = new System.Drawing.Point(123, 175);
+            this.txtItem04Name.Name = "txtItem04Name";
+            this.txtItem04Name.Size = new System.Drawing.Size(100, 20);
+            this.txtItem04Name.TabIndex = 42;
+            // 
+            // txtItem05WeightedGrade
+            // 
+            this.txtItem05WeightedGrade.Location = new System.Drawing.Point(430, 201);
+            this.txtItem05WeightedGrade.Name = "txtItem05WeightedGrade";
+            this.txtItem05WeightedGrade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem05WeightedGrade.TabIndex = 55;
+            // 
+            // txtItem05Weight
+            // 
+            this.txtItem05Weight.Location = new System.Drawing.Point(380, 201);
+            this.txtItem05Weight.Name = "txtItem05Weight";
+            this.txtItem05Weight.Size = new System.Drawing.Size(44, 20);
+            this.txtItem05Weight.TabIndex = 54;
+            // 
+            // txtItem05Grade
+            // 
+            this.txtItem05Grade.Location = new System.Drawing.Point(330, 201);
+            this.txtItem05Grade.Name = "txtItem05Grade";
+            this.txtItem05Grade.Size = new System.Drawing.Size(44, 20);
+            this.txtItem05Grade.TabIndex = 53;
+            // 
+            // chkItem05Status
+            // 
+            this.chkItem05Status.AutoSize = true;
+            this.chkItem05Status.Location = new System.Drawing.Point(102, 204);
+            this.chkItem05Status.Name = "chkItem05Status";
+            this.chkItem05Status.Size = new System.Drawing.Size(15, 14);
+            this.chkItem05Status.TabIndex = 52;
+            this.chkItem05Status.UseVisualStyleBackColor = true;
+            // 
+            // txtItem05Possible
+            // 
+            this.txtItem05Possible.Location = new System.Drawing.Point(280, 201);
+            this.txtItem05Possible.Name = "txtItem05Possible";
+            this.txtItem05Possible.Size = new System.Drawing.Size(44, 20);
+            this.txtItem05Possible.TabIndex = 51;
+            // 
+            // txtItem05Earned
+            // 
+            this.txtItem05Earned.Location = new System.Drawing.Point(230, 201);
+            this.txtItem05Earned.Name = "txtItem05Earned";
+            this.txtItem05Earned.Size = new System.Drawing.Size(44, 20);
+            this.txtItem05Earned.TabIndex = 50;
+            // 
+            // txtItem05Name
+            // 
+            this.txtItem05Name.Location = new System.Drawing.Point(123, 201);
+            this.txtItem05Name.Name = "txtItem05Name";
+            this.txtItem05Name.Size = new System.Drawing.Size(100, 20);
+            this.txtItem05Name.TabIndex = 49;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 407);
+            this.Controls.Add(this.txtItem05WeightedGrade);
+            this.Controls.Add(this.txtItem05Weight);
+            this.Controls.Add(this.txtItem05Grade);
+            this.Controls.Add(this.chkItem05Status);
+            this.Controls.Add(this.txtItem05Possible);
+            this.Controls.Add(this.txtItem05Earned);
+            this.Controls.Add(this.txtItem05Name);
+            this.Controls.Add(this.txtItem04WeightedGrade);
+            this.Controls.Add(this.txtItem04Weight);
+            this.Controls.Add(this.txtItem04Grade);
+            this.Controls.Add(this.chkItem04Status);
+            this.Controls.Add(this.txtItem04Possible);
+            this.Controls.Add(this.txtItem04Earned);
+            this.Controls.Add(this.txtItem04Name);
+            this.Controls.Add(this.txtItem03WeightedGrade);
+            this.Controls.Add(this.txtItem03Weight);
+            this.Controls.Add(this.txtItem03Grade);
+            this.Controls.Add(this.txtItem02WeightedGrade);
+            this.Controls.Add(this.txtItem02Weight);
+            this.Controls.Add(this.txtItem02Grade);
             this.Controls.Add(this.btnClassRename);
             this.Controls.Add(this.txtItem01WeightedGrade);
             this.Controls.Add(this.label7);
@@ -387,10 +571,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtItem01Weight);
             this.Controls.Add(this.txtItem01Grade);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.chkItem03Status);
+            this.Controls.Add(this.chkItem02Status);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chkItem01Status);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -440,10 +624,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkItem01Status;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox chkItem02Status;
+        private System.Windows.Forms.CheckBox chkItem03Status;
         private System.Windows.Forms.TextBox txtItem01Grade;
         private System.Windows.Forms.TextBox txtItem01Weight;
         private System.Windows.Forms.Label label5;
@@ -461,6 +645,26 @@
         private System.Windows.Forms.Button btnClass04;
         private System.Windows.Forms.Button btnClass05;
         private System.Windows.Forms.Button btnClass06;
+        private System.Windows.Forms.TextBox txtItem02WeightedGrade;
+        private System.Windows.Forms.TextBox txtItem02Weight;
+        private System.Windows.Forms.TextBox txtItem02Grade;
+        private System.Windows.Forms.TextBox txtItem03WeightedGrade;
+        private System.Windows.Forms.TextBox txtItem03Weight;
+        private System.Windows.Forms.TextBox txtItem03Grade;
+        private System.Windows.Forms.TextBox txtItem04WeightedGrade;
+        private System.Windows.Forms.TextBox txtItem04Weight;
+        private System.Windows.Forms.TextBox txtItem04Grade;
+        private System.Windows.Forms.CheckBox chkItem04Status;
+        private System.Windows.Forms.TextBox txtItem04Possible;
+        private System.Windows.Forms.TextBox txtItem04Earned;
+        private System.Windows.Forms.TextBox txtItem04Name;
+        private System.Windows.Forms.TextBox txtItem05WeightedGrade;
+        private System.Windows.Forms.TextBox txtItem05Weight;
+        private System.Windows.Forms.TextBox txtItem05Grade;
+        private System.Windows.Forms.CheckBox chkItem05Status;
+        private System.Windows.Forms.TextBox txtItem05Possible;
+        private System.Windows.Forms.TextBox txtItem05Earned;
+        private System.Windows.Forms.TextBox txtItem05Name;
     }
 }
 
