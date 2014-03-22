@@ -21,15 +21,18 @@ namespace MyGradeBook
     {
         //Setting status to default for Class naming controls
         int classRenameStatus = 0;
-
         //Sets class selection to none
         int selection = 0;
+
+        //String for color scheme
+        string colorScheme;
 
         //array for class names (GUI)
         string[] classNames = new string[7];
 
         //Declaring arrays for class01
         string[] class01ItemNames = new string[21];
+        string[] class01ItemStatus = new string[21];
 
         string[] class01PointsEarnedString = new string[21];
         string[] class01PointsPossibleString = new string[21];
@@ -45,6 +48,7 @@ namespace MyGradeBook
 
         //Declaring arrays for class02
         string[] class02ItemNames = new string[21];
+        string[] class02ItemStatus = new string[21];
 
         string[] class02PointsEarnedString = new string[21];
         string[] class02PointsPossibleString = new string[21];
@@ -60,6 +64,7 @@ namespace MyGradeBook
 
         //Declaring arrays for class03
         string[] class03ItemNames = new string[21];
+        string[] class03ItemStatus = new string[21];
 
         string[] class03PointsEarnedString = new string[21];
         string[] class03PointsPossibleString = new string[21];
@@ -75,6 +80,7 @@ namespace MyGradeBook
 
         //Declaring arrays for class04
         string[] class04ItemNames = new string[21];
+        string[] class04ItemStatus = new string[21];
 
         string[] class04PointsEarnedString = new string[21];
         string[] class04PointsPossibleString = new string[21];
@@ -90,6 +96,7 @@ namespace MyGradeBook
 
         //Declaring arrays for class05
         string[] class05ItemNames = new string[21];
+        string[] class05ItemStatus = new string[21];
 
         string[] class05PointsEarnedString = new string[21];
         string[] class05PointsPossibleString = new string[21];
@@ -105,6 +112,7 @@ namespace MyGradeBook
 
         //Declaring arrays for class06
         string[] class06ItemNames = new string[21];
+        string[] class06ItemStatus = new string[21];
 
         string[] class06PointsEarnedString = new string[21];
         string[] class06PointsPossibleString = new string[21];
@@ -118,13 +126,16 @@ namespace MyGradeBook
         double[] class06Weights = new double[21];
         double[] class06WeightedGrades = new double[21];
 
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  START OF INITIALIZATION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  INITIALIZATION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
         public Main()
         {
             InitializeComponent();
 
-            //########################################Default buttons########################################
+            //######################################## Default buttons ########################################
+            //######################################## GUI ########################################
             //To hide txtbox for class names
             txtClass01Name.Visible = false;
             txtClass02Name.Visible = false;
@@ -132,6 +143,11 @@ namespace MyGradeBook
             txtClass04Name.Visible = false;
             txtClass05Name.Visible = false;
             txtClass06Name.Visible = false;
+
+            //Hide buttons used for referncing
+            btnClassNotSelected.Visible = false;
+            btnClassSelected.Visible = false;
+
             lblSysMsg.Text = "Class Input text hidden";
 
             //To show btns for class names
@@ -141,21 +157,22 @@ namespace MyGradeBook
             btnClass04.Visible = true;
             btnClass05.Visible = true;
             btnClass06.Visible = true;
-            lblSysMsg.Text = "Buttons are loaded";
 
-            //To set btn color
-            btnClass01.BackColor = System.Drawing.Color.LightCyan;
-            btnClass02.BackColor = System.Drawing.Color.LightCyan;
-            btnClass03.BackColor = System.Drawing.Color.LightCyan;
-            btnClass04.BackColor = System.Drawing.Color.LightCyan;
-            btnClass05.BackColor = System.Drawing.Color.LightCyan;
-            btnClass06.BackColor = System.Drawing.Color.LightCyan;
-            lblSysMsg.Text = "Buttons are now more colorful";
+            lblSysMsg.Text = "Buttons are loaded";
 
             lblSysMsg.Text = "GUI Loaded";
 
 
             // ########################################DATA########################################
+            //colorScheme
+            if (File.Exists("colorScheme.txt"))
+            {
+                colorScheme = File.ReadAllText("colorScheme.txt");
+            }
+            else File.WriteAllText("colorScheme.txt", colorScheme);
+            //Set colorScheme
+            cboColorScheme.Text = colorScheme;
+
             //classNames
             if (File.Exists("classNames.txt"))
             {
@@ -174,6 +191,7 @@ namespace MyGradeBook
                 txtClass06Name.Text = classNames[6];
             }
             else File.WriteAllLines("classNames.txt", classNames);
+
             lblSysMsg.Text = "classNames have been set";
 
 
@@ -184,6 +202,13 @@ namespace MyGradeBook
                 class01ItemNames = File.ReadAllLines("class01ItemNames.txt");
             }
             else File.WriteAllLines("class01ItemNames.txt", class01ItemNames);
+
+            //class01ItemStatus
+            if (File.Exists("class01ItemStatus.txt"))
+            {
+                class01ItemStatus = File.ReadAllLines("class01ItemStatus.txt");
+            }
+            else File.WriteAllLines("class01ItemStatus.txt", class01ItemStatus);
 
             //class01PointsEarned
             if (File.Exists("class01PointsEarned.txt"))
@@ -274,8 +299,11 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class01WeightedGrades.txt", class01WeightsString);
             }
+
             lblSysMsg.Text = "Class 1 initialized";
+
             //END OF CLASS 1
+
 
 
             //########################################START OF CLASS 2########################################
@@ -285,6 +313,13 @@ namespace MyGradeBook
                 class02ItemNames = File.ReadAllLines("class02ItemNames.txt");
             }
             else File.WriteAllLines("class02ItemNames.txt", class02ItemNames);
+
+            //class02ItemStatus
+            if (File.Exists("class02ItemStatus.txt"))
+            {
+                class02ItemStatus = File.ReadAllLines("class02ItemStatus.txt");
+            }
+            else File.WriteAllLines("class02ItemStatus.txt", class02ItemStatus);
 
             //class02PointsEarned
             if (File.Exists("class02PointsEarned.txt"))
@@ -375,8 +410,11 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class02WeightedGrades.txt", class02WeightsString);
             }
+
             lblSysMsg.Text = "Class 2 initialized";
+
             //END OF CLASS 2
+
 
 
             //########################################START OF CLASS 3########################################
@@ -386,6 +424,13 @@ namespace MyGradeBook
                 class03ItemNames = File.ReadAllLines("class03ItemNames.txt");
             }
             else File.WriteAllLines("class03ItemNames.txt", class03ItemNames);
+
+            //class03ItemStatus
+            if (File.Exists("class03ItemStatus.txt"))
+            {
+                class03ItemStatus = File.ReadAllLines("class03ItemStatus.txt");
+            }
+            else File.WriteAllLines("class03ItemStatus.txt", class03ItemStatus);
 
             //class03PointsEarned
             if (File.Exists("class03PointsEarned.txt"))
@@ -476,8 +521,12 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class03WeightedGrades.txt", class03WeightsString);
             }
+
             lblSysMsg.Text = "Class 3 initialized";
+
             //END OF CLASS 3
+
+
 
             //########################################START OF CLASS 4########################################
             //class04ItemNames
@@ -486,6 +535,13 @@ namespace MyGradeBook
                 class04ItemNames = File.ReadAllLines("class04ItemNames.txt");
             }
             else File.WriteAllLines("class04ItemNames.txt", class04ItemNames);
+
+            //class04ItemStatus
+            if (File.Exists("class04ItemStatus.txt"))
+            {
+                class04ItemStatus = File.ReadAllLines("class04ItemStatus.txt");
+            }
+            else File.WriteAllLines("class04ItemStatus.txt", class04ItemStatus);
 
             //class04PointsEarned
             if (File.Exists("class04PointsEarned.txt"))
@@ -576,8 +632,12 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class04WeightedGrades.txt", class04WeightsString);
             }
+
             lblSysMsg.Text = "Class 4 initialized";
+
             //END OF CLASS 4
+
+
 
             //########################################START OF CLASS 5########################################
             //class05ItemNames
@@ -586,6 +646,13 @@ namespace MyGradeBook
                 class05ItemNames = File.ReadAllLines("class05ItemNames.txt");
             }
             else File.WriteAllLines("class05ItemNames.txt", class05ItemNames);
+
+            //class05ItemStatus
+            if (File.Exists("class05ItemStatus.txt"))
+            {
+                class05ItemStatus = File.ReadAllLines("class05ItemStatus.txt");
+            }
+            else File.WriteAllLines("class05ItemStatus.txt", class05ItemStatus);
 
             //class05PointsEarned
             if (File.Exists("class05PointsEarned.txt"))
@@ -676,7 +743,9 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class05WeightedGrades.txt", class05WeightsString);
             }
+
             lblSysMsg.Text = "Class 5 initialized";
+
             //END OF CLASS 5
 
 
@@ -687,6 +756,13 @@ namespace MyGradeBook
                 class06ItemNames = File.ReadAllLines("class06ItemNames.txt");
             }
             else File.WriteAllLines("class06ItemNames.txt", class06ItemNames);
+
+            //class06ItemStatus
+            if (File.Exists("class06ItemStatus.txt"))
+            {
+                class06ItemStatus = File.ReadAllLines("class06ItemStatus.txt");
+            }
+            else File.WriteAllLines("class06ItemStatus.txt", class06ItemStatus);
 
             //class06PointsEarned
             if (File.Exists("class06PointsEarned.txt"))
@@ -783,13 +859,113 @@ namespace MyGradeBook
             lblSysMsg.Text = "Welcome";
         }
 
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  START OF GUI BUTTONS  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
+
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  COLORING @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+        private void cboColorScheme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            colorScheme = cboColorScheme.Text;
+
+            if (colorScheme == "(default)")
+            {
+                this.BackColor = System.Drawing.Color.Silver;
+                this.ForeColor = System.Drawing.Color.Black;
+                btnClassSelected.BackColor = System.Drawing.Color.Gray;
+                btnClassNotSelected.BackColor = System.Drawing.Color.LightGray;
+                btnSave.BackColor = btnClassNotSelected.BackColor;
+                btnClassRename.BackColor = btnClassNotSelected.BackColor;
+                btnClass01.BackColor = btnClassNotSelected.BackColor;
+                btnClass02.BackColor = btnClassNotSelected.BackColor;
+                btnClass03.BackColor = btnClassNotSelected.BackColor;
+                btnClass04.BackColor = btnClassNotSelected.BackColor;
+                btnClass05.BackColor = btnClassNotSelected.BackColor;
+                btnClass06.BackColor = btnClassNotSelected.BackColor;
+            }
+
+            else if (colorScheme == "Cool")
+            {
+                this.BackColor = System.Drawing.Color.LightSkyBlue;
+                this.ForeColor = System.Drawing.Color.DarkBlue;
+                btnClassSelected.BackColor = System.Drawing.Color.Cyan;
+                btnClassNotSelected.BackColor = System.Drawing.Color.LightCyan;
+                btnSave.BackColor = btnClassNotSelected.BackColor;
+                btnClassRename.BackColor = btnClassNotSelected.BackColor;
+                btnClass01.BackColor = btnClassNotSelected.BackColor;
+                btnClass02.BackColor = btnClassNotSelected.BackColor;
+                btnClass03.BackColor = btnClassNotSelected.BackColor;
+                btnClass04.BackColor = btnClassNotSelected.BackColor;
+                btnClass05.BackColor = btnClassNotSelected.BackColor;
+                btnClass06.BackColor = btnClassNotSelected.BackColor;
+            }
+
+            else if (colorScheme == "Hello Kitty")
+            {
+                this.BackColor = System.Drawing.Color.LightPink;
+                this.ForeColor = System.Drawing.Color.DarkRed;
+                btnClassSelected.BackColor = System.Drawing.Color.HotPink;
+                btnClassNotSelected.BackColor = System.Drawing.Color.Pink;
+                btnSave.BackColor = btnClassNotSelected.BackColor;
+                btnClassRename.BackColor = btnClassNotSelected.BackColor;
+                btnClass01.BackColor = btnClassNotSelected.BackColor;
+                btnClass02.BackColor = btnClassNotSelected.BackColor;
+                btnClass03.BackColor = btnClassNotSelected.BackColor;
+                btnClass04.BackColor = btnClassNotSelected.BackColor;
+                btnClass05.BackColor = btnClassNotSelected.BackColor;
+                btnClass06.BackColor = btnClassNotSelected.BackColor;
+            }
+
+            else if (colorScheme == "Midnight")
+            {
+                this.BackColor = System.Drawing.Color.Black;
+                this.ForeColor = System.Drawing.Color.White;
+                btnClassSelected.BackColor = System.Drawing.Color.Black;
+                btnClassNotSelected.BackColor = System.Drawing.Color.Gray;
+                btnSave.BackColor = btnClassNotSelected.BackColor;
+                btnClassRename.BackColor = btnClassNotSelected.BackColor;
+                btnClass01.BackColor = btnClassNotSelected.BackColor;
+                btnClass02.BackColor = btnClassNotSelected.BackColor;
+                btnClass03.BackColor = btnClassNotSelected.BackColor;
+                btnClass04.BackColor = btnClassNotSelected.BackColor;
+                btnClass05.BackColor = btnClassNotSelected.BackColor;
+                btnClass06.BackColor = btnClassNotSelected.BackColor;
+                
+            }
+
+            File.WriteAllText("colorScheme.txt", colorScheme);
+        }
+
+
+
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  GUI BUTTONS  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+        /* Must update to include additional items */
+        /* Sections to update will include //UPDATE START and //UPDATE END */
+
+        /* MUST UPDATE SAVE BUTTON */
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Save if class01 is selected
             if (selection == 1)
             {
+                //UPDATE START
+                //This assigns values to arrays
+                if (chkItem01Status.Checked)
+                    class01ItemStatus[1] = "yes"; else
+                    class01ItemStatus[1] = "no";
+                if (chkItem02Status.Checked)
+                    class01ItemStatus[2] = "yes"; else
+                    class01ItemStatus[2] = "no";
+                if (chkItem03Status.Checked)
+                    class01ItemStatus[3] = "yes"; else
+                    class01ItemStatus[3] = "no";
+                if (chkItem04Status.Checked)
+                    class01ItemStatus[4] = "yes"; else
+                    class01ItemStatus[4] = "no";
+                if (chkItem05Status.Checked)
+                    class01ItemStatus[5] = "yes"; else
+                    class01ItemStatus[5] = "no";
+
                 class01ItemNames[1] = Convert.ToString(txtItem01Name.Text);
                 class01ItemNames[2] = Convert.ToString(txtItem02Name.Text);
                 class01ItemNames[3] = Convert.ToString(txtItem03Name.Text);
@@ -808,11 +984,20 @@ namespace MyGradeBook
                 class01PointsPossible[4] = Convert.ToDouble(txtItem04Possible.Text);
                 class01PointsPossible[5] = Convert.ToDouble(txtItem05Possible.Text);
 
-                class01Grades[1] = Convert.ToDouble(txtItem01Grade.Text);
-                class01Grades[2] = Convert.ToDouble(txtItem02Grade.Text);
-                class01Grades[3] = Convert.ToDouble(txtItem03Grade.Text);
-                class01Grades[4] = Convert.ToDouble(txtItem04Grade.Text);
-                class01Grades[5] = Convert.ToDouble(txtItem05Grade.Text);
+                for (int i = 0; i < class01Grades.Length; i++)
+                {
+                    if (class01PointsPossible[i] != 0)
+                        class01Grades[i] = class01PointsEarned[i] / class01PointsPossible[i];
+                    else
+                        class01Grades[i] = 0;
+                }
+
+                //Assign new values to textboxes
+                txtItem01Grade.Text = Convert.ToString(class01Grades[1]);
+                txtItem02Grade.Text = Convert.ToString(class01Grades[2]);
+                txtItem03Grade.Text = Convert.ToString(class01Grades[3]);
+                txtItem04Grade.Text = Convert.ToString(class01Grades[4]);
+                txtItem05Grade.Text = Convert.ToString(class01Grades[5]);
 
                 class01Weights[1] = Convert.ToDouble(txtItem01Weight.Text);
                 class01Weights[2] = Convert.ToDouble(txtItem02Weight.Text);
@@ -820,17 +1005,29 @@ namespace MyGradeBook
                 class01Weights[4] = Convert.ToDouble(txtItem04Weight.Text);
                 class01Weights[5] = Convert.ToDouble(txtItem05Weight.Text);
 
-                class01WeightedGrades[1] = Convert.ToDouble(txtItem01WeightedGrade.Text);
-                class01WeightedGrades[2] = Convert.ToDouble(txtItem02WeightedGrade.Text);
-                class01WeightedGrades[3] = Convert.ToDouble(txtItem03WeightedGrade.Text);
-                class01WeightedGrades[4] = Convert.ToDouble(txtItem04WeightedGrade.Text);
-                class01WeightedGrades[5] = Convert.ToDouble(txtItem05WeightedGrade.Text);
+                for (int i = 0; i < class01WeightedGrades.Length; i++)
+                {
+                        class01WeightedGrades[i] = class01Weights[i] * class01Grades[i];
+                }
+
+                //Assign new values to variables
+                txtItem01WeightedGrade.Text = Convert.ToString(class01WeightedGrades[1]);
+                txtItem02WeightedGrade.Text = Convert.ToString(class01WeightedGrades[2]);
+                txtItem03WeightedGrade.Text = Convert.ToString(class01WeightedGrades[3]);
+                txtItem04WeightedGrade.Text = Convert.ToString(class01WeightedGrades[4]);
+                txtItem05WeightedGrade.Text = Convert.ToString(class01WeightedGrades[5]);
+                //UPDATE END
 
                 lblSysMsg.Text = "Class01 txtboxes assigned to variables";
 
+                //UPDATE START
+                //This writes all values to txt files
                 //START OF CLASS 1
                 //class01ItemNames
 			    File.WriteAllLines("class01ItemNames.txt", class01ItemNames);
+
+                //class01ItemStatus
+                File.WriteAllLines("class01ItemStatus.txt", class01ItemStatus);
 
                 //class01PointsEarned
                 for (int n = 0; n < class01PointsEarnedString.Length; n++)
@@ -865,8 +1062,9 @@ namespace MyGradeBook
                 {
                     class01WeightedGradesString[n] = Convert.ToString(class01WeightedGrades[n]);
                 }
-                File.WriteAllLines("class01WeightedGrades.txt", class01WeightsString);
+                File.WriteAllLines("class01WeightedGrades.txt", class01WeightedGradesString);
             //END OF CLASS 1
+            //UPDATE END
 
                 lblSysMsg.Text = "Class01 variables saved to .txt";
             }
@@ -874,6 +1072,24 @@ namespace MyGradeBook
             //Save if class 2 is selected
             else if (selection == 2)
             {
+                //UPDATE START
+                //This assigns values to arrays
+                if (chkItem01Status.Checked)
+                    class02ItemStatus[1] = "yes"; else
+                    class02ItemStatus[1] = "no";
+                if (chkItem02Status.Checked)
+                    class02ItemStatus[2] = "yes"; else
+                    class02ItemStatus[2] = "no";
+                if (chkItem03Status.Checked)
+                    class02ItemStatus[3] = "yes"; else
+                    class02ItemStatus[3] = "no";
+                if (chkItem04Status.Checked)
+                    class02ItemStatus[4] = "yes"; else
+                    class02ItemStatus[4] = "no";
+                if (chkItem05Status.Checked)
+                    class02ItemStatus[5] = "yes"; else
+                    class02ItemStatus[5] = "no";
+
                 class02ItemNames[1] = Convert.ToString(txtItem01Name.Text);
                 class02ItemNames[2] = Convert.ToString(txtItem02Name.Text);
                 class02ItemNames[3] = Convert.ToString(txtItem03Name.Text);
@@ -892,11 +1108,20 @@ namespace MyGradeBook
                 class02PointsPossible[4] = Convert.ToDouble(txtItem04Possible.Text);
                 class02PointsPossible[5] = Convert.ToDouble(txtItem05Possible.Text);
 
-                class02Grades[1] = Convert.ToDouble(txtItem01Grade.Text);
-                class02Grades[2] = Convert.ToDouble(txtItem02Grade.Text);
-                class02Grades[3] = Convert.ToDouble(txtItem03Grade.Text);
-                class02Grades[4] = Convert.ToDouble(txtItem04Grade.Text);
-                class02Grades[5] = Convert.ToDouble(txtItem05Grade.Text);
+                for (int i = 0; i < class02Grades.Length; i++)
+                {
+                    if (class02PointsPossible[i] != 0)
+                        class02Grades[i] = class02PointsEarned[i] / class02PointsPossible[i];
+                    else
+                        class02Grades[i] = 0;
+                }
+
+                //Assign new values to textboxes
+                txtItem01Grade.Text = Convert.ToString(class02Grades[1]);
+                txtItem02Grade.Text = Convert.ToString(class02Grades[2]);
+                txtItem03Grade.Text = Convert.ToString(class02Grades[3]);
+                txtItem04Grade.Text = Convert.ToString(class02Grades[4]);
+                txtItem05Grade.Text = Convert.ToString(class02Grades[5]);
 
                 class02Weights[1] = Convert.ToDouble(txtItem01Weight.Text);
                 class02Weights[2] = Convert.ToDouble(txtItem02Weight.Text);
@@ -904,17 +1129,29 @@ namespace MyGradeBook
                 class02Weights[4] = Convert.ToDouble(txtItem04Weight.Text);
                 class02Weights[5] = Convert.ToDouble(txtItem05Weight.Text);
 
-                class02WeightedGrades[1] = Convert.ToDouble(txtItem01WeightedGrade.Text);
-                class02WeightedGrades[2] = Convert.ToDouble(txtItem02WeightedGrade.Text);
-                class02WeightedGrades[3] = Convert.ToDouble(txtItem03WeightedGrade.Text);
-                class02WeightedGrades[4] = Convert.ToDouble(txtItem04WeightedGrade.Text);
-                class02WeightedGrades[5] = Convert.ToDouble(txtItem05WeightedGrade.Text);
+                for (int i = 0; i < class02WeightedGrades.Length; i++)
+                {
+                        class02WeightedGrades[i] = class02Weights[i] * class02Grades[i];
+                }
+
+                //Assign new values to variables
+                txtItem01WeightedGrade.Text = Convert.ToString(class02WeightedGrades[1]);
+                txtItem02WeightedGrade.Text = Convert.ToString(class02WeightedGrades[2]);
+                txtItem03WeightedGrade.Text = Convert.ToString(class02WeightedGrades[3]);
+                txtItem04WeightedGrade.Text = Convert.ToString(class02WeightedGrades[4]);
+                txtItem05WeightedGrade.Text = Convert.ToString(class02WeightedGrades[5]);
+                //UPDATE END
 
                 lblSysMsg.Text = "Class02 txtboxes assigned to variables";
 
+                //UPDATE START
+                //This writes all values to txt files
                 //START OF CLASS 2
                 //class02ItemNames
                 File.WriteAllLines("class02ItemNames.txt", class02ItemNames);
+
+                //class02ItemStatus
+                File.WriteAllLines("class02ItemStatus.txt", class02ItemStatus);
 
                 //class02PointsEarned
                 for (int n = 0; n < class02PointsEarnedString.Length; n++)
@@ -949,14 +1186,33 @@ namespace MyGradeBook
                 {
                     class02WeightedGradesString[n] = Convert.ToString(class02WeightedGrades[n]);
                 }
-                File.WriteAllLines("class02WeightedGrades.txt", class02WeightsString);
+                File.WriteAllLines("class02WeightedGrades.txt", class02WeightedGradesString);
                 //END OF CLASS 2
+                //UPDATE END
 
                 lblSysMsg.Text = "Class02 variables saved to .txt";
             }
 
             else if (selection == 3)
             {
+                //UPDATE START
+                //This assigns values to arrays
+                if (chkItem01Status.Checked)
+                    class03ItemStatus[1] = "yes"; else
+                    class03ItemStatus[1] = "no";
+                if (chkItem02Status.Checked)
+                    class03ItemStatus[2] = "yes"; else
+                    class03ItemStatus[2] = "no";
+                if (chkItem03Status.Checked)
+                    class03ItemStatus[3] = "yes"; else
+                    class03ItemStatus[3] = "no";
+                if (chkItem04Status.Checked)
+                    class03ItemStatus[4] = "yes"; else
+                    class03ItemStatus[4] = "no";
+                if (chkItem05Status.Checked)
+                    class03ItemStatus[5] = "yes"; else
+                    class03ItemStatus[5] = "no";
+
                 class03ItemNames[1] = Convert.ToString(txtItem01Name.Text);
                 class03ItemNames[2] = Convert.ToString(txtItem02Name.Text);
                 class03ItemNames[3] = Convert.ToString(txtItem03Name.Text);
@@ -975,29 +1231,50 @@ namespace MyGradeBook
                 class03PointsPossible[4] = Convert.ToDouble(txtItem04Possible.Text);
                 class03PointsPossible[5] = Convert.ToDouble(txtItem05Possible.Text);
 
-                class03Grades[1] = Convert.ToDouble(txtItem01Grade.Text);
-                class03Grades[2] = Convert.ToDouble(txtItem02Grade.Text);
-                class03Grades[3] = Convert.ToDouble(txtItem03Grade.Text);
-                class03Grades[4] = Convert.ToDouble(txtItem04Grade.Text);
-                class03Grades[5] = Convert.ToDouble(txtItem05Grade.Text);
+                for (int i = 0; i < class03Grades.Length; i++)
+                {
+                    if (class03PointsPossible[i] != 0)
+                        class03Grades[i] = class03PointsEarned[i] / class03PointsPossible[i];
+                    else
+                        class03Grades[i] = 0;
+                }
 
+                //Assign new values to textboxes
+                txtItem01Grade.Text = Convert.ToString(class03Grades[1]);
+                txtItem02Grade.Text = Convert.ToString(class03Grades[2]);
+                txtItem03Grade.Text = Convert.ToString(class03Grades[3]);
+                txtItem04Grade.Text = Convert.ToString(class03Grades[4]);
+                txtItem05Grade.Text = Convert.ToString(class03Grades[5]);
+        
                 class03Weights[1] = Convert.ToDouble(txtItem01Weight.Text);
                 class03Weights[2] = Convert.ToDouble(txtItem02Weight.Text);
                 class03Weights[3] = Convert.ToDouble(txtItem03Weight.Text);
                 class03Weights[4] = Convert.ToDouble(txtItem04Weight.Text);
                 class03Weights[5] = Convert.ToDouble(txtItem05Weight.Text);
 
-                class03WeightedGrades[1] = Convert.ToDouble(txtItem01WeightedGrade.Text);
-                class03WeightedGrades[2] = Convert.ToDouble(txtItem02WeightedGrade.Text);
-                class03WeightedGrades[3] = Convert.ToDouble(txtItem03WeightedGrade.Text);
-                class03WeightedGrades[4] = Convert.ToDouble(txtItem04WeightedGrade.Text);
-                class03WeightedGrades[5] = Convert.ToDouble(txtItem05WeightedGrade.Text);
+                for (int i = 0; i < class03WeightedGrades.Length; i++)
+                {
+                        class03WeightedGrades[i] = class03Weights[i] * class03Grades[i];
+                }
+
+                //Assign new values to variables
+                txtItem01WeightedGrade.Text = Convert.ToString(class03WeightedGrades[1]);
+                txtItem02WeightedGrade.Text = Convert.ToString(class03WeightedGrades[2]);
+                txtItem03WeightedGrade.Text = Convert.ToString(class03WeightedGrades[3]);
+                txtItem04WeightedGrade.Text = Convert.ToString(class03WeightedGrades[4]);
+                txtItem05WeightedGrade.Text = Convert.ToString(class03WeightedGrades[5]);
+                //UPDATE END
 
                 lblSysMsg.Text = "Class03 txtboxes assigned to variables";
 
+                //UPDATE START
+                //This writes all values to txt files
                 //START OF CLASS 3
                 //class03ItemNames
                 File.WriteAllLines("class03ItemNames.txt", class03ItemNames);
+
+                //class03ItemStatus
+                File.WriteAllLines("class03ItemStatus.txt", class03ItemStatus);
 
                 //class03PointsEarned
                 for (int n = 0; n < class03PointsEarnedString.Length; n++)
@@ -1032,14 +1309,33 @@ namespace MyGradeBook
                 {
                     class03WeightedGradesString[n] = Convert.ToString(class03WeightedGrades[n]);
                 }
-                File.WriteAllLines("class03WeightedGrades.txt", class03WeightsString);
+                File.WriteAllLines("class03WeightedGrades.txt", class03WeightedGradesString);
                 //END OF CLASS 3
+                //UPDATE END
 
                 lblSysMsg.Text = "Class03 variables saved to .txt";
             }
 
             else if (selection == 4)
             {
+                //UPDATE START
+                //This assigns values to arrays
+                if (chkItem01Status.Checked)
+                    class04ItemStatus[1] = "yes"; else
+                    class04ItemStatus[1] = "no";
+                if (chkItem02Status.Checked)
+                    class04ItemStatus[2] = "yes"; else
+                    class04ItemStatus[2] = "no";
+                if (chkItem03Status.Checked)
+                    class04ItemStatus[3] = "yes"; else
+                    class04ItemStatus[3] = "no";
+                if (chkItem04Status.Checked)
+                    class04ItemStatus[4] = "yes"; else
+                    class04ItemStatus[4] = "no";
+                if (chkItem05Status.Checked)
+                    class04ItemStatus[5] = "yes"; else
+                    class04ItemStatus[5] = "no";
+
                 class04ItemNames[1] = Convert.ToString(txtItem01Name.Text);
                 class04ItemNames[2] = Convert.ToString(txtItem02Name.Text);
                 class04ItemNames[3] = Convert.ToString(txtItem03Name.Text);
@@ -1058,11 +1354,20 @@ namespace MyGradeBook
                 class04PointsPossible[4] = Convert.ToDouble(txtItem04Possible.Text);
                 class04PointsPossible[5] = Convert.ToDouble(txtItem05Possible.Text);
 
-                class04Grades[1] = Convert.ToDouble(txtItem01Grade.Text);
-                class04Grades[2] = Convert.ToDouble(txtItem02Grade.Text);
-                class04Grades[3] = Convert.ToDouble(txtItem03Grade.Text);
-                class04Grades[4] = Convert.ToDouble(txtItem04Grade.Text);
-                class04Grades[5] = Convert.ToDouble(txtItem05Grade.Text);
+                for (int i = 0; i < class04Grades.Length; i++)
+                {
+                    if (class04PointsPossible[i] != 0)
+                        class04Grades[i] = class04PointsEarned[i] / class04PointsPossible[i];
+                    else
+                        class04Grades[i] = 0;
+                }
+
+                //Assign new values to textboxes
+                txtItem01Grade.Text = Convert.ToString(class04Grades[1]);
+                txtItem02Grade.Text = Convert.ToString(class04Grades[2]);
+                txtItem03Grade.Text = Convert.ToString(class04Grades[3]);
+                txtItem04Grade.Text = Convert.ToString(class04Grades[4]);
+                txtItem05Grade.Text = Convert.ToString(class04Grades[5]);
 
                 class04Weights[1] = Convert.ToDouble(txtItem01Weight.Text);
                 class04Weights[2] = Convert.ToDouble(txtItem02Weight.Text);
@@ -1070,17 +1375,29 @@ namespace MyGradeBook
                 class04Weights[4] = Convert.ToDouble(txtItem04Weight.Text);
                 class04Weights[5] = Convert.ToDouble(txtItem05Weight.Text);
 
-                class04WeightedGrades[1] = Convert.ToDouble(txtItem01WeightedGrade.Text);
-                class04WeightedGrades[2] = Convert.ToDouble(txtItem02WeightedGrade.Text);
-                class04WeightedGrades[3] = Convert.ToDouble(txtItem03WeightedGrade.Text);
-                class04WeightedGrades[4] = Convert.ToDouble(txtItem04WeightedGrade.Text);
-                class04WeightedGrades[5] = Convert.ToDouble(txtItem05WeightedGrade.Text);
+                for (int i = 0; i < class04WeightedGrades.Length; i++)
+                {
+                        class04WeightedGrades[i] = class04Weights[i] * class04Grades[i];
+                }
+
+                //Assign new values to variables
+                txtItem01WeightedGrade.Text = Convert.ToString(class04WeightedGrades[1]);
+                txtItem02WeightedGrade.Text = Convert.ToString(class04WeightedGrades[2]);
+                txtItem03WeightedGrade.Text = Convert.ToString(class04WeightedGrades[3]);
+                txtItem04WeightedGrade.Text = Convert.ToString(class04WeightedGrades[4]);
+                txtItem05WeightedGrade.Text = Convert.ToString(class04WeightedGrades[5]);
+                //UPDATE END
 
                 lblSysMsg.Text = "Class04 txtboxes assigned to variables";
 
+                //UPDATE START
+                //This writes all values to txt files
                 //START OF CLASS 4
                 //class04ItemNames
                 File.WriteAllLines("class04ItemNames.txt", class04ItemNames);
+
+                //class04ItemStatus
+                File.WriteAllLines("class04ItemStatus.txt", class04ItemStatus);
 
                 //class04PointsEarned
                 for (int n = 0; n < class04PointsEarnedString.Length; n++)
@@ -1115,14 +1432,33 @@ namespace MyGradeBook
                 {
                     class04WeightedGradesString[n] = Convert.ToString(class04WeightedGrades[n]);
                 }
-                File.WriteAllLines("class04WeightedGrades.txt", class04WeightsString);
+                File.WriteAllLines("class04WeightedGrades.txt", class04WeightedGradesString);
                 //END OF CLASS 4
+                //UPDATE END
 
                 lblSysMsg.Text = "Class04 variables saved to .txt";
             }
 
             else if (selection == 5)
             {
+                //UPDATE START
+                //This assigns values to arrays
+                if (chkItem01Status.Checked)
+                    class05ItemStatus[1] = "yes"; else
+                    class05ItemStatus[1] = "no";
+                if (chkItem02Status.Checked)
+                    class05ItemStatus[2] = "yes"; else
+                    class05ItemStatus[2] = "no";
+                if (chkItem03Status.Checked)
+                    class05ItemStatus[3] = "yes"; else
+                    class05ItemStatus[3] = "no";
+                if (chkItem04Status.Checked)
+                    class05ItemStatus[4] = "yes"; else
+                    class05ItemStatus[4] = "no";
+                if (chkItem05Status.Checked)
+                    class05ItemStatus[5] = "yes"; else
+                    class05ItemStatus[5] = "no";
+
                 class05ItemNames[1] = Convert.ToString(txtItem01Name.Text);
                 class05ItemNames[2] = Convert.ToString(txtItem02Name.Text);
                 class05ItemNames[3] = Convert.ToString(txtItem03Name.Text);
@@ -1141,11 +1477,20 @@ namespace MyGradeBook
                 class05PointsPossible[4] = Convert.ToDouble(txtItem04Possible.Text);
                 class05PointsPossible[5] = Convert.ToDouble(txtItem05Possible.Text);
 
-                class05Grades[1] = Convert.ToDouble(txtItem01Grade.Text);
-                class05Grades[2] = Convert.ToDouble(txtItem02Grade.Text);
-                class05Grades[3] = Convert.ToDouble(txtItem03Grade.Text);
-                class05Grades[4] = Convert.ToDouble(txtItem04Grade.Text);
-                class05Grades[5] = Convert.ToDouble(txtItem05Grade.Text);
+                for (int i = 0; i < class05Grades.Length; i++)
+                {
+                    if (class05PointsPossible[i] != 0)
+                        class05Grades[i] = class05PointsEarned[i] / class05PointsPossible[i];
+                    else
+                        class05Grades[i] = 0;
+                }
+
+                //Assign new values to textboxes
+                txtItem01Grade.Text = Convert.ToString(class05Grades[1]);
+                txtItem02Grade.Text = Convert.ToString(class05Grades[2]);
+                txtItem03Grade.Text = Convert.ToString(class05Grades[3]);
+                txtItem04Grade.Text = Convert.ToString(class05Grades[4]);
+                txtItem05Grade.Text = Convert.ToString(class05Grades[5]);
 
                 class05Weights[1] = Convert.ToDouble(txtItem01Weight.Text);
                 class05Weights[2] = Convert.ToDouble(txtItem02Weight.Text);
@@ -1153,17 +1498,29 @@ namespace MyGradeBook
                 class05Weights[4] = Convert.ToDouble(txtItem04Weight.Text);
                 class05Weights[5] = Convert.ToDouble(txtItem05Weight.Text);
 
-                class05WeightedGrades[1] = Convert.ToDouble(txtItem01WeightedGrade.Text);
-                class05WeightedGrades[2] = Convert.ToDouble(txtItem02WeightedGrade.Text);
-                class05WeightedGrades[3] = Convert.ToDouble(txtItem03WeightedGrade.Text);
-                class05WeightedGrades[4] = Convert.ToDouble(txtItem04WeightedGrade.Text);
-                class05WeightedGrades[5] = Convert.ToDouble(txtItem05WeightedGrade.Text);
+                for (int i = 0; i < class05WeightedGrades.Length; i++)
+                {
+                        class05WeightedGrades[i] = class05Weights[i] * class05Grades[i];
+                }
+
+                //Assign new values to variables
+                txtItem01WeightedGrade.Text = Convert.ToString(class05WeightedGrades[1]);
+                txtItem02WeightedGrade.Text = Convert.ToString(class05WeightedGrades[2]);
+                txtItem03WeightedGrade.Text = Convert.ToString(class05WeightedGrades[3]);
+                txtItem04WeightedGrade.Text = Convert.ToString(class05WeightedGrades[4]);
+                txtItem05WeightedGrade.Text = Convert.ToString(class05WeightedGrades[5]);
+                //UPDATE END
 
                 lblSysMsg.Text = "Class05 txtboxes assigned to variables";
 
+                //UPDATE START
+                //This writes all values to txt files
                 //START OF CLASS 5
                 //class05ItemNames
                 File.WriteAllLines("class05ItemNames.txt", class05ItemNames);
+
+                //class05ItemStatus
+                File.WriteAllLines("class05ItemStatus.txt", class05ItemStatus);
 
                 //class05PointsEarned
                 for (int n = 0; n < class05PointsEarnedString.Length; n++)
@@ -1198,14 +1555,33 @@ namespace MyGradeBook
                 {
                     class05WeightedGradesString[n] = Convert.ToString(class05WeightedGrades[n]);
                 }
-                File.WriteAllLines("class05WeightedGrades.txt", class05WeightsString);
+                File.WriteAllLines("class05WeightedGrades.txt", class05WeightedGradesString);
                 //END OF CLASS 5
+                //UPDATE END
 
                 lblSysMsg.Text = "Class05 variables saved to .txt";
             }
 
             else if (selection == 6)
             {
+                //UPDATE START
+                //This assigns values to arrays
+                if (chkItem01Status.Checked)
+                    class06ItemStatus[1] = "yes"; else
+                    class06ItemStatus[1] = "no";
+                if (chkItem02Status.Checked)
+                    class06ItemStatus[2] = "yes"; else
+                    class06ItemStatus[2] = "no";
+                if (chkItem03Status.Checked)
+                    class06ItemStatus[3] = "yes"; else
+                    class06ItemStatus[3] = "no";
+                if (chkItem04Status.Checked)
+                    class06ItemStatus[4] = "yes"; else
+                    class06ItemStatus[4] = "no";
+                if (chkItem05Status.Checked)
+                    class06ItemStatus[5] = "yes"; else
+                    class06ItemStatus[5] = "no";
+
                 class06ItemNames[1] = Convert.ToString(txtItem01Name.Text);
                 class06ItemNames[2] = Convert.ToString(txtItem02Name.Text);
                 class06ItemNames[3] = Convert.ToString(txtItem03Name.Text);
@@ -1224,11 +1600,20 @@ namespace MyGradeBook
                 class06PointsPossible[4] = Convert.ToDouble(txtItem04Possible.Text);
                 class06PointsPossible[5] = Convert.ToDouble(txtItem05Possible.Text);
 
-                class06Grades[1] = Convert.ToDouble(txtItem01Grade.Text);
-                class06Grades[2] = Convert.ToDouble(txtItem02Grade.Text);
-                class06Grades[3] = Convert.ToDouble(txtItem03Grade.Text);
-                class06Grades[4] = Convert.ToDouble(txtItem04Grade.Text);
-                class06Grades[5] = Convert.ToDouble(txtItem05Grade.Text);
+                for (int i = 0; i < class06Grades.Length; i++)
+                {
+                    if (class06PointsPossible[i] != 0)
+                        class06Grades[i] = class06PointsEarned[i] / class06PointsPossible[i];
+                    else
+                        class06Grades[i] = 0;
+                }
+
+                //Assign new values to textboxes
+                txtItem01Grade.Text = Convert.ToString(class06Grades[1]);
+                txtItem02Grade.Text = Convert.ToString(class06Grades[2]);
+                txtItem03Grade.Text = Convert.ToString(class06Grades[3]);
+                txtItem04Grade.Text = Convert.ToString(class06Grades[4]);
+                txtItem05Grade.Text = Convert.ToString(class06Grades[5]);
             
                 class06Weights[1] = Convert.ToDouble(txtItem01Weight.Text);
                 class06Weights[2] = Convert.ToDouble(txtItem02Weight.Text);
@@ -1236,17 +1621,28 @@ namespace MyGradeBook
                 class06Weights[4] = Convert.ToDouble(txtItem04Weight.Text);
                 class06Weights[5] = Convert.ToDouble(txtItem05Weight.Text);
 
-                class06WeightedGrades[1] = Convert.ToDouble(txtItem01WeightedGrade.Text);
-                class06WeightedGrades[2] = Convert.ToDouble(txtItem02WeightedGrade.Text);
-                class06WeightedGrades[3] = Convert.ToDouble(txtItem03WeightedGrade.Text);
-                class06WeightedGrades[4] = Convert.ToDouble(txtItem04WeightedGrade.Text);
-                class06WeightedGrades[5] = Convert.ToDouble(txtItem05WeightedGrade.Text);
+                for (int i = 0; i < class06WeightedGrades.Length; i++)
+                {
+                        class06WeightedGrades[i] = class06Weights[i] * class06Grades[i];
+                }
+                //Assign new values to variables
+                txtItem01WeightedGrade.Text = Convert.ToString(class06WeightedGrades[1]);
+                txtItem02WeightedGrade.Text = Convert.ToString(class06WeightedGrades[2]);
+                txtItem03WeightedGrade.Text = Convert.ToString(class06WeightedGrades[3]);
+                txtItem04WeightedGrade.Text = Convert.ToString(class06WeightedGrades[4]);
+                txtItem05WeightedGrade.Text = Convert.ToString(class06WeightedGrades[5]);
+                //UPDATE END
 
                 lblSysMsg.Text = "Class06 txtboxes assigned to variables";
 
+                //UPDATE START
+                //This writes all values to txt files
                 //START OF CLASS 6
                 //class06ItemNames
                 File.WriteAllLines("class06ItemNames.txt", class06ItemNames);
+
+                //class06ItemStatus
+                File.WriteAllLines("class06ItemStatus.txt", class06ItemStatus);
 
                 //class06PointsEarned
                 for (int n = 0; n < class06PointsEarnedString.Length; n++)
@@ -1281,13 +1677,15 @@ namespace MyGradeBook
                 {
                     class06WeightedGradesString[n] = Convert.ToString(class06WeightedGrades[n]);
                 }
-                File.WriteAllLines("class06WeightedGrades.txt", class06WeightsString);
+                File.WriteAllLines("class06WeightedGrades.txt", class06WeightedGradesString);
                 //END OF CLASS 6
+                //UPDATE END
 
                 lblSysMsg.Text = "Class06 variables saved to .txt";
             }
         }
 
+        /* NO UPDATES FOR CLASS NAMES */
         private void btnClassNames_Click(object sender, EventArgs e)
         {
             if (classRenameStatus == 0)//to change class names
@@ -1315,6 +1713,10 @@ namespace MyGradeBook
                 txtClass04Name.Visible = true;
                 txtClass05Name.Visible = true;
                 txtClass06Name.Visible = true;
+
+                //Change text and color
+                btnClassRename.Text = "Done";
+                btnClassRename.BackColor = btnClassSelected.BackColor;
 
                 //Set status for next click
                 classRenameStatus = 1;
@@ -1358,27 +1760,51 @@ namespace MyGradeBook
                 //Store array values to text file
                 File.WriteAllLines("classNames.txt", classNames);
 
+                //Change text and color
+                btnClassRename.Text = "Rename";
+                btnClassRename.BackColor = btnClassNotSelected.BackColor;
+
                 //Set status for next click
                 classRenameStatus = 0;
 
                 lblSysMsg.Text = "Class names saved to .txt";
-
             }
         }
 
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  START OF CLASS BUTTONS  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
+
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CLASS BUTTONS  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+        /* Contains GUI color controls and reads data only, no writing or calculations */
+
+        /* MUST UPDATE ALL CLASS BUTTONS */
         private void btnClass01_Click(object sender, EventArgs e)
         {
             //Visuals
-            btnClass01.BackColor = System.Drawing.Color.LightGreen;
-            btnClass02.BackColor = System.Drawing.Color.LightCyan;
-            btnClass03.BackColor = System.Drawing.Color.LightCyan;
-            btnClass04.BackColor = System.Drawing.Color.LightCyan;
-            btnClass05.BackColor = System.Drawing.Color.LightCyan;
-            btnClass06.BackColor = System.Drawing.Color.LightCyan;
+            btnClass01.BackColor = btnClassSelected.BackColor;
+            btnClass02.BackColor = btnClassNotSelected.BackColor;
+            btnClass03.BackColor = btnClassNotSelected.BackColor;
+            btnClass04.BackColor = btnClassNotSelected.BackColor;
+            btnClass05.BackColor = btnClassNotSelected.BackColor;
+            btnClass06.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
+            if (class01ItemStatus[1] == "yes")
+                chkItem01Status.Checked = true; else
+                chkItem01Status.Checked = false;
+            if (class01ItemStatus[2] == "yes")
+                chkItem02Status.Checked = true; else
+                chkItem02Status.Checked = false;
+            if (class01ItemStatus[3] == "yes")
+                chkItem03Status.Checked = true; else
+                chkItem03Status.Checked = false;
+            if (class01ItemStatus[4] == "yes")
+                chkItem04Status.Checked = true; else
+                chkItem04Status.Checked = false;
+            if (class01ItemStatus[5] == "yes")
+                chkItem05Status.Checked = true; else
+                chkItem05Status.Checked = false;
+
             txtItem01Name.Text = class01ItemNames[1];
             txtItem02Name.Text = class01ItemNames[2];
             txtItem03Name.Text = class01ItemNames[3];
@@ -1415,6 +1841,25 @@ namespace MyGradeBook
             txtItem04WeightedGrade.Text = Convert.ToString(class01WeightedGrades[4]);
             txtItem05WeightedGrade.Text = Convert.ToString(class01WeightedGrades[5]);
 
+            //Grade Total
+            if (class01PointsPossible.Sum() != 0)
+            {
+                for (int i = 0; i < class01Grades.Length; i++)
+                {
+                    double gradeTotal = class01PointsEarned.Sum() / class01PointsPossible.Sum();
+                    lblGrade.Text = gradeTotal.ToString("P2");
+                }
+            }
+            else
+                lblGrade.Text = "0.00%";
+
+            //Weighted Total
+            for (int i = 0; i < class01WeightedGrades.Length; i++)
+            {
+                double weightedGradeTotal = class01WeightedGrades.Sum();
+                lblWeightedGrade.Text = weightedGradeTotal.ToString("P2");
+            }
+
             //Selection
             selection = 1;
 
@@ -1424,14 +1869,30 @@ namespace MyGradeBook
         private void btnClass02_Click(object sender, EventArgs e)
         {
             //Visuals
-            btnClass01.BackColor = System.Drawing.Color.LightCyan;
-            btnClass02.BackColor = System.Drawing.Color.LightGreen;
-            btnClass03.BackColor = System.Drawing.Color.LightCyan;
-            btnClass04.BackColor = System.Drawing.Color.LightCyan;
-            btnClass05.BackColor = System.Drawing.Color.LightCyan;
-            btnClass06.BackColor = System.Drawing.Color.LightCyan;
+            btnClass01.BackColor = btnClassNotSelected.BackColor;
+            btnClass02.BackColor = btnClassSelected.BackColor;
+            btnClass03.BackColor = btnClassNotSelected.BackColor;
+            btnClass04.BackColor = btnClassNotSelected.BackColor;
+            btnClass05.BackColor = btnClassNotSelected.BackColor;
+            btnClass06.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
+            if (class02ItemStatus[1] == "yes")
+                chkItem01Status.Checked = true; else
+                chkItem01Status.Checked = false;
+            if (class02ItemStatus[2] == "yes")
+                chkItem02Status.Checked = true; else
+                chkItem02Status.Checked = false;
+            if (class02ItemStatus[3] == "yes")
+                chkItem03Status.Checked = true; else
+                chkItem03Status.Checked = false;
+            if (class02ItemStatus[4] == "yes")
+                chkItem04Status.Checked = true; else
+                chkItem04Status.Checked = false;
+            if (class02ItemStatus[5] == "yes")
+                chkItem05Status.Checked = true; else
+                chkItem05Status.Checked = false;
+
             txtItem01Name.Text = class02ItemNames[1];
             txtItem02Name.Text = class02ItemNames[2];
             txtItem03Name.Text = class02ItemNames[3];
@@ -1468,6 +1929,25 @@ namespace MyGradeBook
             txtItem04WeightedGrade.Text = Convert.ToString(class02WeightedGrades[4]);
             txtItem05WeightedGrade.Text = Convert.ToString(class02WeightedGrades[5]);
 
+            //Grade Total
+            if (class02PointsPossible.Sum() != 0)
+            {
+                for (int i = 0; i < class02Grades.Length; i++)
+                {
+                    double gradeTotal = class02PointsEarned.Sum() / class02PointsPossible.Sum();
+                    lblGrade.Text = gradeTotal.ToString("P2");
+                }
+            }
+            else
+                lblGrade.Text = "0.00%";
+
+            //Weighted Total
+            for (int i = 0; i < class02WeightedGrades.Length; i++)
+            {
+                double weightedGradeTotal = class02WeightedGrades.Sum();
+                lblWeightedGrade.Text = weightedGradeTotal.ToString("P2");
+            }
+
             //Selection
             selection = 2;
 
@@ -1477,14 +1957,30 @@ namespace MyGradeBook
         private void btnClass03_Click(object sender, EventArgs e)
         {
             //Visuals
-            btnClass01.BackColor = System.Drawing.Color.LightCyan;
-            btnClass02.BackColor = System.Drawing.Color.LightCyan;
-            btnClass03.BackColor = System.Drawing.Color.LightGreen;
-            btnClass04.BackColor = System.Drawing.Color.LightCyan;
-            btnClass05.BackColor = System.Drawing.Color.LightCyan;
-            btnClass06.BackColor = System.Drawing.Color.LightCyan;
+            btnClass01.BackColor = btnClassNotSelected.BackColor;
+            btnClass02.BackColor = btnClassNotSelected.BackColor;
+            btnClass03.BackColor = btnClassSelected.BackColor;
+            btnClass04.BackColor = btnClassNotSelected.BackColor;
+            btnClass05.BackColor = btnClassNotSelected.BackColor;
+            btnClass06.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
+            if (class03ItemStatus[1] == "yes")
+                chkItem01Status.Checked = true; else
+                chkItem01Status.Checked = false;
+            if (class03ItemStatus[2] == "yes")
+                chkItem02Status.Checked = true; else
+                chkItem02Status.Checked = false;
+            if (class03ItemStatus[3] == "yes")
+                chkItem03Status.Checked = true; else
+                chkItem03Status.Checked = false;
+            if (class03ItemStatus[4] == "yes")
+                chkItem04Status.Checked = true; else
+                chkItem04Status.Checked = false;
+            if (class03ItemStatus[5] == "yes")
+                chkItem05Status.Checked = true; else
+                chkItem05Status.Checked = false;
+
             txtItem01Name.Text = class03ItemNames[1];
             txtItem02Name.Text = class03ItemNames[2];
             txtItem03Name.Text = class03ItemNames[3];
@@ -1521,6 +2017,25 @@ namespace MyGradeBook
             txtItem04WeightedGrade.Text = Convert.ToString(class03WeightedGrades[4]);
             txtItem05WeightedGrade.Text = Convert.ToString(class03WeightedGrades[5]);
 
+            //Grade Total
+            if (class03PointsPossible.Sum() != 0)
+            {
+                for (int i = 0; i < class03Grades.Length; i++)
+                {
+                    double gradeTotal = class03PointsEarned.Sum() / class03PointsPossible.Sum();
+                    lblGrade.Text = gradeTotal.ToString("P2");
+                }
+            }
+            else
+                lblWeightedGrade.Text = "0.00%";
+
+            //Weighted Total
+            for (int i = 0; i < class03WeightedGrades.Length; i++)
+            {
+                double weightedGradeTotal = class03WeightedGrades.Sum();
+                lblWeightedGrade.Text = weightedGradeTotal.ToString("P2");
+            }
+
             //Selection
             selection = 3;
 
@@ -1530,14 +2045,30 @@ namespace MyGradeBook
         private void btnClass04_Click(object sender, EventArgs e)
         {
             //Visuals
-            btnClass01.BackColor = System.Drawing.Color.LightCyan;
-            btnClass02.BackColor = System.Drawing.Color.LightCyan;
-            btnClass03.BackColor = System.Drawing.Color.LightCyan;
-            btnClass04.BackColor = System.Drawing.Color.LightGreen;
-            btnClass05.BackColor = System.Drawing.Color.LightCyan;
-            btnClass06.BackColor = System.Drawing.Color.LightCyan;
+            btnClass01.BackColor = btnClassNotSelected.BackColor;
+            btnClass02.BackColor = btnClassNotSelected.BackColor;
+            btnClass03.BackColor = btnClassNotSelected.BackColor;
+            btnClass04.BackColor = btnClassSelected.BackColor;
+            btnClass05.BackColor = btnClassNotSelected.BackColor;
+            btnClass06.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
+            if (class04ItemStatus[1] == "yes")
+                chkItem01Status.Checked = true; else
+                chkItem01Status.Checked = false;
+            if (class04ItemStatus[2] == "yes")
+                chkItem02Status.Checked = true; else
+                chkItem02Status.Checked = false;
+            if (class04ItemStatus[3] == "yes")
+                chkItem03Status.Checked = true; else
+                chkItem03Status.Checked = false;
+            if (class04ItemStatus[4] == "yes")
+                chkItem04Status.Checked = true; else
+                chkItem04Status.Checked = false;
+            if (class04ItemStatus[5] == "yes")
+                chkItem05Status.Checked = true; else
+                chkItem05Status.Checked = false;
+
             txtItem01Name.Text = class04ItemNames[1];
             txtItem02Name.Text = class04ItemNames[2];
             txtItem03Name.Text = class04ItemNames[3];
@@ -1574,6 +2105,25 @@ namespace MyGradeBook
             txtItem04WeightedGrade.Text = Convert.ToString(class04WeightedGrades[4]);
             txtItem05WeightedGrade.Text = Convert.ToString(class04WeightedGrades[5]);
 
+            //Grade Total
+            if (class04PointsPossible.Sum() != 0)
+            {
+                for (int i = 0; i < class04Grades.Length; i++)
+                {
+                    double gradeTotal = class04PointsEarned.Sum() / class04PointsPossible.Sum();
+                    lblGrade.Text = gradeTotal.ToString("P2");
+                }
+            }
+            else
+                lblWeightedGrade.Text = "0.00%";
+
+            //Weighted Total
+            for (int i = 0; i < class04WeightedGrades.Length; i++)
+            {
+                double weightedGradeTotal = class04WeightedGrades.Sum();
+                lblWeightedGrade.Text = weightedGradeTotal.ToString("P2");
+            }
+
             //Selection
             selection = 4;
 
@@ -1583,14 +2133,30 @@ namespace MyGradeBook
         private void btnClass05_Click(object sender, EventArgs e)
         {
             //Visuals
-            btnClass01.BackColor = System.Drawing.Color.LightCyan;
-            btnClass02.BackColor = System.Drawing.Color.LightCyan;
-            btnClass03.BackColor = System.Drawing.Color.LightCyan;
-            btnClass04.BackColor = System.Drawing.Color.LightCyan;
-            btnClass05.BackColor = System.Drawing.Color.LightGreen;
-            btnClass06.BackColor = System.Drawing.Color.LightCyan;
+            btnClass01.BackColor = btnClassNotSelected.BackColor;
+            btnClass02.BackColor = btnClassNotSelected.BackColor;
+            btnClass03.BackColor = btnClassNotSelected.BackColor;
+            btnClass04.BackColor = btnClassNotSelected.BackColor;
+            btnClass05.BackColor = btnClassSelected.BackColor;
+            btnClass06.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
+            if (class05ItemStatus[1] == "yes")
+                chkItem01Status.Checked = true; else
+                chkItem01Status.Checked = false;
+            if (class05ItemStatus[2] == "yes")
+                chkItem02Status.Checked = true; else
+                chkItem02Status.Checked = false;
+            if (class05ItemStatus[3] == "yes")
+                chkItem03Status.Checked = true; else
+                chkItem03Status.Checked = false;
+            if (class05ItemStatus[4] == "yes")
+                chkItem04Status.Checked = true; else
+                chkItem04Status.Checked = false;
+            if (class05ItemStatus[5] == "yes")
+                chkItem05Status.Checked = true; else
+                chkItem05Status.Checked = false;
+
             txtItem01Name.Text = class05ItemNames[1];
             txtItem02Name.Text = class05ItemNames[2];
             txtItem03Name.Text = class05ItemNames[3];
@@ -1627,8 +2193,27 @@ namespace MyGradeBook
             txtItem04WeightedGrade.Text = Convert.ToString(class05WeightedGrades[4]);
             txtItem05WeightedGrade.Text = Convert.ToString(class05WeightedGrades[5]);
 
+            //Grade Total
+            if (class05PointsPossible.Sum() != 0)
+            {
+                for (int i = 0; i < class05Grades.Length; i++)
+                {
+                    double gradeTotal = class05PointsEarned.Sum() / class05PointsPossible.Sum();
+                    lblGrade.Text = gradeTotal.ToString("P2");
+                }
+            }
+            else
+                lblWeightedGrade.Text = "0.00%";
+
+            //Weighted Total
+            for (int i = 0; i < class05WeightedGrades.Length; i++)
+            {
+                double weightedGradeTotal = class05WeightedGrades.Sum();
+                lblWeightedGrade.Text = weightedGradeTotal.ToString("P2");
+            }
+
             //Selection
-            selection = 4;
+            selection = 5;
 
             lblSysMsg.Text = "Class04 has been selected";
         }
@@ -1636,14 +2221,30 @@ namespace MyGradeBook
         private void btnClass06_Click(object sender, EventArgs e)
         {
             //Visuals
-            btnClass01.BackColor = System.Drawing.Color.LightCyan;
-            btnClass02.BackColor = System.Drawing.Color.LightCyan;
-            btnClass03.BackColor = System.Drawing.Color.LightCyan;
-            btnClass04.BackColor = System.Drawing.Color.LightCyan;
-            btnClass05.BackColor = System.Drawing.Color.LightCyan;
-            btnClass06.BackColor = System.Drawing.Color.LightGreen;
+            btnClass01.BackColor = btnClassNotSelected.BackColor;
+            btnClass02.BackColor = btnClassNotSelected.BackColor;
+            btnClass03.BackColor = btnClassNotSelected.BackColor;
+            btnClass04.BackColor = btnClassNotSelected.BackColor;
+            btnClass05.BackColor = btnClassNotSelected.BackColor;
+            btnClass06.BackColor = btnClassSelected.BackColor;
 
             //Setting textbox to values from array
+            if (class06ItemStatus[1] == "yes")
+                chkItem01Status.Checked = true; else
+                chkItem01Status.Checked = false;
+            if (class06ItemStatus[2] == "yes")
+                chkItem02Status.Checked = true; else
+                chkItem02Status.Checked = false;
+            if (class06ItemStatus[3] == "yes")
+                chkItem03Status.Checked = true; else
+                chkItem03Status.Checked = false;
+            if (class06ItemStatus[4] == "yes")
+                chkItem04Status.Checked = true; else
+                chkItem04Status.Checked = false;
+            if (class06ItemStatus[5] == "yes")
+                chkItem05Status.Checked = true; else
+                chkItem05Status.Checked = false;
+
             txtItem01Name.Text = class06ItemNames[1];
             txtItem02Name.Text = class06ItemNames[2];
             txtItem03Name.Text = class06ItemNames[3];
@@ -1679,6 +2280,25 @@ namespace MyGradeBook
             txtItem03WeightedGrade.Text = Convert.ToString(class06WeightedGrades[3]);
             txtItem04WeightedGrade.Text = Convert.ToString(class06WeightedGrades[4]);
             txtItem05WeightedGrade.Text = Convert.ToString(class06WeightedGrades[5]);
+
+            //Grade Total
+            if (class06PointsPossible.Sum() != 0)
+            {
+                for (int i = 0; i < class06Grades.Length; i++)
+                {
+                    double gradeTotal = class06PointsEarned.Sum() / class06PointsPossible.Sum();
+                    lblGrade.Text = gradeTotal.ToString("P2");
+                }
+            }
+            else
+                lblWeightedGrade.Text = "0.00%";
+
+            //Weighted Total
+            for (int i = 0; i < class06WeightedGrades.Length; i++)
+            {
+                double weightedGradeTotal = class06WeightedGrades.Sum();
+                lblWeightedGrade.Text = weightedGradeTotal.ToString("P2");
+            }
 
             //Selection
             selection = 6;

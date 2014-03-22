@@ -89,11 +89,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblSysMsg = new System.Windows.Forms.Label();
+            this.cboColorScheme = new System.Windows.Forms.ComboBox();
+            this.btnClassSelected = new System.Windows.Forms.Button();
+            this.btnClassNotSelected = new System.Windows.Forms.Button();
+            this.lblWeightedGrade = new System.Windows.Forms.Label();
+            this.lblGrade = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(12, 12);
+            this.btnSave.Location = new System.Drawing.Point(0, 0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
@@ -103,14 +108,14 @@
             // 
             // txtItem01Name
             // 
-            this.txtItem01Name.Location = new System.Drawing.Point(123, 97);
+            this.txtItem01Name.Location = new System.Drawing.Point(122, 97);
             this.txtItem01Name.Name = "txtItem01Name";
             this.txtItem01Name.Size = new System.Drawing.Size(100, 20);
             this.txtItem01Name.TabIndex = 1;
             // 
             // txtItem01Earned
             // 
-            this.txtItem01Earned.Location = new System.Drawing.Point(230, 97);
+            this.txtItem01Earned.Location = new System.Drawing.Point(229, 97);
             this.txtItem01Earned.Name = "txtItem01Earned";
             this.txtItem01Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Earned.TabIndex = 2;
@@ -118,7 +123,7 @@
             // 
             // txtItem01Possible
             // 
-            this.txtItem01Possible.Location = new System.Drawing.Point(280, 97);
+            this.txtItem01Possible.Location = new System.Drawing.Point(279, 97);
             this.txtItem01Possible.Name = "txtItem01Possible";
             this.txtItem01Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Possible.TabIndex = 3;
@@ -126,7 +131,7 @@
             // 
             // txtItem02Possible
             // 
-            this.txtItem02Possible.Location = new System.Drawing.Point(280, 123);
+            this.txtItem02Possible.Location = new System.Drawing.Point(279, 123);
             this.txtItem02Possible.Name = "txtItem02Possible";
             this.txtItem02Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Possible.TabIndex = 6;
@@ -134,7 +139,7 @@
             // 
             // txtItem02Earned
             // 
-            this.txtItem02Earned.Location = new System.Drawing.Point(230, 123);
+            this.txtItem02Earned.Location = new System.Drawing.Point(229, 123);
             this.txtItem02Earned.Name = "txtItem02Earned";
             this.txtItem02Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Earned.TabIndex = 5;
@@ -142,14 +147,14 @@
             // 
             // txtItem02Name
             // 
-            this.txtItem02Name.Location = new System.Drawing.Point(123, 123);
+            this.txtItem02Name.Location = new System.Drawing.Point(122, 123);
             this.txtItem02Name.Name = "txtItem02Name";
             this.txtItem02Name.Size = new System.Drawing.Size(100, 20);
             this.txtItem02Name.TabIndex = 4;
             // 
             // txtItem03Possible
             // 
-            this.txtItem03Possible.Location = new System.Drawing.Point(280, 149);
+            this.txtItem03Possible.Location = new System.Drawing.Point(279, 149);
             this.txtItem03Possible.Name = "txtItem03Possible";
             this.txtItem03Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Possible.TabIndex = 9;
@@ -157,7 +162,7 @@
             // 
             // txtItem03Earned
             // 
-            this.txtItem03Earned.Location = new System.Drawing.Point(230, 149);
+            this.txtItem03Earned.Location = new System.Drawing.Point(229, 149);
             this.txtItem03Earned.Name = "txtItem03Earned";
             this.txtItem03Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Earned.TabIndex = 8;
@@ -165,14 +170,14 @@
             // 
             // txtItem03Name
             // 
-            this.txtItem03Name.Location = new System.Drawing.Point(123, 149);
+            this.txtItem03Name.Location = new System.Drawing.Point(122, 149);
             this.txtItem03Name.Name = "txtItem03Name";
             this.txtItem03Name.Size = new System.Drawing.Size(100, 20);
             this.txtItem03Name.TabIndex = 7;
             // 
             // btnClass01
             // 
-            this.btnClass01.Location = new System.Drawing.Point(13, 95);
+            this.btnClass01.Location = new System.Drawing.Point(12, 95);
             this.btnClass01.Name = "btnClass01";
             this.btnClass01.Size = new System.Drawing.Size(75, 23);
             this.btnClass01.TabIndex = 10;
@@ -182,7 +187,7 @@
             // 
             // btnClass02
             // 
-            this.btnClass02.Location = new System.Drawing.Point(13, 121);
+            this.btnClass02.Location = new System.Drawing.Point(12, 121);
             this.btnClass02.Name = "btnClass02";
             this.btnClass02.Size = new System.Drawing.Size(75, 23);
             this.btnClass02.TabIndex = 11;
@@ -194,7 +199,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 79);
+            this.label1.Location = new System.Drawing.Point(159, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 12;
@@ -204,7 +209,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(232, 79);
+            this.label2.Location = new System.Drawing.Point(231, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 13;
@@ -214,7 +219,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(279, 79);
+            this.label3.Location = new System.Drawing.Point(278, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 14;
@@ -223,7 +228,7 @@
             // chkItem01Status
             // 
             this.chkItem01Status.AutoSize = true;
-            this.chkItem01Status.Location = new System.Drawing.Point(102, 100);
+            this.chkItem01Status.Location = new System.Drawing.Point(101, 100);
             this.chkItem01Status.Name = "chkItem01Status";
             this.chkItem01Status.Size = new System.Drawing.Size(15, 14);
             this.chkItem01Status.TabIndex = 15;
@@ -233,7 +238,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(93, 79);
+            this.label4.Location = new System.Drawing.Point(92, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 16;
@@ -242,7 +247,7 @@
             // chkItem02Status
             // 
             this.chkItem02Status.AutoSize = true;
-            this.chkItem02Status.Location = new System.Drawing.Point(102, 126);
+            this.chkItem02Status.Location = new System.Drawing.Point(101, 126);
             this.chkItem02Status.Name = "chkItem02Status";
             this.chkItem02Status.Size = new System.Drawing.Size(15, 14);
             this.chkItem02Status.TabIndex = 17;
@@ -251,7 +256,7 @@
             // chkItem03Status
             // 
             this.chkItem03Status.AutoSize = true;
-            this.chkItem03Status.Location = new System.Drawing.Point(102, 152);
+            this.chkItem03Status.Location = new System.Drawing.Point(101, 152);
             this.chkItem03Status.Name = "chkItem03Status";
             this.chkItem03Status.Size = new System.Drawing.Size(15, 14);
             this.chkItem03Status.TabIndex = 18;
@@ -259,7 +264,8 @@
             // 
             // txtItem01Grade
             // 
-            this.txtItem01Grade.Location = new System.Drawing.Point(330, 97);
+            this.txtItem01Grade.Enabled = false;
+            this.txtItem01Grade.Location = new System.Drawing.Point(329, 97);
             this.txtItem01Grade.Name = "txtItem01Grade";
             this.txtItem01Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Grade.TabIndex = 19;
@@ -267,7 +273,7 @@
             // 
             // txtItem01Weight
             // 
-            this.txtItem01Weight.Location = new System.Drawing.Point(380, 97);
+            this.txtItem01Weight.Location = new System.Drawing.Point(379, 97);
             this.txtItem01Weight.Name = "txtItem01Weight";
             this.txtItem01Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Weight.TabIndex = 20;
@@ -277,7 +283,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(333, 79);
+            this.label5.Location = new System.Drawing.Point(332, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 21;
@@ -287,7 +293,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(381, 79);
+            this.label6.Location = new System.Drawing.Point(380, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 22;
@@ -297,7 +303,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(427, 79);
+            this.label7.Location = new System.Drawing.Point(426, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 23;
@@ -305,7 +311,8 @@
             // 
             // txtItem01WeightedGrade
             // 
-            this.txtItem01WeightedGrade.Location = new System.Drawing.Point(430, 97);
+            this.txtItem01WeightedGrade.Enabled = false;
+            this.txtItem01WeightedGrade.Location = new System.Drawing.Point(429, 97);
             this.txtItem01WeightedGrade.Name = "txtItem01WeightedGrade";
             this.txtItem01WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem01WeightedGrade.TabIndex = 24;
@@ -313,7 +320,7 @@
             // 
             // btnClassRename
             // 
-            this.btnClassRename.Location = new System.Drawing.Point(93, 12);
+            this.btnClassRename.Location = new System.Drawing.Point(74, 0);
             this.btnClassRename.Name = "btnClassRename";
             this.btnClassRename.Size = new System.Drawing.Size(75, 23);
             this.btnClassRename.TabIndex = 25;
@@ -323,7 +330,7 @@
             // 
             // txtClass01Name
             // 
-            this.txtClass01Name.Location = new System.Drawing.Point(13, 97);
+            this.txtClass01Name.Location = new System.Drawing.Point(12, 97);
             this.txtClass01Name.Name = "txtClass01Name";
             this.txtClass01Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass01Name.TabIndex = 26;
@@ -331,7 +338,7 @@
             // 
             // txtClass02Name
             // 
-            this.txtClass02Name.Location = new System.Drawing.Point(13, 123);
+            this.txtClass02Name.Location = new System.Drawing.Point(12, 123);
             this.txtClass02Name.Name = "txtClass02Name";
             this.txtClass02Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass02Name.TabIndex = 27;
@@ -339,7 +346,7 @@
             // 
             // txtClass03Name
             // 
-            this.txtClass03Name.Location = new System.Drawing.Point(13, 149);
+            this.txtClass03Name.Location = new System.Drawing.Point(12, 149);
             this.txtClass03Name.Name = "txtClass03Name";
             this.txtClass03Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass03Name.TabIndex = 28;
@@ -347,7 +354,7 @@
             // 
             // txtClass04Name
             // 
-            this.txtClass04Name.Location = new System.Drawing.Point(13, 175);
+            this.txtClass04Name.Location = new System.Drawing.Point(12, 175);
             this.txtClass04Name.Name = "txtClass04Name";
             this.txtClass04Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass04Name.TabIndex = 29;
@@ -355,7 +362,7 @@
             // 
             // txtClass05Name
             // 
-            this.txtClass05Name.Location = new System.Drawing.Point(13, 201);
+            this.txtClass05Name.Location = new System.Drawing.Point(12, 201);
             this.txtClass05Name.Name = "txtClass05Name";
             this.txtClass05Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass05Name.TabIndex = 30;
@@ -363,7 +370,7 @@
             // 
             // txtClass06Name
             // 
-            this.txtClass06Name.Location = new System.Drawing.Point(13, 227);
+            this.txtClass06Name.Location = new System.Drawing.Point(12, 227);
             this.txtClass06Name.Name = "txtClass06Name";
             this.txtClass06Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass06Name.TabIndex = 31;
@@ -371,7 +378,7 @@
             // 
             // btnClass03
             // 
-            this.btnClass03.Location = new System.Drawing.Point(13, 147);
+            this.btnClass03.Location = new System.Drawing.Point(12, 147);
             this.btnClass03.Name = "btnClass03";
             this.btnClass03.Size = new System.Drawing.Size(75, 23);
             this.btnClass03.TabIndex = 32;
@@ -381,7 +388,7 @@
             // 
             // btnClass04
             // 
-            this.btnClass04.Location = new System.Drawing.Point(13, 173);
+            this.btnClass04.Location = new System.Drawing.Point(12, 173);
             this.btnClass04.Name = "btnClass04";
             this.btnClass04.Size = new System.Drawing.Size(75, 23);
             this.btnClass04.TabIndex = 33;
@@ -391,7 +398,7 @@
             // 
             // btnClass05
             // 
-            this.btnClass05.Location = new System.Drawing.Point(13, 199);
+            this.btnClass05.Location = new System.Drawing.Point(12, 199);
             this.btnClass05.Name = "btnClass05";
             this.btnClass05.Size = new System.Drawing.Size(75, 23);
             this.btnClass05.TabIndex = 34;
@@ -401,7 +408,7 @@
             // 
             // btnClass06
             // 
-            this.btnClass06.Location = new System.Drawing.Point(13, 225);
+            this.btnClass06.Location = new System.Drawing.Point(12, 225);
             this.btnClass06.Name = "btnClass06";
             this.btnClass06.Size = new System.Drawing.Size(75, 23);
             this.btnClass06.TabIndex = 35;
@@ -411,7 +418,8 @@
             // 
             // txtItem02WeightedGrade
             // 
-            this.txtItem02WeightedGrade.Location = new System.Drawing.Point(430, 123);
+            this.txtItem02WeightedGrade.Enabled = false;
+            this.txtItem02WeightedGrade.Location = new System.Drawing.Point(429, 123);
             this.txtItem02WeightedGrade.Name = "txtItem02WeightedGrade";
             this.txtItem02WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem02WeightedGrade.TabIndex = 38;
@@ -419,7 +427,7 @@
             // 
             // txtItem02Weight
             // 
-            this.txtItem02Weight.Location = new System.Drawing.Point(380, 123);
+            this.txtItem02Weight.Location = new System.Drawing.Point(379, 123);
             this.txtItem02Weight.Name = "txtItem02Weight";
             this.txtItem02Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Weight.TabIndex = 37;
@@ -427,7 +435,8 @@
             // 
             // txtItem02Grade
             // 
-            this.txtItem02Grade.Location = new System.Drawing.Point(330, 123);
+            this.txtItem02Grade.Enabled = false;
+            this.txtItem02Grade.Location = new System.Drawing.Point(329, 123);
             this.txtItem02Grade.Name = "txtItem02Grade";
             this.txtItem02Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Grade.TabIndex = 36;
@@ -435,7 +444,8 @@
             // 
             // txtItem03WeightedGrade
             // 
-            this.txtItem03WeightedGrade.Location = new System.Drawing.Point(430, 149);
+            this.txtItem03WeightedGrade.Enabled = false;
+            this.txtItem03WeightedGrade.Location = new System.Drawing.Point(429, 149);
             this.txtItem03WeightedGrade.Name = "txtItem03WeightedGrade";
             this.txtItem03WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem03WeightedGrade.TabIndex = 41;
@@ -443,7 +453,7 @@
             // 
             // txtItem03Weight
             // 
-            this.txtItem03Weight.Location = new System.Drawing.Point(380, 149);
+            this.txtItem03Weight.Location = new System.Drawing.Point(379, 149);
             this.txtItem03Weight.Name = "txtItem03Weight";
             this.txtItem03Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Weight.TabIndex = 40;
@@ -451,7 +461,8 @@
             // 
             // txtItem03Grade
             // 
-            this.txtItem03Grade.Location = new System.Drawing.Point(330, 149);
+            this.txtItem03Grade.Enabled = false;
+            this.txtItem03Grade.Location = new System.Drawing.Point(329, 149);
             this.txtItem03Grade.Name = "txtItem03Grade";
             this.txtItem03Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Grade.TabIndex = 39;
@@ -459,7 +470,8 @@
             // 
             // txtItem04WeightedGrade
             // 
-            this.txtItem04WeightedGrade.Location = new System.Drawing.Point(430, 175);
+            this.txtItem04WeightedGrade.Enabled = false;
+            this.txtItem04WeightedGrade.Location = new System.Drawing.Point(429, 175);
             this.txtItem04WeightedGrade.Name = "txtItem04WeightedGrade";
             this.txtItem04WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem04WeightedGrade.TabIndex = 48;
@@ -467,7 +479,7 @@
             // 
             // txtItem04Weight
             // 
-            this.txtItem04Weight.Location = new System.Drawing.Point(380, 175);
+            this.txtItem04Weight.Location = new System.Drawing.Point(379, 175);
             this.txtItem04Weight.Name = "txtItem04Weight";
             this.txtItem04Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Weight.TabIndex = 47;
@@ -475,7 +487,8 @@
             // 
             // txtItem04Grade
             // 
-            this.txtItem04Grade.Location = new System.Drawing.Point(330, 175);
+            this.txtItem04Grade.Enabled = false;
+            this.txtItem04Grade.Location = new System.Drawing.Point(329, 175);
             this.txtItem04Grade.Name = "txtItem04Grade";
             this.txtItem04Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Grade.TabIndex = 46;
@@ -484,7 +497,7 @@
             // chkItem04Status
             // 
             this.chkItem04Status.AutoSize = true;
-            this.chkItem04Status.Location = new System.Drawing.Point(102, 178);
+            this.chkItem04Status.Location = new System.Drawing.Point(101, 178);
             this.chkItem04Status.Name = "chkItem04Status";
             this.chkItem04Status.Size = new System.Drawing.Size(15, 14);
             this.chkItem04Status.TabIndex = 45;
@@ -492,7 +505,7 @@
             // 
             // txtItem04Possible
             // 
-            this.txtItem04Possible.Location = new System.Drawing.Point(280, 175);
+            this.txtItem04Possible.Location = new System.Drawing.Point(279, 175);
             this.txtItem04Possible.Name = "txtItem04Possible";
             this.txtItem04Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Possible.TabIndex = 44;
@@ -500,7 +513,7 @@
             // 
             // txtItem04Earned
             // 
-            this.txtItem04Earned.Location = new System.Drawing.Point(230, 175);
+            this.txtItem04Earned.Location = new System.Drawing.Point(229, 175);
             this.txtItem04Earned.Name = "txtItem04Earned";
             this.txtItem04Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Earned.TabIndex = 43;
@@ -508,14 +521,15 @@
             // 
             // txtItem04Name
             // 
-            this.txtItem04Name.Location = new System.Drawing.Point(123, 175);
+            this.txtItem04Name.Location = new System.Drawing.Point(122, 175);
             this.txtItem04Name.Name = "txtItem04Name";
             this.txtItem04Name.Size = new System.Drawing.Size(100, 20);
             this.txtItem04Name.TabIndex = 42;
             // 
             // txtItem05WeightedGrade
             // 
-            this.txtItem05WeightedGrade.Location = new System.Drawing.Point(430, 201);
+            this.txtItem05WeightedGrade.Enabled = false;
+            this.txtItem05WeightedGrade.Location = new System.Drawing.Point(429, 201);
             this.txtItem05WeightedGrade.Name = "txtItem05WeightedGrade";
             this.txtItem05WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem05WeightedGrade.TabIndex = 55;
@@ -523,7 +537,7 @@
             // 
             // txtItem05Weight
             // 
-            this.txtItem05Weight.Location = new System.Drawing.Point(380, 201);
+            this.txtItem05Weight.Location = new System.Drawing.Point(379, 201);
             this.txtItem05Weight.Name = "txtItem05Weight";
             this.txtItem05Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Weight.TabIndex = 54;
@@ -531,7 +545,8 @@
             // 
             // txtItem05Grade
             // 
-            this.txtItem05Grade.Location = new System.Drawing.Point(330, 201);
+            this.txtItem05Grade.Enabled = false;
+            this.txtItem05Grade.Location = new System.Drawing.Point(329, 201);
             this.txtItem05Grade.Name = "txtItem05Grade";
             this.txtItem05Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Grade.TabIndex = 53;
@@ -540,7 +555,7 @@
             // chkItem05Status
             // 
             this.chkItem05Status.AutoSize = true;
-            this.chkItem05Status.Location = new System.Drawing.Point(102, 204);
+            this.chkItem05Status.Location = new System.Drawing.Point(101, 204);
             this.chkItem05Status.Name = "chkItem05Status";
             this.chkItem05Status.Size = new System.Drawing.Size(15, 14);
             this.chkItem05Status.TabIndex = 52;
@@ -548,7 +563,7 @@
             // 
             // txtItem05Possible
             // 
-            this.txtItem05Possible.Location = new System.Drawing.Point(280, 201);
+            this.txtItem05Possible.Location = new System.Drawing.Point(279, 201);
             this.txtItem05Possible.Name = "txtItem05Possible";
             this.txtItem05Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Possible.TabIndex = 51;
@@ -556,7 +571,7 @@
             // 
             // txtItem05Earned
             // 
-            this.txtItem05Earned.Location = new System.Drawing.Point(230, 201);
+            this.txtItem05Earned.Location = new System.Drawing.Point(229, 201);
             this.txtItem05Earned.Name = "txtItem05Earned";
             this.txtItem05Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Earned.TabIndex = 50;
@@ -564,7 +579,7 @@
             // 
             // txtItem05Name
             // 
-            this.txtItem05Name.Location = new System.Drawing.Point(123, 201);
+            this.txtItem05Name.Location = new System.Drawing.Point(122, 201);
             this.txtItem05Name.Name = "txtItem05Name";
             this.txtItem05Name.Size = new System.Drawing.Size(100, 20);
             this.txtItem05Name.TabIndex = 49;
@@ -608,11 +623,61 @@
             // lblSysMsg
             // 
             this.lblSysMsg.AutoSize = true;
-            this.lblSysMsg.Location = new System.Drawing.Point(174, 17);
+            this.lblSysMsg.Location = new System.Drawing.Point(5, 388);
             this.lblSysMsg.Name = "lblSysMsg";
-            this.lblSysMsg.Size = new System.Drawing.Size(50, 13);
+            this.lblSysMsg.Size = new System.Drawing.Size(67, 13);
             this.lblSysMsg.TabIndex = 60;
-            this.lblSysMsg.Text = "Message";
+            this.lblSysMsg.Text = "SysMessage";
+            // 
+            // cboColorScheme
+            // 
+            this.cboColorScheme.FormattingEnabled = true;
+            this.cboColorScheme.Items.AddRange(new object[] {
+            "(default)",
+            "Cool",
+            "Hello Kitty",
+            "Midnight"});
+            this.cboColorScheme.Location = new System.Drawing.Point(514, 2);
+            this.cboColorScheme.Name = "cboColorScheme";
+            this.cboColorScheme.Size = new System.Drawing.Size(121, 21);
+            this.cboColorScheme.TabIndex = 61;
+            this.cboColorScheme.SelectedIndexChanged += new System.EventHandler(this.cboColorScheme_SelectedIndexChanged);
+            // 
+            // btnClassSelected
+            // 
+            this.btnClassSelected.Location = new System.Drawing.Point(580, 383);
+            this.btnClassSelected.Name = "btnClassSelected";
+            this.btnClassSelected.Size = new System.Drawing.Size(57, 23);
+            this.btnClassSelected.TabIndex = 62;
+            this.btnClassSelected.Text = "Sel";
+            this.btnClassSelected.UseVisualStyleBackColor = true;
+            // 
+            // btnClassNotSelected
+            // 
+            this.btnClassNotSelected.Location = new System.Drawing.Point(523, 383);
+            this.btnClassNotSelected.Name = "btnClassNotSelected";
+            this.btnClassNotSelected.Size = new System.Drawing.Size(57, 23);
+            this.btnClassNotSelected.TabIndex = 63;
+            this.btnClassNotSelected.Text = "NotSel";
+            this.btnClassNotSelected.UseVisualStyleBackColor = true;
+            // 
+            // lblWeightedGrade
+            // 
+            this.lblWeightedGrade.AutoSize = true;
+            this.lblWeightedGrade.Location = new System.Drawing.Point(426, 47);
+            this.lblWeightedGrade.Name = "lblWeightedGrade";
+            this.lblWeightedGrade.Size = new System.Drawing.Size(85, 13);
+            this.lblWeightedGrade.TabIndex = 64;
+            this.lblWeightedGrade.Text = "Weighted Grade";
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.AutoSize = true;
+            this.lblGrade.Location = new System.Drawing.Point(332, 47);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(36, 13);
+            this.lblGrade.TabIndex = 65;
+            this.lblGrade.Text = "Grade";
             // 
             // Main
             // 
@@ -620,6 +685,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(638, 407);
+            this.Controls.Add(this.lblGrade);
+            this.Controls.Add(this.lblWeightedGrade);
+            this.Controls.Add(this.btnClassNotSelected);
+            this.Controls.Add(this.btnClassSelected);
+            this.Controls.Add(this.cboColorScheme);
             this.Controls.Add(this.lblSysMsg);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -681,8 +751,9 @@
             this.Controls.Add(this.txtClass03Name);
             this.Controls.Add(this.txtClass02Name);
             this.Controls.Add(this.txtClass01Name);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "MyGrades";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,6 +822,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblSysMsg;
+        private System.Windows.Forms.ComboBox cboColorScheme;
+        private System.Windows.Forms.Button btnClassSelected;
+        private System.Windows.Forms.Button btnClassNotSelected;
+        private System.Windows.Forms.Label lblWeightedGrade;
+        private System.Windows.Forms.Label lblGrade;
     }
 }
 
