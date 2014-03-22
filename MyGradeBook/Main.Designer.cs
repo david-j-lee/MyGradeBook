@@ -1,6 +1,6 @@
 ﻿namespace MyGradeBook
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -84,15 +84,20 @@
             this.txtItem05Possible = new System.Windows.Forms.TextBox();
             this.txtItem05Earned = new System.Windows.Forms.TextBox();
             this.txtItem05Name = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lblSysMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(0, 0);
+            this.btnSave.Location = new System.Drawing.Point(12, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "SAVE";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -109,6 +114,7 @@
             this.txtItem01Earned.Name = "txtItem01Earned";
             this.txtItem01Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Earned.TabIndex = 2;
+            this.txtItem01Earned.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem01Possible
             // 
@@ -116,6 +122,7 @@
             this.txtItem01Possible.Name = "txtItem01Possible";
             this.txtItem01Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Possible.TabIndex = 3;
+            this.txtItem01Possible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem02Possible
             // 
@@ -123,6 +130,7 @@
             this.txtItem02Possible.Name = "txtItem02Possible";
             this.txtItem02Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Possible.TabIndex = 6;
+            this.txtItem02Possible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem02Earned
             // 
@@ -130,6 +138,7 @@
             this.txtItem02Earned.Name = "txtItem02Earned";
             this.txtItem02Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Earned.TabIndex = 5;
+            this.txtItem02Earned.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem02Name
             // 
@@ -144,6 +153,7 @@
             this.txtItem03Possible.Name = "txtItem03Possible";
             this.txtItem03Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Possible.TabIndex = 9;
+            this.txtItem03Possible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem03Earned
             // 
@@ -151,6 +161,7 @@
             this.txtItem03Earned.Name = "txtItem03Earned";
             this.txtItem03Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Earned.TabIndex = 8;
+            this.txtItem03Earned.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem03Name
             // 
@@ -171,7 +182,7 @@
             // 
             // btnClass02
             // 
-            this.btnClass02.Location = new System.Drawing.Point(12, 121);
+            this.btnClass02.Location = new System.Drawing.Point(13, 121);
             this.btnClass02.Name = "btnClass02";
             this.btnClass02.Size = new System.Drawing.Size(75, 23);
             this.btnClass02.TabIndex = 11;
@@ -252,6 +263,7 @@
             this.txtItem01Grade.Name = "txtItem01Grade";
             this.txtItem01Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Grade.TabIndex = 19;
+            this.txtItem01Grade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem01Weight
             // 
@@ -259,6 +271,7 @@
             this.txtItem01Weight.Name = "txtItem01Weight";
             this.txtItem01Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem01Weight.TabIndex = 20;
+            this.txtItem01Weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -296,20 +309,21 @@
             this.txtItem01WeightedGrade.Name = "txtItem01WeightedGrade";
             this.txtItem01WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem01WeightedGrade.TabIndex = 24;
+            this.txtItem01WeightedGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnClassRename
             // 
-            this.btnClassRename.Location = new System.Drawing.Point(563, 0);
+            this.btnClassRename.Location = new System.Drawing.Point(93, 12);
             this.btnClassRename.Name = "btnClassRename";
             this.btnClassRename.Size = new System.Drawing.Size(75, 23);
             this.btnClassRename.TabIndex = 25;
-            this.btnClassRename.Text = "Names";
+            this.btnClassRename.Text = "Rename";
             this.btnClassRename.UseVisualStyleBackColor = true;
             this.btnClassRename.Click += new System.EventHandler(this.btnClassNames_Click);
             // 
             // txtClass01Name
             // 
-            this.txtClass01Name.Location = new System.Drawing.Point(12, 97);
+            this.txtClass01Name.Location = new System.Drawing.Point(13, 97);
             this.txtClass01Name.Name = "txtClass01Name";
             this.txtClass01Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass01Name.TabIndex = 26;
@@ -325,7 +339,7 @@
             // 
             // txtClass03Name
             // 
-            this.txtClass03Name.Location = new System.Drawing.Point(12, 149);
+            this.txtClass03Name.Location = new System.Drawing.Point(13, 149);
             this.txtClass03Name.Name = "txtClass03Name";
             this.txtClass03Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass03Name.TabIndex = 28;
@@ -349,7 +363,7 @@
             // 
             // txtClass06Name
             // 
-            this.txtClass06Name.Location = new System.Drawing.Point(12, 227);
+            this.txtClass06Name.Location = new System.Drawing.Point(13, 227);
             this.txtClass06Name.Name = "txtClass06Name";
             this.txtClass06Name.Size = new System.Drawing.Size(75, 20);
             this.txtClass06Name.TabIndex = 31;
@@ -357,7 +371,7 @@
             // 
             // btnClass03
             // 
-            this.btnClass03.Location = new System.Drawing.Point(12, 147);
+            this.btnClass03.Location = new System.Drawing.Point(13, 147);
             this.btnClass03.Name = "btnClass03";
             this.btnClass03.Size = new System.Drawing.Size(75, 23);
             this.btnClass03.TabIndex = 32;
@@ -387,7 +401,7 @@
             // 
             // btnClass06
             // 
-            this.btnClass06.Location = new System.Drawing.Point(12, 225);
+            this.btnClass06.Location = new System.Drawing.Point(13, 225);
             this.btnClass06.Name = "btnClass06";
             this.btnClass06.Size = new System.Drawing.Size(75, 23);
             this.btnClass06.TabIndex = 35;
@@ -401,6 +415,7 @@
             this.txtItem02WeightedGrade.Name = "txtItem02WeightedGrade";
             this.txtItem02WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem02WeightedGrade.TabIndex = 38;
+            this.txtItem02WeightedGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem02Weight
             // 
@@ -408,6 +423,7 @@
             this.txtItem02Weight.Name = "txtItem02Weight";
             this.txtItem02Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Weight.TabIndex = 37;
+            this.txtItem02Weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem02Grade
             // 
@@ -415,6 +431,7 @@
             this.txtItem02Grade.Name = "txtItem02Grade";
             this.txtItem02Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem02Grade.TabIndex = 36;
+            this.txtItem02Grade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem03WeightedGrade
             // 
@@ -422,6 +439,7 @@
             this.txtItem03WeightedGrade.Name = "txtItem03WeightedGrade";
             this.txtItem03WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem03WeightedGrade.TabIndex = 41;
+            this.txtItem03WeightedGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem03Weight
             // 
@@ -429,6 +447,7 @@
             this.txtItem03Weight.Name = "txtItem03Weight";
             this.txtItem03Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Weight.TabIndex = 40;
+            this.txtItem03Weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem03Grade
             // 
@@ -436,6 +455,7 @@
             this.txtItem03Grade.Name = "txtItem03Grade";
             this.txtItem03Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem03Grade.TabIndex = 39;
+            this.txtItem03Grade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem04WeightedGrade
             // 
@@ -443,6 +463,7 @@
             this.txtItem04WeightedGrade.Name = "txtItem04WeightedGrade";
             this.txtItem04WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem04WeightedGrade.TabIndex = 48;
+            this.txtItem04WeightedGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem04Weight
             // 
@@ -450,6 +471,7 @@
             this.txtItem04Weight.Name = "txtItem04Weight";
             this.txtItem04Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Weight.TabIndex = 47;
+            this.txtItem04Weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem04Grade
             // 
@@ -457,6 +479,7 @@
             this.txtItem04Grade.Name = "txtItem04Grade";
             this.txtItem04Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Grade.TabIndex = 46;
+            this.txtItem04Grade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // chkItem04Status
             // 
@@ -473,6 +496,7 @@
             this.txtItem04Possible.Name = "txtItem04Possible";
             this.txtItem04Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Possible.TabIndex = 44;
+            this.txtItem04Possible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem04Earned
             // 
@@ -480,6 +504,7 @@
             this.txtItem04Earned.Name = "txtItem04Earned";
             this.txtItem04Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem04Earned.TabIndex = 43;
+            this.txtItem04Earned.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem04Name
             // 
@@ -494,6 +519,7 @@
             this.txtItem05WeightedGrade.Name = "txtItem05WeightedGrade";
             this.txtItem05WeightedGrade.Size = new System.Drawing.Size(44, 20);
             this.txtItem05WeightedGrade.TabIndex = 55;
+            this.txtItem05WeightedGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem05Weight
             // 
@@ -501,6 +527,7 @@
             this.txtItem05Weight.Name = "txtItem05Weight";
             this.txtItem05Weight.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Weight.TabIndex = 54;
+            this.txtItem05Weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem05Grade
             // 
@@ -508,6 +535,7 @@
             this.txtItem05Grade.Name = "txtItem05Grade";
             this.txtItem05Grade.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Grade.TabIndex = 53;
+            this.txtItem05Grade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // chkItem05Status
             // 
@@ -524,6 +552,7 @@
             this.txtItem05Possible.Name = "txtItem05Possible";
             this.txtItem05Possible.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Possible.TabIndex = 51;
+            this.txtItem05Possible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem05Earned
             // 
@@ -531,6 +560,7 @@
             this.txtItem05Earned.Name = "txtItem05Earned";
             this.txtItem05Earned.Size = new System.Drawing.Size(44, 20);
             this.txtItem05Earned.TabIndex = 50;
+            this.txtItem05Earned.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItem05Name
             // 
@@ -539,11 +569,62 @@
             this.txtItem05Name.Size = new System.Drawing.Size(100, 20);
             this.txtItem05Name.TabIndex = 49;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(524, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "To Pass";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(536, 79);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "What If\'s";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(524, 147);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 58;
+            this.button2.Text = "To Get an A";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(524, 121);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 59;
+            this.button3.Text = "Most Likely";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // lblSysMsg
+            // 
+            this.lblSysMsg.AutoSize = true;
+            this.lblSysMsg.Location = new System.Drawing.Point(174, 17);
+            this.lblSysMsg.Name = "lblSysMsg";
+            this.lblSysMsg.Size = new System.Drawing.Size(50, 13);
+            this.lblSysMsg.TabIndex = 60;
+            this.lblSysMsg.Text = "Message";
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(638, 407);
+            this.Controls.Add(this.lblSysMsg);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtItem05WeightedGrade);
             this.Controls.Add(this.txtItem05Weight);
             this.Controls.Add(this.txtItem05Grade);
@@ -600,7 +681,7 @@
             this.Controls.Add(this.txtClass03Name);
             this.Controls.Add(this.txtClass02Name);
             this.Controls.Add(this.txtClass01Name);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -665,6 +746,11 @@
         private System.Windows.Forms.TextBox txtItem05Possible;
         private System.Windows.Forms.TextBox txtItem05Earned;
         private System.Windows.Forms.TextBox txtItem05Name;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblSysMsg;
     }
 }
 
