@@ -121,20 +121,14 @@ namespace MyGradeBook
 
 
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  INITIALIZATION */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  INITIALIZATION */
 
+        /* SET STAGE */
+        //No data is pulled at this point
+        //Just controls of btns and txtboxes
         public Main()
         {
             InitializeComponent();
-        }
-
-    /* Loads all data upon open */
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-    //######################################## Default buttons ########################################
-    //######################################## GUI ########################################
 
             //To hide txtbox for class names
             for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
@@ -145,7 +139,10 @@ namespace MyGradeBook
             //Hide buttons used for referncing
             btnClassNotSelected.Visible = false;
             btnClassSelected.Visible = false;
+            txtDone.Visible = false;
+            txtNotDone.Visible = false;
 
+            //SysMsg
             lblSysMsg.Text = "Class Input text hidden";
 
             //To show btns for class names
@@ -157,8 +154,14 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "Buttons are loaded";
             lblSysMsg.Text = "GUI Loaded";
+        }
 
-
+        /* LOAD DATA */
+        //Data is pulled from txt files and placed into arrays
+        //If txtfiles do not exsist they are created
+        //For calculated arrays the calculation is performed and stored
+        private void Main_Load(object sender, EventArgs e)
+        {
 
     // ########################################DATA########################################
 
@@ -311,16 +314,16 @@ namespace MyGradeBook
             if (File.Exists("class02PointsEarned.txt"))
             {
                 class02PointsEarnedString = File.ReadAllLines("class02PointsEarned.txt");
-                for (int n = 0; n < class02PointsEarnedString.Length; n++)
+                for (int i = 0; i < class02PointsEarnedString.Length; i++)
                 {
-                    class02PointsEarned[n] = double.Parse(class02PointsEarnedString[n]);
+                    class02PointsEarned[i] = double.Parse(class02PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class02PointsEarnedString.Length; n++)
+                for (int i = 0; i < class02PointsEarnedString.Length; i++)
                 {
-                    class02PointsEarnedString[n] = Convert.ToString(class02PointsEarned[n]);
+                    class02PointsEarnedString[i] = Convert.ToString(class02PointsEarned[i]);
                 }
                 File.WriteAllLines("class01PointsEarned.txt", class02PointsEarnedString);
             }
@@ -329,16 +332,16 @@ namespace MyGradeBook
             if (File.Exists("class02PointsPossible.txt"))
             {
                 class02PointsPossibleString = File.ReadAllLines("class02PointsPossible.txt");
-                for (int n = 0; n < class02PointsPossibleString.Length; n++)
+                for (int i = 0; i < class02PointsPossibleString.Length; i++)
                 {
-                    class02PointsPossible[n] = double.Parse(class02PointsPossibleString[n]);
+                    class02PointsPossible[i] = double.Parse(class02PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class02PointsPossibleString.Length; n++)
+                for (int i = 0; i < class02PointsPossibleString.Length; i++)
                 {
-                    class02PointsPossibleString[n] = Convert.ToString(class02PointsPossible[n]);
+                    class02PointsPossibleString[i] = Convert.ToString(class02PointsPossible[i]);
                 }
                 File.WriteAllLines("class02PointsPossible.txt", class02PointsPossibleString);
             }
@@ -357,16 +360,16 @@ namespace MyGradeBook
             if (File.Exists("class02Weights.txt"))
             {
                 class02WeightsString = File.ReadAllLines("class02Weights.txt");
-                for (int n = 0; n < class02WeightsString.Length; n++)
+                for (int i = 0; i < class02WeightsString.Length; i++)
                 {
-                    class02Weights[n] = double.Parse(class02WeightsString[n]);
+                    class02Weights[i] = double.Parse(class02WeightsString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class02WeightsString.Length; n++)
+                for (int i = 0; i < class02WeightsString.Length; i++)
                 {
-                    class02WeightsString[n] = Convert.ToString(class02Weights[n]);
+                    class02WeightsString[i] = Convert.ToString(class02Weights[i]);
                 }
                 File.WriteAllLines("class02Weights.txt", class02WeightsString);
             }
@@ -408,16 +411,16 @@ namespace MyGradeBook
             if (File.Exists("class03PointsEarned.txt"))
             {
                 class03PointsEarnedString = File.ReadAllLines("class03PointsEarned.txt");
-                for (int n = 0; n < class03PointsEarnedString.Length; n++)
+                for (int i = 0; i < class03PointsEarnedString.Length; i++)
                 {
-                    class03PointsEarned[n] = double.Parse(class03PointsEarnedString[n]);
+                    class03PointsEarned[i] = double.Parse(class03PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class03PointsEarnedString.Length; n++)
+                for (int i = 0; i < class03PointsEarnedString.Length; i++)
                 {
-                    class03PointsEarnedString[n] = Convert.ToString(class03PointsEarned[n]);
+                    class03PointsEarnedString[i] = Convert.ToString(class03PointsEarned[i]);
                 }
                 File.WriteAllLines("class03PointsEarned.txt", class03PointsEarnedString);
             }
@@ -426,16 +429,16 @@ namespace MyGradeBook
             if (File.Exists("class03PointsPossible.txt"))
             {
                 class03PointsPossibleString = File.ReadAllLines("class03PointsPossible.txt");
-                for (int n = 0; n < class03PointsPossibleString.Length; n++)
+                for (int i = 0; i < class03PointsPossibleString.Length; i++)
                 {
-                    class03PointsPossible[n] = double.Parse(class03PointsPossibleString[n]);
+                    class03PointsPossible[i] = double.Parse(class03PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class03PointsPossibleString.Length; n++)
+                for (int i = 0; i < class03PointsPossibleString.Length; i++)
                 {
-                    class03PointsPossibleString[n] = Convert.ToString(class03PointsPossible[n]);
+                    class03PointsPossibleString[i] = Convert.ToString(class03PointsPossible[i]);
                 }
                 File.WriteAllLines("class03PointsPossible.txt", class03PointsPossibleString);
             }
@@ -454,16 +457,16 @@ namespace MyGradeBook
             if (File.Exists("class03Weights.txt"))
             {
                 class03WeightsString = File.ReadAllLines("class03Weights.txt");
-                for (int n = 0; n < class03WeightsString.Length; n++)
+                for (int i = 0; i < class03WeightsString.Length; i++)
                 {
-                    class03Weights[n] = double.Parse(class03WeightsString[n]);
+                    class03Weights[i] = double.Parse(class03WeightsString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class03WeightsString.Length; n++)
+                for (int i = 0; i < class03WeightsString.Length; i++)
                 {
-                    class03WeightsString[n] = Convert.ToString(class03Weights[n]);
+                    class03WeightsString[i] = Convert.ToString(class03Weights[i]);
                 }
                 File.WriteAllLines("class03Weights.txt", class03WeightsString);
             }
@@ -505,16 +508,16 @@ namespace MyGradeBook
             if (File.Exists("class04PointsEarned.txt"))
             {
                 class04PointsEarnedString = File.ReadAllLines("class04PointsEarned.txt");
-                for (int n = 0; n < class04PointsEarnedString.Length; n++)
+                for (int i = 0; i < class04PointsEarnedString.Length; i++)
                 {
-                    class04PointsEarned[n] = double.Parse(class04PointsEarnedString[n]);
+                    class04PointsEarned[i] = double.Parse(class04PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class04PointsEarnedString.Length; n++)
+                for (int i = 0; i < class04PointsEarnedString.Length; i++)
                 {
-                    class04PointsEarnedString[n] = Convert.ToString(class04PointsEarned[n]);
+                    class04PointsEarnedString[i] = Convert.ToString(class04PointsEarned[i]);
                 }
                 File.WriteAllLines("class04PointsEarned.txt", class04PointsEarnedString);
             }
@@ -523,16 +526,16 @@ namespace MyGradeBook
             if (File.Exists("class04PointsPossible.txt"))
             {
                 class04PointsPossibleString = File.ReadAllLines("class04PointsPossible.txt");
-                for (int n = 0; n < class04PointsPossibleString.Length; n++)
+                for (int i = 0; i < class04PointsPossibleString.Length; i++)
                 {
-                    class04PointsPossible[n] = double.Parse(class04PointsPossibleString[n]);
+                    class04PointsPossible[i] = double.Parse(class04PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class04PointsPossibleString.Length; n++)
+                for (int i = 0; i < class04PointsPossibleString.Length; i++)
                 {
-                    class04PointsPossibleString[n] = Convert.ToString(class04PointsPossible[n]);
+                    class04PointsPossibleString[i] = Convert.ToString(class04PointsPossible[i]);
                 }
                 File.WriteAllLines("class04PointsPossible.txt", class04PointsPossibleString);
             }
@@ -551,16 +554,16 @@ namespace MyGradeBook
             if (File.Exists("class04Weights.txt"))
             {
                 class04WeightsString = File.ReadAllLines("class04Weights.txt");
-                for (int n = 0; n < class04WeightsString.Length; n++)
+                for (int i = 0; i < class04WeightsString.Length; i++)
                 {
-                    class04Weights[n] = double.Parse(class04WeightsString[n]);
+                    class04Weights[i] = double.Parse(class04WeightsString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class04WeightsString.Length; n++)
+                for (int i = 0; i < class04WeightsString.Length; i++)
                 {
-                    class04WeightsString[n] = Convert.ToString(class04Weights[n]);
+                    class04WeightsString[i] = Convert.ToString(class04Weights[i]);
                 }
                 File.WriteAllLines("class04Weights.txt", class04WeightsString);
             }
@@ -602,16 +605,16 @@ namespace MyGradeBook
             if (File.Exists("class05PointsEarned.txt"))
             {
                 class05PointsEarnedString = File.ReadAllLines("class05PointsEarned.txt");
-                for (int n = 0; n < class05PointsEarnedString.Length; n++)
+                for (int i = 0; i < class05PointsEarnedString.Length; i++)
                 {
-                    class05PointsEarned[n] = double.Parse(class05PointsEarnedString[n]);
+                    class05PointsEarned[i] = double.Parse(class05PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class05PointsEarnedString.Length; n++)
+                for (int i = 0; i < class05PointsEarnedString.Length; i++)
                 {
-                    class05PointsEarnedString[n] = Convert.ToString(class05PointsEarned[n]);
+                    class05PointsEarnedString[i] = Convert.ToString(class05PointsEarned[i]);
                 }
                 File.WriteAllLines("class05PointsEarned.txt", class05PointsEarnedString);
             }
@@ -620,16 +623,16 @@ namespace MyGradeBook
             if (File.Exists("class05PointsPossible.txt"))
             {
                 class05PointsPossibleString = File.ReadAllLines("class05PointsPossible.txt");
-                for (int n = 0; n < class05PointsPossibleString.Length; n++)
+                for (int i = 0; i < class05PointsPossibleString.Length; i++)
                 {
-                    class05PointsPossible[n] = double.Parse(class05PointsPossibleString[n]);
+                    class05PointsPossible[i] = double.Parse(class05PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class05PointsPossibleString.Length; n++)
+                for (int i = 0; i < class05PointsPossibleString.Length; i++)
                 {
-                    class05PointsPossibleString[n] = Convert.ToString(class05PointsPossible[n]);
+                    class05PointsPossibleString[i] = Convert.ToString(class05PointsPossible[i]);
                 }
                 File.WriteAllLines("class05PointsPossible.txt", class05PointsPossibleString);
             }
@@ -648,16 +651,16 @@ namespace MyGradeBook
             if (File.Exists("class05Weights.txt"))
             {
                 class05WeightsString = File.ReadAllLines("class05Weights.txt");
-                for (int n = 0; n < class05WeightsString.Length; n++)
+                for (int i = 0; i < class05WeightsString.Length; i++)
                 {
-                    class05Weights[n] = double.Parse(class05WeightsString[n]);
+                    class05Weights[i] = double.Parse(class05WeightsString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class05WeightsString.Length; n++)
+                for (int i = 0; i < class05WeightsString.Length; i++)
                 {
-                    class05WeightsString[n] = Convert.ToString(class05Weights[n]);
+                    class05WeightsString[i] = Convert.ToString(class05Weights[i]);
                 }
                 File.WriteAllLines("class05Weights.txt", class05WeightsString);
             }
@@ -698,16 +701,16 @@ namespace MyGradeBook
             if (File.Exists("class06PointsEarned.txt"))
             {
                 class06PointsEarnedString = File.ReadAllLines("class06PointsEarned.txt");
-                for (int n = 0; n < class06PointsEarnedString.Length; n++)
+                for (int i = 0; i < class06PointsEarnedString.Length; i++)
                 {
-                    class06PointsEarned[n] = double.Parse(class06PointsEarnedString[n]);
+                    class06PointsEarned[i] = double.Parse(class06PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class06PointsEarnedString.Length; n++)
+                for (int i = 0; i < class06PointsEarnedString.Length; i++)
                 {
-                    class06PointsEarnedString[n] = Convert.ToString(class06PointsEarned[n]);
+                    class06PointsEarnedString[i] = Convert.ToString(class06PointsEarned[i]);
                 }
                 File.WriteAllLines("class06PointsEarned.txt", class06PointsEarnedString);
             }
@@ -716,16 +719,16 @@ namespace MyGradeBook
             if (File.Exists("class06PointsPossible.txt"))
             {
                 class06PointsPossibleString = File.ReadAllLines("class06PointsPossible.txt");
-                for (int n = 0; n < class06PointsPossibleString.Length; n++)
+                for (int i = 0; i < class06PointsPossibleString.Length; i++)
                 {
-                    class06PointsPossible[n] = double.Parse(class06PointsPossibleString[n]);
+                    class06PointsPossible[i] = double.Parse(class06PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class06PointsPossibleString.Length; n++)
+                for (int i = 0; i < class06PointsPossibleString.Length; i++)
                 {
-                    class06PointsPossibleString[n] = Convert.ToString(class06PointsPossible[n]);
+                    class06PointsPossibleString[i] = Convert.ToString(class06PointsPossible[i]);
                 }
                 File.WriteAllLines("class06PointsPossible.txt", class06PointsPossibleString);
             }
@@ -744,16 +747,16 @@ namespace MyGradeBook
             if (File.Exists("class06Weights.txt"))
             {
                 class06WeightsString = File.ReadAllLines("class06Weights.txt");
-                for (int n = 0; n < class06WeightsString.Length; n++)
+                for (int i = 0; i < class06WeightsString.Length; i++)
                 {
-                    class06Weights[n] = double.Parse(class06WeightsString[n]);
+                    class06Weights[i] = double.Parse(class06WeightsString[i]);
                 }
             }
             else
             {
-                for (int n = 0; n < class06WeightsString.Length; n++)
+                for (int i = 0; i < class06WeightsString.Length; i++)
                 {
-                    class06WeightsString[n] = Convert.ToString(class06Weights[n]);
+                    class06WeightsString[i] = Convert.ToString(class06Weights[i]);
                 }
                 File.WriteAllLines("class06Weights.txt", class06WeightsString);
             }
@@ -773,88 +776,173 @@ namespace MyGradeBook
 
     //END OF CLASS 6
 
+            //SysMsg
             lblSysMsg.Text = "Welcome";
         }
 
 
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  COLORING */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  COLORING */
 
-    /* COLOR SCHEMES */
-
+        /* COLOR SCHEMES */
         private void cboColorScheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             colorScheme = cboColorScheme.Text;
 
             if (colorScheme == "(default)")
             {
+                //Set colors
                 this.BackColor = default(Color);
                 this.ForeColor = default(Color);
                 btnClassSelected.BackColor = Color.LightGray;
                 btnClassNotSelected.BackColor = default(Color);
+                txtDone.BackColor = Color.LightGray;
+                txtNotDone.BackColor = Color.White;
+
+                //Set sys btn colors
                 btnSave.BackColor = btnClassNotSelected.BackColor;
                 btnClassRename.BackColor = btnClassNotSelected.BackColor;
 
+                //Set class btn colors
                 for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
                 {
                     pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
                 }
+
+                //Set selection color
+                if (selection == 1)
+                    btnClass1.BackColor = btnClassSelected.BackColor;
+                else if (selection == 2)
+                    btnClass2.BackColor = btnClassSelected.BackColor;
+                else if (selection == 3)
+                    btnClass3.BackColor = btnClassSelected.BackColor;
+                else if (selection == 4)
+                    btnClass4.BackColor = btnClassSelected.BackColor;
+                else if (selection == 5)
+                    btnClass5.BackColor = btnClassSelected.BackColor;
+                else if (selection == 6)
+                    btnClass6.BackColor = btnClassSelected.BackColor;
+
             }
 
             else if (colorScheme == "Cool")
             {
+                //Set colors
                 this.BackColor = Color.LightSkyBlue;
                 this.ForeColor = Color.DarkBlue;
                 btnClassSelected.BackColor = Color.Cyan;
                 btnClassNotSelected.BackColor = Color.LightCyan;
+                txtDone.BackColor = Color.LightGray;
+                txtNotDone.BackColor = Color.White;
+
+                //Set sys btn colors
                 btnSave.BackColor = btnClassNotSelected.BackColor;
                 btnClassRename.BackColor = btnClassNotSelected.BackColor;
 
+                //Set class btn colors
                 for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
                 {
                     pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
                 }
+
+                //Set selection color
+                if (selection == 1)
+                    btnClass1.BackColor = btnClassSelected.BackColor;
+                else if (selection == 2)
+                    btnClass2.BackColor = btnClassSelected.BackColor;
+                else if (selection == 3)
+                    btnClass3.BackColor = btnClassSelected.BackColor;
+                else if (selection == 4)
+                    btnClass4.BackColor = btnClassSelected.BackColor;
+                else if (selection == 5)
+                    btnClass5.BackColor = btnClassSelected.BackColor;
+                else if (selection == 6)
+                    btnClass6.BackColor = btnClassSelected.BackColor;
             }
 
             else if (colorScheme == "Hello Kitty")
             {
+                //Set color
                 this.BackColor = Color.LightPink;
                 this.ForeColor = Color.DarkRed;
                 btnClassSelected.BackColor = Color.HotPink;
                 btnClassNotSelected.BackColor = Color.Pink;
+                txtDone.BackColor = Color.LightGray;
+                txtNotDone.BackColor = Color.White;
+
+                //Set sys btns to colors
                 btnSave.BackColor = btnClassNotSelected.BackColor;
                 btnClassRename.BackColor = btnClassNotSelected.BackColor;
 
+                //Set class btns to colors
                 for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
                 {
                     pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
                 }
+
+                //Set selection color
+                if (selection == 1)
+                    btnClass1.BackColor = btnClassSelected.BackColor;
+                else if (selection == 2)
+                    btnClass2.BackColor = btnClassSelected.BackColor;
+                else if (selection == 3)
+                    btnClass3.BackColor = btnClassSelected.BackColor;
+                else if (selection == 4)
+                    btnClass4.BackColor = btnClassSelected.BackColor;
+                else if (selection == 5)
+                    btnClass5.BackColor = btnClassSelected.BackColor;
+                else if (selection == 6)
+                    btnClass6.BackColor = btnClassSelected.BackColor;
             }
 
             else if (colorScheme == "Midnight")
             {
+                //Set colors
                 this.BackColor = Color.Black;
                 this.ForeColor = Color.White;
                 btnClassSelected.BackColor = Color.Black;
                 btnClassNotSelected.BackColor = Color.Gray;
+                txtDone.BackColor = Color.LightGray;
+                txtNotDone.BackColor = Color.White;
+
+                //Set sys btns to colors
                 btnSave.BackColor = btnClassNotSelected.BackColor;
                 btnClassRename.BackColor = btnClassNotSelected.BackColor;
 
+                //Set colors to btns
                 for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
                 {
                     pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
                 }
+
+                //Set selection color
+                if (selection == 1)
+                    btnClass1.BackColor = btnClassSelected.BackColor;
+                else if (selection == 2)
+                    btnClass2.BackColor = btnClassSelected.BackColor;
+                else if (selection == 3)
+                    btnClass3.BackColor = btnClassSelected.BackColor;
+                else if (selection == 4)
+                    btnClass4.BackColor = btnClassSelected.BackColor;
+                else if (selection == 5)
+                    btnClass5.BackColor = btnClassSelected.BackColor;
+                else if (selection == 6)
+                    btnClass6.BackColor = btnClassSelected.BackColor;
             }
 
+            //Saves color scheme selection to text file
             File.WriteAllText("colorScheme.txt", colorScheme);
         }
 
 
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  GUI BUTTONS */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  GUI BUTTONS */
 
-    /* SAVE and CALCULATE */
-
+        /* SAVE & CALCULATE */
+        //Save first checks for selection
+        //Based on selection it will assign values to variables and perform calculations
+        //Those variable are then sent to txt files
+        //Sets txtboxes to correct color
         private void btnSave_Click(object sender, EventArgs e)
         {
 
@@ -1662,7 +1750,7 @@ namespace MyGradeBook
                 {
                     pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class06Grades[i]);
                 }
-            
+
                 //Weights to variables
                 for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
                 {
@@ -1683,7 +1771,7 @@ namespace MyGradeBook
                 //SysMsg
                 lblSysMsg.Text = "Class06 txtboxes assigned to variables";
 
-        //This writes all values to txt files
+                //This writes all values to txt files
 
                 //class06ItemNames
                 File.WriteAllLines("class06ItemNames.txt", class06ItemNames);
@@ -1716,11 +1804,147 @@ namespace MyGradeBook
                 lblSysMsg.Text = "Class06 variables saved to .txt";
 
     //END OF CLASS 6
+
             }
+
+    //Txtbox coloring
+
+            //Visuals for finished items
+            if (selection == 1)
+            {
+                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+                {
+                    if (class01ItemStatus[i] == "yes")
+                    {
+                        //IF DONE THEN SET COLOR TO TXTBOXES
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                    }
+                    else if (class01ItemStatus[i] == "no")
+                    {
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                    }
+                }
+            }
+
+            else if (selection == 2)
+                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+                {
+                    if (class02ItemStatus[i] == "yes")
+                    {
+                        //IF DONE THEN SET COLOR TO TXTBOXES
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                    }
+                    else if (class02ItemStatus[i] == "no")
+                    {
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                    }
+                }
+
+            else if (selection == 3)
+            {
+                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+                {
+                    if (class03ItemStatus[i] == "yes")
+                    {
+                        //IF DONE THEN SET COLOR TO TXTBOXES
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                    }
+                    else if (class03ItemStatus[i] == "no")
+                    {
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                    }
+                }
+            }
+
+            else if (selection == 4)
+            {
+                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+                {
+                    if (class04ItemStatus[i] == "yes")
+                    {
+                        //IF DONE THEN SET COLOR TO TXTBOXES
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                    }
+                    else if (class04ItemStatus[i] == "no")
+                    {
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                    }
+                }
+            }
+
+            else if (selection == 5)
+            {
+                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+                {
+                    if (class05ItemStatus[i] == "yes")
+                    {
+                        //IF DONE THEN SET COLOR TO TXTBOXES
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                    }
+                    else if (class05ItemStatus[i] == "no")
+                    {
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                    }
+                }
+            }
+
+            else if (selection == 6)
+            {
+                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+                {
+                    if (class06ItemStatus[i] == "yes")
+                    {
+                        //IF DONE THEN SET COLOR TO TXTBOXES
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                    }
+                    else if (class06ItemStatus[i] == "no")
+                    {
+                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                    }
+                }
+            }
+
+    //end of txtbox coloring
+
         }
 
-    /* RENAME CLASSES */
-
+        /* RENAME CLASSES */
         private void btnClassNames_Click(object sender, EventArgs e)
         {
             //To change class names
@@ -1780,12 +2004,15 @@ namespace MyGradeBook
 
 
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CLASS BUTTONS */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CLASS BUTTONS */
+        // Contains GUI color controls and reads data only, no writing or calculations */
 
-        /* Contains GUI color controls and reads data only, no writing or calculations */
-
-    /* CLASS 1 SELECTION */
-
+        /* CLASS 1 SELECTION */
+        //Pulls all data from variables(arrays)
+        //Sets btns colors
+        //Assign totals to labels
+        //Sets txtbox colors
+        //Sets selection value
         private void btnClass01_Click(object sender, EventArgs e)
         {
             //Set btn to selected
@@ -1896,6 +2123,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class01WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
+            //Visuals for finished items
+            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            {
+                if(class01ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                else if (class01ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+
             //Selection
             selection = 1;
 
@@ -1903,8 +2150,12 @@ namespace MyGradeBook
             lblSysMsg.Text = "Class01 has been selected";
         }
 
-    /* CLASS 2 SELECTION */
-
+        /* CLASS 2 SELECTION */
+        //Pulls all data from variables(arrays)
+        //Sets btns colors
+        //Assign totals to labels
+        //Sets txtbox colors
+        //Sets selection value
         private void btnClass02_Click(object sender, EventArgs e)
         {
             //Visuals
@@ -2016,6 +2267,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class02WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
+            //Visuals for finished items
+            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            {
+                if (class02ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                else if (class02ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+
             //Selection
             selection = 2;
 
@@ -2023,8 +2294,12 @@ namespace MyGradeBook
             lblSysMsg.Text = "Class02 has been selected";
         }
 
-    /* CLASS 3 SELCTION */
-
+        /* CLASS 3 SELCTION */
+        //Pulls all data from variables(arrays)
+        //Sets btns colors
+        //Assign totals to labels
+        //Sets txtbox colors
+        //Sets selection value
         private void btnClass03_Click(object sender, EventArgs e)
         {
             //Visuals
@@ -2135,14 +2410,38 @@ namespace MyGradeBook
             double weightedGradeTotal = class03WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
+            //Visuals for finished items
+            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            {
+                if (class03ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                else if (class03ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+
             //Selection
             selection = 3;
 
             lblSysMsg.Text = "Class03 has been selected";
         }
 
-    /* CLASS 4 SELECTION */
-
+        /* CLASS 4 SELECTION */
+        //Pulls all data from variables(arrays)
+        //Sets btns colors
+        //Assign totals to labels
+        //Sets txtbox colors
+        //Sets selection value
         private void btnClass04_Click(object sender, EventArgs e)
         {
             //Visuals
@@ -2253,6 +2552,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class04WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
+            //Visuals for finished items
+            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            {
+                if (class04ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                else if (class04ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+
             //Selection
             selection = 4;
 
@@ -2260,8 +2579,12 @@ namespace MyGradeBook
             lblSysMsg.Text = "Class04 has been selected";
         }
 
-    /* CLASS 5 SELECTION */
-
+        /* CLASS 5 SELECTION */
+        //Pulls all data from variables(arrays)
+        //Sets btns colors
+        //Assign totals to labels
+        //Sets txtbox colors
+        //Sets selection value
         private void btnClass05_Click(object sender, EventArgs e)
         {
             //Visuals
@@ -2372,6 +2695,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class05WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
+            //Visuals for finished items
+            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            {
+                if (class05ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                else if (class05ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+
             //Selection
             selection = 5;
 
@@ -2379,8 +2722,12 @@ namespace MyGradeBook
             lblSysMsg.Text = "Class04 has been selected";
         }
 
-    /* CLASS 6 SELECTION */
-
+        /* CLASS 6 SELECTION */
+        //Pulls all data from variables(arrays)
+        //Sets btns colors
+        //Assign totals to labels
+        //Sets txtbox colors
+        //Sets selection value
         private void btnClass06_Click(object sender, EventArgs e)
         {
             //Visuals
@@ -2490,6 +2837,26 @@ namespace MyGradeBook
             //Weighted Total
             double weightedGradeTotal = class06WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
+
+            //Visuals for finished items
+            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            {
+                if (class06ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                else if (class06ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
 
             //Selection
             selection = 6;

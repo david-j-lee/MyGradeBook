@@ -132,6 +132,8 @@
             this.pnlItems = new System.Windows.Forms.Panel();
             this.pnlClassBtns = new System.Windows.Forms.Panel();
             this.pnlWhatIfs = new System.Windows.Forms.Panel();
+            this.txtNotDone = new System.Windows.Forms.TextBox();
+            this.txtDone = new System.Windows.Forms.TextBox();
             this.pnlItems.SuspendLayout();
             this.pnlClassBtns.SuspendLayout();
             this.pnlWhatIfs.SuspendLayout();
@@ -1125,12 +1127,30 @@
             this.pnlWhatIfs.Size = new System.Drawing.Size(84, 150);
             this.pnlWhatIfs.TabIndex = 2;
             // 
+            // txtNotDone
+            // 
+            this.txtNotDone.Location = new System.Drawing.Point(528, 363);
+            this.txtNotDone.Name = "txtNotDone";
+            this.txtNotDone.Size = new System.Drawing.Size(48, 20);
+            this.txtNotDone.TabIndex = 200003;
+            this.txtNotDone.Text = "txtNotDone";
+            // 
+            // txtDone
+            // 
+            this.txtDone.Location = new System.Drawing.Point(584, 363);
+            this.txtDone.Name = "txtDone";
+            this.txtDone.Size = new System.Drawing.Size(48, 20);
+            this.txtDone.TabIndex = 200004;
+            this.txtDone.Text = "txtDone";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(638, 407);
+            this.Controls.Add(this.txtDone);
+            this.Controls.Add(this.txtNotDone);
             this.Controls.Add(this.pnlWhatIfs);
             this.Controls.Add(this.pnlClassBtns);
             this.Controls.Add(this.lblGrade);
@@ -1262,6 +1282,8 @@
         private System.Windows.Forms.Panel pnlItems;
         private System.Windows.Forms.Panel pnlClassBtns;
         private System.Windows.Forms.Panel pnlWhatIfs;
+        private System.Windows.Forms.TextBox txtNotDone;
+        private System.Windows.Forms.TextBox txtDone;
     }
 }
 
