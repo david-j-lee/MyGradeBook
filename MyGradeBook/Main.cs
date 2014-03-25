@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.IO;
 
 
-/* ******************************** */
-/* MyGradeBook                      */
-/* ******************************** */
+/* ********************************* */
+/* ********** MyGradeBook ********** */
+/* ********************************* */
 
 
 namespace MyGradeBook
@@ -23,100 +23,96 @@ namespace MyGradeBook
         const int NUMBER_OF_CLASSES = 6;
         const int NUMBER_OF_ITEMS = 10;
 
-        //Setting status to default for Class naming controls
-        int classRenameStatus = 0;
+        int classRenameStatus = 0; //Setting status to default for Class naming controls
+        int selection = 0;  //Sets class selection to none
+        string colorScheme;  //String for color scheme
 
-        //Sets class selection to none
-        int selection = 0;
-
-        //String for color scheme
-        string colorScheme;
-
+       
         //array for class names (GUI)
-        string[] classNames = new string[7];
+        string[] classNames = new string[NUMBER_OF_CLASSES + 1];
 
         //Declaring arrays for class01
-        string[] class01ItemNames = new string[21];
-        string[] class01ItemStatus = new string[21];
+        string[] class01ItemNames = new string[NUMBER_OF_ITEMS + 1];
+        string[] class01ItemStatus = new string[NUMBER_OF_ITEMS + 1];
 
-        string[] class01PointsEarnedString = new string[21];
-        string[] class01PointsPossibleString = new string[21];
-        string[] class01WeightsString = new string[21];
+        string[] class01PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class01PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class01WeightsString = new string[NUMBER_OF_ITEMS + 1];
 
-        double[] class01PointsEarned = new double[21];
-        double[] class01PointsPossible = new double[21];
+        double[] class01PointsEarned = new double[NUMBER_OF_ITEMS + 1];
+        double[] class01PointsPossible = new double[NUMBER_OF_ITEMS + 1];
         double[] class01Grades = new double[NUMBER_OF_ITEMS+1];
-        double[] class01Weights = new double[21];
+        double[] class01Weights = new double[NUMBER_OF_ITEMS + 1];
         double[] class01WeightedGrades = new double[NUMBER_OF_ITEMS+1];
 
         //Declaring arrays for class02
-        string[] class02ItemNames = new string[21];
-        string[] class02ItemStatus = new string[21];
+        string[] class02ItemNames = new string[NUMBER_OF_ITEMS + 1];
+        string[] class02ItemStatus = new string[NUMBER_OF_ITEMS + 1];
 
-        string[] class02PointsEarnedString = new string[21];
-        string[] class02PointsPossibleString = new string[21];
-        string[] class02WeightsString = new string[21];
+        string[] class02PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class02PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class02WeightsString = new string[NUMBER_OF_ITEMS + 1];
 
-        double[] class02PointsEarned = new double[21];
-        double[] class02PointsPossible = new double [21];
+        double[] class02PointsEarned = new double[NUMBER_OF_ITEMS + 1];
+        double[] class02PointsPossible = new double[NUMBER_OF_ITEMS + 1];
         double[] class02Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class02Weights = new double[21];
+        double[] class02Weights = new double[NUMBER_OF_ITEMS + 1];
         double[] class02WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
 
         //Declaring arrays for class03
-        string[] class03ItemNames = new string[21];
-        string[] class03ItemStatus = new string[21];
+        string[] class03ItemNames = new string[NUMBER_OF_ITEMS + 1];
+        string[] class03ItemStatus = new string[NUMBER_OF_ITEMS + 1];
 
-        string[] class03PointsEarnedString = new string[21];
-        string[] class03PointsPossibleString = new string[21];
-        string[] class03WeightsString = new string[21];
+        string[] class03PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class03PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class03WeightsString = new string[NUMBER_OF_ITEMS + 1];
 
-        double[] class03PointsEarned = new double[21];
-        double[] class03PointsPossible = new double[21];
+        double[] class03PointsEarned = new double[NUMBER_OF_ITEMS + 1];
+        double[] class03PointsPossible = new double[NUMBER_OF_ITEMS + 1];
         double[] class03Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class03Weights = new double[21];
+        double[] class03Weights = new double[NUMBER_OF_ITEMS + 1];
         double[] class03WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
 
         //Declaring arrays for class04
-        string[] class04ItemNames = new string[21];
-        string[] class04ItemStatus = new string[21];
+        string[] class04ItemNames = new string[NUMBER_OF_ITEMS + 1];
+        string[] class04ItemStatus = new string[NUMBER_OF_ITEMS + 1];
 
-        string[] class04PointsEarnedString = new string[21];
-        string[] class04PointsPossibleString = new string[21];
-        string[] class04WeightsString = new string[21];
+        string[] class04PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class04PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class04WeightsString = new string[NUMBER_OF_ITEMS + 1];
 
-        double[] class04PointsEarned = new double[21];
-        double[] class04PointsPossible = new double[21];
+        double[] class04PointsEarned = new double[NUMBER_OF_ITEMS + 1];
+        double[] class04PointsPossible = new double[NUMBER_OF_ITEMS + 1];
         double[] class04Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class04Weights = new double[21];
+        double[] class04Weights = new double[NUMBER_OF_ITEMS + 1];
         double[] class04WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
 
         //Declaring arrays for class05
-        string[] class05ItemNames = new string[21];
-        string[] class05ItemStatus = new string[21];
+        string[] class05ItemNames = new string[NUMBER_OF_ITEMS + 1];
+        string[] class05ItemStatus = new string[NUMBER_OF_ITEMS + 1];
 
-        string[] class05PointsEarnedString = new string[21];
-        string[] class05PointsPossibleString = new string[21];
-        string[] class05WeightsString = new string[21];
+        string[] class05PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class05PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class05WeightsString = new string[NUMBER_OF_ITEMS + 1];
 
-        double[] class05PointsEarned = new double[21];
-        double[] class05PointsPossible = new double[21];
+        double[] class05PointsEarned = new double[NUMBER_OF_ITEMS + 1];
+        double[] class05PointsPossible = new double[NUMBER_OF_ITEMS + 1];
         double[] class05Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class05Weights = new double[21];
+        double[] class05Weights = new double[NUMBER_OF_ITEMS + 1];
         double[] class05WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
 
         //Declaring arrays for class06
-        string[] class06ItemNames = new string[21];
-        string[] class06ItemStatus = new string[21];
+        string[] class06ItemNames = new string[NUMBER_OF_ITEMS + 1];
+        string[] class06ItemStatus = new string[NUMBER_OF_ITEMS + 1];
 
-        string[] class06PointsEarnedString = new string[21];
-        string[] class06PointsPossibleString = new string[21];
-        string[] class06WeightsString = new string[21];
+        string[] class06PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class06PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class06WeightsString = new string[NUMBER_OF_ITEMS + 1];
 
-        double[] class06PointsEarned = new double[21];
-        double[] class06PointsPossible = new double[21];
+        double[] class06PointsEarned = new double[NUMBER_OF_ITEMS + 1];
+        double[] class06PointsPossible = new double[NUMBER_OF_ITEMS + 1];
         double[] class06Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class06Weights = new double[21];
+        double[] class06Weights = new double[NUMBER_OF_ITEMS + 1];
         double[] class06WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
 
 
@@ -902,7 +898,7 @@ namespace MyGradeBook
                 this.ForeColor = Color.White;
                 btnClassSelected.BackColor = Color.Black;
                 btnClassNotSelected.BackColor = Color.Gray;
-                txtDone.BackColor = Color.LightGray;
+                txtDone.BackColor = Color.Gray;
                 txtNotDone.BackColor = Color.White;
 
                 //Set sys btns to colors
@@ -1982,7 +1978,7 @@ namespace MyGradeBook
                     //Hide class txtboxes
                     pnlClassBtns.Controls["txtClassName" + i].Visible = false;
                     //Assign values in txtboxes to btns
-                    classNames[1] = pnlClassBtns.Controls["txtClassName" + i].Text;
+                    classNames[i] = pnlClassBtns.Controls["txtClassName" + i].Text;
                     //Assign array values to btns
                     pnlClassBtns.Controls["btnClass" + i].Text = classNames[i];
                 }
@@ -2005,7 +2001,7 @@ namespace MyGradeBook
 
 
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CLASS BUTTONS */
-        // Contains GUI color controls and reads data only, no writing or calculations */
+        // Contains GUI color controls, reads data, only calculates totals */
 
         /* CLASS 1 SELECTION */
         //Pulls all data from variables(arrays)
