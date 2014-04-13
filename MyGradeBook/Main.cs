@@ -24,100 +24,96 @@ namespace MyGradeBook
         const int NUMBER_OF_ITEMS = 10;
 
         int classRenameStatus = 0; //Setting status to default for Class naming controls
-        int selection = 0;  //Sets class selection to none
+        int selection = -1;  //Sets class selection to none
         string colorScheme;  //String for color scheme
 
-       
+
         //array for class names (GUI)
-        string[] classNames = new string[NUMBER_OF_CLASSES + 1];
+        string[] classNames = new string[NUMBER_OF_CLASSES];
 
-        //Declaring arrays for class01
-        string[] class01ItemNames = new string[NUMBER_OF_ITEMS + 1];
-        string[] class01ItemStatus = new string[NUMBER_OF_ITEMS + 1];
+        //Declaring arrays for class0
+        string[] class0ItemNames = new string[NUMBER_OF_ITEMS];
+        string[] class0ItemStatus = new string[NUMBER_OF_ITEMS];
 
-        string[] class01PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class01PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class01WeightsString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class0PointsEarnedString = new string[NUMBER_OF_ITEMS];
+        string[] class0PointsPossibleString = new string[NUMBER_OF_ITEMS];
+        string[] class0WeightsString = new string[NUMBER_OF_ITEMS];
 
-        double[] class01PointsEarned = new double[NUMBER_OF_ITEMS + 1];
-        double[] class01PointsPossible = new double[NUMBER_OF_ITEMS + 1];
-        double[] class01Grades = new double[NUMBER_OF_ITEMS+1];
-        double[] class01Weights = new double[NUMBER_OF_ITEMS + 1];
-        double[] class01WeightedGrades = new double[NUMBER_OF_ITEMS+1];
+        double[] class0PointsEarned = new double[NUMBER_OF_ITEMS];
+        double[] class0PointsPossible = new double[NUMBER_OF_ITEMS];
+        double[] class0Grades = new double[NUMBER_OF_ITEMS];
+        double[] class0Weights = new double[NUMBER_OF_ITEMS];
+        double[] class0WeightedGrades = new double[NUMBER_OF_ITEMS];
 
-        //Declaring arrays for class02
-        string[] class02ItemNames = new string[NUMBER_OF_ITEMS + 1];
-        string[] class02ItemStatus = new string[NUMBER_OF_ITEMS + 1];
+        //Declaring arrays for class1
+        string[] class1ItemNames = new string[NUMBER_OF_ITEMS];
+        string[] class1ItemStatus = new string[NUMBER_OF_ITEMS];
 
-        string[] class02PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class02PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class02WeightsString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class1PointsEarnedString = new string[NUMBER_OF_ITEMS];
+        string[] class1PointsPossibleString = new string[NUMBER_OF_ITEMS];
+        string[] class1WeightsString = new string[NUMBER_OF_ITEMS];
 
-        double[] class02PointsEarned = new double[NUMBER_OF_ITEMS + 1];
-        double[] class02PointsPossible = new double[NUMBER_OF_ITEMS + 1];
-        double[] class02Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class02Weights = new double[NUMBER_OF_ITEMS + 1];
-        double[] class02WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
+        double[] class1PointsEarned = new double[NUMBER_OF_ITEMS];
+        double[] class1PointsPossible = new double[NUMBER_OF_ITEMS];
+        double[] class1Grades = new double[NUMBER_OF_ITEMS];
+        double[] class1Weights = new double[NUMBER_OF_ITEMS];
+        double[] class1WeightedGrades = new double[NUMBER_OF_ITEMS];
 
-        //Declaring arrays for class03
-        string[] class03ItemNames = new string[NUMBER_OF_ITEMS + 1];
-        string[] class03ItemStatus = new string[NUMBER_OF_ITEMS + 1];
+        //Declaring arrays for class2
+        string[] class2ItemNames = new string[NUMBER_OF_ITEMS];
+        string[] class2ItemStatus = new string[NUMBER_OF_ITEMS];
 
-        string[] class03PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class03PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class03WeightsString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class2PointsEarnedString = new string[NUMBER_OF_ITEMS];
+        string[] class2PointsPossibleString = new string[NUMBER_OF_ITEMS];
+        string[] class2WeightsString = new string[NUMBER_OF_ITEMS];
 
-        double[] class03PointsEarned = new double[NUMBER_OF_ITEMS + 1];
-        double[] class03PointsPossible = new double[NUMBER_OF_ITEMS + 1];
-        double[] class03Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class03Weights = new double[NUMBER_OF_ITEMS + 1];
-        double[] class03WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
+        double[] class2PointsEarned = new double[NUMBER_OF_ITEMS];
+        double[] class2PointsPossible = new double[NUMBER_OF_ITEMS];
+        double[] class2Grades = new double[NUMBER_OF_ITEMS];
+        double[] class2Weights = new double[NUMBER_OF_ITEMS];
+        double[] class2WeightedGrades = new double[NUMBER_OF_ITEMS];
 
-        //Declaring arrays for class04
-        string[] class04ItemNames = new string[NUMBER_OF_ITEMS + 1];
-        string[] class04ItemStatus = new string[NUMBER_OF_ITEMS + 1];
+        //Declaring arrays for class3
+        string[] class3ItemNames = new string[NUMBER_OF_ITEMS];
+        string[] class3ItemStatus = new string[NUMBER_OF_ITEMS];
 
-        string[] class04PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class04PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class04WeightsString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class3PointsEarnedString = new string[NUMBER_OF_ITEMS];
+        string[] class3PointsPossibleString = new string[NUMBER_OF_ITEMS];
+        string[] class3WeightsString = new string[NUMBER_OF_ITEMS];
 
-        double[] class04PointsEarned = new double[NUMBER_OF_ITEMS + 1];
-        double[] class04PointsPossible = new double[NUMBER_OF_ITEMS + 1];
-        double[] class04Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class04Weights = new double[NUMBER_OF_ITEMS + 1];
-        double[] class04WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
+        double[] class3PointsEarned = new double[NUMBER_OF_ITEMS];
+        double[] class3PointsPossible = new double[NUMBER_OF_ITEMS];
+        double[] class3Grades = new double[NUMBER_OF_ITEMS];
+        double[] class3Weights = new double[NUMBER_OF_ITEMS];
+        double[] class3WeightedGrades = new double[NUMBER_OF_ITEMS];
 
-        //Declaring arrays for class05
-        string[] class05ItemNames = new string[NUMBER_OF_ITEMS + 1];
-        string[] class05ItemStatus = new string[NUMBER_OF_ITEMS + 1];
+        //Declaring arrays for class4
+        string[] class4ItemNames = new string[NUMBER_OF_ITEMS];
+        string[] class4ItemStatus = new string[NUMBER_OF_ITEMS];
 
-        string[] class05PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class05PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class05WeightsString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class4PointsEarnedString = new string[NUMBER_OF_ITEMS];
+        string[] class4PointsPossibleString = new string[NUMBER_OF_ITEMS];
+        string[] class4WeightsString = new string[NUMBER_OF_ITEMS];
 
-        double[] class05PointsEarned = new double[NUMBER_OF_ITEMS + 1];
-        double[] class05PointsPossible = new double[NUMBER_OF_ITEMS + 1];
-        double[] class05Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class05Weights = new double[NUMBER_OF_ITEMS + 1];
-        double[] class05WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
+        double[] class4PointsEarned = new double[NUMBER_OF_ITEMS];
+        double[] class4PointsPossible = new double[NUMBER_OF_ITEMS];
+        double[] class4Grades = new double[NUMBER_OF_ITEMS];
+        double[] class4Weights = new double[NUMBER_OF_ITEMS];
+        double[] class4WeightedGrades = new double[NUMBER_OF_ITEMS];
 
-        //Declaring arrays for class06
-        string[] class06ItemNames = new string[NUMBER_OF_ITEMS + 1];
-        string[] class06ItemStatus = new string[NUMBER_OF_ITEMS + 1];
+        //Declaring arrays for class5
+        string[] class5ItemNames = new string[NUMBER_OF_ITEMS];
+        string[] class5ItemStatus = new string[NUMBER_OF_ITEMS];
 
-        string[] class06PointsEarnedString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class06PointsPossibleString = new string[NUMBER_OF_ITEMS + 1];
-        string[] class06WeightsString = new string[NUMBER_OF_ITEMS + 1];
+        string[] class5PointsEarnedString = new string[NUMBER_OF_ITEMS];
+        string[] class5PointsPossibleString = new string[NUMBER_OF_ITEMS];
+        string[] class5WeightsString = new string[NUMBER_OF_ITEMS];
 
-        double[] class06PointsEarned = new double[NUMBER_OF_ITEMS + 1];
-        double[] class06PointsPossible = new double[NUMBER_OF_ITEMS + 1];
-        double[] class06Grades = new double[NUMBER_OF_ITEMS + 1];
-        double[] class06Weights = new double[NUMBER_OF_ITEMS + 1];
-        double[] class06WeightedGrades = new double[NUMBER_OF_ITEMS + 1];
-
-
-
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  INITIALIZATION */
+        double[] class5PointsEarned = new double[NUMBER_OF_ITEMS];
+        double[] class5PointsPossible = new double[NUMBER_OF_ITEMS];
+        double[] class5Grades = new double[NUMBER_OF_ITEMS];
+        double[] class5Weights = new double[NUMBER_OF_ITEMS];
+        double[] class5WeightedGrades = new double[NUMBER_OF_ITEMS];
 
         /* SET STAGE */
         //No data is pulled at this point
@@ -127,7 +123,7 @@ namespace MyGradeBook
             InitializeComponent();
 
             //To hide txtbox for class names
-            for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
+            for (int i = 0; i < NUMBER_OF_CLASSES; i++)
             {
                 pnlClassBtns.Controls["txtClassName" + i].Visible = false;
             }
@@ -142,7 +138,7 @@ namespace MyGradeBook
             lblSysMsg.Text = "Class Input text hidden";
 
             //To show btns for class names
-            for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
+            for (int i = 0; i < NUMBER_OF_CLASSES; i++)
             {
                 pnlClassBtns.Controls["btnClass" + i].Visible = true;
             }
@@ -151,1803 +147,1850 @@ namespace MyGradeBook
             lblSysMsg.Text = "Buttons are loaded";
             lblSysMsg.Text = "GUI Loaded";
         }
-
-        /* LOAD DATA */
-        //Data is pulled from txt files and placed into arrays
-        //If txtfiles do not exsist they are created
-        //For calculated arrays the calculation is performed and stored
+        
         private void Main_Load(object sender, EventArgs e)
         {
+            Load_Color_Scheme();
+            Load_Class_Names();
+            Load_Class_0();
+            Load_Class_1();
+            Load_Class_2();
+            Load_Class_3();
+            Load_Class_4();
+            Load_Class_5();
 
-    // ########################################DATA########################################
+            //SysMsg
+            lblSysMsg.Text = "Welcome";
+        }
 
-            //colorScheme
+        /* LOAD */
+        //Checks for txt files
+        //If none exsists it creates one
+        //If one does exsist it reads it
+
+        public void Load_Color_Scheme()
+        {
+            //Looks for file, creates if does not exsist
             if (File.Exists("colorScheme.txt"))
             {
                 colorScheme = File.ReadAllText("colorScheme.txt");
             }
-            else File.WriteAllText("colorScheme.txt", colorScheme);
+            else
+            {
+                colorScheme = "(default)";
+                File.WriteAllText("colorScheme.txt", colorScheme);
+            }
 
             //Set colorScheme
             cboColorScheme.Text = colorScheme;
 
+            //SysMsg
+            lblSysMsg.Text = "colorScheme has been set";
+        }
+
+        public void Load_Class_Names()
+        {
             //classNames
             if (File.Exists("classNames.txt"))
             {
                 classNames = File.ReadAllLines("classNames.txt");
 
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
+                for (int i = 0; i < NUMBER_OF_CLASSES; i++)
                 {
                     pnlClassBtns.Controls["btnClass" + i].Text = classNames[i];
                 }
 
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
+                for (int i = 0; i < NUMBER_OF_CLASSES; i++)
                 {
                     pnlClassBtns.Controls["txtClassName" + i].Text = classNames[i];
                 }
             }
             else File.WriteAllLines("classNames.txt", classNames);
 
+            //SysMsg
             lblSysMsg.Text = "classNames have been set";
+        }
 
-
-
-    //########################################START OF CLASS 1########################################
-
-            //class01ItemNames
-            if (File.Exists("class01ItemNames.txt"))
+        public void Load_Class_0()
+        {
+            //Looks for files: if exsists read, if does not exsist create one
+            //class0ItemNames
+            if (File.Exists("class0ItemNames.txt"))
             {
-                class01ItemNames = File.ReadAllLines("class01ItemNames.txt");
+                class0ItemNames = File.ReadAllLines("class0ItemNames.txt");
             }
-            else File.WriteAllLines("class01ItemNames.txt", class01ItemNames);
+            else File.WriteAllLines("class0ItemNames.txt", class0ItemNames);
 
-            //class01ItemStatus
-            if (File.Exists("class01ItemStatus.txt"))
+            //class0ItemStatus
+            if (File.Exists("class0ItemStatus.txt"))
             {
-                class01ItemStatus = File.ReadAllLines("class01ItemStatus.txt");
+                class0ItemStatus = File.ReadAllLines("class0ItemStatus.txt");
             }
-            else File.WriteAllLines("class01ItemStatus.txt", class01ItemStatus);
-
-            //class01PointsEarned
-            if (File.Exists("class01PointsEarned.txt"))
+            else
             {
-                class01PointsEarnedString = File.ReadAllLines("class01PointsEarned.txt");
-                for (int i = 0; i < class01PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class01PointsEarned[i] = double.Parse(class01PointsEarnedString[i]);
+                    class0ItemStatus[i] = "no";
+                }
+                File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
+            } 
+
+            //class0PointsEarned
+            if (File.Exists("class0PointsEarned.txt"))
+            {
+                class0PointsEarnedString = File.ReadAllLines("class0PointsEarned.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class0PointsEarned[i] = double.Parse(class0PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class01PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class01PointsEarnedString[i] = Convert.ToString(class01PointsEarned[i]);
+                    class0PointsEarnedString[i] = Convert.ToString(class0PointsEarned[i]);
                 }
-                File.WriteAllLines("class01PointsEarned.txt", class01PointsEarnedString);
+                File.WriteAllLines("class0PointsEarned.txt", class0PointsEarnedString);
             }
 
-            //class01PointsPossible
-            if (File.Exists("class01PointsPossible.txt"))
+            //class0PointsPossible
+            if (File.Exists("class0PointsPossible.txt"))
             {
-                class01PointsPossibleString = File.ReadAllLines("class01PointsPossible.txt");
-                for (int i = 0; i < class01PointsPossibleString.Length; i++)
+                class0PointsPossibleString = File.ReadAllLines("class0PointsPossible.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class01PointsPossible[i] = double.Parse(class01PointsPossibleString[i]);
+                    class0PointsPossible[i] = double.Parse(class0PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class01PointsPossibleString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class01PointsPossibleString[i] = Convert.ToString(class01PointsPossible[i]);
+                    class0PointsPossibleString[i] = Convert.ToString(class0PointsPossible[i]);
                 }
-                File.WriteAllLines("class01PointsPossible.txt", class01PointsPossibleString);
+                File.WriteAllLines("class0PointsPossible.txt", class0PointsPossibleString);
             }
 
-            //class01Grades
-            class01Grades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class0Grades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class01PointsPossible[i] == 0)
-                    class01Grades[i] = 0;
+                if (class0PointsPossible[i] == 0)
+                    class0Grades[i] = 0;
                 else
-                    class01Grades[i] = class01PointsEarned[i] / class01PointsPossible[i];
+                    class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
             }
 
-            //class01Weights
-            if (File.Exists("class01Weights.txt"))
+            //class0Weights
+            if (File.Exists("class0Weights.txt"))
             {
-                class01WeightsString = File.ReadAllLines("class01Weights.txt");
-                for (int i = 0; i < class01WeightsString.Length; i++)
+                class0WeightsString = File.ReadAllLines("class0Weights.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class01Weights[i] = double.Parse(class01WeightsString[i]);
+                    class0Weights[i] = double.Parse(class0WeightsString[i]);
                 }
 
             }
             else
             {
-                for (int i = 0; i < class01WeightsString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class01WeightsString[i] = Convert.ToString(class01Weights[i]);
+                    class0WeightsString[i] = Convert.ToString(class0Weights[i]);
                 }
-                File.WriteAllLines("class01Weights.txt", class01WeightsString);
+                File.WriteAllLines("class0Weights.txt", class0WeightsString);
             }
 
-            //class01WeightedGrades
-            class01WeightedGrades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class0WeightedGrades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class01Weights[i] == 0)
-                    class01WeightedGrades[i] = 0;
+                if (class0Weights[i] == 0)
+                    class0WeightedGrades[i] = 0;
                 else
-                    class01WeightedGrades[i] = class01Grades[i] * class01Weights[i];
+                    class0WeightedGrades[i] = class0Grades[i] * class0Weights[i];
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 1 initialized";
+            lblSysMsg.Text = "Class 0 initialized";
+        }
 
-    //END OF CLASS 1
-
-
-
-    //########################################START OF CLASS 2########################################
-
-            //class02ItemNames
-            if (File.Exists("class02ItemNames.txt"))
+        public void Load_Class_1()
+        {
+            //class1ItemNames
+            if (File.Exists("class1ItemNames.txt"))
             {
-                class02ItemNames = File.ReadAllLines("class02ItemNames.txt");
+                class1ItemNames = File.ReadAllLines("class1ItemNames.txt");
             }
-            else File.WriteAllLines("class02ItemNames.txt", class02ItemNames);
+            else File.WriteAllLines("class1ItemNames.txt", class1ItemNames);
 
-            //class02ItemStatus
-            if (File.Exists("class02ItemStatus.txt"))
+            //class1ItemStatus
+            if (File.Exists("class1ItemStatus.txt"))
             {
-                class02ItemStatus = File.ReadAllLines("class02ItemStatus.txt");
+                class1ItemStatus = File.ReadAllLines("class1ItemStatus.txt");
             }
-            else File.WriteAllLines("class02ItemStatus.txt", class02ItemStatus);
-
-            //class02PointsEarned
-            if (File.Exists("class02PointsEarned.txt"))
+            else
             {
-                class02PointsEarnedString = File.ReadAllLines("class02PointsEarned.txt");
-                for (int i = 0; i < class02PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class02PointsEarned[i] = double.Parse(class02PointsEarnedString[i]);
+                    class1ItemStatus[i] = "no";
+                }
+                File.WriteAllLines("class1ItemStatus.txt", class1ItemStatus);
+            }
+                
+
+            //class1PointsEarned
+            if (File.Exists("class1PointsEarned.txt"))
+            {
+                class1PointsEarnedString = File.ReadAllLines("class1PointsEarned.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class1PointsEarned[i] = double.Parse(class1PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class02PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class02PointsEarnedString[i] = Convert.ToString(class02PointsEarned[i]);
+                    class1PointsEarnedString[i] = Convert.ToString(class1PointsEarned[i]);
                 }
-                File.WriteAllLines("class01PointsEarned.txt", class02PointsEarnedString);
+                File.WriteAllLines("class1PointsEarned.txt", class1PointsEarnedString);
             }
 
-            //class02PointsPossible
-            if (File.Exists("class02PointsPossible.txt"))
+            //class1PointsPossible
+            if (File.Exists("class1PointsPossible.txt"))
             {
-                class02PointsPossibleString = File.ReadAllLines("class02PointsPossible.txt");
-                for (int i = 0; i < class02PointsPossibleString.Length; i++)
+                class1PointsPossibleString = File.ReadAllLines("class1PointsPossible.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class02PointsPossible[i] = double.Parse(class02PointsPossibleString[i]);
+                    class1PointsPossible[i] = double.Parse(class1PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class02PointsPossibleString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class02PointsPossibleString[i] = Convert.ToString(class02PointsPossible[i]);
+                    class1PointsPossibleString[i] = Convert.ToString(class1PointsPossible[i]);
                 }
-                File.WriteAllLines("class02PointsPossible.txt", class02PointsPossibleString);
+                File.WriteAllLines("class1PointsPossible.txt", class1PointsPossibleString);
             }
 
-            //class02Grades
-            class02Grades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class1Grades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class02PointsPossible[i] == 0)
-                    class02Grades[i] = 0;
+                if (class1PointsPossible[i] == 0)
+                    class1Grades[i] = 0;
                 else
-                    class02Grades[i] = class02PointsEarned[i] / class02PointsPossible[i];
+                    class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
             }
 
-            //class02Weights
-            if (File.Exists("class02Weights.txt"))
+            //class1Weights
+            if (File.Exists("class1Weights.txt"))
             {
-                class02WeightsString = File.ReadAllLines("class02Weights.txt");
-                for (int i = 0; i < class02WeightsString.Length; i++)
+                class1WeightsString = File.ReadAllLines("class1Weights.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class02Weights[i] = double.Parse(class02WeightsString[i]);
+                    class1Weights[i] = double.Parse(class1WeightsString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class02WeightsString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class02WeightsString[i] = Convert.ToString(class02Weights[i]);
+                    class1WeightsString[i] = Convert.ToString(class1Weights[i]);
                 }
-                File.WriteAllLines("class02Weights.txt", class02WeightsString);
+                File.WriteAllLines("class1Weights.txt", class1WeightsString);
             }
 
-            //class02WeightedGrades
-            class02WeightedGrades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class1WeightedGrades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class02Weights[i] == 0)
-                    class02WeightedGrades[i] = 0;
+                if (class1Weights[i] == 0)
+                    class1WeightedGrades[i] = 0;
                 else
-                    class02WeightedGrades[i] = class02Grades[i] / class02Weights[i];
+                    class1WeightedGrades[i] = class1Grades[i] / class1Weights[i];
             }
-            
+
             //SysMsg
             lblSysMsg.Text = "Class 2 initialized";
+        }
 
-    //END OF CLASS 2
-
-
-
-    //########################################START OF CLASS 3########################################
-
-            //class03ItemNames
-            if (File.Exists("class03ItemNames.txt"))
+        public void Load_Class_2()
+        {
+            //class2ItemNames
+            if (File.Exists("class2ItemNames.txt"))
             {
-                class03ItemNames = File.ReadAllLines("class03ItemNames.txt");
+                class2ItemNames = File.ReadAllLines("class2ItemNames.txt");
             }
-            else File.WriteAllLines("class03ItemNames.txt", class03ItemNames);
+            else File.WriteAllLines("class2ItemNames.txt", class2ItemNames);
 
-            //class03ItemStatus
-            if (File.Exists("class03ItemStatus.txt"))
+            //class2ItemStatus
+            if (File.Exists("class2ItemStatus.txt"))
             {
-                class03ItemStatus = File.ReadAllLines("class03ItemStatus.txt");
+                class2ItemStatus = File.ReadAllLines("class2ItemStatus.txt");
             }
-            else File.WriteAllLines("class03ItemStatus.txt", class03ItemStatus);
-
-            //class03PointsEarned
-            if (File.Exists("class03PointsEarned.txt"))
+            else
             {
-                class03PointsEarnedString = File.ReadAllLines("class03PointsEarned.txt");
-                for (int i = 0; i < class03PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class03PointsEarned[i] = double.Parse(class03PointsEarnedString[i]);
+                    class2ItemStatus[i] = "no";
+                }
+                File.WriteAllLines("class2ItemStatus.txt", class2ItemStatus);
+            }
+                
+
+            //class2PointsEarned
+            if (File.Exists("class2PointsEarned.txt"))
+            {
+                class2PointsEarnedString = File.ReadAllLines("class2PointsEarned.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class2PointsEarned[i] = double.Parse(class2PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class03PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class03PointsEarnedString[i] = Convert.ToString(class03PointsEarned[i]);
+                    class2PointsEarnedString[i] = Convert.ToString(class2PointsEarned[i]);
                 }
-                File.WriteAllLines("class03PointsEarned.txt", class03PointsEarnedString);
+                File.WriteAllLines("class2PointsEarned.txt", class2PointsEarnedString);
             }
 
-            //class03PointsPossible
-            if (File.Exists("class03PointsPossible.txt"))
+            //class2PointsPossible
+            if (File.Exists("class2PointsPossible.txt"))
             {
-                class03PointsPossibleString = File.ReadAllLines("class03PointsPossible.txt");
-                for (int i = 0; i < class03PointsPossibleString.Length; i++)
+                class2PointsPossibleString = File.ReadAllLines("class2PointsPossible.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class03PointsPossible[i] = double.Parse(class03PointsPossibleString[i]);
+                    class2PointsPossible[i] = double.Parse(class2PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class03PointsPossibleString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class03PointsPossibleString[i] = Convert.ToString(class03PointsPossible[i]);
+                    class2PointsPossibleString[i] = Convert.ToString(class2PointsPossible[i]);
                 }
-                File.WriteAllLines("class03PointsPossible.txt", class03PointsPossibleString);
+                File.WriteAllLines("class2PointsPossible.txt", class2PointsPossibleString);
             }
 
-            //class03Grades
-            class03Grades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class2Grades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class03PointsPossible[i] == 0)
-                    class03Grades[i] = 0;
+                if (class2PointsPossible[i] == 0)
+                    class2Grades[i] = 0;
                 else
-                    class03Grades[i] = class03PointsEarned[i] / class03PointsPossible[i];
+                    class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
             }
 
-            //class03Weights
-            if (File.Exists("class03Weights.txt"))
+            //class2Weights
+            if (File.Exists("class2Weights.txt"))
             {
-                class03WeightsString = File.ReadAllLines("class03Weights.txt");
-                for (int i = 0; i < class03WeightsString.Length; i++)
+                class2WeightsString = File.ReadAllLines("class2Weights.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class03Weights[i] = double.Parse(class03WeightsString[i]);
+                    class2Weights[i] = double.Parse(class2WeightsString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class03WeightsString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class03WeightsString[i] = Convert.ToString(class03Weights[i]);
+                    class2WeightsString[i] = Convert.ToString(class2Weights[i]);
                 }
-                File.WriteAllLines("class03Weights.txt", class03WeightsString);
+                File.WriteAllLines("class2Weights.txt", class2WeightsString);
             }
 
-            //class03WeightedGrades
-            class03WeightedGrades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class2WeightedGrades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class03Weights[i] == 0)
-                    class03WeightedGrades[i] = 0;
+                if (class2Weights[i] == 0)
+                    class2WeightedGrades[i] = 0;
                 else
-                    class03WeightedGrades[i] = class03Grades[i] * class03Weights[i];
+                    class2WeightedGrades[i] = class2Grades[i] * class2Weights[i];
             }
 
             //SysMsg
             lblSysMsg.Text = "Class 3 initialized";
+        }
 
-    //END OF CLASS 3
-
-
-
-    //########################################START OF CLASS 4########################################
-
-            //class04ItemNames
-            if (File.Exists("class04ItemNames.txt"))
+        public void Load_Class_3()
+        {
+            //class3ItemNames
+            if (File.Exists("class3ItemNames.txt"))
             {
-                class04ItemNames = File.ReadAllLines("class04ItemNames.txt");
+                class3ItemNames = File.ReadAllLines("class3ItemNames.txt");
             }
-            else File.WriteAllLines("class04ItemNames.txt", class04ItemNames);
+            else File.WriteAllLines("class3ItemNames.txt", class3ItemNames);
 
-            //class04ItemStatus
-            if (File.Exists("class04ItemStatus.txt"))
+            //class3ItemStatus
+            if (File.Exists("class3ItemStatus.txt"))
             {
-                class04ItemStatus = File.ReadAllLines("class04ItemStatus.txt");
+                class3ItemStatus = File.ReadAllLines("class3ItemStatus.txt");
             }
-            else File.WriteAllLines("class04ItemStatus.txt", class04ItemStatus);
-
-            //class04PointsEarned
-            if (File.Exists("class04PointsEarned.txt"))
+            else
             {
-                class04PointsEarnedString = File.ReadAllLines("class04PointsEarned.txt");
-                for (int i = 0; i < class04PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class04PointsEarned[i] = double.Parse(class04PointsEarnedString[i]);
+                    class3ItemStatus[i] = "no";
+                }
+                File.WriteAllLines("class3ItemStatus.txt", class3ItemStatus);
+            }
+                
+                
+
+            //class3PointsEarned
+            if (File.Exists("class3PointsEarned.txt"))
+            {
+                class3PointsEarnedString = File.ReadAllLines("class3PointsEarned.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class3PointsEarned[i] = double.Parse(class3PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class04PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class04PointsEarnedString[i] = Convert.ToString(class04PointsEarned[i]);
+                    class3PointsEarnedString[i] = Convert.ToString(class3PointsEarned[i]);
                 }
-                File.WriteAllLines("class04PointsEarned.txt", class04PointsEarnedString);
+                File.WriteAllLines("class3PointsEarned.txt", class3PointsEarnedString);
             }
 
-            //class04PointsPossible
-            if (File.Exists("class04PointsPossible.txt"))
+            //class3PointsPossible
+            if (File.Exists("class3PointsPossible.txt"))
             {
-                class04PointsPossibleString = File.ReadAllLines("class04PointsPossible.txt");
-                for (int i = 0; i < class04PointsPossibleString.Length; i++)
+                class3PointsPossibleString = File.ReadAllLines("class3PointsPossible.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class04PointsPossible[i] = double.Parse(class04PointsPossibleString[i]);
+                    class3PointsPossible[i] = double.Parse(class3PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class04PointsPossibleString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class04PointsPossibleString[i] = Convert.ToString(class04PointsPossible[i]);
+                    class3PointsPossibleString[i] = Convert.ToString(class3PointsPossible[i]);
                 }
-                File.WriteAllLines("class04PointsPossible.txt", class04PointsPossibleString);
+                File.WriteAllLines("class3PointsPossible.txt", class3PointsPossibleString);
             }
 
-            //class04Grades
-            class04Grades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class3Grades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class04PointsPossible[i] == 0)
-                    class04Grades[i] = 0;
+                if (class3PointsPossible[i] == 0)
+                    class3Grades[i] = 0;
                 else
-                    class04Grades[i] = class04PointsEarned[i] / class04PointsPossible[i];
+                    class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
             }
 
-            //class04Weights
-            if (File.Exists("class04Weights.txt"))
+            //class3Weights
+            if (File.Exists("class3Weights.txt"))
             {
-                class04WeightsString = File.ReadAllLines("class04Weights.txt");
-                for (int i = 0; i < class04WeightsString.Length; i++)
+                class3WeightsString = File.ReadAllLines("class3Weights.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class04Weights[i] = double.Parse(class04WeightsString[i]);
+                    class3Weights[i] = double.Parse(class3WeightsString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class04WeightsString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class04WeightsString[i] = Convert.ToString(class04Weights[i]);
+                    class3WeightsString[i] = Convert.ToString(class3Weights[i]);
                 }
-                File.WriteAllLines("class04Weights.txt", class04WeightsString);
+                File.WriteAllLines("class3Weights.txt", class3WeightsString);
             }
 
-            //class04WeightedGrades
-            class04WeightedGrades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class3WeightedGrades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class04Weights[i] == 0)
-                    class04WeightedGrades[i] = 0;
+                if (class3Weights[i] == 0)
+                    class3WeightedGrades[i] = 0;
                 else
-                    class04WeightedGrades[i] = class04PointsEarned[i] / class04PointsPossible[i];
+                    class3WeightedGrades[i] = class3PointsEarned[i] / class3PointsPossible[i];
             }
 
             //SysMsg
             lblSysMsg.Text = "Class 4 initialized";
 
-    //END OF CLASS 4
+            //END OF CLASS 4
 
+        }
 
-
-    //########################################START OF CLASS 5########################################
-
-            //class05ItemNames
-            if (File.Exists("class05ItemNames.txt"))
+        public void Load_Class_4()
+        {
+            //class4ItemNames
+            if (File.Exists("class4ItemNames.txt"))
             {
-                class05ItemNames = File.ReadAllLines("class05ItemNames.txt");
+                class4ItemNames = File.ReadAllLines("class4ItemNames.txt");
             }
-            else File.WriteAllLines("class05ItemNames.txt", class05ItemNames);
+            else File.WriteAllLines("class4ItemNames.txt", class4ItemNames);
 
-            //class05ItemStatus
-            if (File.Exists("class05ItemStatus.txt"))
+            //class4ItemStatus
+            if (File.Exists("class4ItemStatus.txt"))
             {
-                class05ItemStatus = File.ReadAllLines("class05ItemStatus.txt");
+                class4ItemStatus = File.ReadAllLines("class4ItemStatus.txt");
             }
-            else File.WriteAllLines("class05ItemStatus.txt", class05ItemStatus);
-
-            //class05PointsEarned
-            if (File.Exists("class05PointsEarned.txt"))
+            else
             {
-                class05PointsEarnedString = File.ReadAllLines("class05PointsEarned.txt");
-                for (int i = 0; i < class05PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class05PointsEarned[i] = double.Parse(class05PointsEarnedString[i]);
+                    class4ItemStatus[i] = "no";
+                }
+                File.WriteAllLines("class4ItemStatus.txt", class4ItemStatus);
+            }
+                
+
+            //class4PointsEarned
+            if (File.Exists("class4PointsEarned.txt"))
+            {
+                class4PointsEarnedString = File.ReadAllLines("class4PointsEarned.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class4PointsEarned[i] = double.Parse(class4PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class05PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class05PointsEarnedString[i] = Convert.ToString(class05PointsEarned[i]);
+                    class4PointsEarnedString[i] = Convert.ToString(class4PointsEarned[i]);
                 }
-                File.WriteAllLines("class05PointsEarned.txt", class05PointsEarnedString);
+                File.WriteAllLines("class4PointsEarned.txt", class4PointsEarnedString);
             }
 
-            //class05PointsPossible
-            if (File.Exists("class05PointsPossible.txt"))
+            //class4PointsPossible
+            if (File.Exists("class4PointsPossible.txt"))
             {
-                class05PointsPossibleString = File.ReadAllLines("class05PointsPossible.txt");
-                for (int i = 0; i < class05PointsPossibleString.Length; i++)
+                class4PointsPossibleString = File.ReadAllLines("class4PointsPossible.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class05PointsPossible[i] = double.Parse(class05PointsPossibleString[i]);
+                    class4PointsPossible[i] = double.Parse(class4PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class05PointsPossibleString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class05PointsPossibleString[i] = Convert.ToString(class05PointsPossible[i]);
+                    class4PointsPossibleString[i] = Convert.ToString(class4PointsPossible[i]);
                 }
-                File.WriteAllLines("class05PointsPossible.txt", class05PointsPossibleString);
+                File.WriteAllLines("class4PointsPossible.txt", class4PointsPossibleString);
             }
 
-            //class05Grades
-            class05Grades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class4Grades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class05PointsPossible[i] == 0)
-                    class05Grades[i] = 0;
+                if (class4PointsPossible[i] == 0)
+                    class4Grades[i] = 0;
                 else
-                    class05Grades[i] = class05PointsEarned[i] / class05PointsPossible[i];
+                    class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
             }
 
-            //class05Weights
-            if (File.Exists("class05Weights.txt"))
+            //class4Weights
+            if (File.Exists("class4Weights.txt"))
             {
-                class05WeightsString = File.ReadAllLines("class05Weights.txt");
-                for (int i = 0; i < class05WeightsString.Length; i++)
+                class4WeightsString = File.ReadAllLines("class4Weights.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class05Weights[i] = double.Parse(class05WeightsString[i]);
+                    class4Weights[i] = double.Parse(class4WeightsString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class05WeightsString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class05WeightsString[i] = Convert.ToString(class05Weights[i]);
+                    class4WeightsString[i] = Convert.ToString(class4Weights[i]);
                 }
-                File.WriteAllLines("class05Weights.txt", class05WeightsString);
+                File.WriteAllLines("class4Weights.txt", class4WeightsString);
             }
 
-            //class05WeightedGrades
-            class05WeightedGrades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class4WeightedGrades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class05Weights[i] == 0)
-                    class05WeightedGrades[i] = 0;
+                if (class4Weights[i] == 0)
+                    class4WeightedGrades[i] = 0;
                 else
-                    class05WeightedGrades[i] = class05Grades[i] * class05Weights[i];
+                    class4WeightedGrades[i] = class4Grades[i] * class4Weights[i];
             }
 
             //SysMsg
             lblSysMsg.Text = "Class 5 initialized";
+        }
 
-    //END OF CLASS 5
-
-
-    //########################################START OF CLASS 6########################################
-
-            //class06ItemNames
-            if (File.Exists("class06ItemNames.txt"))
+        public void Load_Class_5()
+        {
+            //class5ItemNames
+            if (File.Exists("class5ItemNames.txt"))
             {
-                class06ItemNames = File.ReadAllLines("class06ItemNames.txt");
+                class5ItemNames = File.ReadAllLines("class5ItemNames.txt");
             }
-            else File.WriteAllLines("class06ItemNames.txt", class06ItemNames);
+            else File.WriteAllLines("class5ItemNames.txt", class5ItemNames);
 
-            //class06ItemStatus
-            if (File.Exists("class06ItemStatus.txt"))
+            //class5ItemStatus
+            if (File.Exists("class5ItemStatus.txt"))
             {
-                class06ItemStatus = File.ReadAllLines("class06ItemStatus.txt");
+                class5ItemStatus = File.ReadAllLines("class5ItemStatus.txt");
             }
-            else File.WriteAllLines("class06ItemStatus.txt", class06ItemStatus);
-
-            //class06PointsEarned
-            if (File.Exists("class06PointsEarned.txt"))
+            else
             {
-                class06PointsEarnedString = File.ReadAllLines("class06PointsEarned.txt");
-                for (int i = 0; i < class06PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class06PointsEarned[i] = double.Parse(class06PointsEarnedString[i]);
+                    class5ItemStatus[i] = "no";
+                }
+                File.WriteAllLines("class5ItemStatus.txt", class5ItemStatus);
+            }
+                
+
+            //class5PointsEarned
+            if (File.Exists("class5PointsEarned.txt"))
+            {
+                class5PointsEarnedString = File.ReadAllLines("class5PointsEarned.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class5PointsEarned[i] = double.Parse(class5PointsEarnedString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class06PointsEarnedString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class06PointsEarnedString[i] = Convert.ToString(class06PointsEarned[i]);
+                    class5PointsEarnedString[i] = Convert.ToString(class5PointsEarned[i]);
                 }
-                File.WriteAllLines("class06PointsEarned.txt", class06PointsEarnedString);
+                File.WriteAllLines("class5PointsEarned.txt", class5PointsEarnedString);
             }
 
-            //class06PointsPossible
-            if (File.Exists("class06PointsPossible.txt"))
+            //class5PointsPossible
+            if (File.Exists("class5PointsPossible.txt"))
             {
-                class06PointsPossibleString = File.ReadAllLines("class06PointsPossible.txt");
-                for (int i = 0; i < class06PointsPossibleString.Length; i++)
+                class5PointsPossibleString = File.ReadAllLines("class5PointsPossible.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class06PointsPossible[i] = double.Parse(class06PointsPossibleString[i]);
+                    class5PointsPossible[i] = double.Parse(class5PointsPossibleString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class06PointsPossibleString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class06PointsPossibleString[i] = Convert.ToString(class06PointsPossible[i]);
+                    class5PointsPossibleString[i] = Convert.ToString(class5PointsPossible[i]);
                 }
-                File.WriteAllLines("class06PointsPossible.txt", class06PointsPossibleString);
+                File.WriteAllLines("class5PointsPossible.txt", class5PointsPossibleString);
             }
 
-            //class06Grades
-            class06Grades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class5Grades
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class06PointsPossible[i] == 0)
-                    class06Grades[i] = 0;
+                if (class5PointsPossible[i] == 0)
+                    class5Grades[i] = 0;
                 else
-                    class06Grades[i] = class06PointsEarned[i] / class06PointsPossible[i];
+                    class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
             }
 
-            //class06Weights
-            if (File.Exists("class06Weights.txt"))
+            //class5Weights
+            if (File.Exists("class5Weights.txt"))
             {
-                class06WeightsString = File.ReadAllLines("class06Weights.txt");
-                for (int i = 0; i < class06WeightsString.Length; i++)
+                class5WeightsString = File.ReadAllLines("class5Weights.txt");
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class06Weights[i] = double.Parse(class06WeightsString[i]);
+                    class5Weights[i] = double.Parse(class5WeightsString[i]);
                 }
             }
             else
             {
-                for (int i = 0; i < class06WeightsString.Length; i++)
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class06WeightsString[i] = Convert.ToString(class06Weights[i]);
+                    class5WeightsString[i] = Convert.ToString(class5Weights[i]);
                 }
-                File.WriteAllLines("class06Weights.txt", class06WeightsString);
+                File.WriteAllLines("class5Weights.txt", class5WeightsString);
             }
 
-            //class06WeightedGrades
-            class06WeightedGrades[0] = 0;
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            //class5WeightedGrades
+            class5WeightedGrades[0] = 0;
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                if (class06Weights[i] == 0)
-                    class06WeightedGrades[i] = 0;
+                if (class5Weights[i] == 0)
+                    class5WeightedGrades[i] = 0;
                 else
-                    class06WeightedGrades[i] = class06Grades[i] * class06Weights[i];
+                    class5WeightedGrades[i] = class5Grades[i] * class5Weights[i];
             }
 
             //SysMsg
             lblSysMsg.Text = "Class 6 initialized";
 
-    //END OF CLASS 6
 
-            //SysMsg
-            lblSysMsg.Text = "Welcome";
+        }
+        
+        /* SAVE */
+        //Saves txtboxes to arrays 
+        //Than arrays to text files
+
+        public void Save_Class_CurrSel()
+        {
+            if (selection == 0)
+            {
+                Save_Class_0();
+            }
+
+            else if (selection == 1)
+            {
+                Save_Class_1();
+            }
+
+            else if (selection == 2)
+            {
+                Save_Class_2();
+            }
+
+            else if (selection == 3)
+            {
+                Save_Class_3();
+            }
+
+            else if (selection == 4)
+            {
+                Save_Class_4();
+            }
+
+            else if (selection == 5)
+            {
+                Save_Class_5();
+            }
         }
 
+        public void Save_Class_0()
+        {
+            //This assigns values to arrays                                
+            if (chkItemStatus0.Checked)
+                class0ItemStatus[0] = "yes";
+            else
+                class0ItemStatus[0] = "no";
+
+            if (chkItemStatus1.Checked)
+                class0ItemStatus[1] = "yes";
+            else
+                class0ItemStatus[1] = "no";
+
+            if (chkItemStatus2.Checked)
+                class0ItemStatus[2] = "yes";
+            else
+                class0ItemStatus[2] = "no";
+
+            if (chkItemStatus3.Checked)
+                class0ItemStatus[3] = "yes";
+            else
+                class0ItemStatus[3] = "no";
+
+            if (chkItemStatus4.Checked)
+                class0ItemStatus[4] = "yes";
+            else
+                class0ItemStatus[4] = "no";
+
+            if (chkItemStatus5.Checked)
+                class0ItemStatus[5] = "yes";
+            else
+                class0ItemStatus[5] = "no";
+
+            if (chkItemStatus6.Checked)
+                class0ItemStatus[6] = "yes";
+            else
+                class0ItemStatus[6] = "no";
+
+            if (chkItemStatus7.Checked)
+                class0ItemStatus[7] = "yes";
+            else
+                class0ItemStatus[7] = "no";
+
+            if (chkItemStatus8.Checked)
+                class0ItemStatus[8] = "yes";
+            else
+                class0ItemStatus[8] = "no";
+
+            if (chkItemStatus9.Checked)
+                class0ItemStatus[9] = "yes";
+            else
+                class0ItemStatus[9] = "no";
+
+            //Item Names to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
+            }
+
+            //Points Earned to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
+            }
+
+            //Points Possible to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
+            }
+
+            //Grade calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class0PointsPossible[i] != 0)
+                    class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
+                else
+                    class0Grades[i] = 0;
+            }
+            //Grade to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemGrade" + i].Text = class0Grades[i].ToString();
+            }
+
+            //Weights to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
+            }
+
+            //Weighted Grade calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0WeightedGrades[i] = class0Weights[i] * class0Grades[i];
+            }
+            //Weighted Grade to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = class0WeightedGrades[i].ToString();
+            }
+
+            //SysMsg
+            lblSysMsg.Text = "Class0 txtboxes assigned to variables";
+
+            //This writes all values to txt files
+
+            //class0ItemNames
+            File.WriteAllLines("class0ItemNames.txt", class0ItemNames);
+
+            //class0ItemStatus
+            File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
+
+            //class0PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0PointsEarnedString[i] = Convert.ToString(class0PointsEarned[i]);
+            }
+            File.WriteAllLines("class0PointsEarned.txt", class0PointsEarnedString);
+
+            //class0PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0PointsPossibleString[i] = Convert.ToString(class0PointsPossible[i]);
+            }
+            File.WriteAllLines("class0PointsPossible.txt", class0PointsPossibleString);
+
+            //class0Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0WeightsString[i] = Convert.ToString(class0Weights[i]);
+            }
+            File.WriteAllLines("class0Weights.txt", class0WeightsString);
+
+            //SysMsg
+            lblSysMsg.Text = "Class0 variables saved to .txt";
+        }
+
+        public void Save_Class_1()
+        {
+            //This assigns values to arrays
+            if (chkItemStatus0.Checked)
+                class1ItemStatus[0] = "yes";
+            else
+                class1ItemStatus[0] = "no";
+
+            if (chkItemStatus1.Checked)
+                class1ItemStatus[1] = "yes";
+            else
+                class1ItemStatus[1] = "no";
+
+            if (chkItemStatus2.Checked)
+                class1ItemStatus[2] = "yes";
+            else
+                class1ItemStatus[2] = "no";
+
+            if (chkItemStatus3.Checked)
+                class1ItemStatus[3] = "yes";
+            else
+                class1ItemStatus[3] = "no";
+
+            if (chkItemStatus4.Checked)
+                class1ItemStatus[4] = "yes";
+            else
+                class1ItemStatus[4] = "no";
+
+            if (chkItemStatus5.Checked)
+                class1ItemStatus[5] = "yes";
+            else
+                class1ItemStatus[5] = "no";
+
+            if (chkItemStatus6.Checked)
+                class1ItemStatus[6] = "yes";
+            else
+                class1ItemStatus[6] = "no";
+
+            if (chkItemStatus7.Checked)
+                class1ItemStatus[7] = "yes";
+            else
+                class1ItemStatus[7] = "no";
+
+            if (chkItemStatus8.Checked)
+                class1ItemStatus[8] = "yes";
+            else
+                class1ItemStatus[8] = "no";
+
+            if (chkItemStatus9.Checked)
+                class1ItemStatus[9] = "yes";
+            else
+                class1ItemStatus[9] = "no";
 
 
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  COLORING */
+            //Item Names to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
+            }
 
-        /* COLOR SCHEMES */
+            //Points Earned to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
+            }
+
+            //Points Possible to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
+            }
+
+            //Grade to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class1PointsPossible[i] != 0)
+                    class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
+                else
+                    class1Grades[i] = 0;
+            }
+            //Grade to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemGrade" + i].Text = class1Grades[i].ToString();
+            }
+
+            //Weights to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
+            }
+
+            //Weighted Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1WeightedGrades[i] = class1Weights[i] * class1Grades[i];
+            }
+            //Weighted Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class1WeightedGrades[i]);
+            }
+
+            //SysMsg
+            lblSysMsg.Text = "Class1 txtboxes assigned to variables";
+
+            //This writes all values to txt files
+
+            //class1ItemNames
+            File.WriteAllLines("class1ItemNames.txt", class1ItemNames);
+
+            //class1ItemStatus
+            File.WriteAllLines("class1ItemStatus.txt", class1ItemStatus);
+
+            //class1PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1PointsEarnedString[i] = Convert.ToString(class1PointsEarned[i]);
+            }
+            File.WriteAllLines("class1PointsEarned.txt", class1PointsEarnedString);
+
+            //class1PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1PointsPossibleString[i] = Convert.ToString(class1PointsPossible[i]);
+            }
+            File.WriteAllLines("class1PointsPossible.txt", class1PointsPossibleString);
+
+            //class1Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1WeightsString[i] = Convert.ToString(class1Weights[i]);
+            }
+            File.WriteAllLines("class1Weights.txt", class1WeightsString);
+
+            //SysMsg
+            lblSysMsg.Text = "Class1 variables saved to .txt";
+        }
+
+        public void Save_Class_2()
+        {
+            //This assigns values to arrays            
+            if (chkItemStatus0.Checked)
+                class2ItemStatus[0] = "yes";
+            else
+                class2ItemStatus[0] = "no";
+            
+            if (chkItemStatus1.Checked)
+                class2ItemStatus[1] = "yes";
+            else
+                class2ItemStatus[1] = "no";
+
+            if (chkItemStatus2.Checked)
+                class2ItemStatus[2] = "yes";
+            else
+                class2ItemStatus[2] = "no";
+
+            if (chkItemStatus3.Checked)
+                class2ItemStatus[3] = "yes";
+            else
+                class2ItemStatus[3] = "no";
+
+            if (chkItemStatus4.Checked)
+                class2ItemStatus[4] = "yes";
+            else
+                class2ItemStatus[4] = "no";
+
+            if (chkItemStatus5.Checked)
+                class2ItemStatus[5] = "yes";
+            else
+                class2ItemStatus[5] = "no";
+
+            if (chkItemStatus6.Checked)
+                class2ItemStatus[6] = "yes";
+            else
+                class2ItemStatus[6] = "no";
+
+            if (chkItemStatus7.Checked)
+                class2ItemStatus[7] = "yes";
+            else
+                class2ItemStatus[7] = "no";
+
+            if (chkItemStatus8.Checked)
+                class2ItemStatus[8] = "yes";
+            else
+                class2ItemStatus[8] = "no";
+
+            if (chkItemStatus9.Checked)
+                class2ItemStatus[9] = "yes";
+            else
+                class2ItemStatus[9] = "no";
+
+            //Item Names to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
+            }
+
+            //Points Earned to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
+            }
+
+            //Points Possible to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
+            }
+
+            //Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class2PointsPossible[i] != 0)
+                    class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
+                else
+                    class2Grades[i] = 0;
+            }
+            //Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class2Grades[i]);
+            }
+
+            //Weights to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
+            }
+
+            //Weighted Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2WeightedGrades[i] = class2Weights[i] * class2Grades[i];
+            }
+            //Weighted Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class2WeightedGrades[i]);
+            }
+
+            //SysMsg
+            lblSysMsg.Text = "Class2 txtboxes assigned to variables";
+
+            //This writes all values to txt files
+
+            //class2ItemNames
+            File.WriteAllLines("class2ItemNames.txt", class2ItemNames);
+
+            //class2ItemStatus
+            File.WriteAllLines("class2ItemStatus.txt", class2ItemStatus);
+
+            //class2PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2PointsEarnedString[i] = Convert.ToString(class2PointsEarned[i]);
+            }
+            File.WriteAllLines("class2PointsEarned.txt", class2PointsEarnedString);
+
+            //class2PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2PointsPossibleString[i] = Convert.ToString(class2PointsPossible[i]);
+            }
+            File.WriteAllLines("class2PointsPossible.txt", class2PointsPossibleString);
+
+            //class2Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2WeightsString[i] = Convert.ToString(class2Weights[i]);
+            }
+            File.WriteAllLines("class2Weights.txt", class2WeightsString);
+
+            //SysMsg
+            lblSysMsg.Text = "Class2 variables saved to .txt";
+        }
+
+        public void Save_Class_3()
+        {
+            //This assigns values to arrays
+            if (chkItemStatus0.Checked)
+                class3ItemStatus[0] = "yes";
+            else
+                class3ItemStatus[0] = "no";
+
+            if (chkItemStatus1.Checked)
+                class3ItemStatus[1] = "yes";
+            else
+                class3ItemStatus[1] = "no";
+
+            if (chkItemStatus2.Checked)
+                class3ItemStatus[2] = "yes";
+            else
+                class3ItemStatus[2] = "no";
+
+            if (chkItemStatus3.Checked)
+                class3ItemStatus[3] = "yes";
+            else
+                class3ItemStatus[3] = "no";
+
+            if (chkItemStatus4.Checked)
+                class3ItemStatus[4] = "yes";
+            else
+                class3ItemStatus[4] = "no";
+
+            if (chkItemStatus5.Checked)
+                class3ItemStatus[5] = "yes";
+            else
+                class3ItemStatus[5] = "no";
+
+            if (chkItemStatus6.Checked)
+                class3ItemStatus[6] = "yes";
+            else
+                class3ItemStatus[6] = "no";
+
+            if (chkItemStatus7.Checked)
+                class3ItemStatus[7] = "yes";
+            else
+                class3ItemStatus[7] = "no";
+
+            if (chkItemStatus8.Checked)
+                class3ItemStatus[8] = "yes";
+            else
+                class3ItemStatus[8] = "no";
+
+            if (chkItemStatus9.Checked)
+                class3ItemStatus[9] = "yes";
+            else
+                class3ItemStatus[9] = "no";
+
+
+            //Item Names to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
+            }
+
+            //Points Earned to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
+            }
+
+            //Points Possible to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
+            }
+
+            //Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class3PointsPossible[i] != 0)
+                    class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
+                else
+                    class3Grades[i] = 0;
+            }
+
+            //Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class3Grades[i]);
+            }
+
+            //Weights to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
+            }
+
+            //Weighted Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3WeightedGrades[i] = class3Weights[i] * class3Grades[i];
+            }
+
+            //Assign new values to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class3WeightedGrades[i]);
+            }
+
+            //SysMsg
+            lblSysMsg.Text = "Class3 txtboxes assigned to variables";
+
+            //This writes all values to txt files
+
+            //class3ItemNames
+            File.WriteAllLines("class3ItemNames.txt", class3ItemNames);
+
+            //class3ItemStatus
+            File.WriteAllLines("class3ItemStatus.txt", class3ItemStatus);
+
+            //class3PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3PointsEarnedString[i] = Convert.ToString(class3PointsEarned[i]);
+            }
+            File.WriteAllLines("class3PointsEarned.txt", class3PointsEarnedString);
+
+            //class3PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3PointsPossibleString[i] = Convert.ToString(class3PointsPossible[i]);
+            }
+            File.WriteAllLines("class3PointsPossible.txt", class3PointsPossibleString);
+
+            //class3Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3WeightsString[i] = Convert.ToString(class3Weights[i]);
+            }
+            File.WriteAllLines("class3Weights.txt", class3WeightsString);
+
+            //SysMsg
+            lblSysMsg.Text = "Class3 variables saved to .txt";
+        }
+
+        public void Save_Class_4()
+        {
+            //This assigns values to arrays
+            if (chkItemStatus0.Checked)
+                class4ItemStatus[0] = "yes";
+            else
+                class4ItemStatus[0] = "no";
+
+            if (chkItemStatus1.Checked)
+                class4ItemStatus[1] = "yes";
+            else
+                class4ItemStatus[1] = "no";
+
+            if (chkItemStatus2.Checked)
+                class4ItemStatus[2] = "yes";
+            else
+                class4ItemStatus[2] = "no";
+
+            if (chkItemStatus3.Checked)
+                class4ItemStatus[3] = "yes";
+            else
+                class4ItemStatus[3] = "no";
+
+            if (chkItemStatus4.Checked)
+                class4ItemStatus[4] = "yes";
+            else
+                class4ItemStatus[4] = "no";
+
+            if (chkItemStatus5.Checked)
+                class4ItemStatus[5] = "yes";
+            else
+                class4ItemStatus[5] = "no";
+
+            if (chkItemStatus6.Checked)
+                class4ItemStatus[6] = "yes";
+            else
+                class4ItemStatus[6] = "no";
+
+            if (chkItemStatus7.Checked)
+                class4ItemStatus[7] = "yes";
+            else
+                class4ItemStatus[7] = "no";
+
+            if (chkItemStatus8.Checked)
+                class4ItemStatus[8] = "yes";
+            else
+                class4ItemStatus[8] = "no";
+
+            if (chkItemStatus9.Checked)
+                class4ItemStatus[9] = "yes";
+            else
+                class4ItemStatus[9] = "no";
+
+
+            //Item Names to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
+            }
+
+            //Points Earned to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
+            }
+
+            //Points Possible to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
+            }
+
+            //Grades calculated to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class4PointsPossible[i] != 0)
+                    class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
+                else
+                    class4Grades[i] = 0;
+            }
+            //Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class4Grades[i]);
+            }
+
+            //Weights to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
+            }
+
+            //Weighted Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4WeightedGrades[i] = class4Weights[i] * class4Grades[i];
+            }
+            //Weighted Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class4WeightedGrades[i]);
+            }
+
+            //SysMsg
+            lblSysMsg.Text = "Class4 txtboxes assigned to variables";
+
+
+            //This writes all values to txt files
+
+            //class4ItemNames
+            File.WriteAllLines("class4ItemNames.txt", class4ItemNames);
+
+            //class4ItemStatus
+            File.WriteAllLines("class4ItemStatus.txt", class4ItemStatus);
+
+            //class4PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4PointsEarnedString[i] = Convert.ToString(class4PointsEarned[i]);
+            }
+            File.WriteAllLines("class4PointsEarned.txt", class4PointsEarnedString);
+
+            //class4PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4PointsPossibleString[i] = Convert.ToString(class4PointsPossible[i]);
+            }
+            File.WriteAllLines("class4PointsPossible.txt", class4PointsPossibleString);
+
+            //class4Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4WeightsString[i] = Convert.ToString(class4Weights[i]);
+            }
+            File.WriteAllLines("class4Weights.txt", class4WeightsString);
+
+            //SysMsg
+            lblSysMsg.Text = "Class4 variables saved to .txt";
+        }
+
+        public void Save_Class_5()
+        {
+            //This assigns values to arrays
+            if (chkItemStatus0.Checked)
+                class5ItemStatus[0] = "yes";
+            else
+                class5ItemStatus[0] = "no";
+
+            if (chkItemStatus1.Checked)
+                class5ItemStatus[1] = "yes";
+            else
+                class5ItemStatus[1] = "no";
+
+            if (chkItemStatus2.Checked)
+                class5ItemStatus[2] = "yes";
+            else
+                class5ItemStatus[2] = "no";
+
+            if (chkItemStatus3.Checked)
+                class5ItemStatus[3] = "yes";
+            else
+                class5ItemStatus[3] = "no";
+
+            if (chkItemStatus4.Checked)
+                class5ItemStatus[4] = "yes";
+            else
+                class5ItemStatus[4] = "no";
+
+            if (chkItemStatus5.Checked)
+                class5ItemStatus[5] = "yes";
+            else
+                class5ItemStatus[5] = "no";
+
+            if (chkItemStatus6.Checked)
+                class5ItemStatus[6] = "yes";
+            else
+                class5ItemStatus[6] = "no";
+
+            if (chkItemStatus7.Checked)
+                class5ItemStatus[7] = "yes";
+            else
+                class5ItemStatus[7] = "no";
+
+            if (chkItemStatus8.Checked)
+                class5ItemStatus[8] = "yes";
+            else
+                class5ItemStatus[8] = "no";
+
+            if (chkItemStatus9.Checked)
+                class5ItemStatus[9] = "yes";
+            else
+                class5ItemStatus[9] = "no";
+
+
+            //Item Names to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
+            }
+
+            //Points Earned to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
+            }
+
+            //Points Possible to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
+            }
+
+            //Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class5PointsPossible[i] != 0)
+                    class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
+                else
+                    class5Grades[i] = 0;
+            }
+            //Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class5Grades[i]);
+            }
+
+            //Weights to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
+            }
+
+            //Weighted Grades calculate to variables
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5WeightedGrades[i] = class5Weights[i] * class5Grades[i];
+            }
+            //Weighted Grades to txtboxes
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class5WeightedGrades[i]);
+            }
+
+            //SysMsg
+            lblSysMsg.Text = "Class5 txtboxes assigned to variables";
+
+            //This writes all values to txt files
+
+            //class5ItemNames
+            File.WriteAllLines("class5ItemNames.txt", class5ItemNames);
+
+            //class5ItemStatus
+            File.WriteAllLines("class5ItemStatus.txt", class5ItemStatus);
+
+            //class5PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5PointsEarnedString[i] = Convert.ToString(class5PointsEarned[i]);
+            }
+            File.WriteAllLines("class5PointsEarned.txt", class5PointsEarnedString);
+
+            //class5PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5PointsPossibleString[i] = Convert.ToString(class5PointsPossible[i]);
+            }
+            File.WriteAllLines("class5PointsPossible.txt", class5PointsPossibleString);
+
+            //class5Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class5WeightsString[i] = Convert.ToString(class5Weights[i]);
+            }
+            File.WriteAllLines("class5Weights.txt", class5WeightsString);
+
+            //SysMsg
+            lblSysMsg.Text = "Class5 variables saved to .txt";
+        }
+
+        /* GUI */
+        //Includes coloring
+        //Includes buttons
+
+        /* COLOR */
+        //Selecting, setting and saving color schemes
+        //Setting colors for finished items
+
         private void cboColorScheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             colorScheme = cboColorScheme.Text;
 
             if (colorScheme == "(default)")
             {
-                //Set colors
-                this.BackColor = default(Color);
-                this.ForeColor = default(Color);
-                btnClassSelected.BackColor = Color.LightGray;
-                btnClassNotSelected.BackColor = default(Color);
-                txtDone.BackColor = Color.LightGray;
-                txtNotDone.BackColor = Color.White;
-
-                //Set sys btn colors
-                btnSave.BackColor = btnClassNotSelected.BackColor;
-                btnClassRename.BackColor = btnClassNotSelected.BackColor;
-
-                //Set class btn colors
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
-                {
-                    pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
-                }
-
-                //Set selection color
-                if (selection == 1)
-                    btnClass1.BackColor = btnClassSelected.BackColor;
-                else if (selection == 2)
-                    btnClass2.BackColor = btnClassSelected.BackColor;
-                else if (selection == 3)
-                    btnClass3.BackColor = btnClassSelected.BackColor;
-                else if (selection == 4)
-                    btnClass4.BackColor = btnClassSelected.BackColor;
-                else if (selection == 5)
-                    btnClass5.BackColor = btnClassSelected.BackColor;
-                else if (selection == 6)
-                    btnClass6.BackColor = btnClassSelected.BackColor;
-
+                Color_Scheme_Default();
             }
 
             else if (colorScheme == "Cool")
             {
-                //Set colors
-                this.BackColor = Color.LightSkyBlue;
-                this.ForeColor = Color.DarkBlue;
-                btnClassSelected.BackColor = Color.Cyan;
-                btnClassNotSelected.BackColor = Color.LightCyan;
-                txtDone.BackColor = Color.LightGray;
-                txtNotDone.BackColor = Color.White;
-
-                //Set sys btn colors
-                btnSave.BackColor = btnClassNotSelected.BackColor;
-                btnClassRename.BackColor = btnClassNotSelected.BackColor;
-
-                //Set class btn colors
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
-                {
-                    pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
-                }
-
-                //Set selection color
-                if (selection == 1)
-                    btnClass1.BackColor = btnClassSelected.BackColor;
-                else if (selection == 2)
-                    btnClass2.BackColor = btnClassSelected.BackColor;
-                else if (selection == 3)
-                    btnClass3.BackColor = btnClassSelected.BackColor;
-                else if (selection == 4)
-                    btnClass4.BackColor = btnClassSelected.BackColor;
-                else if (selection == 5)
-                    btnClass5.BackColor = btnClassSelected.BackColor;
-                else if (selection == 6)
-                    btnClass6.BackColor = btnClassSelected.BackColor;
+                Color_Scheme_Cool();
             }
 
             else if (colorScheme == "Hello Kitty")
             {
-                //Set color
-                this.BackColor = Color.LightPink;
-                this.ForeColor = Color.DarkRed;
-                btnClassSelected.BackColor = Color.HotPink;
-                btnClassNotSelected.BackColor = Color.Pink;
-                txtDone.BackColor = Color.LightGray;
-                txtNotDone.BackColor = Color.White;
-
-                //Set sys btns to colors
-                btnSave.BackColor = btnClassNotSelected.BackColor;
-                btnClassRename.BackColor = btnClassNotSelected.BackColor;
-
-                //Set class btns to colors
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
-                {
-                    pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
-                }
-
-                //Set selection color
-                if (selection == 1)
-                    btnClass1.BackColor = btnClassSelected.BackColor;
-                else if (selection == 2)
-                    btnClass2.BackColor = btnClassSelected.BackColor;
-                else if (selection == 3)
-                    btnClass3.BackColor = btnClassSelected.BackColor;
-                else if (selection == 4)
-                    btnClass4.BackColor = btnClassSelected.BackColor;
-                else if (selection == 5)
-                    btnClass5.BackColor = btnClassSelected.BackColor;
-                else if (selection == 6)
-                    btnClass6.BackColor = btnClassSelected.BackColor;
+                Color_Scheme_HelloKitty();
             }
 
             else if (colorScheme == "Midnight")
             {
-                //Set colors
-                this.BackColor = Color.Black;
-                this.ForeColor = Color.White;
-                btnClassSelected.BackColor = Color.Black;
-                btnClassNotSelected.BackColor = Color.Gray;
-                txtDone.BackColor = Color.Gray;
-                txtNotDone.BackColor = Color.White;
-
-                //Set sys btns to colors
-                btnSave.BackColor = btnClassNotSelected.BackColor;
-                btnClassRename.BackColor = btnClassNotSelected.BackColor;
-
-                //Set colors to btns
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
-                {
-                    pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
-                }
-
-                //Set selection color
-                if (selection == 1)
-                    btnClass1.BackColor = btnClassSelected.BackColor;
-                else if (selection == 2)
-                    btnClass2.BackColor = btnClassSelected.BackColor;
-                else if (selection == 3)
-                    btnClass3.BackColor = btnClassSelected.BackColor;
-                else if (selection == 4)
-                    btnClass4.BackColor = btnClassSelected.BackColor;
-                else if (selection == 5)
-                    btnClass5.BackColor = btnClassSelected.BackColor;
-                else if (selection == 6)
-                    btnClass6.BackColor = btnClassSelected.BackColor;
+                Color_Scheme_Midnight();
             }
 
             //Saves color scheme selection to text file
+            Color_Scheme_Save();
+        }
+        
+        public void Color_Scheme_Set()
+        {
+            //Set sys btn colors
+            btnClassRename.BackColor = btnClassNotSelected.BackColor;
+
+            //Set class btn colors
+            for (int i = 0; i < NUMBER_OF_CLASSES; i++)
+            {
+                pnlClassBtns.Controls["btnClass" + i].BackColor = btnClassNotSelected.BackColor;
+            }
+
+            //Sets class selection color
+
+            if (selection == 0)
+                btnClass0.BackColor = btnClassSelected.BackColor;
+            else if (selection == 1)
+                btnClass1.BackColor = btnClassSelected.BackColor;
+            else if (selection == 2)
+                btnClass2.BackColor = btnClassSelected.BackColor;
+            else if (selection == 3)
+                btnClass3.BackColor = btnClassSelected.BackColor;
+            else if (selection == 4)
+                btnClass4.BackColor = btnClassSelected.BackColor;
+            else if (selection == 5)
+                btnClass5.BackColor = btnClassSelected.BackColor;
+        }
+        
+        public void Color_Scheme_Save()
+        {
             File.WriteAllText("colorScheme.txt", colorScheme);
         }
 
-
-
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  GUI BUTTONS */
-
-        /* SAVE & CALCULATE */
-        //Save first checks for selection
-        //Based on selection it will assign values to variables and perform calculations
-        //Those variable are then sent to txt files
-        //Sets txtboxes to correct color
-        private void btnSave_Click(object sender, EventArgs e)
+        public void Color_Scheme_Default()
         {
-
-    //START OF CLASS 1
-
-            if (selection == 1)
-            {
-                //This assigns values to arrays
-                if (chkItemStatus1.Checked)
-                    class01ItemStatus[1] = "yes";
-                else
-                    class01ItemStatus[1] = "no";
-
-                if (chkItemStatus2.Checked)
-                    class01ItemStatus[2] = "yes";
-                else
-                    class01ItemStatus[2] = "no";
-
-                if (chkItemStatus3.Checked)
-                    class01ItemStatus[3] = "yes";
-                else
-                    class01ItemStatus[3] = "no";
-
-                if (chkItemStatus4.Checked)
-                    class01ItemStatus[4] = "yes";
-                else
-                    class01ItemStatus[4] = "no";
-
-                if (chkItemStatus5.Checked)
-                    class01ItemStatus[5] = "yes";
-                else
-                    class01ItemStatus[5] = "no";
-
-                if (chkItemStatus6.Checked)
-                    class01ItemStatus[6] = "yes";
-                else
-                    class01ItemStatus[6] = "no";
-
-                if (chkItemStatus7.Checked)
-                    class01ItemStatus[7] = "yes";
-                else
-                    class01ItemStatus[7] = "no";
-
-                if (chkItemStatus8.Checked)
-                    class01ItemStatus[8] = "yes";
-                else
-                    class01ItemStatus[8] = "no";
-
-                if (chkItemStatus9.Checked)
-                    class01ItemStatus[9] = "yes";
-                else
-                    class01ItemStatus[9] = "no";
-
-                if (chkItemStatus10.Checked)
-                    class01ItemStatus[10] = "yes";
-                else
-                    class01ItemStatus[10] = "no";
-
-                //Item Names to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class01ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-                }
-
-                //Points Earned to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class01PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-                }
-
-                //Points Possible to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class01PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-                }
-
-                //Grade calculate to variables
-                for (int i = 0; i < class01Grades.Length; i++)
-                {
-                    if (class01PointsPossible[i] != 0)
-                        class01Grades[i] = class01PointsEarned[i] / class01PointsPossible[i];
-                    else
-                        class01Grades[i] = 0;
-                }
-                //Grade to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = class01Grades[i].ToString();
-                }
-
-                //Weights to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class01Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-                }
-                
-                //Weighted Grade calculate to variables
-                for (int i = 0; i < class01WeightedGrades.Length; i++)
-                {
-                    class01WeightedGrades[i] = class01Weights[i] * class01Grades[i];
-                }
-                //Weighted Grade to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = class01WeightedGrades[i].ToString();
-                }
-
-                //SysMsg
-                lblSysMsg.Text = "Class01 txtboxes assigned to variables";
-
-        //This writes all values to txt files
-
-                //class01ItemNames
-			    File.WriteAllLines("class01ItemNames.txt", class01ItemNames);
-
-                //class01ItemStatus
-                File.WriteAllLines("class01ItemStatus.txt", class01ItemStatus);
-
-                //class01PointsEarned
-                for (int n = 0; n < class01PointsEarnedString.Length; n++)
-                {
-                    class01PointsEarnedString[n] = Convert.ToString(class01PointsEarned[n]);
-                }
-                File.WriteAllLines("class01PointsEarned.txt", class01PointsEarnedString);
-
-                //class01PointsPossible
-                for (int n = 0; n < class01PointsPossibleString.Length; n++)
-                {
-                    class01PointsPossibleString[n] = Convert.ToString(class01PointsPossible[n]);
-                }
-                File.WriteAllLines("class01PointsPossible.txt", class01PointsPossibleString);
-
-                //class01Weights
-                for (int n = 0; n < class01WeightsString.Length; n++)
-                {
-                    class01WeightsString[n] = Convert.ToString(class01Weights[n]);
-                }
-                File.WriteAllLines("class01Weights.txt", class01WeightsString);
-
-                //SysMsg
-                lblSysMsg.Text = "Class01 variables saved to .txt";
-
-    //END OF CLASS 1
-
-            }
-
-    //START OF CLASS 2
-
-            else if (selection == 2)
-            {
-                //This assigns values to arrays
-                if (chkItemStatus1.Checked)
-                    class02ItemStatus[1] = "yes";
-                else
-                    class02ItemStatus[1] = "no";
-
-                if (chkItemStatus2.Checked)
-                    class02ItemStatus[2] = "yes";
-                else
-                    class02ItemStatus[2] = "no";
-
-                if (chkItemStatus3.Checked)
-                    class02ItemStatus[3] = "yes";
-                else
-                    class02ItemStatus[3] = "no";
-
-                if (chkItemStatus4.Checked)
-                    class02ItemStatus[4] = "yes";
-                else
-                    class02ItemStatus[4] = "no";
-
-                if (chkItemStatus5.Checked)
-                    class02ItemStatus[5] = "yes";
-                else
-                    class02ItemStatus[5] = "no";
-
-                if (chkItemStatus6.Checked)
-                    class02ItemStatus[6] = "yes";
-                else
-                    class02ItemStatus[6] = "no";
-
-                if (chkItemStatus7.Checked)
-                    class02ItemStatus[7] = "yes";
-                else
-                    class02ItemStatus[7] = "no";
-
-                if (chkItemStatus8.Checked)
-                    class02ItemStatus[8] = "yes";
-                else
-                    class02ItemStatus[8] = "no";
-
-                if (chkItemStatus9.Checked)
-                    class02ItemStatus[9] = "yes";
-                else
-                    class02ItemStatus[9] = "no";
-
-                if (chkItemStatus10.Checked)
-                    class02ItemStatus[10] = "yes";
-                else
-                    class02ItemStatus[10] = "no";
-
-                //Item Names to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class02ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-                }
-
-                //Points Earned to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class02PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-                }
-
-                //Points Possible to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class02PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-                }
-
-                //Grade to variables
-                for (int i = 0; i < class02Grades.Length; i++)
-                {
-                    if (class02PointsPossible[i] != 0)
-                        class02Grades[i] = class02PointsEarned[i] / class02PointsPossible[i];
-                    else
-                        class02Grades[i] = 0;
-                }
-                //Grade to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = class02Grades[i].ToString();
-                }
-
-                //Weights to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class02Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-                }
-
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < class02WeightedGrades.Length; i++)
-                {
-                    class02WeightedGrades[i] = class02Weights[i] * class02Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class02WeightedGrades[i]);
-                }
-                
-                //SysMsg
-                lblSysMsg.Text = "Class02 txtboxes assigned to variables";
-
-        //This writes all values to txt files
-
-                //class02ItemNames
-                File.WriteAllLines("class02ItemNames.txt", class02ItemNames);
-
-                //class02ItemStatus
-                File.WriteAllLines("class02ItemStatus.txt", class02ItemStatus);
-
-                //class02PointsEarned
-                for (int n = 0; n < class02PointsEarnedString.Length; n++)
-                {
-                    class02PointsEarnedString[n] = Convert.ToString(class02PointsEarned[n]);
-                }
-                File.WriteAllLines("class02PointsEarned.txt", class02PointsEarnedString);
-
-                //class02PointsPossible
-                for (int n = 0; n < class02PointsPossibleString.Length; n++)
-                {
-                    class02PointsPossibleString[n] = Convert.ToString(class02PointsPossible[n]);
-                }
-                File.WriteAllLines("class02PointsPossible.txt", class02PointsPossibleString);
-
-                //class02Weights
-                for (int n = 0; n < class02WeightsString.Length; n++)
-                {
-                    class02WeightsString[n] = Convert.ToString(class02Weights[n]);
-                }
-                File.WriteAllLines("class02Weights.txt", class02WeightsString);
-
-                //SysMsg
-                lblSysMsg.Text = "Class02 variables saved to .txt";
-
-    //END OF CLASS 2
-
-            }
-
-    //START OF CLASS 3
-
-            else if (selection == 3)
-            {
-                //This assigns values to arrays
-                if (chkItemStatus1.Checked)
-                    class03ItemStatus[1] = "yes";
-                else
-                    class03ItemStatus[1] = "no";
-
-                if (chkItemStatus2.Checked)
-                    class03ItemStatus[2] = "yes";
-                else
-                    class03ItemStatus[2] = "no";
-
-                if (chkItemStatus3.Checked)
-                    class03ItemStatus[3] = "yes";
-                else
-                    class03ItemStatus[3] = "no";
-
-                if (chkItemStatus4.Checked)
-                    class03ItemStatus[4] = "yes";
-                else
-                    class03ItemStatus[4] = "no";
-
-                if (chkItemStatus5.Checked)
-                    class03ItemStatus[5] = "yes";
-                else
-                    class03ItemStatus[5] = "no";
-
-                if (chkItemStatus6.Checked)
-                    class03ItemStatus[6] = "yes";
-                else
-                    class03ItemStatus[6] = "no";
-
-                if (chkItemStatus7.Checked)
-                    class03ItemStatus[7] = "yes";
-                else
-                    class03ItemStatus[7] = "no";
-
-                if (chkItemStatus8.Checked)
-                    class03ItemStatus[8] = "yes";
-                else
-                    class03ItemStatus[8] = "no";
-
-                if (chkItemStatus9.Checked)
-                    class03ItemStatus[9] = "yes";
-                else
-                    class03ItemStatus[9] = "no";
-
-                if (chkItemStatus10.Checked)
-                    class03ItemStatus[10] = "yes";
-                else
-                    class03ItemStatus[10] = "no";
-
-                //Item Names to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class03ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-                }
-
-                //Points Earned to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class03PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-                }
-
-                //Points Possible to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class03PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < class03Grades.Length; i++)
-                {
-                    if (class03PointsPossible[i] != 0)
-                        class03Grades[i] = class03PointsEarned[i] / class03PointsPossible[i];
-                    else
-                        class03Grades[i] = 0;
-                }
-                //Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class03Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class03Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-                }
-
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < class03WeightedGrades.Length; i++)
-                {
-                        class03WeightedGrades[i] = class03Weights[i] * class03Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class03WeightedGrades[i]);
-                }
-
-                //SysMsg
-                lblSysMsg.Text = "Class03 txtboxes assigned to variables";
-
-        //This writes all values to txt files
-
-                //class03ItemNames
-                File.WriteAllLines("class03ItemNames.txt", class03ItemNames);
-
-                //class03ItemStatus
-                File.WriteAllLines("class03ItemStatus.txt", class03ItemStatus);
-
-                //class03PointsEarned
-                for (int n = 0; n < class03PointsEarnedString.Length; n++)
-                {
-                    class03PointsEarnedString[n] = Convert.ToString(class03PointsEarned[n]);
-                }
-                File.WriteAllLines("class03PointsEarned.txt", class03PointsEarnedString);
-
-                //class03PointsPossible
-                for (int n = 0; n < class03PointsPossibleString.Length; n++)
-                {
-                    class03PointsPossibleString[n] = Convert.ToString(class03PointsPossible[n]);
-                }
-                File.WriteAllLines("class03PointsPossible.txt", class03PointsPossibleString);
-
-                //class03Weights
-                for (int n = 0; n < class03WeightsString.Length; n++)
-                {
-                    class03WeightsString[n] = Convert.ToString(class03Weights[n]);
-                }
-                File.WriteAllLines("class03Weights.txt", class03WeightsString);
-
-                //SysMsg
-                lblSysMsg.Text = "Class03 variables saved to .txt";
-
-    //END OF CLASS 3
-
-            }
-
-    //START OF CLASS 4
-
-            else if (selection == 4)
-            {
-                //This assigns values to arrays
-                if (chkItemStatus1.Checked)
-                    class04ItemStatus[1] = "yes";
-                else
-                    class04ItemStatus[1] = "no";
-
-                if (chkItemStatus2.Checked)
-                    class04ItemStatus[2] = "yes";
-                else
-                    class04ItemStatus[2] = "no";
-
-                if (chkItemStatus3.Checked)
-                    class04ItemStatus[3] = "yes";
-                else
-                    class04ItemStatus[3] = "no";
-
-                if (chkItemStatus4.Checked)
-                    class04ItemStatus[4] = "yes";
-                else
-                    class04ItemStatus[4] = "no";
-
-                if (chkItemStatus5.Checked)
-                    class04ItemStatus[5] = "yes";
-                else
-                    class04ItemStatus[5] = "no";
-
-                if (chkItemStatus6.Checked)
-                    class04ItemStatus[6] = "yes";
-                else
-                    class04ItemStatus[6] = "no";
-
-                if (chkItemStatus7.Checked)
-                    class04ItemStatus[7] = "yes";
-                else
-                    class04ItemStatus[7] = "no";
-
-                if (chkItemStatus8.Checked)
-                    class04ItemStatus[8] = "yes";
-                else
-                    class04ItemStatus[8] = "no";
-
-                if (chkItemStatus9.Checked)
-                    class04ItemStatus[9] = "yes";
-                else
-                    class04ItemStatus[9] = "no";
-
-                if (chkItemStatus10.Checked)
-                    class04ItemStatus[10] = "yes";
-                else
-                    class04ItemStatus[10] = "no";
-
-                //Item Names to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class04ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-                }
-
-                //Points Earned to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class04PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-                }
-
-                //Points Possible to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class04PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < class04Grades.Length; i++)
-                {
-                    if (class04PointsPossible[i] != 0)
-                        class04Grades[i] = class04PointsEarned[i] / class04PointsPossible[i];
-                    else
-                        class04Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class04Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class04Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-                }
-
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < class04WeightedGrades.Length; i++)
-                {
-                        class04WeightedGrades[i] = class04Weights[i] * class04Grades[i];
-                }
-
-                //Assign new values to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class04WeightedGrades[i]);
-                }
-
-                //SysMsg
-                lblSysMsg.Text = "Class04 txtboxes assigned to variables";
-
-        //This writes all values to txt files
-
-                //class04ItemNames
-                File.WriteAllLines("class04ItemNames.txt", class04ItemNames);
-
-                //class04ItemStatus
-                File.WriteAllLines("class04ItemStatus.txt", class04ItemStatus);
-
-                //class04PointsEarned
-                for (int n = 0; n < class04PointsEarnedString.Length; n++)
-                {
-                    class04PointsEarnedString[n] = Convert.ToString(class04PointsEarned[n]);
-                }
-                File.WriteAllLines("class04PointsEarned.txt", class04PointsEarnedString);
-
-                //class04PointsPossible
-                for (int n = 0; n < class04PointsPossibleString.Length; n++)
-                {
-                    class04PointsPossibleString[n] = Convert.ToString(class04PointsPossible[n]);
-                }
-                File.WriteAllLines("class04PointsPossible.txt", class04PointsPossibleString);
-
-                //class04Weights
-                for (int n = 0; n < class04WeightsString.Length; n++)
-                {
-                    class04WeightsString[n] = Convert.ToString(class04Weights[n]);
-                }
-                File.WriteAllLines("class04Weights.txt", class04WeightsString);
-
-                //SysMsg
-                lblSysMsg.Text = "Class04 variables saved to .txt";
-
-    //END OF CLASS 4
-
-            }
-
-    //START OF CLASS 5
-
-            else if (selection == 5)
-            {
-                //This assigns values to arrays
-                if (chkItemStatus1.Checked)
-                    class05ItemStatus[1] = "yes";
-                else
-                    class05ItemStatus[1] = "no";
-
-                if (chkItemStatus2.Checked)
-                    class05ItemStatus[2] = "yes";
-                else
-                    class05ItemStatus[2] = "no";
-
-                if (chkItemStatus3.Checked)
-                    class05ItemStatus[3] = "yes";
-                else
-                    class05ItemStatus[3] = "no";
-
-                if (chkItemStatus4.Checked)
-                    class05ItemStatus[4] = "yes";
-                else
-                    class05ItemStatus[4] = "no";
-
-                if (chkItemStatus5.Checked)
-                    class05ItemStatus[5] = "yes";
-                else
-                    class05ItemStatus[5] = "no";
-
-                if (chkItemStatus6.Checked)
-                    class05ItemStatus[6] = "yes";
-                else
-                    class05ItemStatus[6] = "no";
-
-                if (chkItemStatus7.Checked)
-                    class05ItemStatus[7] = "yes";
-                else
-                    class05ItemStatus[7] = "no";
-
-                if (chkItemStatus8.Checked)
-                    class05ItemStatus[8] = "yes";
-                else
-                    class05ItemStatus[8] = "no";
-
-                if (chkItemStatus9.Checked)
-                    class05ItemStatus[9] = "yes";
-                else
-                    class05ItemStatus[9] = "no";
-
-                if (chkItemStatus10.Checked)
-                    class05ItemStatus[10] = "yes";
-                else
-                    class05ItemStatus[10] = "no";
-
-                //Item Names to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class05ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-                }
-
-                //Points Earned to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class05PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-                }
-
-                //Points Possible to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class05PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-                }
-
-                //Grades calculated to variables
-                for (int i = 0; i < class05Grades.Length; i++)
-                {
-                    if (class05PointsPossible[i] != 0)
-                        class05Grades[i] = class05PointsEarned[i] / class05PointsPossible[i];
-                    else
-                        class05Grades[i] = 0;
-                }
-                //Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class05Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class05Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-                }
-
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < class05WeightedGrades.Length; i++)
-                {
-                        class05WeightedGrades[i] = class05Weights[i] * class05Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class05WeightedGrades[i]);
-                }
-
-                //SysMsg
-                lblSysMsg.Text = "Class05 txtboxes assigned to variables";
-
-
-        //This writes all values to txt files
-
-                //class05ItemNames
-                File.WriteAllLines("class05ItemNames.txt", class05ItemNames);
-
-                //class05ItemStatus
-                File.WriteAllLines("class05ItemStatus.txt", class05ItemStatus);
-
-                //class05PointsEarned
-                for (int n = 0; n < class05PointsEarnedString.Length; n++)
-                {
-                    class05PointsEarnedString[n] = Convert.ToString(class05PointsEarned[n]);
-                }
-                File.WriteAllLines("class05PointsEarned.txt", class05PointsEarnedString);
-
-                //class05PointsPossible
-                for (int n = 0; n < class05PointsPossibleString.Length; n++)
-                {
-                    class05PointsPossibleString[n] = Convert.ToString(class05PointsPossible[n]);
-                }
-                File.WriteAllLines("class05PointsPossible.txt", class05PointsPossibleString);
-
-                //class05Weights
-                for (int n = 0; n < class05WeightsString.Length; n++)
-                {
-                    class05WeightsString[n] = Convert.ToString(class05Weights[n]);
-                }
-                File.WriteAllLines("class05Weights.txt", class05WeightsString);
-
-                //SysMsg
-                lblSysMsg.Text = "Class05 variables saved to .txt";
-
-    //END OF CLASS 5
-
-            }
-
-    //START OF CLASS 6
-
-            else if (selection == 6)
-            {
-                //This assigns values to arrays
-                if (chkItemStatus1.Checked)
-                    class06ItemStatus[1] = "yes";
-                else
-                    class06ItemStatus[1] = "no";
-
-                if (chkItemStatus2.Checked)
-                    class06ItemStatus[2] = "yes";
-                else
-                    class06ItemStatus[2] = "no";
-
-                if (chkItemStatus3.Checked)
-                    class06ItemStatus[3] = "yes";
-                else
-                    class06ItemStatus[3] = "no";
-
-                if (chkItemStatus4.Checked)
-                    class06ItemStatus[4] = "yes";
-                else
-                    class06ItemStatus[4] = "no";
-
-                if (chkItemStatus5.Checked)
-                    class06ItemStatus[5] = "yes";
-                else
-                    class06ItemStatus[5] = "no";
-
-                if (chkItemStatus6.Checked)
-                    class06ItemStatus[6] = "yes";
-                else
-                    class06ItemStatus[6] = "no";
-
-                if (chkItemStatus7.Checked)
-                    class06ItemStatus[7] = "yes";
-                else
-                    class06ItemStatus[7] = "no";
-
-                if (chkItemStatus8.Checked)
-                    class06ItemStatus[8] = "yes";
-                else
-                    class06ItemStatus[8] = "no";
-
-                if (chkItemStatus9.Checked)
-                    class06ItemStatus[9] = "yes";
-                else
-                    class06ItemStatus[9] = "no";
-
-                if (chkItemStatus10.Checked)
-                    class06ItemStatus[10] = "yes";
-                else
-                    class06ItemStatus[10] = "no";
-
-                //Item Names to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class06ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-                }
-
-                //Points Earned to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class06PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-                }
-
-                //Points Possible to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class06PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < class06Grades.Length; i++)
-                {
-                    if (class06PointsPossible[i] != 0)
-                        class06Grades[i] = class06PointsEarned[i] / class06PointsPossible[i];
-                    else
-                        class06Grades[i] = 0;
-                }
-                //Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class06Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    class06Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-                }
-
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < class06WeightedGrades.Length; i++)
-                {
-                    class06WeightedGrades[i] = class06Weights[i] * class06Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class06WeightedGrades[i]);
-                }
-
-                //SysMsg
-                lblSysMsg.Text = "Class06 txtboxes assigned to variables";
-
-                //This writes all values to txt files
-
-                //class06ItemNames
-                File.WriteAllLines("class06ItemNames.txt", class06ItemNames);
-
-                //class06ItemStatus
-                File.WriteAllLines("class06ItemStatus.txt", class06ItemStatus);
-
-                //class06PointsEarned
-                for (int n = 0; n < class06PointsEarnedString.Length; n++)
-                {
-                    class06PointsEarnedString[n] = Convert.ToString(class06PointsEarned[n]);
-                }
-                File.WriteAllLines("class06PointsEarned.txt", class06PointsEarnedString);
-
-                //class06PointsPossible
-                for (int n = 0; n < class06PointsPossibleString.Length; n++)
-                {
-                    class06PointsPossibleString[n] = Convert.ToString(class06PointsPossible[n]);
-                }
-                File.WriteAllLines("class06PointsPossible.txt", class06PointsPossibleString);
-
-                //class06Weights
-                for (int n = 0; n < class06WeightsString.Length; n++)
-                {
-                    class06WeightsString[n] = Convert.ToString(class06Weights[n]);
-                }
-                File.WriteAllLines("class06Weights.txt", class06WeightsString);
-
-                //SysMsg
-                lblSysMsg.Text = "Class06 variables saved to .txt";
-
-    //END OF CLASS 6
-
-            }
-
-    //Txtbox coloring
-
-            //Visuals for finished items
-            if (selection == 1)
-            {
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    if (class01ItemStatus[i] == "yes")
-                    {
-                        //IF DONE THEN SET COLOR TO TXTBOXES
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                    }
-                    else if (class01ItemStatus[i] == "no")
-                    {
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                    }
-                }
-            }
-
-            else if (selection == 2)
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    if (class02ItemStatus[i] == "yes")
-                    {
-                        //IF DONE THEN SET COLOR TO TXTBOXES
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                    }
-                    else if (class02ItemStatus[i] == "no")
-                    {
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                    }
-                }
-
-            else if (selection == 3)
-            {
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    if (class03ItemStatus[i] == "yes")
-                    {
-                        //IF DONE THEN SET COLOR TO TXTBOXES
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                    }
-                    else if (class03ItemStatus[i] == "no")
-                    {
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                    }
-                }
-            }
-
-            else if (selection == 4)
-            {
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    if (class04ItemStatus[i] == "yes")
-                    {
-                        //IF DONE THEN SET COLOR TO TXTBOXES
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                    }
-                    else if (class04ItemStatus[i] == "no")
-                    {
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                    }
-                }
-            }
-
-            else if (selection == 5)
-            {
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    if (class05ItemStatus[i] == "yes")
-                    {
-                        //IF DONE THEN SET COLOR TO TXTBOXES
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                    }
-                    else if (class05ItemStatus[i] == "no")
-                    {
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                    }
-                }
-            }
-
-            else if (selection == 6)
-            {
-                for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-                {
-                    if (class06ItemStatus[i] == "yes")
-                    {
-                        //IF DONE THEN SET COLOR TO TXTBOXES
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                    }
-                    else if (class06ItemStatus[i] == "no")
-                    {
-                        pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                        pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                    }
-                }
-            }
-
-    //end of txtbox coloring
-
+            //Set colors
+            this.BackColor = default(Color);
+            this.ForeColor = default(Color);
+            btnClassSelected.BackColor = Color.LightGray;
+            btnClassNotSelected.BackColor = default(Color);
+            txtDone.BackColor = Color.LightGray;
+            txtNotDone.BackColor = Color.White;
+
+            //Set
+            Color_Scheme_Set();
         }
 
-        /* RENAME CLASSES */
+        public void Color_Scheme_Cool()
+        {
+            //Set colors
+            this.BackColor = Color.LightSkyBlue;
+            this.ForeColor = Color.DarkBlue;
+            btnClassSelected.BackColor = Color.Cyan;
+            btnClassNotSelected.BackColor = Color.LightCyan;
+            txtDone.BackColor = Color.LightGray;
+            txtNotDone.BackColor = Color.White;
+
+            //Set
+            Color_Scheme_Set();
+        }
+
+        public void Color_Scheme_HelloKitty()
+        {
+            //Set color
+            this.BackColor = Color.LightPink;
+            this.ForeColor = Color.DarkRed;
+            btnClassSelected.BackColor = Color.HotPink;
+            btnClassNotSelected.BackColor = Color.Pink;
+            txtDone.BackColor = Color.LightGray;
+            txtNotDone.BackColor = Color.White;
+
+            //Set
+            Color_Scheme_Set();
+        }
+
+        public void Color_Scheme_Midnight()
+        {
+            //Set colors
+            this.BackColor = Color.Black;
+            this.ForeColor = Color.White;
+            btnClassSelected.BackColor = Color.Black;
+            btnClassNotSelected.BackColor = Color.Gray;
+            txtDone.BackColor = Color.Gray;
+            txtNotDone.BackColor = Color.White;
+            
+            //Set
+            Color_Scheme_Set();
+        }
+
+        public void Fin_Items_Class_0()
+        {
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class0ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                if (class0ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+        }
+
+        public void Fin_Items_Class_1()
+        {
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class1ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                if (class1ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+        }
+
+        public void Fin_Items_Class_2()
+        {
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class2ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                if (class2ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+        }
+
+        public void Fin_Items_Class_3()
+        {
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class3ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                if (class3ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+        }
+
+        public void Fin_Items_Class_4()
+        {
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class4ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                if (class4ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+        }
+
+        public void Fin_Items_Class_5()
+        {
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                if (class5ItemStatus[i] == "yes")
+                {
+                    //IF DONE THEN SET COLOR TO TXTBOXES
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
+                }
+                if (class5ItemStatus[i] == "no")
+                {
+                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
+                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
+                }
+            }
+        }
+
+        public void Fin_Items_Class_CurrSel()
+        {
+            //Visuals for finished items
+            if (selection == 0)
+            {
+                Fin_Items_Class_0();
+            }
+
+            else if (selection == 1)
+            {
+                Fin_Items_Class_1();
+            }
+
+            else if (selection == 2)
+            {
+                Fin_Items_Class_2();
+            }
+
+            else if (selection == 3)
+            {
+                Fin_Items_Class_3();
+            }
+
+            else if (selection == 4)
+            {
+                Fin_Items_Class_4();
+            }
+
+            else if (selection == 5)
+            {
+                Fin_Items_Class_5();
+            }
+        }
+
+        /* BTNS */
+
+        //Rename Classes
         private void btnClassNames_Click(object sender, EventArgs e)
         {
             //To change class names
             if (classRenameStatus == 0)
             {
                 //Hide buttons
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
+                for (int i = 0; i < NUMBER_OF_CLASSES; i++)
                 {
                     //Hide buttons
                     pnlClassBtns.Controls["btnClass" + i].Visible = false;
@@ -1958,7 +2001,7 @@ namespace MyGradeBook
                 }
 
                 //Change text and color
-                btnClassRename.Text = "Done";
+                btnClassRename.Text = "";  //REMOVED WITH IMAGE
                 btnClassRename.BackColor = btnClassSelected.BackColor;
 
                 //Set status for next click
@@ -1971,7 +2014,7 @@ namespace MyGradeBook
             //To save new class names
             else if (classRenameStatus == 1)
             {
-                for (int i = 1; i <= NUMBER_OF_CLASSES; i++)
+                for (int i = 0; i < NUMBER_OF_CLASSES; i++)
                 {
                     //Shows class btns
                     pnlClassBtns.Controls["btnClass" + i].Visible = true;
@@ -1987,7 +2030,7 @@ namespace MyGradeBook
                 File.WriteAllLines("classNames.txt", classNames);
 
                 //Change text and color
-                btnClassRename.Text = "Rename";
+                btnClassRename.Text = ""; //REMOVED WITH IMAGE
                 btnClassRename.BackColor = btnClassNotSelected.BackColor;
 
                 //Set status for next click
@@ -1998,11 +2041,6 @@ namespace MyGradeBook
             }
         }
 
-
-
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CLASS BUTTONS */
-        // Contains GUI color controls, reads data, only calculates totals */
-
         /* CLASS 1 SELECTION */
         //Pulls all data from variables(arrays)
         //Sets btns colors
@@ -2011,139 +2049,126 @@ namespace MyGradeBook
         //Sets selection value
         private void btnClass01_Click(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
+
             //Set btn to selected
-            btnClass1.BackColor = btnClassSelected.BackColor;
+            btnClass0.BackColor = btnClassSelected.BackColor;
+            btnClass1.BackColor = btnClassNotSelected.BackColor;
             btnClass2.BackColor = btnClassNotSelected.BackColor;
             btnClass3.BackColor = btnClassNotSelected.BackColor;
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
-            btnClass6.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
-            if (class01ItemStatus[1] == "yes")
+            if (class0ItemStatus[0] == "yes")
+                chkItemStatus0.Checked = true;
+            else
+                chkItemStatus0.Checked = false;
+
+            if (class0ItemStatus[1] == "yes")
                 chkItemStatus1.Checked = true;
             else
                 chkItemStatus1.Checked = false;
 
-            if (class01ItemStatus[2] == "yes")
+            if (class0ItemStatus[2] == "yes")
                 chkItemStatus2.Checked = true;
             else
                 chkItemStatus2.Checked = false;
 
-            if (class01ItemStatus[3] == "yes")
+            if (class0ItemStatus[3] == "yes")
                 chkItemStatus3.Checked = true;
             else
                 chkItemStatus3.Checked = false;
 
-            if (class01ItemStatus[4] == "yes")
+            if (class0ItemStatus[4] == "yes")
                 chkItemStatus4.Checked = true;
             else
                 chkItemStatus4.Checked = false;
 
-            if (class01ItemStatus[5] == "yes")
+            if (class0ItemStatus[5] == "yes")
                 chkItemStatus5.Checked = true;
             else
                 chkItemStatus5.Checked = false;
 
-            if (class01ItemStatus[6] == "yes")
+            if (class0ItemStatus[6] == "yes")
                 chkItemStatus6.Checked = true;
             else
                 chkItemStatus6.Checked = false;
 
-            if (class01ItemStatus[7] == "yes")
+            if (class0ItemStatus[7] == "yes")
                 chkItemStatus7.Checked = true;
             else
                 chkItemStatus7.Checked = false;
 
-            if (class01ItemStatus[8] == "yes")
+            if (class0ItemStatus[8] == "yes")
                 chkItemStatus8.Checked = true;
             else
                 chkItemStatus8.Checked = false;
 
-            if (class01ItemStatus[9] == "yes")
+            if (class0ItemStatus[9] == "yes")
                 chkItemStatus9.Checked = true;
             else
                 chkItemStatus9.Checked = false;
 
-            if (class01ItemStatus[10] == "yes")
-                chkItemStatus10.Checked = true;
-            else
-                chkItemStatus10.Checked = false;
-
             //Item Names to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemName" + i].Text = class01ItemNames[i];
+                pnlItems.Controls["txtItemName" + i].Text = class0ItemNames[i];
             }
 
             //Points Earned to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class01PointsEarned[i]);
+                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class0PointsEarned[i]);
             }
 
             //Points Possible to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class01PointsPossible[i]);
+                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class0PointsPossible[i]);
             }
 
             //Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class01Grades[i]);
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class0Grades[i]);
             }
 
             //Weights to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class01Weights[i]);
+                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class0Weights[i]);
             }
 
             //Weighted Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class01WeightedGrades[i]);
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class0WeightedGrades[i]);
             }
 
             //Grade Total
-            if (class01PointsPossible.Sum() != 0)
+            if (class0PointsPossible.Sum() != 0)
             {
-                double gradeTotal = class01PointsEarned.Sum() / class01PointsPossible.Sum();
+                double gradeTotal = class0PointsEarned.Sum() / class0PointsPossible.Sum();
                 lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
             }
             else
+            {
                 lblGrade.Text = "Grade:  0.00%";
-
+            }
+                
             //Weighted Total
-            double weightedGradeTotal = class01WeightedGrades.Sum();
+            double weightedGradeTotal = class0WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Visuals for finished items
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-            {
-                if(class01ItemStatus[i] == "yes")
-                {
-                    //IF DONE THEN SET COLOR TO TXTBOXES
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                }
-                else if (class01ItemStatus[i] == "no")
-                {
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                }
-            }
-
             //Selection
-            selection = 1;
+            selection = 0;
+
+            //Visuals for finished items
+            Fin_Items_Class_CurrSel();
 
             //SysMsg
-            lblSysMsg.Text = "Class01 has been selected";
+            lblSysMsg.Text = "class0 has been selected";
         }
 
         /* CLASS 2 SELECTION */
@@ -2154,140 +2179,125 @@ namespace MyGradeBook
         //Sets selection value
         private void btnClass02_Click(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
+
             //Visuals
-            btnClass1.BackColor = btnClassNotSelected.BackColor;
-            btnClass2.BackColor = btnClassSelected.BackColor;
+            btnClass0.BackColor = btnClassNotSelected.BackColor;
+            btnClass1.BackColor = btnClassSelected.BackColor;
+            btnClass2.BackColor = btnClassNotSelected.BackColor;
             btnClass3.BackColor = btnClassNotSelected.BackColor;
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
-            btnClass6.BackColor = btnClassNotSelected.BackColor;
 
             //UPDATE START
-            //Setting textbox to values from array
-            if (class02ItemStatus[1] == "yes")
+            //Setting textbox to values from array                        
+            if (class1ItemStatus[0] == "yes")
+                chkItemStatus0.Checked = true;
+            else
+                chkItemStatus0.Checked = false;
+
+            if (class1ItemStatus[1] == "yes")
                 chkItemStatus1.Checked = true;
             else
                 chkItemStatus1.Checked = false;
 
-            if (class02ItemStatus[2] == "yes")
+            if (class1ItemStatus[2] == "yes")
                 chkItemStatus2.Checked = true;
             else
                 chkItemStatus2.Checked = false;
 
-            if (class02ItemStatus[3] == "yes")
+            if (class1ItemStatus[3] == "yes")
                 chkItemStatus3.Checked = true;
             else
                 chkItemStatus3.Checked = false;
 
-            if (class02ItemStatus[4] == "yes")
+            if (class1ItemStatus[4] == "yes")
                 chkItemStatus4.Checked = true;
             else
                 chkItemStatus4.Checked = false;
 
-            if (class02ItemStatus[5] == "yes")
+            if (class1ItemStatus[5] == "yes")
                 chkItemStatus5.Checked = true;
             else
                 chkItemStatus5.Checked = false;
 
-            if (class02ItemStatus[6] == "yes")
+            if (class1ItemStatus[6] == "yes")
                 chkItemStatus6.Checked = true;
             else
                 chkItemStatus6.Checked = false;
 
-            if (class02ItemStatus[7] == "yes")
+            if (class1ItemStatus[7] == "yes")
                 chkItemStatus7.Checked = true;
             else
                 chkItemStatus7.Checked = false;
 
-            if (class02ItemStatus[8] == "yes")
+            if (class1ItemStatus[8] == "yes")
                 chkItemStatus8.Checked = true;
             else
                 chkItemStatus8.Checked = false;
 
-            if (class02ItemStatus[9] == "yes")
+            if (class1ItemStatus[9] == "yes")
                 chkItemStatus9.Checked = true;
             else
                 chkItemStatus9.Checked = false;
 
-            if (class02ItemStatus[10] == "yes")
-                chkItemStatus10.Checked = true;
-            else
-                chkItemStatus10.Checked = false;
-
             //Item Names to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemName" + i].Text = class02ItemNames[i];
+                pnlItems.Controls["txtItemName" + i].Text = class1ItemNames[i];
             }
 
             //Points Earned to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class02PointsEarned[i]);
+                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class1PointsEarned[i]);
             }
 
             //Points Possible to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class02PointsPossible[i]);
+                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class1PointsPossible[i]);
             }
 
             //Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class02Grades[i]);
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class1Grades[i]);
             }
 
             //Weights to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class02Weights[i]);
+                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class1Weights[i]);
             }
 
             //Weighted Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class02WeightedGrades[i]);
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class1WeightedGrades[i]);
             }
 
             //Grade Total
-            if (class02PointsPossible.Sum() != 0)
+            if (class1PointsPossible.Sum() != 0)
             {
-                double gradeTotal = class02PointsEarned.Sum() / class02PointsPossible.Sum();
+                double gradeTotal = class1PointsEarned.Sum() / class1PointsPossible.Sum();
                 lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
             }
             else
-                lblGrade.Text = "Grades:  0.00%";
+                lblGrade.Text = "Grade:  0.00%";
 
             //Weighted Total
-            double weightedGradeTotal = class02WeightedGrades.Sum();
+            double weightedGradeTotal = class1WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Visuals for finished items
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-            {
-                if (class02ItemStatus[i] == "yes")
-                {
-                    //IF DONE THEN SET COLOR TO TXTBOXES
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                }
-                else if (class02ItemStatus[i] == "no")
-                {
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                }
-            }
-
             //Selection
-            selection = 2;
+            selection = 1;
+
+            //Visuals for finished items
+            Fin_Items_Class_CurrSel();
 
             //SysMsg
-            lblSysMsg.Text = "Class02 has been selected";
+            lblSysMsg.Text = "class1 has been selected";
         }
 
         /* CLASS 3 SELCTION */
@@ -2298,138 +2308,124 @@ namespace MyGradeBook
         //Sets selection value
         private void btnClass03_Click(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
+
             //Visuals
+            btnClass0.BackColor = btnClassNotSelected.BackColor;
             btnClass1.BackColor = btnClassNotSelected.BackColor;
-            btnClass2.BackColor = btnClassNotSelected.BackColor;
-            btnClass3.BackColor = btnClassSelected.BackColor;
+            btnClass2.BackColor = btnClassSelected.BackColor;
+            btnClass3.BackColor = btnClassNotSelected.BackColor;
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
-            btnClass6.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
-            if (class03ItemStatus[1] == "yes")
+            if (class2ItemStatus[0] == "yes")
+                chkItemStatus0.Checked = true;
+            else
+                chkItemStatus0.Checked = false;
+
+            if (class2ItemStatus[1] == "yes")
                 chkItemStatus1.Checked = true;
             else
                 chkItemStatus1.Checked = false;
 
-            if (class03ItemStatus[2] == "yes")
+            if (class2ItemStatus[2] == "yes")
                 chkItemStatus2.Checked = true;
             else
                 chkItemStatus2.Checked = false;
 
-            if (class03ItemStatus[3] == "yes")
+            if (class2ItemStatus[3] == "yes")
                 chkItemStatus3.Checked = true;
             else
                 chkItemStatus3.Checked = false;
 
-            if (class03ItemStatus[4] == "yes")
+            if (class2ItemStatus[4] == "yes")
                 chkItemStatus4.Checked = true;
             else
                 chkItemStatus4.Checked = false;
 
-            if (class03ItemStatus[5] == "yes")
+            if (class2ItemStatus[5] == "yes")
                 chkItemStatus5.Checked = true;
             else
                 chkItemStatus5.Checked = false;
 
-            if (class03ItemStatus[6] == "yes")
+            if (class2ItemStatus[6] == "yes")
                 chkItemStatus6.Checked = true;
             else
                 chkItemStatus6.Checked = false;
 
-            if (class03ItemStatus[7] == "yes")
+            if (class2ItemStatus[7] == "yes")
                 chkItemStatus7.Checked = true;
             else
                 chkItemStatus7.Checked = false;
 
-            if (class03ItemStatus[8] == "yes")
+            if (class2ItemStatus[8] == "yes")
                 chkItemStatus8.Checked = true;
             else
                 chkItemStatus8.Checked = false;
 
-            if (class03ItemStatus[9] == "yes")
+            if (class2ItemStatus[9] == "yes")
                 chkItemStatus9.Checked = true;
             else
                 chkItemStatus9.Checked = false;
 
-            if (class03ItemStatus[10] == "yes")
-                chkItemStatus10.Checked = true;
-            else
-                chkItemStatus10.Checked = false;
 
             //Item Names to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemName" + i].Text = class03ItemNames[i];
+                pnlItems.Controls["txtItemName" + i].Text = class2ItemNames[i];
             }
 
             //Points Earned to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class03PointsEarned[i]);
+                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class2PointsEarned[i]);
             }
 
             //Points Possible to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class03PointsPossible[i]);
+                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class2PointsPossible[i]);
             }
 
             //Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class03Grades[i]);
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class2Grades[i]);
             }
 
             //Weights to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class03Weights[i]);
+                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class2Weights[i]);
             }
 
             //Weighted Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class03WeightedGrades[i]);
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class2WeightedGrades[i]);
             }
 
             //Grade Total
-            if (class03PointsPossible.Sum() != 0)
+            if (class2PointsPossible.Sum() != 0)
             {
-                double gradeTotal = class03PointsEarned.Sum() / class03PointsPossible.Sum();
+                double gradeTotal = class2PointsEarned.Sum() / class2PointsPossible.Sum();
                 lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
             }
             else
                 lblWeightedGrade.Text = "Grade:  0.00%";
 
             //Weighted Total
-            double weightedGradeTotal = class03WeightedGrades.Sum();
+            double weightedGradeTotal = class2WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Visuals for finished items
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-            {
-                if (class03ItemStatus[i] == "yes")
-                {
-                    //IF DONE THEN SET COLOR TO TXTBOXES
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                }
-                else if (class03ItemStatus[i] == "no")
-                {
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                }
-            }
-
             //Selection
-            selection = 3;
+            selection = 2;
 
-            lblSysMsg.Text = "Class03 has been selected";
+            //Visuals for finished items
+            Fin_Items_Class_CurrSel();
+
+            lblSysMsg.Text = "class2 has been selected";
         }
 
         /* CLASS 4 SELECTION */
@@ -2440,139 +2436,124 @@ namespace MyGradeBook
         //Sets selection value
         private void btnClass04_Click(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
+
             //Visuals
+            btnClass0.BackColor = btnClassNotSelected.BackColor;
             btnClass1.BackColor = btnClassNotSelected.BackColor;
             btnClass2.BackColor = btnClassNotSelected.BackColor;
-            btnClass3.BackColor = btnClassNotSelected.BackColor;
-            btnClass4.BackColor = btnClassSelected.BackColor;
+            btnClass3.BackColor = btnClassSelected.BackColor;
+            btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
-            btnClass6.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
-            if (class04ItemStatus[1] == "yes")
+            if (class3ItemStatus[0] == "yes")
+                chkItemStatus0.Checked = true;
+            else
+                chkItemStatus0.Checked = false;
+
+            if (class3ItemStatus[1] == "yes")
                 chkItemStatus1.Checked = true;
             else
                 chkItemStatus1.Checked = false;
 
-            if (class04ItemStatus[2] == "yes")
+            if (class3ItemStatus[2] == "yes")
                 chkItemStatus2.Checked = true;
             else
                 chkItemStatus2.Checked = false;
 
-            if (class04ItemStatus[3] == "yes")
+            if (class3ItemStatus[3] == "yes")
                 chkItemStatus3.Checked = true;
             else
                 chkItemStatus3.Checked = false;
 
-            if (class04ItemStatus[4] == "yes")
+            if (class3ItemStatus[4] == "yes")
                 chkItemStatus4.Checked = true;
             else
                 chkItemStatus4.Checked = false;
 
-            if (class04ItemStatus[5] == "yes")
+            if (class3ItemStatus[5] == "yes")
                 chkItemStatus5.Checked = true;
             else
                 chkItemStatus5.Checked = false;
 
-            if (class04ItemStatus[6] == "yes")
+            if (class3ItemStatus[6] == "yes")
                 chkItemStatus6.Checked = true;
             else
                 chkItemStatus6.Checked = false;
 
-            if (class04ItemStatus[7] == "yes")
+            if (class3ItemStatus[7] == "yes")
                 chkItemStatus7.Checked = true;
             else
                 chkItemStatus7.Checked = false;
 
-            if (class04ItemStatus[8] == "yes")
+            if (class3ItemStatus[8] == "yes")
                 chkItemStatus8.Checked = true;
             else
                 chkItemStatus8.Checked = false;
 
-            if (class04ItemStatus[9] == "yes")
+            if (class3ItemStatus[9] == "yes")
                 chkItemStatus9.Checked = true;
             else
                 chkItemStatus9.Checked = false;
 
-            if (class04ItemStatus[10] == "yes")
-                chkItemStatus10.Checked = true;
-            else
-                chkItemStatus10.Checked = false;
-
             //Item Names to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemName" + i].Text = class04ItemNames[i];
+                pnlItems.Controls["txtItemName" + i].Text = class3ItemNames[i];
             }
 
             //Points Earned to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class04PointsEarned[i]);
+                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class3PointsEarned[i]);
             }
 
             //Points Possible to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class04PointsPossible[i]);
+                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class3PointsPossible[i]);
             }
 
             //Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class04Grades[i]);
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class3Grades[i]);
             }
 
             //Weights to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class04Weights[i]);
+                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class3Weights[i]);
             }
 
             //Weighted Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class04WeightedGrades[i]);
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class3WeightedGrades[i]);
             }
 
             //Grade Total
-            if (class04PointsPossible.Sum() != 0)
+            if (class3PointsPossible.Sum() != 0)
             {
-                double gradeTotal = class04PointsEarned.Sum() / class04PointsPossible.Sum();
+                double gradeTotal = class3PointsEarned.Sum() / class3PointsPossible.Sum();
                 lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
             }
             else
                 lblWeightedGrade.Text = "Grade:  0.00%";
 
             //Weighted Total
-            double weightedGradeTotal = class04WeightedGrades.Sum();
+            double weightedGradeTotal = class3WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Visuals for finished items
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-            {
-                if (class04ItemStatus[i] == "yes")
-                {
-                    //IF DONE THEN SET COLOR TO TXTBOXES
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                }
-                else if (class04ItemStatus[i] == "no")
-                {
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                }
-            }
-
             //Selection
-            selection = 4;
+            selection = 3;
+
+            //Visuals for finished items
+            Fin_Items_Class_CurrSel();
 
             //SysMsg
-            lblSysMsg.Text = "Class04 has been selected";
+            lblSysMsg.Text = "class3 has been selected";
         }
 
         /* CLASS 5 SELECTION */
@@ -2583,139 +2564,125 @@ namespace MyGradeBook
         //Sets selection value
         private void btnClass05_Click(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
+
             //Visuals
+            btnClass0.BackColor = btnClassNotSelected.BackColor;
             btnClass1.BackColor = btnClassNotSelected.BackColor;
             btnClass2.BackColor = btnClassNotSelected.BackColor;
             btnClass3.BackColor = btnClassNotSelected.BackColor;
-            btnClass4.BackColor = btnClassNotSelected.BackColor;
-            btnClass5.BackColor = btnClassSelected.BackColor;
-            btnClass6.BackColor = btnClassNotSelected.BackColor;
+            btnClass4.BackColor = btnClassSelected.BackColor;
+            btnClass5.BackColor = btnClassNotSelected.BackColor;
 
             //Setting textbox to values from array
-            if (class05ItemStatus[1] == "yes")
+            if (class4ItemStatus[0] == "yes")
+                chkItemStatus0.Checked = true;
+            else
+                chkItemStatus0.Checked = false;
+
+            if (class4ItemStatus[1] == "yes")
                 chkItemStatus1.Checked = true;
             else
                 chkItemStatus1.Checked = false;
 
-            if (class05ItemStatus[2] == "yes")
+            if (class4ItemStatus[2] == "yes")
                 chkItemStatus2.Checked = true;
             else
                 chkItemStatus2.Checked = false;
 
-            if (class05ItemStatus[3] == "yes")
+            if (class4ItemStatus[3] == "yes")
                 chkItemStatus3.Checked = true;
             else
                 chkItemStatus3.Checked = false;
 
-            if (class05ItemStatus[4] == "yes")
+            if (class4ItemStatus[4] == "yes")
                 chkItemStatus4.Checked = true;
             else
                 chkItemStatus4.Checked = false;
 
-            if (class05ItemStatus[5] == "yes")
+            if (class4ItemStatus[5] == "yes")
                 chkItemStatus5.Checked = true;
             else
                 chkItemStatus5.Checked = false;
 
-            if (class05ItemStatus[6] == "yes")
+            if (class4ItemStatus[6] == "yes")
                 chkItemStatus6.Checked = true;
             else
                 chkItemStatus6.Checked = false;
 
-            if (class05ItemStatus[7] == "yes")
+            if (class4ItemStatus[7] == "yes")
                 chkItemStatus7.Checked = true;
             else
                 chkItemStatus7.Checked = false;
 
-            if (class05ItemStatus[8] == "yes")
+            if (class4ItemStatus[8] == "yes")
                 chkItemStatus8.Checked = true;
             else
                 chkItemStatus8.Checked = false;
 
-            if (class05ItemStatus[9] == "yes")
+            if (class4ItemStatus[9] == "yes")
                 chkItemStatus9.Checked = true;
             else
                 chkItemStatus9.Checked = false;
 
-            if (class05ItemStatus[10] == "yes")
-                chkItemStatus10.Checked = true;
-            else
-                chkItemStatus10.Checked = false;
 
             //Item Names to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemName" + i].Text = class05ItemNames[i];
+                pnlItems.Controls["txtItemName" + i].Text = class4ItemNames[i];
             }
 
             //Points Earned to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class05PointsEarned[i]);
+                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class4PointsEarned[i]);
             }
 
             //Points Possible to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class05PointsPossible[i]);
+                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class4PointsPossible[i]);
             }
 
             //Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class05Grades[i]);
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class4Grades[i]);
             }
 
             //Weights to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class05Weights[i]);
+                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class4Weights[i]);
             }
 
             //Weighted Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class05WeightedGrades[i]);
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class4WeightedGrades[i]);
             }
 
             //Grade Total
-            if (class05PointsPossible.Sum() != 0)
+            if (class4PointsPossible.Sum() != 0)
             {
-                double gradeTotal = class05PointsEarned.Sum() / class05PointsPossible.Sum();
+                double gradeTotal = class4PointsEarned.Sum() / class4PointsPossible.Sum();
                 lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
             }
             else
                 lblWeightedGrade.Text = "Grade:  0.00%";
 
             //Weighted Total
-            double weightedGradeTotal = class05WeightedGrades.Sum();
+            double weightedGradeTotal = class4WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Visuals for finished items
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-            {
-                if (class05ItemStatus[i] == "yes")
-                {
-                    //IF DONE THEN SET COLOR TO TXTBOXES
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                }
-                else if (class05ItemStatus[i] == "no")
-                {
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                }
-            }
-
             //Selection
-            selection = 5;
+            selection = 4;
+
+            //Visuals for finished items
+            Fin_Items_Class_CurrSel();
 
             //SysMsg
-            lblSysMsg.Text = "Class04 has been selected";
+            lblSysMsg.Text = "class4 has been selected";
         }
 
         /* CLASS 6 SELECTION */
@@ -2726,139 +2693,130 @@ namespace MyGradeBook
         //Sets selection value
         private void btnClass06_Click(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
+
             //Visuals
+            btnClass0.BackColor = btnClassNotSelected.BackColor;
             btnClass1.BackColor = btnClassNotSelected.BackColor;
             btnClass2.BackColor = btnClassNotSelected.BackColor;
             btnClass3.BackColor = btnClassNotSelected.BackColor;
             btnClass4.BackColor = btnClassNotSelected.BackColor;
-            btnClass5.BackColor = btnClassNotSelected.BackColor;
-            btnClass6.BackColor = btnClassSelected.BackColor;
+            btnClass5.BackColor = btnClassSelected.BackColor;
 
             //Setting textbox to values from array
-            if (class06ItemStatus[1] == "yes")
+            if (class5ItemStatus[0] == "yes")
+                chkItemStatus0.Checked = true;
+            else
+                chkItemStatus0.Checked = false;
+
+            if (class5ItemStatus[1] == "yes")
                 chkItemStatus1.Checked = true;
             else
                 chkItemStatus1.Checked = false;
 
-            if (class06ItemStatus[2] == "yes")
+            if (class5ItemStatus[2] == "yes")
                 chkItemStatus2.Checked = true;
             else
                 chkItemStatus2.Checked = false;
 
-            if (class06ItemStatus[3] == "yes")
+            if (class5ItemStatus[3] == "yes")
                 chkItemStatus3.Checked = true;
             else
                 chkItemStatus3.Checked = false;
 
-            if (class06ItemStatus[4] == "yes")
+            if (class5ItemStatus[4] == "yes")
                 chkItemStatus4.Checked = true;
             else
                 chkItemStatus4.Checked = false;
 
-            if (class06ItemStatus[5] == "yes")
+            if (class5ItemStatus[5] == "yes")
                 chkItemStatus5.Checked = true;
             else
                 chkItemStatus5.Checked = false;
 
-            if (class06ItemStatus[6] == "yes")
+            if (class5ItemStatus[6] == "yes")
                 chkItemStatus6.Checked = true;
             else
                 chkItemStatus6.Checked = false;
 
-            if (class06ItemStatus[7] == "yes")
+            if (class5ItemStatus[7] == "yes")
                 chkItemStatus7.Checked = true;
             else
                 chkItemStatus7.Checked = false;
 
-            if (class06ItemStatus[8] == "yes")
+            if (class5ItemStatus[8] == "yes")
                 chkItemStatus8.Checked = true;
             else
                 chkItemStatus8.Checked = false;
 
-            if (class06ItemStatus[9] == "yes")
+            if (class5ItemStatus[9] == "yes")
                 chkItemStatus9.Checked = true;
             else
                 chkItemStatus9.Checked = false;
 
-            if (class06ItemStatus[10] == "yes")
-                chkItemStatus10.Checked = true;
-            else
-                chkItemStatus10.Checked = false;
 
             //Item Names to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemName" + i].Text = class06ItemNames[i];
+                pnlItems.Controls["txtItemName" + i].Text = class5ItemNames[i];
             }
 
             //Points Earned to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class06PointsEarned[i]);
+                pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class5PointsEarned[i]);
             }
 
             //Points Possible to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class06PointsPossible[i]);
+                pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class5PointsPossible[i]);
             }
 
             //Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class06Grades[i]);
+                pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class5Grades[i]);
             }
 
             //Weights to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class06Weights[i]);
+                pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class5Weights[i]);
             }
 
             //Weighted Grades to txtboxes
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
-                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class06WeightedGrades[i]);
+                pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class5WeightedGrades[i]);
             }
 
             //Grade Total
-            if (class06PointsPossible.Sum() != 0)
+            if (class5PointsPossible.Sum() != 0)
             {
-                double gradeTotal = class06PointsEarned.Sum() / class06PointsPossible.Sum();
+                double gradeTotal = class5PointsEarned.Sum() / class5PointsPossible.Sum();
                 lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
             }
             else
                 lblWeightedGrade.Text = "Grade:  0.00%";
 
             //Weighted Total
-            double weightedGradeTotal = class06WeightedGrades.Sum();
+            double weightedGradeTotal = class5WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Visuals for finished items
-            for (int i = 1; i <= NUMBER_OF_ITEMS; i++)
-            {
-                if (class06ItemStatus[i] == "yes")
-                {
-                    //IF DONE THEN SET COLOR TO TXTBOXES
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtDone.BackColor;
-                }
-                else if (class06ItemStatus[i] == "no")
-                {
-                    pnlItems.Controls["txtItemName" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemEarned" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemPossible" + i].BackColor = txtNotDone.BackColor;
-                    pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
-                }
-            }
-
             //Selection
-            selection = 6;
+            selection = 5;
+
+            //Visuals for finished items
+            Fin_Items_Class_CurrSel();
 
             //SysMsg
-            lblSysMsg.Text = "Class06 has been selected";
+            lblSysMsg.Text = "class5 has been selected";
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Save_Class_CurrSel();
         }
     }
 }
