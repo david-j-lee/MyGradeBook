@@ -14,6 +14,24 @@ using System.IO;
 /* ********** MyGradeBook ********** */
 /* ********************************* */
 
+// QUESTIONS TO PROFESSSOR:
+
+// Using for with checkboxes
+// Event procedures for many similar controls
+// 
+
+
+// TO BE COMPLETED:
+
+// What ifs
+// Events on checkboxes
+// Saving sys msgs to txt file with append
+// Visuals for grade
+// Better grade labels
+// Clear all, clear selection button
+// About us
+//
+
 
 namespace MyGradeBook
 {
