@@ -248,7 +248,7 @@ namespace MyGradeBook
             {
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class0ItemStatus[i] = "no";
+                    class0ItemStatus[i] = "no"; // Why not just ""? (This is also a test for pulls)
                 }
                 File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
             } 
