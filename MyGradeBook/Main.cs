@@ -24,10 +24,7 @@ using System.IO;
 // TO BE COMPLETED:
 
 // What ifs
-<<<<<<< HEAD
-=======
 // Events on checkboxes
->>>>>>> d0a8556a6810bebac1de56eaba04c462a8a5d22e
 // Saving sys msgs to txt file with append
 // Visuals for grade
 // Better grade labels
