@@ -134,6 +134,8 @@
             this.pnlWhatIfs = new System.Windows.Forms.Panel();
             this.txtNotDone = new System.Windows.Forms.TextBox();
             this.txtDone = new System.Windows.Forms.TextBox();
+            this.btnClearCurrent = new System.Windows.Forms.Button();
+            this.btnClearAll = new System.Windows.Forms.Button();
             this.pnlItems.SuspendLayout();
             this.pnlClassBtns.SuspendLayout();
             this.pnlWhatIfs.SuspendLayout();
@@ -1173,12 +1175,34 @@
             this.txtDone.TabIndex = 200004;
             this.txtDone.Text = "txtDone";
             // 
+            // btnClearCurrent
+            // 
+            this.btnClearCurrent.Location = new System.Drawing.Point(481, 184);
+            this.btnClearCurrent.Name = "btnClearCurrent";
+            this.btnClearCurrent.Size = new System.Drawing.Size(75, 23);
+            this.btnClearCurrent.TabIndex = 200005;
+            this.btnClearCurrent.Text = "Clear";
+            this.btnClearCurrent.UseVisualStyleBackColor = true;
+            this.btnClearCurrent.Click += new System.EventHandler(this.btnClearCurrent_Click);
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Location = new System.Drawing.Point(481, 210);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(75, 23);
+            this.btnClearAll.TabIndex = 200006;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(567, 407);
+            this.Controls.Add(this.btnClearAll);
+            this.Controls.Add(this.btnClearCurrent);
             this.Controls.Add(this.txtDone);
             this.Controls.Add(this.txtNotDone);
             this.Controls.Add(this.pnlWhatIfs);
@@ -1313,6 +1337,8 @@
         private System.Windows.Forms.Panel pnlWhatIfs;
         private System.Windows.Forms.TextBox txtNotDone;
         private System.Windows.Forms.TextBox txtDone;
+        private System.Windows.Forms.Button btnClearCurrent;
+        private System.Windows.Forms.Button btnClearAll;
     }
 }
 
