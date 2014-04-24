@@ -24,6 +24,10 @@ using System.IO;
 // TO BE COMPLETED:
 
 // What ifs
+<<<<<<< HEAD
+=======
+// Events on checkboxes
+>>>>>>> d0a8556a6810bebac1de56eaba04c462a8a5d22e
 // Saving sys msgs to txt file with append
 // Visuals for grade
 // Better grade labels
@@ -246,7 +250,7 @@ namespace MyGradeBook
             {
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class0ItemStatus[i] = "no";
+                    class0ItemStatus[i] = "no"; // Why not just ""? (This is also a test for pulls)
                 }
                 File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
             }
