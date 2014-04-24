@@ -14,6 +14,23 @@ using System.IO;
 /* ********** MyGradeBook ********** */
 /* ********************************* */
 
+// QUESTIONS TO PROFESSSOR:
+
+// Using for with checkboxes
+// Event procedures for many similar controls
+// 
+
+
+// TO BE COMPLETED:
+
+// What ifs
+// Saving sys msgs to txt file with append
+// Visuals for grade
+// Better grade labels
+// Clear all, clear selection button
+// About us
+//
+
 
 namespace MyGradeBook
 {
@@ -26,7 +43,6 @@ namespace MyGradeBook
         int classRenameStatus = 0; //Setting status to default for Class naming controls
         int selection = -1;  //Sets class selection to none
         string colorScheme;  //String for color scheme
-
 
         //array for class names (GUI)
         string[] classNames = new string[NUMBER_OF_CLASSES];
@@ -147,7 +163,8 @@ namespace MyGradeBook
             lblSysMsg.Text = "Buttons are loaded";
             lblSysMsg.Text = "GUI Loaded";
         }
-        
+
+        /* LOADS DATA */
         private void Main_Load(object sender, EventArgs e)
         {
             Load_Color_Scheme();
@@ -163,11 +180,12 @@ namespace MyGradeBook
             lblSysMsg.Text = "Welcome";
         }
 
-        /* LOAD */
+        /* **** **** METHODS **** **** */
+
+        /* LOAD METHODS */
         //Checks for txt files
         //If none exsists it creates one
         //If one does exsist it reads it
-
         public void Load_Color_Scheme()
         {
             //Looks for file, creates if does not exsist
@@ -187,7 +205,6 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "colorScheme has been set";
         }
-
         public void Load_Class_Names()
         {
             //classNames
@@ -210,7 +227,6 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "classNames have been set";
         }
-
         public void Load_Class_0()
         {
             //Looks for files: if exsists read, if does not exsist create one
@@ -233,7 +249,7 @@ namespace MyGradeBook
                     class0ItemStatus[i] = "no";
                 }
                 File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
-            } 
+            }
 
             //class0PointsEarned
             if (File.Exists("class0PointsEarned.txt"))
@@ -311,7 +327,6 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "Class 0 initialized";
         }
-
         public void Load_Class_1()
         {
             //class1ItemNames
@@ -334,7 +349,7 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class1ItemStatus.txt", class1ItemStatus);
             }
-                
+
 
             //class1PointsEarned
             if (File.Exists("class1PointsEarned.txt"))
@@ -411,7 +426,6 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "Class 2 initialized";
         }
-
         public void Load_Class_2()
         {
             //class2ItemNames
@@ -434,7 +448,7 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class2ItemStatus.txt", class2ItemStatus);
             }
-                
+
 
             //class2PointsEarned
             if (File.Exists("class2PointsEarned.txt"))
@@ -511,7 +525,6 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "Class 3 initialized";
         }
-
         public void Load_Class_3()
         {
             //class3ItemNames
@@ -534,8 +547,8 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class3ItemStatus.txt", class3ItemStatus);
             }
-                
-                
+
+
 
             //class3PointsEarned
             if (File.Exists("class3PointsEarned.txt"))
@@ -615,7 +628,6 @@ namespace MyGradeBook
             //END OF CLASS 4
 
         }
-
         public void Load_Class_4()
         {
             //class4ItemNames
@@ -638,7 +650,7 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class4ItemStatus.txt", class4ItemStatus);
             }
-                
+
 
             //class4PointsEarned
             if (File.Exists("class4PointsEarned.txt"))
@@ -715,7 +727,6 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "Class 5 initialized";
         }
-
         public void Load_Class_5()
         {
             //class5ItemNames
@@ -738,7 +749,7 @@ namespace MyGradeBook
                 }
                 File.WriteAllLines("class5ItemStatus.txt", class5ItemStatus);
             }
-                
+
 
             //class5PointsEarned
             if (File.Exists("class5PointsEarned.txt"))
@@ -818,11 +829,10 @@ namespace MyGradeBook
 
 
         }
-        
-        /* SAVE */
+
+        /* SAVE TO ARRAYS METHODS */
         //Saves txtboxes to arrays 
         //Than arrays to text files
-
         public void Save_Class_CurrSel()
         {
             if (selection == 0)
@@ -855,7 +865,6 @@ namespace MyGradeBook
                 Save_Class_5();
             }
         }
-
         public void Save_Class_0()
         {
             //This assigns values to arrays                                
@@ -960,40 +969,7 @@ namespace MyGradeBook
 
             //SysMsg
             lblSysMsg.Text = "Class0 txtboxes assigned to variables";
-
-            //This writes all values to txt files
-
-            //class0ItemNames
-            File.WriteAllLines("class0ItemNames.txt", class0ItemNames);
-
-            //class0ItemStatus
-            File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
-
-            //class0PointsEarned
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class0PointsEarnedString[i] = Convert.ToString(class0PointsEarned[i]);
-            }
-            File.WriteAllLines("class0PointsEarned.txt", class0PointsEarnedString);
-
-            //class0PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class0PointsPossibleString[i] = Convert.ToString(class0PointsPossible[i]);
-            }
-            File.WriteAllLines("class0PointsPossible.txt", class0PointsPossibleString);
-
-            //class0Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class0WeightsString[i] = Convert.ToString(class0Weights[i]);
-            }
-            File.WriteAllLines("class0Weights.txt", class0WeightsString);
-
-            //SysMsg
-            lblSysMsg.Text = "Class0 variables saved to .txt";
         }
-
         public void Save_Class_1()
         {
             //This assigns values to arrays
@@ -1099,40 +1075,7 @@ namespace MyGradeBook
 
             //SysMsg
             lblSysMsg.Text = "Class1 txtboxes assigned to variables";
-
-            //This writes all values to txt files
-
-            //class1ItemNames
-            File.WriteAllLines("class1ItemNames.txt", class1ItemNames);
-
-            //class1ItemStatus
-            File.WriteAllLines("class1ItemStatus.txt", class1ItemStatus);
-
-            //class1PointsEarned
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class1PointsEarnedString[i] = Convert.ToString(class1PointsEarned[i]);
-            }
-            File.WriteAllLines("class1PointsEarned.txt", class1PointsEarnedString);
-
-            //class1PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class1PointsPossibleString[i] = Convert.ToString(class1PointsPossible[i]);
-            }
-            File.WriteAllLines("class1PointsPossible.txt", class1PointsPossibleString);
-
-            //class1Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class1WeightsString[i] = Convert.ToString(class1Weights[i]);
-            }
-            File.WriteAllLines("class1Weights.txt", class1WeightsString);
-
-            //SysMsg
-            lblSysMsg.Text = "Class1 variables saved to .txt";
         }
-
         public void Save_Class_2()
         {
             //This assigns values to arrays            
@@ -1140,7 +1083,7 @@ namespace MyGradeBook
                 class2ItemStatus[0] = "yes";
             else
                 class2ItemStatus[0] = "no";
-            
+
             if (chkItemStatus1.Checked)
                 class2ItemStatus[1] = "yes";
             else
@@ -1237,40 +1180,7 @@ namespace MyGradeBook
 
             //SysMsg
             lblSysMsg.Text = "Class2 txtboxes assigned to variables";
-
-            //This writes all values to txt files
-
-            //class2ItemNames
-            File.WriteAllLines("class2ItemNames.txt", class2ItemNames);
-
-            //class2ItemStatus
-            File.WriteAllLines("class2ItemStatus.txt", class2ItemStatus);
-
-            //class2PointsEarned
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class2PointsEarnedString[i] = Convert.ToString(class2PointsEarned[i]);
-            }
-            File.WriteAllLines("class2PointsEarned.txt", class2PointsEarnedString);
-
-            //class2PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class2PointsPossibleString[i] = Convert.ToString(class2PointsPossible[i]);
-            }
-            File.WriteAllLines("class2PointsPossible.txt", class2PointsPossibleString);
-
-            //class2Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class2WeightsString[i] = Convert.ToString(class2Weights[i]);
-            }
-            File.WriteAllLines("class2Weights.txt", class2WeightsString);
-
-            //SysMsg
-            lblSysMsg.Text = "Class2 variables saved to .txt";
         }
-
         public void Save_Class_3()
         {
             //This assigns values to arrays
@@ -1378,40 +1288,7 @@ namespace MyGradeBook
 
             //SysMsg
             lblSysMsg.Text = "Class3 txtboxes assigned to variables";
-
-            //This writes all values to txt files
-
-            //class3ItemNames
-            File.WriteAllLines("class3ItemNames.txt", class3ItemNames);
-
-            //class3ItemStatus
-            File.WriteAllLines("class3ItemStatus.txt", class3ItemStatus);
-
-            //class3PointsEarned
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class3PointsEarnedString[i] = Convert.ToString(class3PointsEarned[i]);
-            }
-            File.WriteAllLines("class3PointsEarned.txt", class3PointsEarnedString);
-
-            //class3PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class3PointsPossibleString[i] = Convert.ToString(class3PointsPossible[i]);
-            }
-            File.WriteAllLines("class3PointsPossible.txt", class3PointsPossibleString);
-
-            //class3Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class3WeightsString[i] = Convert.ToString(class3Weights[i]);
-            }
-            File.WriteAllLines("class3Weights.txt", class3WeightsString);
-
-            //SysMsg
-            lblSysMsg.Text = "Class3 variables saved to .txt";
         }
-
         public void Save_Class_4()
         {
             //This assigns values to arrays
@@ -1517,41 +1394,7 @@ namespace MyGradeBook
 
             //SysMsg
             lblSysMsg.Text = "Class4 txtboxes assigned to variables";
-
-
-            //This writes all values to txt files
-
-            //class4ItemNames
-            File.WriteAllLines("class4ItemNames.txt", class4ItemNames);
-
-            //class4ItemStatus
-            File.WriteAllLines("class4ItemStatus.txt", class4ItemStatus);
-
-            //class4PointsEarned
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class4PointsEarnedString[i] = Convert.ToString(class4PointsEarned[i]);
-            }
-            File.WriteAllLines("class4PointsEarned.txt", class4PointsEarnedString);
-
-            //class4PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class4PointsPossibleString[i] = Convert.ToString(class4PointsPossible[i]);
-            }
-            File.WriteAllLines("class4PointsPossible.txt", class4PointsPossibleString);
-
-            //class4Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
-                class4WeightsString[i] = Convert.ToString(class4Weights[i]);
-            }
-            File.WriteAllLines("class4Weights.txt", class4WeightsString);
-
-            //SysMsg
-            lblSysMsg.Text = "Class4 variables saved to .txt";
         }
-
         public void Save_Class_5()
         {
             //This assigns values to arrays
@@ -1657,48 +1500,180 @@ namespace MyGradeBook
 
             //SysMsg
             lblSysMsg.Text = "Class5 txtboxes assigned to variables";
+        }
 
-            //This writes all values to txt files
+        /* SAVE TO TEXT FILE METHOD */
+        public void Save_Classes_To_Text()
+        {
+            //CLASS 0
+            //class0ItemNames
+            File.WriteAllLines("class0ItemNames.txt", class0ItemNames);
+            //class0ItemStatus
+            File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
+            //class0PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0PointsEarnedString[i] = Convert.ToString(class0PointsEarned[i]);
+            }
+            File.WriteAllLines("class0PointsEarned.txt", class0PointsEarnedString);
+            //class0PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0PointsPossibleString[i] = Convert.ToString(class0PointsPossible[i]);
+            }
+            File.WriteAllLines("class0PointsPossible.txt", class0PointsPossibleString);
+            //class0Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class0WeightsString[i] = Convert.ToString(class0Weights[i]);
+            }
+            File.WriteAllLines("class0Weights.txt", class0WeightsString);
+            //SysMsg
+            lblSysMsg.Text = "Class0 variables saved to .txt";
 
+            //CLASS 1
+            //class1ItemNames
+            File.WriteAllLines("class1ItemNames.txt", class1ItemNames);
+            //class1ItemStatus
+            File.WriteAllLines("class1ItemStatus.txt", class1ItemStatus);
+            //class1PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1PointsEarnedString[i] = Convert.ToString(class1PointsEarned[i]);
+            }
+            File.WriteAllLines("class1PointsEarned.txt", class1PointsEarnedString);
+            //class1PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1PointsPossibleString[i] = Convert.ToString(class1PointsPossible[i]);
+            }
+            File.WriteAllLines("class1PointsPossible.txt", class1PointsPossibleString);
+            //class1Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class1WeightsString[i] = Convert.ToString(class1Weights[i]);
+            }
+            File.WriteAllLines("class1Weights.txt", class1WeightsString);
+            //SysMsg
+            lblSysMsg.Text = "Class1 variables saved to .txt";
+
+            //CLASS 2
+            //class2ItemNames
+            File.WriteAllLines("class2ItemNames.txt", class2ItemNames);
+            //class2ItemStatus
+            File.WriteAllLines("class2ItemStatus.txt", class2ItemStatus);
+            //class2PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2PointsEarnedString[i] = Convert.ToString(class2PointsEarned[i]);
+            }
+            File.WriteAllLines("class2PointsEarned.txt", class2PointsEarnedString);
+            //class2PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2PointsPossibleString[i] = Convert.ToString(class2PointsPossible[i]);
+            }
+            File.WriteAllLines("class2PointsPossible.txt", class2PointsPossibleString);
+            //class2Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class2WeightsString[i] = Convert.ToString(class2Weights[i]);
+            }
+            File.WriteAllLines("class2Weights.txt", class2WeightsString);
+            //SysMsg
+            lblSysMsg.Text = "Class2 variables saved to .txt";
+
+            //CLASS 3
+            //class3ItemNames
+            File.WriteAllLines("class3ItemNames.txt", class3ItemNames);
+            //class3ItemStatus
+            File.WriteAllLines("class3ItemStatus.txt", class3ItemStatus);
+            //class3PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3PointsEarnedString[i] = Convert.ToString(class3PointsEarned[i]);
+            }
+            File.WriteAllLines("class3PointsEarned.txt", class3PointsEarnedString);
+            //class3PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3PointsPossibleString[i] = Convert.ToString(class3PointsPossible[i]);
+            }
+            File.WriteAllLines("class3PointsPossible.txt", class3PointsPossibleString);
+            //class3Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class3WeightsString[i] = Convert.ToString(class3Weights[i]);
+            }
+            File.WriteAllLines("class3Weights.txt", class3WeightsString);
+            //SysMsg
+            lblSysMsg.Text = "Class3 variables saved to .txt";
+
+            //CLASS 4
+            //class4ItemNames
+            File.WriteAllLines("class4ItemNames.txt", class4ItemNames);
+            //class4ItemStatus
+            File.WriteAllLines("class4ItemStatus.txt", class4ItemStatus);
+            //class4PointsEarned
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4PointsEarnedString[i] = Convert.ToString(class4PointsEarned[i]);
+            }
+            File.WriteAllLines("class4PointsEarned.txt", class4PointsEarnedString);
+            //class4PointsPossible
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4PointsPossibleString[i] = Convert.ToString(class4PointsPossible[i]);
+            }
+            File.WriteAllLines("class4PointsPossible.txt", class4PointsPossibleString);
+            //class4Weights
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+            {
+                class4WeightsString[i] = Convert.ToString(class4Weights[i]);
+            }
+            File.WriteAllLines("class4Weights.txt", class4WeightsString);
+            //SysMsg
+            lblSysMsg.Text = "Class4 variables saved to .txt";
+
+            //CLASS 5
             //class5ItemNames
             File.WriteAllLines("class5ItemNames.txt", class5ItemNames);
-
             //class5ItemStatus
             File.WriteAllLines("class5ItemStatus.txt", class5ItemStatus);
-
             //class5PointsEarned
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 class5PointsEarnedString[i] = Convert.ToString(class5PointsEarned[i]);
             }
             File.WriteAllLines("class5PointsEarned.txt", class5PointsEarnedString);
-
             //class5PointsPossible
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 class5PointsPossibleString[i] = Convert.ToString(class5PointsPossible[i]);
             }
             File.WriteAllLines("class5PointsPossible.txt", class5PointsPossibleString);
-
             //class5Weights
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 class5WeightsString[i] = Convert.ToString(class5Weights[i]);
             }
             File.WriteAllLines("class5Weights.txt", class5WeightsString);
-
             //SysMsg
             lblSysMsg.Text = "Class5 variables saved to .txt";
         }
 
-        /* GUI */
+        /* **** **** GUI **** **** */
         //Includes coloring
         //Includes buttons
+        //Events
 
-        /* COLOR */
+        /* **** COLOR **** */
         //Selecting, setting and saving color schemes
         //Setting colors for finished items
 
+        //Color scheme drop down box
+
+        /* ColorScheme drop down box on change event */
         private void cboColorScheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             colorScheme = cboColorScheme.Text;
@@ -1726,7 +1701,8 @@ namespace MyGradeBook
             //Saves color scheme selection to text file
             Color_Scheme_Save();
         }
-        
+
+        /* Color scheme actions */
         public void Color_Scheme_Set()
         {
             //Set sys btn colors
@@ -1753,12 +1729,12 @@ namespace MyGradeBook
             else if (selection == 5)
                 btnClass5.BackColor = btnClassSelected.BackColor;
         }
-        
         public void Color_Scheme_Save()
         {
             File.WriteAllText("colorScheme.txt", colorScheme);
         }
 
+        /* Color schemes */
         public void Color_Scheme_Default()
         {
             //Set colors
@@ -1772,7 +1748,6 @@ namespace MyGradeBook
             //Set
             Color_Scheme_Set();
         }
-
         public void Color_Scheme_Cool()
         {
             //Set colors
@@ -1786,7 +1761,6 @@ namespace MyGradeBook
             //Set
             Color_Scheme_Set();
         }
-
         public void Color_Scheme_HelloKitty()
         {
             //Set color
@@ -1800,7 +1774,6 @@ namespace MyGradeBook
             //Set
             Color_Scheme_Set();
         }
-
         public void Color_Scheme_Midnight()
         {
             //Set colors
@@ -1810,11 +1783,12 @@ namespace MyGradeBook
             btnClassNotSelected.BackColor = Color.Gray;
             txtDone.BackColor = Color.Gray;
             txtNotDone.BackColor = Color.White;
-            
+
             //Set
             Color_Scheme_Set();
         }
 
+        /* Sets finished item visuals */
         public void Fin_Items_Class_0()
         {
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
@@ -1836,7 +1810,6 @@ namespace MyGradeBook
                 }
             }
         }
-
         public void Fin_Items_Class_1()
         {
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
@@ -1858,7 +1831,6 @@ namespace MyGradeBook
                 }
             }
         }
-
         public void Fin_Items_Class_2()
         {
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
@@ -1880,7 +1852,6 @@ namespace MyGradeBook
                 }
             }
         }
-
         public void Fin_Items_Class_3()
         {
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
@@ -1902,7 +1873,6 @@ namespace MyGradeBook
                 }
             }
         }
-
         public void Fin_Items_Class_4()
         {
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
@@ -1924,7 +1894,6 @@ namespace MyGradeBook
                 }
             }
         }
-
         public void Fin_Items_Class_5()
         {
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
@@ -1946,7 +1915,6 @@ namespace MyGradeBook
                 }
             }
         }
-
         public void Fin_Items_Class_CurrSel()
         {
             //Visuals for finished items
@@ -1981,9 +1949,12 @@ namespace MyGradeBook
             }
         }
 
-        /* BTNS */
 
+        /* **** BTNS **** */
         //Rename Classes
+        //Class 0 - 1 buttons
+
+        /* RENAME CLASSES */
         private void btnClassNames_Click(object sender, EventArgs e)
         {
             //To change class names
@@ -2041,15 +2012,20 @@ namespace MyGradeBook
             }
         }
 
-        /* CLASS 1 SELECTION */
-        //Pulls all data from variables(arrays)
+        /* CLASS 0 SELECTION */
+        //Saves previous data
+        //Sets selection value
         //Sets btns colors
+        //Pulls all data from arrays        
         //Assign totals to labels
         //Sets txtbox colors
-        //Sets selection value
-        private void btnClass01_Click(object sender, EventArgs e)
+        private void btnClass0_Click(object sender, EventArgs e)
         {
+            //Saves previous selection
             Save_Class_CurrSel();
+
+            //Selection
+            selection = 0;
 
             //Set btn to selected
             btnClass0.BackColor = btnClassSelected.BackColor;
@@ -2156,13 +2132,10 @@ namespace MyGradeBook
             {
                 lblGrade.Text = "Grade:  0.00%";
             }
-                
+
             //Weighted Total
             double weightedGradeTotal = class0WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
-
-            //Selection
-            selection = 0;
 
             //Visuals for finished items
             Fin_Items_Class_CurrSel();
@@ -2170,16 +2143,20 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "class0 has been selected";
         }
-
-        /* CLASS 2 SELECTION */
-        //Pulls all data from variables(arrays)
+        /* CLASS 1 SELECTION */
+        //Saves previous data
+        //Sets selection value
         //Sets btns colors
+        //Pulls all data from arrays        
         //Assign totals to labels
         //Sets txtbox colors
-        //Sets selection value
-        private void btnClass02_Click(object sender, EventArgs e)
+        private void btnClass1_Click(object sender, EventArgs e)
         {
+            //Saves previous selection
             Save_Class_CurrSel();
+
+            //Selection
+            selection = 1;
 
             //Visuals
             btnClass0.BackColor = btnClassNotSelected.BackColor;
@@ -2290,25 +2267,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class1WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Selection
-            selection = 1;
-
             //Visuals for finished items
             Fin_Items_Class_CurrSel();
 
             //SysMsg
             lblSysMsg.Text = "class1 has been selected";
         }
-
-        /* CLASS 3 SELCTION */
-        //Pulls all data from variables(arrays)
+        /* CLASS 2 SELCTION */
+        //Saves previous data
+        //Sets selection value
         //Sets btns colors
+        //Pulls all data from arrays        
         //Assign totals to labels
         //Sets txtbox colors
-        //Sets selection value
-        private void btnClass03_Click(object sender, EventArgs e)
+        private void btnClass2_Click(object sender, EventArgs e)
         {
+            //Save previous selection
             Save_Class_CurrSel();
+
+            //Selection
+            selection = 2;
 
             //Visuals
             btnClass0.BackColor = btnClassNotSelected.BackColor;
@@ -2419,24 +2397,25 @@ namespace MyGradeBook
             double weightedGradeTotal = class2WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Selection
-            selection = 2;
-
             //Visuals for finished items
             Fin_Items_Class_CurrSel();
 
             lblSysMsg.Text = "class2 has been selected";
         }
-
-        /* CLASS 4 SELECTION */
-        //Pulls all data from variables(arrays)
+        /* CLASS 3 SELECTION */
+        //Saves previous data
+        //Sets selection value
         //Sets btns colors
+        //Pulls all data from arrays        
         //Assign totals to labels
         //Sets txtbox colors
-        //Sets selection value
-        private void btnClass04_Click(object sender, EventArgs e)
+        private void btnClass3_Click(object sender, EventArgs e)
         {
+            //Save previous selection
             Save_Class_CurrSel();
+
+            //Selection
+            selection = 3;
 
             //Visuals
             btnClass0.BackColor = btnClassNotSelected.BackColor;
@@ -2546,25 +2525,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class3WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Selection
-            selection = 3;
-
             //Visuals for finished items
             Fin_Items_Class_CurrSel();
 
             //SysMsg
             lblSysMsg.Text = "class3 has been selected";
         }
-
-        /* CLASS 5 SELECTION */
-        //Pulls all data from variables(arrays)
+        /* CLASS 4 SELECTION */
+        //Saves previous data
+        //Sets selection value
         //Sets btns colors
+        //Pulls all data from arrays        
         //Assign totals to labels
         //Sets txtbox colors
-        //Sets selection value
-        private void btnClass05_Click(object sender, EventArgs e)
+        private void btnClass4_Click(object sender, EventArgs e)
         {
+            //Save previous selection
             Save_Class_CurrSel();
+
+            //Selection
+            selection = 4;
 
             //Visuals
             btnClass0.BackColor = btnClassNotSelected.BackColor;
@@ -2675,25 +2655,26 @@ namespace MyGradeBook
             double weightedGradeTotal = class4WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Selection
-            selection = 4;
-
             //Visuals for finished items
             Fin_Items_Class_CurrSel();
 
             //SysMsg
             lblSysMsg.Text = "class4 has been selected";
         }
-
-        /* CLASS 6 SELECTION */
-        //Pulls all data from variables(arrays)
+        /* CLASS 5 SELECTION */
+        //Saves previous data
+        //Sets selection value
         //Sets btns colors
+        //Pulls all data from arrays        
         //Assign totals to labels
         //Sets txtbox colors
-        //Sets selection value
-        private void btnClass06_Click(object sender, EventArgs e)
+        private void btnClass5_Click(object sender, EventArgs e)
         {
+            //Save previous selection
             Save_Class_CurrSel();
+
+            //Selection
+            selection = 5;
 
             //Visuals
             btnClass0.BackColor = btnClassNotSelected.BackColor;
@@ -2804,9 +2785,6 @@ namespace MyGradeBook
             double weightedGradeTotal = class5WeightedGrades.Sum();
             lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
 
-            //Selection
-            selection = 5;
-
             //Visuals for finished items
             Fin_Items_Class_CurrSel();
 
@@ -2814,9 +2792,616 @@ namespace MyGradeBook
             lblSysMsg.Text = "class5 has been selected";
         }
 
+
+        /* **** EVENTS **** */
+        //Checkbox events
+        //Points earned on change event
+        //Points possible on change event
+        //Weight on change event
+
+        /*Check box change events */
+        private void chkItemStatus0_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 0;
+            if (selection == 0)
+            {
+                if (chkItemStatus0.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus0.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus0.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus0.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus0.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus0.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus1_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 1;
+            if (selection == 0)
+            {
+                if (chkItemStatus1.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus1.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus1.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus1.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus1.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus1.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus2_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 2;
+            if (selection == 0)
+            {
+                if (chkItemStatus2.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus2.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus2.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus2.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus2.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus2.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus3_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 3;
+            if (selection == 0)
+            {
+                if (chkItemStatus3.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus3.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus3.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus3.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus3.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus3.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus4_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 4;
+            if (selection == 0)
+            {
+                if (chkItemStatus4.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus4.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus4.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus4.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus4.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus4.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus5_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 5;
+            if (selection == 0)
+            {
+                if (chkItemStatus5.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus5.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus5.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus5.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus5.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus5.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus6_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 6;
+            if (selection == 0)
+            {
+                if (chkItemStatus6.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus6.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus6.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus6.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus6.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus6.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus7_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 7;
+            if (selection == 0)
+            {
+                if (chkItemStatus7.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus7.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus7.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus7.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus7.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus7.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus8_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 8;
+            if (selection == 0)
+            {
+                if (chkItemStatus8.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus8.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus8.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus8.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus8.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus8.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+        private void chkItemStatus9_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ITEM_STATUS_NUM = 9;
+            if (selection == 0)
+            {
+                if (chkItemStatus9.Checked)
+                    class0ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class0ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 1)
+            {
+                if (chkItemStatus9.Checked)
+                    class1ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class1ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 2)
+            {
+                if (chkItemStatus9.Checked)
+                    class2ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class2ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 3)
+            {
+                if (chkItemStatus9.Checked)
+                    class3ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class3ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 4)
+            {
+                if (chkItemStatus9.Checked)
+                    class4ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class4ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            if (selection == 5)
+            {
+                if (chkItemStatus9.Checked)
+                    class5ItemStatus[ITEM_STATUS_NUM] = "yes";
+                else
+                    class5ItemStatus[ITEM_STATUS_NUM] = "no";
+            }
+            Fin_Items_Class_CurrSel();
+        }
+
+        /* Earned on change events */
+        private void txtItemEarned0_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned1_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned2_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned3_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned4_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned5_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned6_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned7_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned8_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemEarned9_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+
+        /* Points possible on change events */
+        private void txtItemPossible0_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible1_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible2_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible3_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible4_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible5_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible6_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible7_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible8_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemPossible9_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+
+        /* Weight on change event */
+        private void txtItemWeight0_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight1_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight2_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight3_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight4_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight5_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight6_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight7_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight8_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+        private void txtItemWeight9_Leave(object sender, EventArgs e)
+        {
+            Save_Class_CurrSel();
+        }
+
+        /* On close event */
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Save_Class_CurrSel();
+            Save_Classes_To_Text();
         }
     }
 }

@@ -153,6 +153,7 @@
             this.txtItemEarned1.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned1.TabIndex = 120;
             this.txtItemEarned1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned1.Leave += new System.EventHandler(this.txtItemEarned1_Leave);
             // 
             // txtItemPossible1
             // 
@@ -161,6 +162,7 @@
             this.txtItemPossible1.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible1.TabIndex = 130;
             this.txtItemPossible1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible1.Leave += new System.EventHandler(this.txtItemPossible1_Leave);
             // 
             // txtItemPossible2
             // 
@@ -169,6 +171,7 @@
             this.txtItemPossible2.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible2.TabIndex = 230;
             this.txtItemPossible2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible2.Leave += new System.EventHandler(this.txtItemPossible2_Leave);
             // 
             // txtItemEarned2
             // 
@@ -177,6 +180,7 @@
             this.txtItemEarned2.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned2.TabIndex = 220;
             this.txtItemEarned2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned2.Leave += new System.EventHandler(this.txtItemEarned2_Leave);
             // 
             // txtItemName2
             // 
@@ -192,6 +196,7 @@
             this.txtItemPossible3.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible3.TabIndex = 330;
             this.txtItemPossible3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible3.Leave += new System.EventHandler(this.txtItemPossible3_Leave);
             // 
             // txtItemEarned3
             // 
@@ -200,6 +205,7 @@
             this.txtItemEarned3.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned3.TabIndex = 320;
             this.txtItemEarned3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned3.Leave += new System.EventHandler(this.txtItemEarned3_Leave);
             // 
             // txtItemName3
             // 
@@ -216,7 +222,7 @@
             this.btnClass0.TabIndex = 10;
             this.btnClass0.Text = "CLASS 0";
             this.btnClass0.UseVisualStyleBackColor = true;
-            this.btnClass0.Click += new System.EventHandler(this.btnClass01_Click);
+            this.btnClass0.Click += new System.EventHandler(this.btnClass0_Click);
             // 
             // btnClass1
             // 
@@ -226,7 +232,7 @@
             this.btnClass1.TabIndex = 20;
             this.btnClass1.Text = "CLASS 1";
             this.btnClass1.UseVisualStyleBackColor = true;
-            this.btnClass1.Click += new System.EventHandler(this.btnClass02_Click);
+            this.btnClass1.Click += new System.EventHandler(this.btnClass1_Click);
             // 
             // label1
             // 
@@ -266,6 +272,7 @@
             this.chkItemStatus1.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus1.TabIndex = 100;
             this.chkItemStatus1.UseVisualStyleBackColor = true;
+            this.chkItemStatus1.CheckedChanged += new System.EventHandler(this.chkItemStatus1_CheckedChanged);
             // 
             // label4
             // 
@@ -285,6 +292,7 @@
             this.chkItemStatus2.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus2.TabIndex = 200;
             this.chkItemStatus2.UseVisualStyleBackColor = true;
+            this.chkItemStatus2.CheckedChanged += new System.EventHandler(this.chkItemStatus2_CheckedChanged);
             // 
             // chkItemStatus3
             // 
@@ -294,6 +302,7 @@
             this.chkItemStatus3.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus3.TabIndex = 300;
             this.chkItemStatus3.UseVisualStyleBackColor = true;
+            this.chkItemStatus3.CheckedChanged += new System.EventHandler(this.chkItemStatus3_CheckedChanged);
             // 
             // txtItemGrade1
             // 
@@ -311,6 +320,7 @@
             this.txtItemWeight1.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight1.TabIndex = 150;
             this.txtItemWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight1.Leave += new System.EventHandler(this.txtItemWeight1_Leave);
             // 
             // label5
             // 
@@ -417,7 +427,7 @@
             this.btnClass2.TabIndex = 30;
             this.btnClass2.Text = "CLASS 2";
             this.btnClass2.UseVisualStyleBackColor = true;
-            this.btnClass2.Click += new System.EventHandler(this.btnClass03_Click);
+            this.btnClass2.Click += new System.EventHandler(this.btnClass2_Click);
             // 
             // btnClass3
             // 
@@ -427,7 +437,7 @@
             this.btnClass3.TabIndex = 40;
             this.btnClass3.Text = "CLASS 3";
             this.btnClass3.UseVisualStyleBackColor = true;
-            this.btnClass3.Click += new System.EventHandler(this.btnClass04_Click);
+            this.btnClass3.Click += new System.EventHandler(this.btnClass3_Click);
             // 
             // btnClass4
             // 
@@ -437,7 +447,7 @@
             this.btnClass4.TabIndex = 50;
             this.btnClass4.Text = "CLASS 4";
             this.btnClass4.UseVisualStyleBackColor = true;
-            this.btnClass4.Click += new System.EventHandler(this.btnClass05_Click);
+            this.btnClass4.Click += new System.EventHandler(this.btnClass4_Click);
             // 
             // btnClass5
             // 
@@ -447,7 +457,7 @@
             this.btnClass5.TabIndex = 60;
             this.btnClass5.Text = "CLASS 5";
             this.btnClass5.UseVisualStyleBackColor = true;
-            this.btnClass5.Click += new System.EventHandler(this.btnClass06_Click);
+            this.btnClass5.Click += new System.EventHandler(this.btnClass5_Click);
             // 
             // txtItemWeightedGrade2
             // 
@@ -465,6 +475,7 @@
             this.txtItemWeight2.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight2.TabIndex = 250;
             this.txtItemWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight2.Leave += new System.EventHandler(this.txtItemWeight2_Leave);
             // 
             // txtItemGrade2
             // 
@@ -491,6 +502,7 @@
             this.txtItemWeight3.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight3.TabIndex = 350;
             this.txtItemWeight3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight3.Leave += new System.EventHandler(this.txtItemWeight3_Leave);
             // 
             // txtItemGrade3
             // 
@@ -517,6 +529,7 @@
             this.txtItemWeight4.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight4.TabIndex = 450;
             this.txtItemWeight4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight4.Leave += new System.EventHandler(this.txtItemWeight4_Leave);
             // 
             // txtItemGrade4
             // 
@@ -535,6 +548,7 @@
             this.chkItemStatus4.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus4.TabIndex = 400;
             this.chkItemStatus4.UseVisualStyleBackColor = true;
+            this.chkItemStatus4.CheckedChanged += new System.EventHandler(this.chkItemStatus4_CheckedChanged);
             // 
             // txtItemPossible4
             // 
@@ -543,6 +557,7 @@
             this.txtItemPossible4.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible4.TabIndex = 430;
             this.txtItemPossible4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible4.Leave += new System.EventHandler(this.txtItemPossible4_Leave);
             // 
             // txtItemEarned4
             // 
@@ -551,6 +566,7 @@
             this.txtItemEarned4.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned4.TabIndex = 420;
             this.txtItemEarned4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned4.Leave += new System.EventHandler(this.txtItemEarned4_Leave);
             // 
             // txtItemName4
             // 
@@ -575,6 +591,7 @@
             this.txtItemWeight5.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight5.TabIndex = 550;
             this.txtItemWeight5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight5.Leave += new System.EventHandler(this.txtItemWeight5_Leave);
             // 
             // txtItemGrade5
             // 
@@ -593,6 +610,7 @@
             this.chkItemStatus5.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus5.TabIndex = 500;
             this.chkItemStatus5.UseVisualStyleBackColor = true;
+            this.chkItemStatus5.CheckedChanged += new System.EventHandler(this.chkItemStatus5_CheckedChanged);
             // 
             // txtItemPossible5
             // 
@@ -601,6 +619,7 @@
             this.txtItemPossible5.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible5.TabIndex = 530;
             this.txtItemPossible5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible5.Leave += new System.EventHandler(this.txtItemPossible5_Leave);
             // 
             // txtItemEarned5
             // 
@@ -609,6 +628,7 @@
             this.txtItemEarned5.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned5.TabIndex = 520;
             this.txtItemEarned5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned5.Leave += new System.EventHandler(this.txtItemEarned5_Leave);
             // 
             // txtItemName5
             // 
@@ -670,7 +690,7 @@
             "Cool",
             "Hello Kitty",
             "Midnight"});
-            this.cboColorScheme.Location = new System.Drawing.Point(477, 2);
+            this.cboColorScheme.Location = new System.Drawing.Point(479, 1);
             this.cboColorScheme.Name = "cboColorScheme";
             this.cboColorScheme.Size = new System.Drawing.Size(86, 21);
             this.cboColorScheme.TabIndex = 8;
@@ -728,6 +748,7 @@
             this.txtItemWeight6.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight6.TabIndex = 650;
             this.txtItemWeight6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight6.Leave += new System.EventHandler(this.txtItemWeight6_Leave);
             // 
             // txtItemGrade6
             // 
@@ -746,6 +767,7 @@
             this.chkItemStatus6.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus6.TabIndex = 600;
             this.chkItemStatus6.UseVisualStyleBackColor = true;
+            this.chkItemStatus6.CheckedChanged += new System.EventHandler(this.chkItemStatus6_CheckedChanged);
             // 
             // txtItemPossible6
             // 
@@ -754,6 +776,7 @@
             this.txtItemPossible6.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible6.TabIndex = 630;
             this.txtItemPossible6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible6.Leave += new System.EventHandler(this.txtItemPossible6_Leave);
             // 
             // txtItemEarned6
             // 
@@ -762,6 +785,7 @@
             this.txtItemEarned6.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned6.TabIndex = 620;
             this.txtItemEarned6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned6.Leave += new System.EventHandler(this.txtItemEarned6_Leave);
             // 
             // txtItemName6
             // 
@@ -786,6 +810,7 @@
             this.txtItemWeight7.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight7.TabIndex = 750;
             this.txtItemWeight7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight7.Leave += new System.EventHandler(this.txtItemWeight7_Leave);
             // 
             // txtItemGrade7
             // 
@@ -804,6 +829,7 @@
             this.chkItemStatus7.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus7.TabIndex = 700;
             this.chkItemStatus7.UseVisualStyleBackColor = true;
+            this.chkItemStatus7.CheckedChanged += new System.EventHandler(this.chkItemStatus7_CheckedChanged);
             // 
             // txtItemPossible7
             // 
@@ -812,6 +838,7 @@
             this.txtItemPossible7.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible7.TabIndex = 730;
             this.txtItemPossible7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible7.Leave += new System.EventHandler(this.txtItemPossible7_Leave);
             // 
             // txtItemEarned7
             // 
@@ -820,6 +847,7 @@
             this.txtItemEarned7.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned7.TabIndex = 720;
             this.txtItemEarned7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned7.Leave += new System.EventHandler(this.txtItemEarned7_Leave);
             // 
             // txtItemName7
             // 
@@ -844,6 +872,7 @@
             this.txtItemWeight8.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight8.TabIndex = 850;
             this.txtItemWeight8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight8.Leave += new System.EventHandler(this.txtItemWeight8_Leave);
             // 
             // txtItemGrade8
             // 
@@ -862,6 +891,7 @@
             this.chkItemStatus8.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus8.TabIndex = 800;
             this.chkItemStatus8.UseVisualStyleBackColor = true;
+            this.chkItemStatus8.CheckedChanged += new System.EventHandler(this.chkItemStatus8_CheckedChanged);
             // 
             // txtItemPossible8
             // 
@@ -870,6 +900,7 @@
             this.txtItemPossible8.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible8.TabIndex = 830;
             this.txtItemPossible8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible8.Leave += new System.EventHandler(this.txtItemPossible8_Leave);
             // 
             // txtItemEarned8
             // 
@@ -878,6 +909,7 @@
             this.txtItemEarned8.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned8.TabIndex = 820;
             this.txtItemEarned8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned8.Leave += new System.EventHandler(this.txtItemEarned8_Leave);
             // 
             // txtItemName8
             // 
@@ -902,6 +934,7 @@
             this.txtItemWeight9.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight9.TabIndex = 950;
             this.txtItemWeight9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight9.Leave += new System.EventHandler(this.txtItemWeight9_Leave);
             // 
             // txtItemGrade9
             // 
@@ -920,6 +953,7 @@
             this.chkItemStatus9.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus9.TabIndex = 900;
             this.chkItemStatus9.UseVisualStyleBackColor = true;
+            this.chkItemStatus9.CheckedChanged += new System.EventHandler(this.chkItemStatus9_CheckedChanged);
             // 
             // txtItemPossible9
             // 
@@ -928,6 +962,7 @@
             this.txtItemPossible9.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible9.TabIndex = 930;
             this.txtItemPossible9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible9.Leave += new System.EventHandler(this.txtItemPossible9_Leave);
             // 
             // txtItemEarned9
             // 
@@ -936,6 +971,7 @@
             this.txtItemEarned9.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned9.TabIndex = 920;
             this.txtItemEarned9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned9.Leave += new System.EventHandler(this.txtItemEarned9_Leave);
             // 
             // txtItemName9
             // 
@@ -960,6 +996,7 @@
             this.txtItemWeight0.Size = new System.Drawing.Size(44, 20);
             this.txtItemWeight0.TabIndex = 1050;
             this.txtItemWeight0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemWeight0.Leave += new System.EventHandler(this.txtItemWeight0_Leave);
             // 
             // txtItemGrade0
             // 
@@ -978,6 +1015,7 @@
             this.chkItemStatus0.Size = new System.Drawing.Size(15, 14);
             this.chkItemStatus0.TabIndex = 1000;
             this.chkItemStatus0.UseVisualStyleBackColor = true;
+            this.chkItemStatus0.CheckedChanged += new System.EventHandler(this.chkItemStatus0_CheckedChanged);
             // 
             // txtItemPossible0
             // 
@@ -986,6 +1024,7 @@
             this.txtItemPossible0.Size = new System.Drawing.Size(44, 20);
             this.txtItemPossible0.TabIndex = 1030;
             this.txtItemPossible0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemPossible0.Leave += new System.EventHandler(this.txtItemPossible0_Leave);
             // 
             // txtItemEarned0
             // 
@@ -994,6 +1033,7 @@
             this.txtItemEarned0.Size = new System.Drawing.Size(44, 20);
             this.txtItemEarned0.TabIndex = 1020;
             this.txtItemEarned0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtItemEarned0.Leave += new System.EventHandler(this.txtItemEarned0_Leave);
             // 
             // txtItemName0
             // 
