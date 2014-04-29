@@ -4570,7 +4570,7 @@ namespace MyGradeBook
             Statistics();
         }
 
-        /* Leave Item Name Box event */
+        /* Item Name on Leave */
         private void txtItemName0_Leave(object sender, EventArgs e)
         {
             Save_Class_CurrSel();
@@ -4786,7 +4786,7 @@ namespace MyGradeBook
             Totals();
         }
 
-        /* Points possible on enter */
+        /* Points possible on Enter */
         private void txtItemPossible0_Enter(object sender, EventArgs e)
         {
             txtItemPossible0.SelectAll();
@@ -4948,6 +4948,48 @@ namespace MyGradeBook
             }
             Save_Class_CurrSel();
             Totals();
+        }
+
+        /* Weight on Enter */
+        private void txtItemWeight0_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight0.SelectAll();
+        }
+        private void txtItemWeight1_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight1.SelectAll();
+        }
+        private void txtItemWeight2_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight2.SelectAll();
+        }
+        private void txtItemWeight3_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight3.SelectAll();
+        }
+        private void txtItemWeight4_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight4.SelectAll();
+        }
+        private void txtItemWeight5_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight5.SelectAll();
+        }
+        private void txtItemWeight6_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight6.SelectAll();
+        }
+        private void txtItemWeight7_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight7.SelectAll();
+        }
+        private void txtItemWeight8_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight8.SelectAll();
+        }
+        private void txtItemWeight9_Enter(object sender, EventArgs e)
+        {
+            txtItemWeight9.SelectAll();
         }
 
         /* Weight on Leave */
