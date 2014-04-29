@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +26,9 @@ using System.IO;
 // What ifs
 // Saving sys msgs to txt file with append
 // About us
-// Recommend naming class in lblClass if name is blank
+// On enter events for txtboxes
+// On leave events for txtboxes without numbers
+// 
 
 
 namespace MyGradeBook
@@ -2482,7 +2484,7 @@ namespace MyGradeBook
 
                 lblStatPossibleVal.Text = Convert.ToString(class0PointsPossible.Sum());
 
-                lblStatGradeVal.Text = class0Grades.Sum().ToString("P1");
+                lblStatGradeVal.Text = (class0PointsEarned.Sum()/class0PointsPossible.Sum()).ToString("P1");
 
                 lblStatWeightVal.Text = class0Weights.Sum().ToString("P1");
 
@@ -2533,7 +2535,7 @@ namespace MyGradeBook
 
                 lblStatPossibleVal.Text = Convert.ToString(class1PointsPossible.Sum());
 
-                lblStatGradeVal.Text = class1Grades.Sum().ToString("P1");
+                lblStatGradeVal.Text = (class1PointsEarned.Sum() / class1PointsPossible.Sum()).ToString("P1");
 
                 lblStatWeightVal.Text = class1Weights.Sum().ToString("P1");
 
@@ -2584,7 +2586,7 @@ namespace MyGradeBook
 
                 lblStatPossibleVal.Text = Convert.ToString(class2PointsPossible.Sum());
 
-                lblStatGradeVal.Text = class2Grades.Sum().ToString("P1");
+                lblStatGradeVal.Text = (class2PointsEarned.Sum() / class2PointsPossible.Sum()).ToString("P1");
 
                 lblStatWeightVal.Text = class2Weights.Sum().ToString("P1");
 
@@ -2635,7 +2637,7 @@ namespace MyGradeBook
 
                 lblStatPossibleVal.Text = Convert.ToString(class3PointsPossible.Sum());
 
-                lblStatGradeVal.Text = class3Grades.Sum().ToString("P1");
+                lblStatGradeVal.Text = (class3PointsEarned.Sum() / class3PointsPossible.Sum()).ToString("P1");
 
                 lblStatWeightVal.Text = class3Weights.Sum().ToString("P1");
 
@@ -2686,7 +2688,7 @@ namespace MyGradeBook
 
                 lblStatPossibleVal.Text = Convert.ToString(class4PointsPossible.Sum());
 
-                lblStatGradeVal.Text = class4Grades.Sum().ToString("P1");
+                lblStatGradeVal.Text = (class4PointsEarned.Sum() / class4PointsPossible.Sum()).ToString("P1");
 
                 lblStatWeightVal.Text = class4Weights.Sum().ToString("P1");
 
@@ -2737,7 +2739,7 @@ namespace MyGradeBook
 
                 lblStatPossibleVal.Text = Convert.ToString(class5PointsPossible.Sum());
 
-                lblStatGradeVal.Text = class5Grades.Sum().ToString("P1");
+                lblStatGradeVal.Text = (class5PointsEarned.Sum() / class5PointsPossible.Sum()).ToString("P1");
 
                 lblStatWeightVal.Text = class5Weights.Sum().ToString("P1");
 
@@ -4571,98 +4573,220 @@ namespace MyGradeBook
         /* Leave Item Name Box event */
         private void txtItemName0_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName1_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName2_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName3_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName4_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName5_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName6_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName7_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName8_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
         private void txtItemName9_Leave(object sender, EventArgs e)
         {
+            Save_Class_CurrSel();
             Statistics();
         }
 
-        /* Earned on change events */
+        /* Earned on Enter */
+        private void txtItemEarned0_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned0.SelectAll();
+        }
+        private void txtItemEarned1_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned1.SelectAll();
+        }
+        private void txtItemEarned2_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned2.SelectAll();
+        }
+        private void txtItemEarned3_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned3.SelectAll();
+        }
+        private void txtItemEarned4_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned4.SelectAll();
+        }
+        private void txtItemEarned5_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned5.SelectAll();
+        }
+        private void txtItemEarned6_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned6.SelectAll();
+        }
+        private void txtItemEarned7_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned7.SelectAll();
+        }
+        private void txtItemEarned8_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned8.SelectAll();
+        }
+        private void txtItemEarned9_Enter(object sender, EventArgs e)
+        {
+            txtItemEarned9.SelectAll();
+        }
+
+        /* Earned on Leave */
         private void txtItemEarned0_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned0.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned0.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned1_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned1.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned1.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned2_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned2.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned2.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned3_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned3.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned3.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned4_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned4.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned4.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned5_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned5.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned5.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned6_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned6.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned6.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned7_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned7.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned7.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned8_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned8.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned8.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemEarned9_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemEarned9.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemEarned9.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
 
-        /* Points possible on change events */
+        /* Points possible on Leave */
         private void txtItemPossible0_Leave(object sender, EventArgs e)
         {
             Save_Class_CurrSel();
@@ -4714,7 +4838,7 @@ namespace MyGradeBook
             Totals();
         }
 
-        /* Weight on change event */
+        /* Weight on Leave */
         private void txtItemWeight0_Leave(object sender, EventArgs e)
         {
             Save_Class_CurrSel();
@@ -4771,6 +4895,31 @@ namespace MyGradeBook
         {
             Save_Class_CurrSel();
             Save_Classes_To_Text();
+        }
+
+        private void txtItemPossible0_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemPossible1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemPossible2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemPossible3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemPossible4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
