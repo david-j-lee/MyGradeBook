@@ -14,20 +14,11 @@ using System.IO;
 /* ********** MyGradeBook ********** */
 /* ********************************* */
 
-// QUESTIONS TO PROFESSSOR:
-
-// Using for with checkboxes
-// Event procedures for many similar controls
-// 
-
 
 // TO BE COMPLETED:
-
 // What ifs
-// Saving sys msgs to txt file with append
+// Saving sys msgs to txt file with append (events only ones left)
 // About us
-// On enter events for txtboxes
-// On leave events for txtboxes without numbers
 // 
 
 
@@ -133,7 +124,7 @@ namespace MyGradeBook
 
 
         //=======================================================================================================
-        /* SET STAGE */
+        /* (EMPTY) */
         //=======================================================================================================
 
         public Main()
@@ -144,11 +135,19 @@ namespace MyGradeBook
 
 
         //=======================================================================================================
-        /* LOADS DATA */
+        /* **** **** LOADS DATA AND SETS STAGE **** **** */
         //=======================================================================================================
 
         private void Main_Load(object sender, EventArgs e)
         {
+            //start a new section in log
+            lblSysMsg.Text = "----------------------------------------------------------------";
+            Sys_Msg_Save_Txt();
+
+            //SysMsg
+            lblSysMsg.Text = "Main_Load started";
+            Sys_Msg_Save_Txt();
+
             //To hide txtbox for class names
             for (int i = 0; i < NUMBER_OF_CLASSES; i++)
             {
@@ -166,7 +165,8 @@ namespace MyGradeBook
             btnClearAll.Visible = false;
 
             //SysMsg
-            lblSysMsg.Text = "Class Input text hidden";
+            lblSysMsg.Text = "Objects hidden";
+            Sys_Msg_Save_Txt();
 
             //To show btns for class names
             for (int i = 0; i < NUMBER_OF_CLASSES; i++)
@@ -175,8 +175,10 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Buttons are loaded";
+            lblSysMsg.Text = "Buttons loaded";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "GUI Loaded";
+            Sys_Msg_Save_Txt();
 
             //Load from text
             Load_Color_Scheme();
@@ -189,14 +191,45 @@ namespace MyGradeBook
             Load_Class_5();
 
             //SysMsg
+            lblSysMsg.Text = "Main_Load successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Welcome";
         }
 
 
 
         //=======================================================================================================
-        /* **** **** METHODS **** **** */
+        /* **** **** DATA METHODS **** **** */
         //=======================================================================================================
+
+        /* SAVE SYS MSGS */
+        public void Sys_Msg_Save_Txt()
+        {   
+            //If log file reaches more than 10,000 lines makes a new one
+            int sysMsgLines = File.ReadAllLines("SysMsgs.txt").Length;
+            if (sysMsgLines >= 10000)
+            {
+                //Writes over file
+                FileStream outFile = new FileStream("SysMsgs.txt", FileMode.Create, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(outFile);
+
+                writer.WriteLine("[" + DateTime.Now.ToString() + "]:  " + lblSysMsg.Text);
+
+                writer.Close();
+                outFile.Close();
+            }
+            else
+            {
+                //Appends to file
+                FileStream outFile = new FileStream("SysMsgs.txt", FileMode.Append, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(outFile);
+
+                writer.WriteLine("[" + DateTime.Now.ToString() + "]:  " + lblSysMsg.Text);
+
+                writer.Close();
+                outFile.Close();
+            }
+        }
 
         /* LOAD TO VARIABLES */
         //Checks for txt files
@@ -204,6 +237,10 @@ namespace MyGradeBook
         //If one does exsist it reads it
         public void Load_Color_Scheme()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Color_Scheme started";
+            Sys_Msg_Save_Txt();
+
             //Looks for file, creates if does not exsist
             if (File.Exists("colorScheme.txt"))
             {
@@ -219,10 +256,15 @@ namespace MyGradeBook
             cboColorScheme.Text = colorScheme;
 
             //SysMsg
-            lblSysMsg.Text = "colorScheme has been set";
+            lblSysMsg.Text = "Load_Color_Scheme successful";
+            Sys_Msg_Save_Txt();
         }
         public void Load_Class_Names()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_Names started";
+            Sys_Msg_Save_Txt();
+
             //classNames
             if (File.Exists("classNames.txt"))
             {
@@ -241,10 +283,15 @@ namespace MyGradeBook
             else File.WriteAllLines("classNames.txt", classNames);
 
             //SysMsg
-            lblSysMsg.Text = "classNames have been set";
+            lblSysMsg.Text = "Load_Class_Names successful";
+            Sys_Msg_Save_Txt();
         }
         public void Load_Class_0()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_0 started";
+            Sys_Msg_Save_Txt();
+
             //Looks for files: if exsists read, if does not exsist create one
             //class0ItemNames
             if (File.Exists("class0ItemNames.txt"))
@@ -341,10 +388,15 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 0 initialized";
+            lblSysMsg.Text = "Load_Class_0 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Load_Class_1()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_1 started";
+            Sys_Msg_Save_Txt();
+
             //class1ItemNames
             if (File.Exists("class1ItemNames.txt"))
             {
@@ -440,10 +492,16 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 2 initialized";
+            lblSysMsg.Text = "Load_Class_1 successful";
+            Sys_Msg_Save_Txt();
+
         }
         public void Load_Class_2()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_2 started";
+            Sys_Msg_Save_Txt();
+
             //class2ItemNames
             if (File.Exists("class2ItemNames.txt"))
             {
@@ -539,10 +597,15 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 3 initialized";
+            lblSysMsg.Text = "Load_Class_2 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Load_Class_3()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_3 started";
+            Sys_Msg_Save_Txt();
+
             //class3ItemNames
             if (File.Exists("class3ItemNames.txt"))
             {
@@ -639,13 +702,15 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 4 initialized";
-
-            //END OF CLASS 4
-
+            lblSysMsg.Text = "Load_Class_3 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Load_Class_4()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_4 started";
+            Sys_Msg_Save_Txt();
+
             //class4ItemNames
             if (File.Exists("class4ItemNames.txt"))
             {
@@ -741,10 +806,15 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 5 initialized";
+            lblSysMsg.Text = "Load_Class_4 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Load_Class_5()
         {
+            //SysMsg
+            lblSysMsg.Text = "Load_Class_5 started";
+            Sys_Msg_Save_Txt();
+
             //class5ItemNames
             if (File.Exists("class5ItemNames.txt"))
             {
@@ -841,14 +911,17 @@ namespace MyGradeBook
             }
 
             //SysMsg
-            lblSysMsg.Text = "Class 6 initialized";
-
-
+            lblSysMsg.Text = "Load_Class_5 successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* SET TEXTBOXES TO VARIABLES */
         public void Set_Txt_ClassCurr()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_ClassCurr started";
+            Sys_Msg_Save_Txt();
+
             if (selection == 0)
             {
                 Set_Txt_Class_0();
@@ -873,9 +946,17 @@ namespace MyGradeBook
             {
                 Set_Txt_Class_5();
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_ClassCurr successful";
+            Sys_Msg_Save_Txt();
         }
         public void Set_Txt_Class_0()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_0 started";
+            Sys_Msg_Save_Txt();
+
             //Setting textbox to values from array
             if (class0ItemStatus[0] == "yes")
                 chkItemStatus0.Checked = true;
@@ -962,9 +1043,17 @@ namespace MyGradeBook
             {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class0WeightedGrades[i].ToString("P1");
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_0 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Set_Txt_Class_1()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_1 started";
+            Sys_Msg_Save_Txt();
+
             //Setting textbox to values from array                        
             if (class1ItemStatus[0] == "yes")
                 chkItemStatus0.Checked = true;
@@ -1051,9 +1140,17 @@ namespace MyGradeBook
             {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class1WeightedGrades[i].ToString("P1");
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_1 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Set_Txt_Class_2()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_2 started";
+            Sys_Msg_Save_Txt();
+
             //Setting textbox to values from array
             if (class2ItemStatus[0] == "yes")
                 chkItemStatus0.Checked = true;
@@ -1140,9 +1237,17 @@ namespace MyGradeBook
             {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class2WeightedGrades[i].ToString("P1");
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_2 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Set_Txt_Class_3()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_3 started";
+            Sys_Msg_Save_Txt();
+
             //Setting textbox to values from array
             if (class3ItemStatus[0] == "yes")
                 chkItemStatus0.Checked = true;
@@ -1229,9 +1334,17 @@ namespace MyGradeBook
             {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class3WeightedGrades[i].ToString("P1");
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_3 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Set_Txt_Class_4()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_4 started";
+            Sys_Msg_Save_Txt();
+
             //Setting textbox to values from array
             if (class4ItemStatus[0] == "yes")
                 chkItemStatus0.Checked = true;
@@ -1319,9 +1432,17 @@ namespace MyGradeBook
             {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class4WeightedGrades[i].ToString("P1");
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_4 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Set_Txt_Class_5()
         {
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_5 started";
+            Sys_Msg_Save_Txt();
+
             //Setting textbox to values from array
             if (class5ItemStatus[0] == "yes")
                 chkItemStatus0.Checked = true;
@@ -1409,6 +1530,10 @@ namespace MyGradeBook
             {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class5WeightedGrades[i].ToString("P1");
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Set_Txt_Class_5 successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* SAVE TO ARRAYS */
@@ -1416,6 +1541,10 @@ namespace MyGradeBook
         //Than arrays to text files
         public void Save_Class_CurrSel()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_CurrSel started";
+            Sys_Msg_Save_Txt();
+            
             if (selection == 0)
             {
                 Save_Class_0();
@@ -1445,9 +1574,17 @@ namespace MyGradeBook
             {
                 Save_Class_5();
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_CurrSel successful";
+            Sys_Msg_Save_Txt();
         }
         public void Save_Class_0()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_0 started";
+            Sys_Msg_Save_Txt();
+
             //This assigns values to arrays                                
             if (chkItemStatus0.Checked)
                 class0ItemStatus[0] = "yes";
@@ -1549,10 +1686,16 @@ namespace MyGradeBook
             }
 
             //SysMsg
+            lblSysMsg.Text = "Save_Class_0 successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Class0 txtboxes assigned to variables";
         }
         public void Save_Class_1()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_1 started";
+            Sys_Msg_Save_Txt();
+
             //This assigns values to arrays
             if (chkItemStatus0.Checked)
                 class1ItemStatus[0] = "yes";
@@ -1655,10 +1798,16 @@ namespace MyGradeBook
             }
 
             //SysMsg
+            lblSysMsg.Text = "Save_Class_1 successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Class1 txtboxes assigned to variables";
         }
         public void Save_Class_2()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_2 started";
+            Sys_Msg_Save_Txt();
+
             //This assigns values to arrays            
             if (chkItemStatus0.Checked)
                 class2ItemStatus[0] = "yes";
@@ -1760,10 +1909,16 @@ namespace MyGradeBook
             }
 
             //SysMsg
+            lblSysMsg.Text = "Save_Class_2 successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Class2 txtboxes assigned to variables";
         }
         public void Save_Class_3()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_3 started";
+            Sys_Msg_Save_Txt();
+
             //This assigns values to arrays
             if (chkItemStatus0.Checked)
                 class3ItemStatus[0] = "yes";
@@ -1868,10 +2023,16 @@ namespace MyGradeBook
             }
 
             //SysMsg
+            lblSysMsg.Text = "Save_Class_3 successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Class3 txtboxes assigned to variables";
         }
         public void Save_Class_4()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_4";
+            Sys_Msg_Save_Txt();
+
             //This assigns values to arrays
             if (chkItemStatus0.Checked)
                 class4ItemStatus[0] = "yes";
@@ -1974,10 +2135,16 @@ namespace MyGradeBook
             }
 
             //SysMsg
+            lblSysMsg.Text = "Save_Class_4";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Class4 txtboxes assigned to variables";
         }
         public void Save_Class_5()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Class_5 started";
+            Sys_Msg_Save_Txt();
+
             //This assigns values to arrays
             if (chkItemStatus0.Checked)
                 class5ItemStatus[0] = "yes";
@@ -2080,12 +2247,18 @@ namespace MyGradeBook
             }
 
             //SysMsg
+            lblSysMsg.Text = "Save_Class_5 successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "Class5 txtboxes assigned to variables";
         }
 
         /* SAVE TO TEXT FILE */
         public void Save_Classes_To_Text()
         {
+            //SysMsg
+            lblSysMsg.Text = "Save_Classes_To_Text started";
+            Sys_Msg_Save_Txt();
+
             //CLASS 0
             //class0ItemNames
             File.WriteAllLines("class0ItemNames.txt", class0ItemNames);
@@ -2111,6 +2284,7 @@ namespace MyGradeBook
             File.WriteAllLines("class0Weights.txt", class0WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class0 variables saved to .txt";
+            Sys_Msg_Save_Txt();
 
             //CLASS 1
             //class1ItemNames
@@ -2137,6 +2311,7 @@ namespace MyGradeBook
             File.WriteAllLines("class1Weights.txt", class1WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class1 variables saved to .txt";
+            Sys_Msg_Save_Txt();
 
             //CLASS 2
             //class2ItemNames
@@ -2163,6 +2338,7 @@ namespace MyGradeBook
             File.WriteAllLines("class2Weights.txt", class2WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class2 variables saved to .txt";
+            Sys_Msg_Save_Txt();
 
             //CLASS 3
             //class3ItemNames
@@ -2189,6 +2365,7 @@ namespace MyGradeBook
             File.WriteAllLines("class3Weights.txt", class3WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class3 variables saved to .txt";
+            Sys_Msg_Save_Txt();
 
             //CLASS 4
             //class4ItemNames
@@ -2215,6 +2392,7 @@ namespace MyGradeBook
             File.WriteAllLines("class4Weights.txt", class4WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class4 variables saved to .txt";
+            Sys_Msg_Save_Txt();
 
             //CLASS 5
             //class5ItemNames
@@ -2241,17 +2419,34 @@ namespace MyGradeBook
             File.WriteAllLines("class5Weights.txt", class5WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class5 variables saved to .txt";
+            Sys_Msg_Save_Txt();
+
+            //SysMsg
+            lblSysMsg.Text = "Save_Classes_To_Text successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* TOTALS */
         public void Totals()
         {
+            //SysMsg
+            lblSysMsg.Text = "Totals started";
+            Sys_Msg_Save_Txt();
+
             Grade_Total();
             Weighted_Grade_Total();
             Statistics();
+
+            //SysMsg
+            lblSysMsg.Text = "Totals successful";
+            Sys_Msg_Save_Txt();
         }
         public void Grade_Total()
         {
+            //SysMsg
+            lblSysMsg.Text = "Grade_Total started";
+            Sys_Msg_Save_Txt();
+
             //Class 0
             double gradeTotal = 0;
 
@@ -2352,10 +2547,18 @@ namespace MyGradeBook
             for (int i = 0; i < gradeTotal*100; i++)
             {
                 prgGrade.PerformStep();
-            }            
+            }          
+  
+            //SysMsg
+            lblSysMsg.Text = "Grade_Total successful";
+            Sys_Msg_Save_Txt();
         }
         public void Weighted_Grade_Total()
         {
+            //SysMsg
+            lblSysMsg.Text = "Weighted_Grade_Total started";
+            Sys_Msg_Save_Txt();
+
             double weightedGradeTotal = 0;
             double totalWeights = 0;
 
@@ -2434,11 +2637,18 @@ namespace MyGradeBook
             for (int i = 0; i < weightedGradeTotal * 100; i++)
                 prgWeightedGrade.PerformStep();
 
+            //SysMsg
+            lblSysMsg.Text = "Weighted_Grade_Total successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* STATISTICS */
         public void Statistics()
         {
+            //SysMsg
+            lblSysMsg.Text = "Statistics started";
+            Sys_Msg_Save_Txt();
+
             if (selection == 0)
             {
                 if (classNames[0] == "")
@@ -2745,17 +2955,24 @@ namespace MyGradeBook
 
                 lblStatWeightedGradeVal.Text = class5WeightedGrades.Sum().ToString("P1");
             }
+
+            lblSysMsg.Text = "Statistics successful";
+            Sys_Msg_Save_Txt();
         }
 
 
 
         //=======================================================================================================
-        /* **** COLOR **** */
+        /* **** **** COLOR METHODS **** **** */
         //=======================================================================================================
 
         /* ColorScheme drop down box on change event */
         private void cboColorScheme_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "cboColorScheme_SelectedIndexChanged started";
+            Sys_Msg_Save_Txt();
+
             colorScheme = cboColorScheme.Text;
 
             if (colorScheme == "(default)")
@@ -2780,11 +2997,19 @@ namespace MyGradeBook
 
             //Saves color scheme selection to text file
             Color_Scheme_Save();
+
+            //SysMsg
+            lblSysMsg.Text = "cboColorScheme_SelectedIndexChanged successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* Color scheme actions */
         public void Color_Scheme_Set()
         {
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Set started";
+            Sys_Msg_Save_Txt();
+
             //Set sys btn colors
             btnSettings.BackColor = btnClassNotSelected.BackColor;
 
@@ -2816,15 +3041,31 @@ namespace MyGradeBook
             //Sets clear and clear all
             btnClearCurrent.BackColor = btnClassNotSelected.BackColor;
             btnClearAll.BackColor = btnClassNotSelected.BackColor;
+
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Set successful";
+            Sys_Msg_Save_Txt();
         }
         public void Color_Scheme_Save()
         {
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Save started";
+            Sys_Msg_Save_Txt();
+
             File.WriteAllText("colorScheme.txt", colorScheme);
+
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Save successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* Color schemes */
         public void Color_Scheme_Default()
         {
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Default started";
+            Sys_Msg_Save_Txt();
+
             //Set colors
             this.BackColor = default(Color);
             this.ForeColor = default(Color);
@@ -2835,9 +3076,17 @@ namespace MyGradeBook
 
             //Set
             Color_Scheme_Set();
+
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Default successful";
+            Sys_Msg_Save_Txt();
         }
         public void Color_Scheme_Cool()
         {
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Cool started";
+            Sys_Msg_Save_Txt();
+
             //Set colors
             this.BackColor = Color.LightSkyBlue;
             this.ForeColor = Color.DarkBlue;
@@ -2848,9 +3097,16 @@ namespace MyGradeBook
 
             //Set
             Color_Scheme_Set();
+
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Cool successful";
         }
         public void Color_Scheme_HelloKitty()
         {
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_HelloKitty started";
+            Sys_Msg_Save_Txt();
+
             //Set color
             this.BackColor = Color.LightPink;
             this.ForeColor = Color.DarkRed;
@@ -2861,9 +3117,17 @@ namespace MyGradeBook
 
             //Set
             Color_Scheme_Set();
+
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_HelloKitty successful";
+            Sys_Msg_Save_Txt();
         }
         public void Color_Scheme_Midnight()
         {
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Midnight started";
+            Sys_Msg_Save_Txt();
+
             //Set colors
             this.BackColor = Color.Black;
             this.ForeColor = Color.White;
@@ -2874,11 +3138,19 @@ namespace MyGradeBook
 
             //Set
             Color_Scheme_Set();
+
+            //SysMsg
+            lblSysMsg.Text = "Color_Scheme_Midnight successful";
+            Sys_Msg_Save_Txt();
         }
 
         /* Sets finished item visuals */
         public void Fin_Items_Class_0()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_0 started";
+            Sys_Msg_Save_Txt();
+
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 if (class0ItemStatus[i] == "yes")
@@ -2897,9 +3169,17 @@ namespace MyGradeBook
                     pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
                 }
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_0 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Fin_Items_Class_1()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_1 started";
+            Sys_Msg_Save_Txt();
+
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 if (class1ItemStatus[i] == "yes")
@@ -2918,9 +3198,17 @@ namespace MyGradeBook
                     pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
                 }
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_1 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Fin_Items_Class_2()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_2 started";
+            Sys_Msg_Save_Txt();
+
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 if (class2ItemStatus[i] == "yes")
@@ -2939,9 +3227,17 @@ namespace MyGradeBook
                     pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
                 }
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_2 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Fin_Items_Class_3()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_3 started";
+            Sys_Msg_Save_Txt();
+
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 if (class3ItemStatus[i] == "yes")
@@ -2960,9 +3256,17 @@ namespace MyGradeBook
                     pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
                 }
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_3 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Fin_Items_Class_4()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_4 started";
+            Sys_Msg_Save_Txt();
+
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 if (class4ItemStatus[i] == "yes")
@@ -2981,9 +3285,17 @@ namespace MyGradeBook
                     pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
                 }
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_4 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Fin_Items_Class_5()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_5 started";
+            Sys_Msg_Save_Txt();
+
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 if (class5ItemStatus[i] == "yes")
@@ -3002,9 +3314,17 @@ namespace MyGradeBook
                     pnlItems.Controls["txtItemWeight" + i].BackColor = txtNotDone.BackColor;
                 }
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_5 successful";
+            Sys_Msg_Save_Txt();
         }
         public void Fin_Items_Class_CurrSel()
         {
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_CurrSel started";
+            Sys_Msg_Save_Txt();
+
             //Visuals for finished items
             if (selection == 0)
             {
@@ -3035,17 +3355,25 @@ namespace MyGradeBook
             {
                 Fin_Items_Class_5();
             }
+
+            //SysMsg
+            lblSysMsg.Text = "Fin_Items_Class_CurrSel successful";
+            Sys_Msg_Save_Txt();
         }
 
 
 
         //=======================================================================================================
-        /* **** BTNS **** */
+        /* **** **** BTNS **** **** */
         //=======================================================================================================
 
         /* SETTINGS */
         private void btnSettings_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnSettings_Click started";
+            Sys_Msg_Save_Txt();
+
             //To change class names
             if (classRenameStatus == 0)
             {
@@ -3102,9 +3430,11 @@ namespace MyGradeBook
                 btnClearAll.Visible = true;
 
                 //Set status for next click
-                classRenameStatus = 1;
+                classRenameStatus = 1;                
 
                 //SysMsg
+                lblSysMsg.Text = "Settings activated";
+                Sys_Msg_Save_Txt();
                 lblSysMsg.Text = "Rename your classes";
             }
 
@@ -3145,6 +3475,8 @@ namespace MyGradeBook
                 Statistics();
 
                 //SysMsg
+                lblSysMsg.Text = "Settings deactivated";
+                Sys_Msg_Save_Txt();
                 lblSysMsg.Text = "Class names saved to .txt";
             }
         }
@@ -3152,6 +3484,10 @@ namespace MyGradeBook
         /* CLASSES */
         private void btnClass0_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClass0_Click started";
+            Sys_Msg_Save_Txt();
+
             //Saves previous selection
             Save_Class_CurrSel();
 
@@ -3176,11 +3512,18 @@ namespace MyGradeBook
             Fin_Items_Class_CurrSel();
 
             lblClass.Text = classNames[0];
+
             //SysMsg
+            lblSysMsg.Text = "btnClass0_Click successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "class0 has been selected";
         }
         private void btnClass1_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClass1_Click started";
+            Sys_Msg_Save_Txt();
+
             //Saves previous selection
             Save_Class_CurrSel();
 
@@ -3205,11 +3548,18 @@ namespace MyGradeBook
             Fin_Items_Class_CurrSel();
 
             lblClass.Text = classNames[1];
+
             //SysMsg
+            lblSysMsg.Text = "btnClass1_Click successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "class1 has been selected";
         }
         private void btnClass2_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClass2_Click";
+            Sys_Msg_Save_Txt();
+
             //Save previous selection
             Save_Class_CurrSel();
 
@@ -3234,11 +3584,18 @@ namespace MyGradeBook
             Fin_Items_Class_CurrSel();
 
             lblClass.Text = classNames[2];
+
             //SysMsg
+            lblSysMsg.Text = "btnClass2_Click successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "class2 has been selected";
         }
         private void btnClass3_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClass3_Click started";
+            Sys_Msg_Save_Txt();
+
             //Save previous selection
             Save_Class_CurrSel();
 
@@ -3263,11 +3620,18 @@ namespace MyGradeBook
             Fin_Items_Class_CurrSel();
 
             lblClass.Text = classNames[3];
+
             //SysMsg
+            lblSysMsg.Text = "btnClass3_Click successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "class3 has been selected";
         }
         private void btnClass4_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClass4_Click started";
+            Sys_Msg_Save_Txt();
+
             //Save previous selection
             Save_Class_CurrSel();
 
@@ -3292,11 +3656,18 @@ namespace MyGradeBook
             Fin_Items_Class_CurrSel();
 
             lblClass.Text = classNames[4];
+
             //SysMsg
+            lblSysMsg.Text = "btnClass4_Click successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "class4 has been selected";
         }
         private void btnClass5_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClass5_Click started";
+            Sys_Msg_Save_Txt();
+
             //Save previous selection
             Save_Class_CurrSel();
 
@@ -3321,7 +3692,10 @@ namespace MyGradeBook
             Fin_Items_Class_CurrSel();
 
             lblClass.Text = classNames[5];
+
             //SysMsg
+            lblSysMsg.Text = "btnClass5_Click successful";
+            Sys_Msg_Save_Txt();
             lblSysMsg.Text = "class5 has been selected";
         }
 
@@ -3341,7 +3715,11 @@ namespace MyGradeBook
 
         /* CLEAR */
         private void btnClearCurrent_Click(object sender, EventArgs e)
-        {            
+        {
+            //SysMsg
+            lblSysMsg.Text = "btnClearCurrent_Click started";
+            Sys_Msg_Save_Txt();
+
             string message = String.Format("Are you sure you want to clear all your data for {0}?",  lblClass.Text.ToString());
             string caption = "Warning";
             var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -3720,9 +4098,16 @@ namespace MyGradeBook
 
             //Set txtboxes so save doesnt pick up old ones
             Set_Txt_ClassCurr();
+
+            lblSysMsg.Text = "btnClearCurrent_Click successful";
+            Sys_Msg_Save_Txt();
         }
         private void btnClearAll_Click(object sender, EventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "btnClearAll_Click started";
+            Sys_Msg_Save_Txt();
+
             string message = String.Format("Are you sure you want to clear all your data?");
             string caption = "Warning";
             var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -4080,12 +4465,16 @@ namespace MyGradeBook
 
             Set_Txt_ClassCurr();
             Totals();
+
+            //SysMsg
+            lblSysMsg.Text = "btnClearAll_Click successful";
+            Sys_Msg_Save_Txt();
         }
 
 
 
         //=======================================================================================================
-        /* **** EVENTS **** */
+        /* **** **** EVENTS **** **** */
         //=======================================================================================================
 
         /* Check box change events */
@@ -5117,8 +5506,16 @@ namespace MyGradeBook
         /* On close event */
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //SysMsg
+            lblSysMsg.Text = "Main_FormClosing started";
+            Sys_Msg_Save_Txt();
+
             Save_Class_CurrSel();
             Save_Classes_To_Text();
+
+            //SysMsg
+            lblSysMsg.Text = "Main_FormClosing sucessful";
+            Sys_Msg_Save_Txt();
         }
     }
 }
