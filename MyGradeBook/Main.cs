@@ -4670,7 +4670,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned0.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned0.Focus();
             }
@@ -4682,7 +4682,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned1.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned1.Focus();
             }
@@ -4694,7 +4694,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned2.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned2.Focus();
             }
@@ -4706,7 +4706,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned3.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned3.Focus();
             }
@@ -4718,7 +4718,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned4.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned4.Focus();
             }
@@ -4730,7 +4730,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned5.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned5.Focus();
             }
@@ -4742,7 +4742,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned6.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned6.Focus();
             }
@@ -4754,7 +4754,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned7.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned7.Focus();
             }
@@ -4766,7 +4766,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned8.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned8.Focus();
             }
@@ -4778,7 +4778,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemEarned9.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemEarned9.Focus();
             }
@@ -4834,7 +4834,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible0.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible0.Focus();
             }
@@ -4846,7 +4846,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible1.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible1.Focus();
             }
@@ -4858,7 +4858,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible2.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible2.Focus();
             }
@@ -4870,7 +4870,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible3.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible3.Focus();
             }
@@ -4882,7 +4882,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible4.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible4.Focus();
             }
@@ -4894,7 +4894,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible5.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible5.Focus();
             }
@@ -4906,7 +4906,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible6.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible6.Focus();
             }
@@ -4918,7 +4918,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible7.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible7.Focus();
             }
@@ -4930,7 +4930,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible8.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible8.Focus();
             }
@@ -4942,7 +4942,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemPossible9.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemPossible9.Focus();
             }
@@ -4998,7 +4998,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight0.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight0.Focus();
             }
@@ -5010,7 +5010,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight1.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight1.Focus();
             }
@@ -5022,7 +5022,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight2.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight2.Focus();
             }
@@ -5034,7 +5034,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight3.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight3.Focus();
             }
@@ -5046,7 +5046,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight4.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight4.Focus();
             }
@@ -5058,7 +5058,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight5.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight5.Focus();
             }
@@ -5070,7 +5070,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight6.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight6.Focus();
             }
@@ -5082,7 +5082,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight7.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight7.Focus();
             }
@@ -5094,7 +5094,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight8.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight8.Focus();
             }
@@ -5106,7 +5106,7 @@ namespace MyGradeBook
             double parsedValue;
             if (!double.TryParse(txtItemWeight9.Text, out parsedValue))
             {
-                MessageBox.Show("This is a number only field");
+                MessageBox.Show("Only numbers are allowed, if blank input 0");
                 Set_Txt_ClassCurr();
                 txtItemWeight9.Focus();
             }
