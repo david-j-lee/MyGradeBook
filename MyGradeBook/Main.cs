@@ -4786,54 +4786,166 @@ namespace MyGradeBook
             Totals();
         }
 
+        /* Points possible on enter */
+        private void txtItemPossible0_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible0.SelectAll();
+        }
+        private void txtItemPossible1_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible1.SelectAll();
+        }
+        private void txtItemPossible2_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible2.SelectAll();
+        }
+        private void txtItemPossible3_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible3.SelectAll();
+        }
+        private void txtItemPossible4_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible4.SelectAll();
+        }
+        private void txtItemPossible5_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible5.SelectAll();
+        }
+        private void txtItemPossible6_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible6.SelectAll();
+        }
+        private void txtItemPossible7_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible7.SelectAll();
+        }
+        private void txtItemPossible8_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible8.SelectAll();
+        }
+        private void txtItemPossible9_Enter(object sender, EventArgs e)
+        {
+            txtItemPossible9.SelectAll();
+        }
+
         /* Points possible on Leave */
         private void txtItemPossible0_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible0.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible0.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible1_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible1.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible1.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible2_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible2.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible2.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible3_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible3.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible3.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible4_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible4.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible4.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible5_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible5.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible5.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible6_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible6.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible6.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible7_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible7.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible7.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible8_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible8.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible8.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemPossible9_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemPossible9.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemPossible9.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
@@ -4841,51 +4953,121 @@ namespace MyGradeBook
         /* Weight on Leave */
         private void txtItemWeight0_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight0.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight0.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight1_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight1.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight1.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight2_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight2.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight2.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight3_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight3.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight3.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight4_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight4.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight4.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight5_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight5.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight5.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight6_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight6.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight6.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight7_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight7.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight7.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight8_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight8.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight8.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
         private void txtItemWeight9_Leave(object sender, EventArgs e)
         {
+            double parsedValue;
+            if (!double.TryParse(txtItemWeight9.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                Set_Txt_ClassCurr();
+                txtItemWeight9.Focus();
+            }
             Save_Class_CurrSel();
             Totals();
         }
@@ -4895,31 +5077,6 @@ namespace MyGradeBook
         {
             Save_Class_CurrSel();
             Save_Classes_To_Text();
-        }
-
-        private void txtItemPossible0_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtItemPossible1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtItemPossible2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtItemPossible3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtItemPossible4_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
