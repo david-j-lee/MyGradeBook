@@ -158,7 +158,7 @@ namespace MyGradeBook
             btnClassNotSelected.Visible = false;
             btnClassSelected.Visible = false;
             txtDone.Visible = false;
-            txtNotDone.Visible = false;           
+            txtNotDone.Visible = false;
 
             //Hide settings
             btnClearCurrent.Visible = false;
@@ -204,7 +204,7 @@ namespace MyGradeBook
 
         /* SAVE SYS MSGS */
         public void Sys_Msg_Save_Txt()
-        {   
+        {
             //If log file reaches more than 10,000 lines makes a new one
             int sysMsgLines = File.ReadAllLines("SysMsgs.txt").Length;
             if (sysMsgLines >= 10000)
@@ -1012,35 +1012,10 @@ namespace MyGradeBook
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 pnlItems.Controls["txtItemName" + i].Text = class0ItemNames[i];
-            }
-
-            //Points Earned to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class0PointsEarned[i]);
-            }
-
-            //Points Possible to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class0PointsPossible[i]);
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemGrade" + i].Text = class0Grades[i].ToString("P1");
-            }
-
-            //Weights to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class0Weights[i]);
-            }
-
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class0WeightedGrades[i].ToString("P1");
             }
 
@@ -1109,35 +1084,10 @@ namespace MyGradeBook
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 pnlItems.Controls["txtItemName" + i].Text = class1ItemNames[i];
-            }
-
-            //Points Earned to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class1PointsEarned[i]);
-            }
-
-            //Points Possible to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class1PointsPossible[i]);
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemGrade" + i].Text = class1Grades[i].ToString("P1");
-            }
-
-            //Weights to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class1Weights[i]);
-            }
-
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class1WeightedGrades[i].ToString("P1");
             }
 
@@ -1206,35 +1156,10 @@ namespace MyGradeBook
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 pnlItems.Controls["txtItemName" + i].Text = class2ItemNames[i];
-            }
-
-            //Points Earned to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class2PointsEarned[i]);
-            }
-
-            //Points Possible to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class2PointsPossible[i]);
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemGrade" + i].Text = class2Grades[i].ToString("P1");
-            }
-
-            //Weights to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class2Weights[i]);
-            }
-
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class2WeightedGrades[i].ToString("P1");
             }
 
@@ -1303,35 +1228,10 @@ namespace MyGradeBook
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 pnlItems.Controls["txtItemName" + i].Text = class3ItemNames[i];
-            }
-
-            //Points Earned to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class3PointsEarned[i]);
-            }
-
-            //Points Possible to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class3PointsPossible[i]);
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemGrade" + i].Text = class3Grades[i].ToString("P1");
-            }
-
-            //Weights to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class3Weights[i]);
-            }
-
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class3WeightedGrades[i].ToString("P1");
             }
 
@@ -1401,35 +1301,10 @@ namespace MyGradeBook
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 pnlItems.Controls["txtItemName" + i].Text = class4ItemNames[i];
-            }
-
-            //Points Earned to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class4PointsEarned[i]);
-            }
-
-            //Points Possible to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class4PointsPossible[i]);
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemGrade" + i].Text = class4Grades[i].ToString("P1");
-            }
-
-            //Weights to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class4Weights[i]);
-            }
-
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class4WeightedGrades[i].ToString("P1");
             }
 
@@ -1499,35 +1374,10 @@ namespace MyGradeBook
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 pnlItems.Controls["txtItemName" + i].Text = class5ItemNames[i];
-            }
-
-            //Points Earned to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemEarned" + i].Text = Convert.ToString(class5PointsEarned[i]);
-            }
-
-            //Points Possible to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemPossible" + i].Text = Convert.ToString(class5PointsPossible[i]);
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemGrade" + i].Text = class5Grades[i].ToString("P1");
-            }
-
-            //Weights to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeight" + i].Text = Convert.ToString(class5Weights[i]);
-            }
-
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class5WeightedGrades[i].ToString("P1");
             }
 
@@ -1544,7 +1394,7 @@ namespace MyGradeBook
             //SysMsg
             lblSysMsg.Text = "Save_Class_CurrSel started";
             Sys_Msg_Save_Txt();
-            
+
             if (selection == 0)
             {
                 Save_Class_0();
@@ -1636,52 +1486,27 @@ namespace MyGradeBook
             else
                 class0ItemStatus[9] = "no";
 
-            //Item Names to variables
+            //For statement to assign values to arrays
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Item Names
                 class0ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-            }
-
-            //Points Earned to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points earned
                 class0PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-            }
-
-            //Points Possible to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class0PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-            }
-
-            //Grade calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades
                 if (class0PointsPossible[i] != 0)
                     class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
                 else
                     class0Grades[i] = 0;
-            }
-            //Grade to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades to txtbox
                 pnlItems.Controls["txtItemGrade" + i].Text = class0Grades[i].ToString("P1");
-            }
-
-            //Weights to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class0Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-            }
-
-            //Weighted Grade calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade
                 class0WeightedGrades[i] = class0Weights[i] * class0Grades[i];
-            }
-            //Weighted Grade to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade to txtbox
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class0WeightedGrades[i].ToString("P1");
             }
 
@@ -1747,53 +1572,27 @@ namespace MyGradeBook
             else
                 class1ItemStatus[9] = "no";
 
-
-            //Item Names to variables
+            //For statement to assign values to arrays
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Item Names
                 class1ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-            }
-
-            //Points Earned to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Earned
                 class1PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-            }
-
-            //Points Possible to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class1PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-            }
-
-            //Grade to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades
                 if (class1PointsPossible[i] != 0)
                     class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
                 else
                     class1Grades[i] = 0;
-            }
-            //Grade to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades to txtbox
                 pnlItems.Controls["txtItemGrade" + i].Text = class1Grades[i].ToString("P1");
-            }
-
-            //Weights to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class1Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-            }
-
-            //Weighted Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade
                 class1WeightedGrades[i] = class1Weights[i] * class1Grades[i];
-            }
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade to txtbox
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class1WeightedGrades[i].ToString("P1");
             }
 
@@ -1859,52 +1658,27 @@ namespace MyGradeBook
             else
                 class2ItemStatus[9] = "no";
 
-            //Item Names to variables
+            //For statement to assign values to arrays
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Item Names
                 class2ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-            }
-
-            //Points Earned to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Earned
                 class2PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-            }
-
-            //Points Possible to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class2PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-            }
-
-            //Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades
                 if (class2PointsPossible[i] != 0)
                     class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
                 else
                     class2Grades[i] = 0;
-            }
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grade to txtbox
                 pnlItems.Controls["txtItemGrade" + i].Text = class2Grades[i].ToString("P1");
-            }
-
-            //Weights to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weight
                 class2Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-            }
-
-            //Weighted Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade
                 class2WeightedGrades[i] = class2Weights[i] * class2Grades[i];
-            }
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade to txtbox
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class2WeightedGrades[i].ToString("P1");
             }
 
@@ -1971,54 +1745,27 @@ namespace MyGradeBook
                 class3ItemStatus[9] = "no";
 
 
-            //Item Names to variables
+            //For statement to assign values to arrays
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Item Name
                 class3ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-            }
-
-            //Points Earned to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Earned
                 class3PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-            }
-
-            //Points Possible to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Point Possible
                 class3PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-            }
-
-            //Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades
                 if (class3PointsPossible[i] != 0)
                     class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
                 else
                     class3Grades[i] = 0;
-            }
-
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades to txtbox
                 pnlItems.Controls["txtItemGrade" + i].Text = class3Grades[i].ToString("P1");
-            }
-
-            //Weights to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class3Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-            }
-
-            //Weighted Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade
                 class3WeightedGrades[i] = class3Weights[i] * class3Grades[i];
-            }
-
-            //Assign new values to txtbox
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grade to txt
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class3WeightedGrades[i].ToString("P1");
             }
 
@@ -2084,53 +1831,27 @@ namespace MyGradeBook
             else
                 class4ItemStatus[9] = "no";
 
-
-            //Item Names to variables
+            //For statement to assign values to arrays
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Item Names
                 class4ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-            }
-
-            //Points Earned to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Earned
                 class4PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-            }
-
-            //Points Possible to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class4PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-            }
-
-            //Grades calculated to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades
                 if (class4PointsPossible[i] != 0)
                     class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
                 else
                     class4Grades[i] = 0;
-            }
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades to txtbox
                 pnlItems.Controls["txtItemGrade" + i].Text = class4Grades[i].ToString("P1");
-            }
-
-            //Weights to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class4Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-            }
-
-            //Weighted Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grades
                 class4WeightedGrades[i] = class4Weights[i] * class4Grades[i];
-            }
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grades to txt
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class4WeightedGrades[i].ToString("P1");
             }
 
@@ -2197,52 +1918,27 @@ namespace MyGradeBook
                 class5ItemStatus[9] = "no";
 
 
-            //Item Names to variables
+            //For statement to assign values to arrays
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Item Names
                 class5ItemNames[i] = Convert.ToString(pnlItems.Controls["txtItemName" + i].Text);
-            }
-
-            //Points Earned to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Eanred
                 class5PointsEarned[i] = Convert.ToDouble(pnlItems.Controls["txtItemEarned" + i].Text);
-            }
-
-            //Points Possible to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class5PointsPossible[i] = Convert.ToDouble(pnlItems.Controls["txtItemPossible" + i].Text);
-            }
-
-            //Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades
                 if (class5PointsPossible[i] != 0)
                     class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
                 else
                     class5Grades[i] = 0;
-            }
-            //Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Grades to txtbox
                 pnlItems.Controls["txtItemGrade" + i].Text = class5Grades[i].ToString("P1");
-            }
-
-            //Weights to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class5Weights[i] = Convert.ToDouble(pnlItems.Controls["txtItemWeight" + i].Text);
-            }
-
-            //Weighted Grades calculate to variables
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grades
                 class5WeightedGrades[i] = class5Weights[i] * class5Grades[i];
-            }
-            //Weighted Grades to txtboxes
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weighted Grades to txtbox
                 pnlItems.Controls["txtItemWeightedGrade" + i].Text = class5WeightedGrades[i].ToString("P1");
             }
 
@@ -2259,88 +1955,73 @@ namespace MyGradeBook
             lblSysMsg.Text = "Save_Classes_To_Text started";
             Sys_Msg_Save_Txt();
 
-            //CLASS 0
+            //CLASS 0 -------------------------------------------------------------------
             //class0ItemNames
             File.WriteAllLines("class0ItemNames.txt", class0ItemNames);
             //class0ItemStatus
             File.WriteAllLines("class0ItemStatus.txt", class0ItemStatus);
-            //class0PointsEarned
+            //For loop to convert number fields
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Points earned
                 class0PointsEarnedString[i] = Convert.ToString(class0PointsEarned[i]);
-            }
-            File.WriteAllLines("class0PointsEarned.txt", class0PointsEarnedString);
-            //class0PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class0PointsPossibleString[i] = Convert.ToString(class0PointsPossible[i]);
-            }
-            File.WriteAllLines("class0PointsPossible.txt", class0PointsPossibleString);
-            //class0Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class0WeightsString[i] = Convert.ToString(class0Weights[i]);
             }
+            //To txt files
+            File.WriteAllLines("class0PointsEarned.txt", class0PointsEarnedString);
+            File.WriteAllLines("class0PointsPossible.txt", class0PointsPossibleString);
             File.WriteAllLines("class0Weights.txt", class0WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class0 variables saved to .txt";
             Sys_Msg_Save_Txt();
 
-            //CLASS 1
+            //CLASS 1 -------------------------------------------------------------------
             //class1ItemNames
             File.WriteAllLines("class1ItemNames.txt", class1ItemNames);
             //class1ItemStatus
             File.WriteAllLines("class1ItemStatus.txt", class1ItemStatus);
-            //class1PointsEarned
+            //For loop to convert to string
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Points Earned
                 class1PointsEarnedString[i] = Convert.ToString(class1PointsEarned[i]);
-            }
-            File.WriteAllLines("class1PointsEarned.txt", class1PointsEarnedString);
-            //class1PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class1PointsPossibleString[i] = Convert.ToString(class1PointsPossible[i]);
-            }
-            File.WriteAllLines("class1PointsPossible.txt", class1PointsPossibleString);
-            //class1Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class1WeightsString[i] = Convert.ToString(class1Weights[i]);
             }
+            //To txt files
+            File.WriteAllLines("class1PointsEarned.txt", class1PointsEarnedString);
+            File.WriteAllLines("class1PointsPossible.txt", class1PointsPossibleString);
             File.WriteAllLines("class1Weights.txt", class1WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class1 variables saved to .txt";
             Sys_Msg_Save_Txt();
 
-            //CLASS 2
+            //CLASS 2 -------------------------------------------------------------------
             //class2ItemNames
             File.WriteAllLines("class2ItemNames.txt", class2ItemNames);
             //class2ItemStatus
             File.WriteAllLines("class2ItemStatus.txt", class2ItemStatus);
-            //class2PointsEarned
+            //For statement to convert to string
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
                 class2PointsEarnedString[i] = Convert.ToString(class2PointsEarned[i]);
-            }
-            File.WriteAllLines("class2PointsEarned.txt", class2PointsEarnedString);
-            //class2PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 class2PointsPossibleString[i] = Convert.ToString(class2PointsPossible[i]);
-            }
-            File.WriteAllLines("class2PointsPossible.txt", class2PointsPossibleString);
-            //class2Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
                 class2WeightsString[i] = Convert.ToString(class2Weights[i]);
             }
+            //To txt files
+            File.WriteAllLines("class2PointsEarned.txt", class2PointsEarnedString);
+            File.WriteAllLines("class2PointsPossible.txt", class2PointsPossibleString);
             File.WriteAllLines("class2Weights.txt", class2WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class2 variables saved to .txt";
             Sys_Msg_Save_Txt();
 
-            //CLASS 3
+            //CLASS 3 -------------------------------------------------------------------
             //class3ItemNames
             File.WriteAllLines("class3ItemNames.txt", class3ItemNames);
             //class3ItemStatus
@@ -2348,74 +2029,62 @@ namespace MyGradeBook
             //class3PointsEarned
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Points Earned
                 class3PointsEarnedString[i] = Convert.ToString(class3PointsEarned[i]);
-            }
-            File.WriteAllLines("class3PointsEarned.txt", class3PointsEarnedString);
-            //class3PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class3PointsPossibleString[i] = Convert.ToString(class3PointsPossible[i]);
-            }
-            File.WriteAllLines("class3PointsPossible.txt", class3PointsPossibleString);
-            //class3Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weight
                 class3WeightsString[i] = Convert.ToString(class3Weights[i]);
             }
+            //To txt file
+            File.WriteAllLines("class3PointsEarned.txt", class3PointsEarnedString);
+            File.WriteAllLines("class3PointsPossible.txt", class3PointsPossibleString);
             File.WriteAllLines("class3Weights.txt", class3WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class3 variables saved to .txt";
             Sys_Msg_Save_Txt();
 
-            //CLASS 4
+            //CLASS 4 -------------------------------------------------------------------
             //class4ItemNames
             File.WriteAllLines("class4ItemNames.txt", class4ItemNames);
             //class4ItemStatus
             File.WriteAllLines("class4ItemStatus.txt", class4ItemStatus);
-            //class4PointsEarned
+            //For statement to convert to string
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Points Earned
                 class4PointsEarnedString[i] = Convert.ToString(class4PointsEarned[i]);
-            }
-            File.WriteAllLines("class4PointsEarned.txt", class4PointsEarnedString);
-            //class4PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Possible
                 class4PointsPossibleString[i] = Convert.ToString(class4PointsPossible[i]);
-            }
-            File.WriteAllLines("class4PointsPossible.txt", class4PointsPossibleString);
-            //class4Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weight
                 class4WeightsString[i] = Convert.ToString(class4Weights[i]);
             }
+            //To txt files
+            File.WriteAllLines("class4PointsEarned.txt", class4PointsEarnedString);
+            File.WriteAllLines("class4PointsPossible.txt", class4PointsPossibleString);
             File.WriteAllLines("class4Weights.txt", class4WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class4 variables saved to .txt";
             Sys_Msg_Save_Txt();
 
-            //CLASS 5
+            //CLASS 5 -------------------------------------------------------------------
             //class5ItemNames
             File.WriteAllLines("class5ItemNames.txt", class5ItemNames);
             //class5ItemStatus
             File.WriteAllLines("class5ItemStatus.txt", class5ItemStatus);
-            //class5PointsEarned
+            //For statement to convert to strings
             for (int i = 0; i < NUMBER_OF_ITEMS; i++)
             {
+                //Points Earned
                 class5PointsEarnedString[i] = Convert.ToString(class5PointsEarned[i]);
-            }
-            File.WriteAllLines("class5PointsEarned.txt", class5PointsEarnedString);
-            //class5PointsPossible
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Points Poossible
                 class5PointsPossibleString[i] = Convert.ToString(class5PointsPossible[i]);
-            }
-            File.WriteAllLines("class5PointsPossible.txt", class5PointsPossibleString);
-            //class5Weights
-            for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-            {
+                //Weights
                 class5WeightsString[i] = Convert.ToString(class5Weights[i]);
             }
+            //To txt Files
+            File.WriteAllLines("class5PointsEarned.txt", class5PointsEarnedString);
+            File.WriteAllLines("class5PointsPossible.txt", class5PointsPossibleString);
             File.WriteAllLines("class5Weights.txt", class5WeightsString);
             //SysMsg
             lblSysMsg.Text = "Class5 variables saved to .txt";
@@ -2447,35 +2116,40 @@ namespace MyGradeBook
             lblSysMsg.Text = "Grade_Total started";
             Sys_Msg_Save_Txt();
 
-            //Class 0
+            double totalWeights = 0;
             double gradeTotal = 0;
 
+            //Set values to variables
+            //Class 0            
             if (selection == 0)
             {
+                totalWeights = class0Weights.Sum();
                 if (class0PointsPossible.Sum() != 0)
                 {
                     gradeTotal = class0PointsEarned.Sum() / class0PointsPossible.Sum();
-                }                    
+                }
                 else
                 {
                     lblGrade.Text = "Grade:  0.00%";
-                }                    
+                }
             }
             //Class 1
             if (selection == 1)
             {
+                totalWeights = class1Weights.Sum();
                 if (class1PointsPossible.Sum() != 0)
                 {
                     gradeTotal = class1PointsEarned.Sum() / class1PointsPossible.Sum();
-                }                    
+                }
                 else
                 {
                     gradeTotal = 0;
-                }                    
+                }
             }
             //Class 2
             if (selection == 2)
             {
+                totalWeights = class2Weights.Sum();
                 if (class2PointsPossible.Sum() != 0)
                 {
                     gradeTotal = class2PointsEarned.Sum() / class2PointsPossible.Sum();
@@ -2488,6 +2162,7 @@ namespace MyGradeBook
             //Class 3
             if (selection == 3)
             {
+                totalWeights = class3Weights.Sum();
                 if (class3PointsPossible.Sum() != 0)
                 {
                     gradeTotal = class3PointsEarned.Sum() / class3PointsPossible.Sum();
@@ -2500,6 +2175,7 @@ namespace MyGradeBook
             //Class 4
             if (selection == 4)
             {
+                totalWeights = class4Weights.Sum();
                 if (class4PointsPossible.Sum() != 0)
                 {
                     gradeTotal = class4PointsEarned.Sum() / class4PointsPossible.Sum();
@@ -2512,6 +2188,7 @@ namespace MyGradeBook
             //Class 5
             if (selection == 5)
             {
+                totalWeights = class5Weights.Sum();
                 if (class5PointsPossible.Sum() != 0)
                 {
                     gradeTotal = class5PointsEarned.Sum() / class5PointsPossible.Sum();
@@ -2522,8 +2199,7 @@ namespace MyGradeBook
                 }
             }
 
-            //Label
-            lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
+            //Coloring
             lblGrade.ForeColor = Color.White;
             if (gradeTotal >= .9)
             {
@@ -2542,13 +2218,31 @@ namespace MyGradeBook
                 lblGrade.BackColor = Color.IndianRed;
             }
 
+            //Label to show wether or not to use weighted grade
+            if (totalWeights != 1)
+            {
+                lblGrade.Text = String.Format("Grade:  {0}", gradeTotal.ToString("P2"));
+            }
+
+            if (totalWeights == 1)
+            {
+                lblGrade.Text = String.Format("Use Weighted Grade");
+                lblGrade.BackColor = Color.Gray;
+            }
+
+            if (gradeTotal <= 0)
+            {
+                lblGrade.Text = String.Format("Input a Grade");
+                lblGrade.BackColor = Color.Gray;
+            }
+
             //Progress Bar
             prgGrade.Value = 0;
-            for (int i = 0; i < gradeTotal*100; i++)
+            for (int i = 0; i < gradeTotal * 100; i++)
             {
                 prgGrade.PerformStep();
-            }          
-  
+            }
+
             //SysMsg
             lblSysMsg.Text = "Grade_Total successful";
             Sys_Msg_Save_Txt();
@@ -2562,12 +2256,13 @@ namespace MyGradeBook
             double weightedGradeTotal = 0;
             double totalWeights = 0;
 
+            //Setting values to double variables
             //Class 0
             if (selection == 0)
             {
                 weightedGradeTotal = class0WeightedGrades.Sum();
                 totalWeights = class0Weights.Sum();
-            }                
+            }
             //Class 1
             if (selection == 1)
             {
@@ -2599,16 +2294,6 @@ namespace MyGradeBook
                 totalWeights = class5Weights.Sum();
             }
 
-            //Label
-            if (totalWeights != 1)
-            {
-                lblWeightedGrade.Text = String.Format("Total Weight does not equal 100%");
-            }
-            else
-            {
-                lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
-            }
-            
             //Color
             lblWeightedGrade.ForeColor = Color.White;
             if (weightedGradeTotal >= .9)
@@ -2627,9 +2312,16 @@ namespace MyGradeBook
             {
                 lblWeightedGrade.BackColor = Color.IndianRed;
             }
+
+            //Label to show whether or not you will be using the weighted grade
             if (totalWeights != 1)
             {
+                lblWeightedGrade.Text = String.Format("Total Weight does not equal 100%");
                 lblWeightedGrade.BackColor = Color.Gray;
+            }
+            else
+            {
+                lblWeightedGrade.Text = String.Format("Weighted Grade:  {0}", weightedGradeTotal.ToString("P2"));
             }
 
             //Progress Bar
@@ -2649,8 +2341,13 @@ namespace MyGradeBook
             lblSysMsg.Text = "Statistics started";
             Sys_Msg_Save_Txt();
 
+            int completed = 0;
+            int remaining = 0;
+            int total = 0;
+
             if (selection == 0)
             {
+                //If class names is blank show the number if not show name
                 if (classNames[0] == "")
                 {
                     lblStatClassVal.Text = "[0]";
@@ -2659,49 +2356,35 @@ namespace MyGradeBook
                 {
                     lblStatClassVal.Text = classNames[0];
                 }
-                
-                int completed = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++ )
+
+                //For statement
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
                     if (class0ItemStatus[i] == "yes")
                     {
                         completed += 1;
                     }
-                }
-                lblStatCompletedVal.Text = completed.ToString();
-
-                int remaining = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++ )
-                {
                     if (class0ItemNames[i] != "" && class0ItemStatus[i] == "no")
                     {
                         remaining += 1;
                     }
-                }
-                lblStatRemainingVal.Text = remaining.ToString();
-
-                int total = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class0ItemNames[i] != "")
                     {
                         total += 1;
                     }
                 }
+                lblStatCompletedVal.Text = completed.ToString();
+                lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
-
                 lblStatEarnedVal.Text = Convert.ToString(class0PointsEarned.Sum());
-
                 lblStatPossibleVal.Text = Convert.ToString(class0PointsPossible.Sum());
-
-                lblStatGradeVal.Text = (class0PointsEarned.Sum()/class0PointsPossible.Sum()).ToString("P1");
-
+                lblStatGradeVal.Text = (class0PointsEarned.Sum() / class0PointsPossible.Sum()).ToString("P1");
                 lblStatWeightVal.Text = class0Weights.Sum().ToString("P1");
-
                 lblStatWeightedGradeVal.Text = class0WeightedGrades.Sum().ToString("P1");
             }
             if (selection == 1)
             {
+                //If for item display
                 if (classNames[1] == "")
                 {
                     lblStatClassVal.Text = "[1]";
@@ -2710,45 +2393,29 @@ namespace MyGradeBook
                 {
                     lblStatClassVal.Text = classNames[1];
                 }
-
-                int completed = 0;
+                //For statement
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
                     if (class1ItemStatus[i] == "yes")
                     {
                         completed += 1;
                     }
-                }
-                lblStatCompletedVal.Text = completed.ToString();
-
-                int remaining = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class1ItemNames[i] != "" && class1ItemStatus[i] == "no")
                     {
                         remaining += 1;
                     }
-                }
-                lblStatRemainingVal.Text = remaining.ToString();
-
-                int total = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class1ItemNames[i] != "")
                     {
                         total += 1;
                     }
                 }
+                lblStatCompletedVal.Text = completed.ToString();
+                lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
-
                 lblStatEarnedVal.Text = Convert.ToString(class1PointsEarned.Sum());
-
                 lblStatPossibleVal.Text = Convert.ToString(class1PointsPossible.Sum());
-
                 lblStatGradeVal.Text = (class1PointsEarned.Sum() / class1PointsPossible.Sum()).ToString("P1");
-
                 lblStatWeightVal.Text = class1Weights.Sum().ToString("P1");
-
                 lblStatWeightedGradeVal.Text = class1WeightedGrades.Sum().ToString("P1");
             }
             if (selection == 2)
@@ -2762,44 +2429,28 @@ namespace MyGradeBook
                     lblStatClassVal.Text = classNames[2];
                 }
 
-                int completed = 0;
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
                     if (class2ItemStatus[i] == "yes")
                     {
                         completed += 1;
                     }
-                }
-                lblStatCompletedVal.Text = completed.ToString();
-
-                int remaining = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class2ItemNames[i] != "" && class2ItemStatus[i] == "no")
                     {
                         remaining += 1;
                     }
-                }
-                lblStatRemainingVal.Text = remaining.ToString();
-
-                int total = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class2ItemNames[i] != "")
                     {
                         total += 1;
                     }
                 }
+                lblStatCompletedVal.Text = completed.ToString();
+                lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
-
                 lblStatEarnedVal.Text = Convert.ToString(class2PointsEarned.Sum());
-
                 lblStatPossibleVal.Text = Convert.ToString(class2PointsPossible.Sum());
-
                 lblStatGradeVal.Text = (class2PointsEarned.Sum() / class2PointsPossible.Sum()).ToString("P1");
-
                 lblStatWeightVal.Text = class2Weights.Sum().ToString("P1");
-
                 lblStatWeightedGradeVal.Text = class2WeightedGrades.Sum().ToString("P1");
             }
             if (selection == 3)
@@ -2813,44 +2464,28 @@ namespace MyGradeBook
                     lblStatClassVal.Text = classNames[3];
                 }
 
-                int completed = 0;
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
                     if (class3ItemStatus[i] == "yes")
                     {
                         completed += 1;
                     }
-                }
-                lblStatCompletedVal.Text = completed.ToString();
-
-                int remaining = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class3ItemNames[i] != "" && class3ItemStatus[i] == "no")
                     {
                         remaining += 1;
                     }
-                }
-                lblStatRemainingVal.Text = remaining.ToString();
-
-                int total = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class3ItemNames[i] != "")
                     {
                         total += 1;
                     }
                 }
+                lblStatCompletedVal.Text = completed.ToString();
+                lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
-
                 lblStatEarnedVal.Text = Convert.ToString(class3PointsEarned.Sum());
-
                 lblStatPossibleVal.Text = Convert.ToString(class3PointsPossible.Sum());
-
                 lblStatGradeVal.Text = (class3PointsEarned.Sum() / class3PointsPossible.Sum()).ToString("P1");
-
                 lblStatWeightVal.Text = class3Weights.Sum().ToString("P1");
-
                 lblStatWeightedGradeVal.Text = class3WeightedGrades.Sum().ToString("P1");
             }
             if (selection == 4)
@@ -2864,44 +2499,28 @@ namespace MyGradeBook
                     lblStatClassVal.Text = classNames[4];
                 }
 
-                int completed = 0;
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
                     if (class4ItemStatus[i] == "yes")
                     {
                         completed += 1;
                     }
-                }
-                lblStatCompletedVal.Text = completed.ToString();
-
-                int remaining = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class4ItemNames[i] != "" && class4ItemStatus[i] == "no")
                     {
                         remaining += 1;
                     }
-                }
-                lblStatRemainingVal.Text = remaining.ToString();
-
-                int total = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class4ItemNames[i] != "")
                     {
                         total += 1;
                     }
                 }
+                lblStatCompletedVal.Text = completed.ToString();
+                lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
-
                 lblStatEarnedVal.Text = Convert.ToString(class4PointsEarned.Sum());
-
                 lblStatPossibleVal.Text = Convert.ToString(class4PointsPossible.Sum());
-
                 lblStatGradeVal.Text = (class4PointsEarned.Sum() / class4PointsPossible.Sum()).ToString("P1");
-
                 lblStatWeightVal.Text = class4Weights.Sum().ToString("P1");
-
                 lblStatWeightedGradeVal.Text = class4WeightedGrades.Sum().ToString("P1");
             }
             if (selection == 5)
@@ -2915,44 +2534,28 @@ namespace MyGradeBook
                     lblStatClassVal.Text = classNames[5];
                 }
 
-                int completed = 0;
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
                     if (class5ItemStatus[i] == "yes")
                     {
                         completed += 1;
                     }
-                }
-                lblStatCompletedVal.Text = completed.ToString();
-
-                int remaining = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class5ItemNames[i] != "" && class5ItemStatus[i] == "no")
                     {
                         remaining += 1;
                     }
-                }
-                lblStatRemainingVal.Text = remaining.ToString();
-
-                int total = 0;
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     if (class5ItemNames[i] != "")
                     {
                         total += 1;
                     }
                 }
+                lblStatCompletedVal.Text = completed.ToString();
+                lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
-
                 lblStatEarnedVal.Text = Convert.ToString(class5PointsEarned.Sum());
-
                 lblStatPossibleVal.Text = Convert.ToString(class5PointsPossible.Sum());
-
                 lblStatGradeVal.Text = (class5PointsEarned.Sum() / class5PointsPossible.Sum()).ToString("P1");
-
                 lblStatWeightVal.Text = class5Weights.Sum().ToString("P1");
-
                 lblStatWeightedGradeVal.Text = class5WeightedGrades.Sum().ToString("P1");
             }
 
@@ -3430,7 +3033,7 @@ namespace MyGradeBook
                 btnClearAll.Visible = true;
 
                 //Set status for next click
-                classRenameStatus = 1;                
+                classRenameStatus = 1;
 
                 //SysMsg
                 lblSysMsg.Text = "Settings activated";
@@ -3702,8 +3305,9 @@ namespace MyGradeBook
         /* What If's */
         private void btnScenarioToPass_Click(object sender, EventArgs e)
         {
-
+ 
         }
+
         private void btnScenarioMostLikely_Click(object sender, EventArgs e)
         {
 
@@ -3720,10 +3324,12 @@ namespace MyGradeBook
             lblSysMsg.Text = "btnClearCurrent_Click started";
             Sys_Msg_Save_Txt();
 
-            string message = String.Format("Are you sure you want to clear all your data for {0}?",  lblClass.Text.ToString());
+            //Msgbox
+            string message = String.Format("Are you sure you want to clear all your data for {0}?", lblClass.Text.ToString());
             string caption = "Warning";
             var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            //If yes on msgbox
             if (result == DialogResult.Yes)
             {
                 if (selection == 0)
@@ -3731,60 +3337,15 @@ namespace MyGradeBook
                     txtClassName0.Text = "";
                     classNames[0] = txtClassName0.Text;
 
-                    //Item status = blank
                     for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                     {
                         class0ItemStatus[i] = "no";
-                    }
-
-                    //Item Names = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class0ItemNames[i] = "";
-                    }
-
-                    //Points Earned = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class0PointsEarned[i] = 0;
-                    }
-
-                    //Points Possible = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class0PointsPossible[i] = 0;
-                    }
-
-                    //Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        if (class0PointsPossible[i] != 0)
-                            class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
-                        else
-                            class0Grades[i] = 0;
-                    }
-
-                    //Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class0Grades[i]);
-                    }
-
-                    //Weights to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
+                        class0Grades[i] = 0;
                         class0Weights[i] = 0;
-                    }
-
-                    //Weighted Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        class0WeightedGrades[i] = class0Weights[i] * class0Grades[i];
-                    }
-                    //Weighted Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class0WeightedGrades[i]);
+                        class0WeightedGrades[i] = 0;
                     }
                 }
                 if (selection == 1)
@@ -3792,60 +3353,15 @@ namespace MyGradeBook
                     txtClassName1.Text = "";
                     classNames[1] = txtClassName1.Text;
 
-                    //Item status = blank
                     for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                     {
                         class1ItemStatus[i] = "no";
-                    }
-
-                    //Item Names = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class1ItemNames[i] = "";
-                    }
-
-                    //Points Earned = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class1PointsEarned[i] = 0;
-                    }
-
-                    //Points Possible = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class1PointsPossible[i] = 0;
-                    }
-
-                    //Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        if (class1PointsPossible[i] != 0)
-                            class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
-                        else
-                            class1Grades[i] = 0;
-                    }
-
-                    //Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class1Grades[i]);
-                    }
-
-                    //Weights to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
+                        class1Grades[i] = 0;
                         class1Weights[i] = 0;
-                    }
-
-                    //Weighted Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        class1WeightedGrades[i] = class1Weights[i] * class1Grades[i];
-                    }
-                    //Weighted Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class1WeightedGrades[i]);
+                        class1WeightedGrades[i] = 0;
                     }
                 }
                 if (selection == 2)
@@ -3857,56 +3373,12 @@ namespace MyGradeBook
                     for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                     {
                         class2ItemStatus[i] = "no";
-                    }
-
-                    //Item Names = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class2ItemNames[i] = "";
-                    }
-
-                    //Points Earned = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class2PointsEarned[i] = 0;
-                    }
-
-                    //Points Possible = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class2PointsPossible[i] = 0;
-                    }
-
-                    //Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        if (class2PointsPossible[i] != 0)
-                            class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
-                        else
-                            class2Grades[i] = 0;
-                    }
-
-                    //Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class2Grades[i]);
-                    }
-
-                    //Weights to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
+                        class2Grades[i] = 0;
                         class2Weights[i] = 0;
-                    }
-
-                    //Weighted Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        class2WeightedGrades[i] = class2Weights[i] * class2Grades[i];
-                    }
-                    //Weighted Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class2WeightedGrades[i]);
+                        class2WeightedGrades[i] = 0;
                     }
                 }
                 if (selection == 3)
@@ -3918,56 +3390,12 @@ namespace MyGradeBook
                     for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                     {
                         class3ItemStatus[i] = "no";
-                    }
-
-                    //Item Names = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class3ItemNames[i] = "";
-                    }
-
-                    //Points Earned = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class3PointsEarned[i] = 0;
-                    }
-
-                    //Points Possible = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class3PointsPossible[i] = 0;
-                    }
-
-                    //Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        if (class3PointsPossible[i] != 0)
-                            class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
-                        else
-                            class3Grades[i] = 0;
-                    }
-
-                    //Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class3Grades[i]);
-                    }
-
-                    //Weights to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
+                        class3Grades[i] = 0;
                         class3Weights[i] = 0;
-                    }
-
-                    //Weighted Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        class3WeightedGrades[i] = class3Weights[i] * class3Grades[i];
-                    }
-                    //Weighted Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class3WeightedGrades[i]);
+                        class3WeightedGrades[i] = 0;
                     }
                 }
                 if (selection == 4)
@@ -3979,56 +3407,12 @@ namespace MyGradeBook
                     for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                     {
                         class4ItemStatus[i] = "no";
-                    }
-
-                    //Item Names = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class4ItemNames[i] = "";
-                    }
-
-                    //Points Earned = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class4PointsEarned[i] = 0;
-                    }
-
-                    //Points Possible = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class4PointsPossible[i] = 0;
-                    }
-
-                    //Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        if (class4PointsPossible[i] != 0)
-                            class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
-                        else
-                            class4Grades[i] = 0;
-                    }
-
-                    //Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class4Grades[i]);
-                    }
-
-                    //Weights to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
+                        class4Grades[i] = 0;
                         class4Weights[i] = 0;
-                    }
-
-                    //Weighted Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        class4WeightedGrades[i] = class4Weights[i] * class4Grades[i];
-                    }
-                    //Weighted Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class4WeightedGrades[i]);
+                        class4WeightedGrades[i] = 0;
                     }
                 }
                 if (selection == 5)
@@ -4040,64 +3424,23 @@ namespace MyGradeBook
                     for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                     {
                         class5ItemStatus[i] = "no";
-                    }
-
-                    //Item Names = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class5ItemNames[i] = "";
-                    }
-
-                    //Points Earned = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class5PointsEarned[i] = 0;
-                    }
-
-                    //Points Possible = blank
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
                         class5PointsPossible[i] = 0;
-                    }
-
-                    //Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        if (class5PointsPossible[i] != 0)
-                            class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
-                        else
-                            class5Grades[i] = 0;
-                    }
-
-                    //Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class5Grades[i]);
-                    }
-
-                    //Weights to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
+                        class5Grades[i] = 0;
                         class5Weights[i] = 0;
+                        class5WeightedGrades[i] = 0;
                     }
-
-                    //Weighted Grades calculate to variables
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        class5WeightedGrades[i] = class5Weights[i] * class5Grades[i];
-                    }
-                    //Weighted Grades to txtboxes
-                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                    {
-                        pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class5WeightedGrades[i]);
-                    }                    
                 }
 
+                //Set txtboxes so save doesnt pick up old ones
+                Set_Txt_ClassCurr();
                 Totals();
-            }
 
-            //Set txtboxes so save doesnt pick up old ones
-            Set_Txt_ClassCurr();
+                //SysMsg
+                lblSysMsg.Text = "A class has been cleared";
+                Sys_Msg_Save_Txt();
+            }
 
             lblSysMsg.Text = "btnClearCurrent_Click successful";
             Sys_Msg_Save_Txt();
@@ -4116,350 +3459,61 @@ namespace MyGradeBook
             {
                 //Class names
                 for (int i = 0; i < NUMBER_OF_CLASSES; i++)
-                {
+                {                    
                     pnlClassBtns.Controls["txtClassName" + i].Text = "";
+                    classNames[i] = pnlClassBtns.Controls["txtClassName" + i].Text; 
                 }
-
-                //CLASS 0
-                //Item status = blank
+                 
+                //Items
                 for (int i = 0; i < NUMBER_OF_ITEMS; i++)
                 {
-                    class0ItemStatus[i] = "";
-                }
-
-                //Item Names = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class0ItemStatus[i] = "no";
                     class0ItemNames[i] = "";
-                }
-
-                //Points Earned = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class0PointsEarned[i] = 0;
-                }
-
-                //Points Possible = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class0PointsPossible[i] = 0;
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    if (class0PointsPossible[i] != 0)
-                        class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
-                    else
-                        class0Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class0Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class0Grades[i] = 0;
                     class0Weights[i] = 0;
-                }
+                    class0WeightedGrades[i] = 0;
 
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class0WeightedGrades[i] = class0Weights[i] * class0Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class0WeightedGrades[i]);
-                }
-
-                //CLASS 1
-                //Item status = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class1ItemStatus[i] = "";
-                }
-
-                //Item Names = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class1ItemStatus[i] = "no";
                     class1ItemNames[i] = "";
-                }
-
-                //Points Earned = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class1PointsEarned[i] = 0;
-                }
-
-                //Points Possible = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class1PointsPossible[i] = 0;
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    if (class1PointsPossible[i] != 0)
-                        class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
-                    else
-                        class1Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class1Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class1Grades[i] = 0;
                     class1Weights[i] = 0;
-                }
+                    class1WeightedGrades[i] = 0;
 
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class1WeightedGrades[i] = class1Weights[i] * class1Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class1WeightedGrades[i]);
-                }
-
-                //CLASS 2
-                //Item status = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class2ItemStatus[i] = "";
-                }
-
-                //Item Names = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class2ItemStatus[i] = "no";
                     class2ItemNames[i] = "";
-                }
-
-                //Points Earned = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class2PointsEarned[i] = 0;
-                }
-
-                //Points Possible = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class2PointsPossible[i] = 0;
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    if (class2PointsPossible[i] != 0)
-                        class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
-                    else
-                        class2Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class2Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class2Grades[i] = 0;
                     class2Weights[i] = 0;
-                }
+                    class2WeightedGrades[i] = 0;
 
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class2WeightedGrades[i] = class2Weights[i] * class2Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class2WeightedGrades[i]);
-                }
-
-                //CLASS 3
-                //Item status = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class3ItemStatus[i] = "";
-                }
-
-                //Item Names = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class3ItemStatus[i] = "no";
                     class3ItemNames[i] = "";
-                }
-
-                //Points Earned = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class3PointsEarned[i] = 0;
-                }
-
-                //Points Possible = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class3PointsPossible[i] = 0;
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    if (class3PointsPossible[i] != 0)
-                        class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
-                    else
-                        class3Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class3Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class3Grades[i] = 0;
                     class3Weights[i] = 0;
-                }
+                    class3WeightedGrades[i] = 0;
 
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class3WeightedGrades[i] = class3Weights[i] * class3Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class3WeightedGrades[i]);
-                }
-
-                //CLASS 4
-                //Item status = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class4ItemStatus[i] = "";
-                }
-
-                //Item Names = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class4ItemStatus[i] = "no";
                     class4ItemNames[i] = "";
-                }
-
-                //Points Earned = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class4PointsEarned[i] = 0;
-                }
-
-                //Points Possible = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class4PointsPossible[i] = 0;
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    if (class4PointsPossible[i] != 0)
-                        class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
-                    else
-                        class4Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class4Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class4Grades[i] = 0;
                     class4Weights[i] = 0;
-                }
+                    class4WeightedGrades[i] = 0;
 
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class4WeightedGrades[i] = class4Weights[i] * class4Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class4WeightedGrades[i]);
-                }
-
-                //CLASS 5
-                //Item status = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class5ItemStatus[i] = "";
-                }
-
-                //Item Names = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class5ItemStatus[i] = "no";
                     class5ItemNames[i] = "";
-                }
-
-                //Points Earned = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class5PointsEarned[i] = 0;
-                }
-
-                //Points Possible = blank
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
                     class5PointsPossible[i] = 0;
-                }
-
-                //Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    if (class5PointsPossible[i] != 0)
-                        class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
-                    else
-                        class5Grades[i] = 0;
-                }
-
-                //Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemGrade" + i].Text = Convert.ToString(class5Grades[i]);
-                }
-
-                //Weights to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
+                    class5Grades[i] = 0;
                     class5Weights[i] = 0;
-                }
-
-                //Weighted Grades calculate to variables
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    class5WeightedGrades[i] = class5Weights[i] * class5Grades[i];
-                }
-                //Weighted Grades to txtboxes
-                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
-                {
-                    pnlItems.Controls["txtItemWeightedGrade" + i].Text = Convert.ToString(class5WeightedGrades[i]);
+                    class5WeightedGrades[i] = 0;
                 }
             }
 
