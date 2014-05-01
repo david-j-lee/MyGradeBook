@@ -3324,6 +3324,10 @@ namespace MyGradeBook
         /* What If's */
         private void btnScenarioToPass_Click(object sender, EventArgs e)
         {
+            //sysmsg
+            lblSysMsg.Text = "btnScenarioToPass_Click started";
+            Sys_Msg_Save_Txt();
+
             //Declaring constant as target grade
             const double targetGrade = .70;
 
@@ -3376,7 +3380,7 @@ namespace MyGradeBook
                             //to find weight so grades are even for all items that are not done
                             class0TempWeights[i] = class0PointsPossible[i] / pointsRemaining;
                             //Calculates points needed and displays result
-                            if (class0PointsEarned[i] == 0)
+                            if (class0PointsPossible[i] == 0)
                             {
                                 //leave blank so program does nothing
                             }
@@ -3433,6 +3437,10 @@ namespace MyGradeBook
             Save_Class_CurrSel();
             Totals();
             Statistics();
+
+            //sysmsg
+            lblSysMsg.Text = "btnScenarioToPass successful";
+            Sys_Msg_Save_Txt();
         }
 
         private void btnScenarioMostLikely_Click(object sender, EventArgs e)
