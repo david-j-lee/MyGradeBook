@@ -207,20 +207,10 @@ namespace MyGradeBook
         /* SAVE SYS MSGS */
         public void Sys_Msg_Save_Txt()
         {
+            int sysMsgLines = 0;
+
             //If log file reaches more than 10,000 lines makes a new one
-            int sysMsgLines = File.ReadAllLines("SysMsgs.txt").Length;
-            if (sysMsgLines >= 10000)
-            {
-                //Writes over file
-                FileStream outFile = new FileStream("SysMsgs.txt", FileMode.Create, FileAccess.Write);
-                StreamWriter writer = new StreamWriter(outFile);
-
-                writer.WriteLine("[" + DateTime.Now.ToString() + "]:  " + lblSysMsg.Text);
-
-                writer.Close();
-                outFile.Close();
-            }
-            else
+            if (File.Exists("SysMsgs.txt") && sysMsgLines < 10000)
             {
                 //Appends to file
                 FileStream outFile = new FileStream("SysMsgs.txt", FileMode.Append, FileAccess.Write);
@@ -229,8 +219,21 @@ namespace MyGradeBook
                 writer.WriteLine("[" + DateTime.Now.ToString() + "]:  " + lblSysMsg.Text);
 
                 writer.Close();
-                outFile.Close();
+                outFile.Close();                
+
+                sysMsgLines = File.ReadAllLines("SysMsgs.txt").Length;
             }
+            else
+            {
+                //Writes over file
+                FileStream outFile = new FileStream("SysMsgs.txt", FileMode.Create, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(outFile);
+
+                writer.WriteLine("[" + DateTime.Now.ToString() + "]:  " + lblSysMsg.Text);
+
+                writer.Close();
+                outFile.Close();                
+            }            
         }
 
         /* LOAD TO VARIABLES */
@@ -2642,6 +2645,7 @@ namespace MyGradeBook
             btnScenarioToPass.BackColor = btnClassNotSelected.BackColor;
             btnScenarioMostLikely.BackColor = btnClassNotSelected.BackColor;
             btnScenarioA.BackColor = btnClassNotSelected.BackColor;
+            btnScenarioTarget.BackColor = btnClassNotSelected.BackColor;
 
             //Sets clear and clear all
             btnClearCurrent.BackColor = btnClassNotSelected.BackColor;
