@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -144,6 +144,11 @@ namespace MyGradeBook
             //start a new section in log
             lblSysMsg.Text = "----------------------------------------------------------------";
             Sys_Msg_Save_Txt();
+<<<<<<< HEAD
+=======
+
+            //SysMsg
+>>>>>>> 96be3a1ebdc509c975dce99ad52e2c0d22392c79
             lblSysMsg.Text = "Main_Load started";
             Sys_Msg_Save_Txt();
 
@@ -158,9 +163,12 @@ namespace MyGradeBook
             btnClassSelected.Visible = false;
             txtDone.Visible = false;
             txtNotDone.Visible = false;
+<<<<<<< HEAD
             txtTargetGrade.Visible = false;
             lblTest.Visible = false;
             lblSysMsg.Visible = false;
+=======
+>>>>>>> 96be3a1ebdc509c975dce99ad52e2c0d22392c79
 
             //Hide settings
             btnClearCurrent.Visible = false;
@@ -3320,6 +3328,7 @@ namespace MyGradeBook
         /* What If's */
         private void btnScenarioToPass_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //Declaring constant as target grade
             const double targetGrade = .70;
 
@@ -3429,6 +3438,9 @@ namespace MyGradeBook
             Save_Class_CurrSel();
             Totals();
             Statistics();
+=======
+ 
+>>>>>>> 96be3a1ebdc509c975dce99ad52e2c0d22392c79
         }
 
         private void btnScenarioMostLikely_Click(object sender, EventArgs e)
@@ -3571,6 +3583,7 @@ namespace MyGradeBook
                         class5WeightedGrades[i] = 0;
                     }
                 }
+<<<<<<< HEAD
 
                 //Set txtboxes so save doesnt pick up old ones
                 Set_Txt_ClassCurr();
@@ -3646,6 +3659,83 @@ namespace MyGradeBook
                     class4Weights[i] = 0;
                     class4WeightedGrades[i] = 0;
 
+=======
+
+                //Set txtboxes so save doesnt pick up old ones
+                Set_Txt_ClassCurr();
+                Totals();
+
+                //SysMsg
+                lblSysMsg.Text = "A class has been cleared";
+                Sys_Msg_Save_Txt();
+            }
+
+            lblSysMsg.Text = "btnClearCurrent_Click successful";
+            Sys_Msg_Save_Txt();
+        }
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            //SysMsg
+            lblSysMsg.Text = "btnClearAll_Click started";
+            Sys_Msg_Save_Txt();
+
+            string message = String.Format("Are you sure you want to clear all your data?");
+            string caption = "Warning";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //Class names
+                for (int i = 0; i < NUMBER_OF_CLASSES; i++)
+                {                    
+                    pnlClassBtns.Controls["txtClassName" + i].Text = "";
+                    classNames[i] = pnlClassBtns.Controls["txtClassName" + i].Text; 
+                }
+                 
+                //Items
+                for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                {
+                    class0ItemStatus[i] = "no";
+                    class0ItemNames[i] = "";
+                    class0PointsEarned[i] = 0;
+                    class0PointsPossible[i] = 0;
+                    class0Grades[i] = 0;
+                    class0Weights[i] = 0;
+                    class0WeightedGrades[i] = 0;
+
+                    class1ItemStatus[i] = "no";
+                    class1ItemNames[i] = "";
+                    class1PointsEarned[i] = 0;
+                    class1PointsPossible[i] = 0;
+                    class1Grades[i] = 0;
+                    class1Weights[i] = 0;
+                    class1WeightedGrades[i] = 0;
+
+                    class2ItemStatus[i] = "no";
+                    class2ItemNames[i] = "";
+                    class2PointsEarned[i] = 0;
+                    class2PointsPossible[i] = 0;
+                    class2Grades[i] = 0;
+                    class2Weights[i] = 0;
+                    class2WeightedGrades[i] = 0;
+
+                    class3ItemStatus[i] = "no";
+                    class3ItemNames[i] = "";
+                    class3PointsEarned[i] = 0;
+                    class3PointsPossible[i] = 0;
+                    class3Grades[i] = 0;
+                    class3Weights[i] = 0;
+                    class3WeightedGrades[i] = 0;
+
+                    class4ItemStatus[i] = "no";
+                    class4ItemNames[i] = "";
+                    class4PointsEarned[i] = 0;
+                    class4PointsPossible[i] = 0;
+                    class4Grades[i] = 0;
+                    class4Weights[i] = 0;
+                    class4WeightedGrades[i] = 0;
+
+>>>>>>> 96be3a1ebdc509c975dce99ad52e2c0d22392c79
                     class5ItemStatus[i] = "no";
                     class5ItemNames[i] = "";
                     class5PointsEarned[i] = 0;
