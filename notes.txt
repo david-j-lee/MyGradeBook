@@ -1,4 +1,0 @@
-Remove lbl8 on main
-Add info into About Us and Help
-Hide SysMsgs
-Try to optimize btn clicks (slow)
