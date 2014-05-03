@@ -1275,6 +1275,7 @@
             this.txtTargetGrade.Name = "txtTargetGrade";
             this.txtTargetGrade.Size = new System.Drawing.Size(73, 20);
             this.txtTargetGrade.TabIndex = 10;
+            this.txtTargetGrade.Text = "0";
             this.txtTargetGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnScenarioTarget
