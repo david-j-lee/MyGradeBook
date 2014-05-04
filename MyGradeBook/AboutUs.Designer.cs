@@ -38,19 +38,19 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 241);
+            this.label2.Location = new System.Drawing.Point(1, 290);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.Size = new System.Drawing.Size(438, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Gradebook v1.00";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDevelopers
             // 
             this.lblDevelopers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDevelopers.Location = new System.Drawing.Point(4, 114);
+            this.lblDevelopers.Location = new System.Drawing.Point(1, 129);
             this.lblDevelopers.Name = "lblDevelopers";
-            this.lblDevelopers.Size = new System.Drawing.Size(430, 111);
+            this.lblDevelopers.Size = new System.Drawing.Size(438, 140);
             this.lblDevelopers.TabIndex = 4;
             this.lblDevelopers.Text = "Developers";
             this.lblDevelopers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,7 +58,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(121, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -67,9 +67,9 @@
             // 
             // lblInfo
             // 
-            this.lblInfo.Location = new System.Drawing.Point(7, 68);
+            this.lblInfo.Location = new System.Drawing.Point(1, 72);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(426, 45);
+            this.lblInfo.Size = new System.Drawing.Size(438, 45);
             this.lblInfo.TabIndex = 6;
             this.lblInfo.Text = "Info";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,12 +78,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 262);
+            this.ClientSize = new System.Drawing.Size(440, 311);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblDevelopers);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AboutUs";
             this.Text = "AboutUs";

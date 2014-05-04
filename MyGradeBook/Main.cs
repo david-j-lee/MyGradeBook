@@ -16,16 +16,15 @@ using System.IO;
 
 
 // TO BE COMPLETED:
-// Most Likely
 // Saving sys msgs to txt file with append (events only ones left)
 // Help
-// About Us
+// Export
 //
 
 
 namespace MyGradeBook
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
         //Constants
         const int NUMBER_OF_CLASSES = 6;
@@ -125,7 +124,7 @@ namespace MyGradeBook
         double[] class5Weights = new double[NUMBER_OF_ITEMS];
         double[] class5WeightedGrades = new double[NUMBER_OF_ITEMS];
 
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
         }       
@@ -164,6 +163,12 @@ namespace MyGradeBook
             //Hide settings
             btnClearCurrent.Visible = false;
             btnClearAll.Visible = false;           
+
+            //Hide input fields and scenario btns
+            pnlItems.Visible = false;
+            pnlWhatIfs.Visible = false;
+            pnlTotals.Visible = false;
+            pnlStats.Visible = false;
 
             //SysMsg
             lblSysMsg.Text = "Objects hidden";
@@ -2129,15 +2134,12 @@ namespace MyGradeBook
                     {
                         completed += 1;
                     }
-                    if (class0ItemNames[i] != "" && class0ItemStatus[i] == "no")
-                    {
-                        remaining += 1;
-                    }
-                    if (class0ItemNames[i] != "")
+                    if (class0ItemNames[i] != "" || class0PointsEarned[i] > 0 || class0PointsPossible[i] > 0)
                     {
                         total += 1;
                     }
                 }
+                remaining = total - completed;
                 lblStatCompletedVal.Text = completed.ToString();
                 lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
@@ -2165,15 +2167,12 @@ namespace MyGradeBook
                     {
                         completed += 1;
                     }
-                    if (class1ItemNames[i] != "" && class1ItemStatus[i] == "no")
-                    {
-                        remaining += 1;
-                    }
-                    if (class1ItemNames[i] != "")
+                    if (class1ItemNames[i] != "" || class1PointsEarned[i] > 0 || class1PointsPossible[i] > 0)
                     {
                         total += 1;
                     }
                 }
+                remaining = total - completed;
                 lblStatCompletedVal.Text = completed.ToString();
                 lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
@@ -2200,15 +2199,12 @@ namespace MyGradeBook
                     {
                         completed += 1;
                     }
-                    if (class2ItemNames[i] != "" && class2ItemStatus[i] == "no")
-                    {
-                        remaining += 1;
-                    }
-                    if (class2ItemNames[i] != "")
+                    if (class2ItemNames[i] != "" || class2PointsEarned[i] > 0 || class2PointsPossible[i] > 0)
                     {
                         total += 1;
                     }
                 }
+                remaining = total - completed;
                 lblStatCompletedVal.Text = completed.ToString();
                 lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
@@ -2235,15 +2231,12 @@ namespace MyGradeBook
                     {
                         completed += 1;
                     }
-                    if (class3ItemNames[i] != "" && class3ItemStatus[i] == "no")
-                    {
-                        remaining += 1;
-                    }
-                    if (class3ItemNames[i] != "")
+                    if (class3ItemNames[i] != "" || class3PointsEarned[i] > 0 || class3PointsPossible[i] > 0)
                     {
                         total += 1;
                     }
                 }
+                remaining = total - completed;
                 lblStatCompletedVal.Text = completed.ToString();
                 lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
@@ -2270,15 +2263,12 @@ namespace MyGradeBook
                     {
                         completed += 1;
                     }
-                    if (class4ItemNames[i] != "" && class4ItemStatus[i] == "no")
-                    {
-                        remaining += 1;
-                    }
-                    if (class4ItemNames[i] != "")
+                    if (class4ItemNames[i] != "" || class4PointsEarned[i] > 0 || class4PointsPossible[i] > 0)
                     {
                         total += 1;
                     }
                 }
+                remaining = total - completed;
                 lblStatCompletedVal.Text = completed.ToString();
                 lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
@@ -2305,15 +2295,12 @@ namespace MyGradeBook
                     {
                         completed += 1;
                     }
-                    if (class5ItemNames[i] != "" && class5ItemStatus[i] == "no")
-                    {
-                        remaining += 1;
-                    }
-                    if (class5ItemNames[i] != "")
+                    if (class5ItemNames[i] != "" || class5PointsEarned[i] > 0 || class5PointsPossible[i] > 0)
                     {
                         total += 1;
                     }
                 }
+                remaining = total - completed;
                 lblStatCompletedVal.Text = completed.ToString();
                 lblStatRemainingVal.Text = remaining.ToString();
                 lblStatTotalVal.Text = total.ToString();
@@ -2815,8 +2802,8 @@ namespace MyGradeBook
                 btnSettings.BackColor = btnClassSelected.BackColor;
 
                 //clear and clear all
-                btnClearCurrent.Location = btnScenarioToPass.Location;
-                btnClearAll.Location = btnScenarioMostLikely.Location;
+                btnClearCurrent.Location = btnScenarioMostLikely.Location;
+                btnClearAll.Location = btnScenarioToPass.Location;
 
                 btnScenarioToPass.Visible = false;
                 btnScenarioMostLikely.Visible = false;
@@ -2911,6 +2898,16 @@ namespace MyGradeBook
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
 
+            //Show input fields and scenario btns
+            if (lblWelcome.Visible == true)
+            {
+                lblWelcome.Visible = false;
+                pnlItems.Visible = true;
+                pnlWhatIfs.Visible = true;
+                pnlTotals.Visible = true;
+                pnlStats.Visible = true;
+            }
+
             //Set txtbox
             Set_Txt_Class_0();
 
@@ -2946,6 +2943,16 @@ namespace MyGradeBook
             btnClass3.BackColor = btnClassNotSelected.BackColor;
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
+
+            //Show input fields and scenario btns
+            if (lblWelcome.Visible == true)
+            {
+                lblWelcome.Visible = false;
+                pnlItems.Visible = true;
+                pnlWhatIfs.Visible = true;
+                pnlTotals.Visible = true;
+                pnlStats.Visible = true;
+            }
 
             //txtboxes
             Set_Txt_Class_1();
@@ -2983,6 +2990,16 @@ namespace MyGradeBook
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
 
+            //Show input fields and scenario btns
+            if (lblWelcome.Visible == true)
+            {
+                lblWelcome.Visible = false;
+                pnlItems.Visible = true;
+                pnlWhatIfs.Visible = true;
+                pnlTotals.Visible = true;
+                pnlStats.Visible = true;
+            }
+
             //txtboxes
             Set_Txt_Class_2();
 
@@ -3018,6 +3035,16 @@ namespace MyGradeBook
             btnClass3.BackColor = btnClassSelected.BackColor;
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
+
+            //Show input fields and scenario btns
+            if (lblWelcome.Visible == true)
+            {
+                lblWelcome.Visible = false;
+                pnlItems.Visible = true;
+                pnlWhatIfs.Visible = true;
+                pnlTotals.Visible = true;
+                pnlStats.Visible = true;
+            }
 
             //txtboxes
             Set_Txt_Class_3();
@@ -3055,6 +3082,16 @@ namespace MyGradeBook
             btnClass4.BackColor = btnClassSelected.BackColor;
             btnClass5.BackColor = btnClassNotSelected.BackColor;
 
+            //Show input fields and scenario btns
+            if (lblWelcome.Visible == true)
+            {
+                lblWelcome.Visible = false;
+                pnlItems.Visible = true;
+                pnlWhatIfs.Visible = true;
+                pnlTotals.Visible = true;
+                pnlStats.Visible = true;
+            }
+
             //txtboxes
             Set_Txt_Class_4();
 
@@ -3091,6 +3128,16 @@ namespace MyGradeBook
             btnClass4.BackColor = btnClassNotSelected.BackColor;
             btnClass5.BackColor = btnClassSelected.BackColor;
 
+            //Show input fields and scenario btns
+            if (lblWelcome.Visible == true)
+            {
+                lblWelcome.Visible = false;
+                pnlItems.Visible = true;
+                pnlWhatIfs.Visible = true;
+                pnlTotals.Visible = true;
+                pnlStats.Visible = true;
+            }
+
             //txtboxes
             Set_Txt_Class_5();
 
@@ -3109,6 +3156,553 @@ namespace MyGradeBook
         }
 
         /* Scenarios */
+        private void btnScenarioMostLikely_Click(object sender, EventArgs e)
+        {
+            //sysmsg
+            lblSysMsg.Text = "btnScenarioMostLikely successful";
+            Sys_Msg_Save_Txt();
+
+            //Declaring array for temp weights
+            double[] class0TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class1TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class2TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class3TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class4TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class5TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class0TempEarnedWeights = new double[NUMBER_OF_ITEMS];
+            double[] class1TempEarnedWeights = new double[NUMBER_OF_ITEMS];
+            double[] class2TempEarnedWeights = new double[NUMBER_OF_ITEMS];
+            double[] class3TempEarnedWeights = new double[NUMBER_OF_ITEMS];
+            double[] class4TempEarnedWeights = new double[NUMBER_OF_ITEMS];
+            double[] class5TempEarnedWeights = new double[NUMBER_OF_ITEMS];
+
+            //Declaring variables needed for classes with weights
+            double weightsEarned = 0;
+            double weightedGradeEarned = 0;
+
+            //For class0
+            if (selection == 0)
+            {
+                //If class does not have weights
+                if (class0Weights.Sum() != 1)
+                {
+                    //For statement to calculate weights on points possible
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        //For divides by 0
+                        if (class0PointsPossible.Sum() == 0)
+                        {
+                            //do nothing
+                        }
+                        else
+                        {
+                            //Get weights
+                            class0TempWeights[i] = class0PointsPossible[i] / class0PointsPossible.Sum();
+                        }
+                    }
+
+                    //To find total weight from locked items
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        //So only locked items are selected
+                        if (class0ItemStatus[i] == "yes")
+                        {
+                            //Total for earned weights
+                            weightsEarned += class0TempWeights[i];
+                        }
+                    }
+
+                    //To find locked items new weights
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class0ItemStatus[i] == "yes")
+                        {
+                            class0TempEarnedWeights[i] = class0TempWeights[i] / weightsEarned;
+                            class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
+                            weightedGradeEarned += class0TempEarnedWeights[i] * class0Grades[i];
+                        }
+                    }
+
+                    //Display results
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        //So only unlocked items are affected
+                        if (class0ItemStatus[i] == "no")
+                        {
+                            //For divide by 0
+                            if (class0PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class0PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+
+                //If class has weights
+                if (class0Weights.Sum() == 1)
+                {
+                    //To find total weight from locked items
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        //So only locked items are selected
+                        if (class0ItemStatus[i] == "yes")
+                        {
+                            //Total for earned weights
+                            weightsEarned += class0Weights[i];
+                        }
+                    }
+
+                    //To find locked items new weights
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class0ItemStatus[i] == "yes")
+                        {
+                            class0TempWeights[i] = class0Weights[i] / weightsEarned;
+                            class0Grades[i] = class0PointsEarned[i] / class0PointsPossible[i];
+                            weightedGradeEarned += class0TempWeights[i] * class0Grades[i];
+                        }
+                    }
+
+                    //Display results
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        //So only unlocked items are affected
+                        if (class0ItemStatus[i] == "no")
+                        {
+                            //For divide by 0
+                            if (class0PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class0PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+            }
+
+            //For class1
+            if (selection == 1)
+            {
+                if (class1Weights.Sum() != 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1PointsPossible.Sum() == 0)
+                        {
+                            //do nothing
+                        }
+                        else
+                        {
+                            class1TempWeights[i] = class1PointsPossible[i] / class1PointsPossible.Sum();
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class1TempWeights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1ItemStatus[i] == "yes")
+                        {
+                            class1TempEarnedWeights[i] = class1TempWeights[i] / weightsEarned;
+                            class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
+                            weightedGradeEarned += class1TempEarnedWeights[i] * class1Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1ItemStatus[i] == "no")
+                        {
+                            if (class1PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class1PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+                if (class1Weights.Sum() == 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class1Weights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1ItemStatus[i] == "yes")
+                        {
+                            class1TempWeights[i] = class1Weights[i] / weightsEarned;
+                            class1Grades[i] = class1PointsEarned[i] / class1PointsPossible[i];
+                            weightedGradeEarned += class1TempWeights[i] * class1Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class1ItemStatus[i] == "no")
+                        {
+                            if (class1PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class1PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+            }
+
+            //For class2
+            if (selection == 2)
+            {
+                if (class2Weights.Sum() != 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2PointsPossible.Sum() == 0)
+                        {
+                            //do nothing
+                        }
+                        else
+                        {
+                            class2TempWeights[i] = class2PointsPossible[i] / class2PointsPossible.Sum();
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class2TempWeights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2ItemStatus[i] == "yes")
+                        {
+                            class2TempEarnedWeights[i] = class2TempWeights[i] / weightsEarned;
+                            class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
+                            weightedGradeEarned += class2TempEarnedWeights[i] * class2Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2ItemStatus[i] == "no")
+                        {
+                            if (class2PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class2PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+                if (class2Weights.Sum() == 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class2Weights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2ItemStatus[i] == "yes")
+                        {
+                            class2TempWeights[i] = class2Weights[i] / weightsEarned;
+                            class2Grades[i] = class2PointsEarned[i] / class2PointsPossible[i];
+                            weightedGradeEarned += class2TempWeights[i] * class2Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class2ItemStatus[i] == "no")
+                        {
+                            if (class2PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class2PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+            }
+            if (selection == 3)
+            {
+                if (class3Weights.Sum() != 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3PointsPossible.Sum() == 0)
+                        {
+                            //do nothing
+                        }
+                        else
+                        {
+                            class3TempWeights[i] = class3PointsPossible[i] / class3PointsPossible.Sum();
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class3TempWeights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3ItemStatus[i] == "yes")
+                        {
+                            class3TempEarnedWeights[i] = class3TempWeights[i] / weightsEarned;
+                            class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
+                            weightedGradeEarned += class3TempEarnedWeights[i] * class3Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3ItemStatus[i] == "no")
+                        {
+                            if (class3PointsPossible[i] == 0)
+                            {
+                                //Do Nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class3PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+                if (class3Weights.Sum() == 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class3Weights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3ItemStatus[i] == "yes")
+                        {
+                            class3TempWeights[i] = class3Weights[i] / weightsEarned;
+                            class3Grades[i] = class3PointsEarned[i] / class3PointsPossible[i];
+                            weightedGradeEarned += class3TempWeights[i] * class3Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class3ItemStatus[i] == "no")
+                        {
+                            if (class3PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class3PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+            }
+
+            //For class4
+            if (selection == 4)
+            {
+                if (class4Weights.Sum() != 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4PointsPossible.Sum() == 0)
+                        {
+                            //do nothing
+                        }
+                        else
+                        {
+                            class4TempWeights[i] = class4PointsPossible[i] / class4PointsPossible.Sum();
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class4TempWeights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4ItemStatus[i] == "yes")
+                        {
+                            class4TempEarnedWeights[i] = class4TempWeights[i] / weightsEarned;
+                            class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
+                            weightedGradeEarned += class4TempEarnedWeights[i] * class4Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4ItemStatus[i] == "no")
+                        {
+                            if (class4PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class4PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+                if (class4Weights.Sum() == 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class4Weights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4ItemStatus[i] == "yes")
+                        {
+                            class4TempWeights[i] = class4Weights[i] / weightsEarned;
+                            class4Grades[i] = class4PointsEarned[i] / class4PointsPossible[i];
+                            weightedGradeEarned += class4TempWeights[i] * class4Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class4ItemStatus[i] == "no")
+                        {
+                            if (class4PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class4PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+            }
+
+            //For class5
+            if (selection == 5)
+            {
+                if (class5Weights.Sum() != 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5PointsPossible.Sum() == 0)
+                        {
+                            //do nothing
+                        }
+                        else
+                        {
+                            class5TempWeights[i] = class5PointsPossible[i] / class5PointsPossible.Sum();
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class5TempWeights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5ItemStatus[i] == "yes")
+                        {
+                            class5TempEarnedWeights[i] = class5TempWeights[i] / weightsEarned;
+                            class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
+                            weightedGradeEarned += class5TempEarnedWeights[i] * class5Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5ItemStatus[i] == "no")
+                        {
+                            if (class5PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class5PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+                if (class5Weights.Sum() == 1)
+                {
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5ItemStatus[i] == "yes")
+                        {
+                            weightsEarned += class5Weights[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5ItemStatus[i] == "yes")
+                        {
+                            class5TempWeights[i] = class5Weights[i] / weightsEarned;
+                            class5Grades[i] = class5PointsEarned[i] / class5PointsPossible[i];
+                            weightedGradeEarned += class5TempWeights[i] * class5Grades[i];
+                        }
+                    }
+                    for (int i = 0; i < NUMBER_OF_ITEMS; i++)
+                    {
+                        if (class5ItemStatus[i] == "no")
+                        {
+                            if (class5PointsPossible[i] == 0)
+                            {
+                                //leave blank so program does nothing
+                            }
+                            else
+                            {
+                                pnlItems.Controls["txtItemEarned" + i].Text = (class5PointsPossible[i] * weightedGradeEarned).ToString("F2");
+                            }
+                        }
+                    }
+                }
+            }
+
+            Save_Class_CurrSel();
+            Totals();
+
+            //sysmsg
+            lblSysMsg.Text = "btnScenarioMostLikely successful";
+            Sys_Msg_Save_Txt();
+
+        }
         private void btnScenarioToPass_Click(object sender, EventArgs e)
         {
             //sysmsg
@@ -3120,11 +3714,11 @@ namespace MyGradeBook
 
             //Declaring array for temp weights
             double[] class0TempWeights = new double[NUMBER_OF_ITEMS];
-            double[] class1TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class2TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class3TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class4TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class5TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
+            double[] class1TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class2TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class3TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class4TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class5TempWeights = new double[NUMBER_OF_ITEMS];
 
             //Declaring variables needed for classes without weights
             double pointsEarned = 0;
@@ -3532,25 +4126,11 @@ namespace MyGradeBook
 
             Save_Class_CurrSel();
             Totals();
-            Statistics();
 
             //sysmsg
             lblSysMsg.Text = "btnScenarioToPass successful";
             Sys_Msg_Save_Txt();
         }
-        private void btnScenarioMostLikely_Click(object sender, EventArgs e)
-        {
-            //sysmsg
-            lblSysMsg.Text = "btnScenarioMostLikely successful";
-            Sys_Msg_Save_Txt();
-
-
-
-            //sysmsg
-            lblSysMsg.Text = "btnScenarioMostLikely successful";
-            Sys_Msg_Save_Txt();
-
-        } //Incomplete
         private void btnScenarioA_Click(object sender, EventArgs e)
         {
             //sysmsg
@@ -3562,11 +4142,11 @@ namespace MyGradeBook
 
             //Declaring array for temp weights
             double[] class0TempWeights = new double[NUMBER_OF_ITEMS];
-            double[] class1TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class2TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class3TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class4TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-            double[] class5TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
+            double[] class1TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class2TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class3TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class4TempWeights = new double[NUMBER_OF_ITEMS];
+            double[] class5TempWeights = new double[NUMBER_OF_ITEMS];
 
             //Declaring variables needed for classes without weights
             double pointsEarned = 0;
@@ -3974,7 +4554,6 @@ namespace MyGradeBook
 
             Save_Class_CurrSel();
             Totals();
-            Statistics();
 
             //sysmsg
             lblSysMsg.Text = "btnScenarioA successful";
@@ -3991,6 +4570,7 @@ namespace MyGradeBook
                 txtTargetGrade.Visible = true;
                 btnScenarioTarget.Text = "Run";
                 txtTargetGrade.Focus();
+                txtTargetGrade.SelectAll();
                 targetGradeStatus = 1;
             }
             else if (targetGradeStatus == 1) //Input code to run target grade here
@@ -4009,11 +4589,11 @@ namespace MyGradeBook
 
                     //Declaring array for temp weights
                     double[] class0TempWeights = new double[NUMBER_OF_ITEMS];
-                    double[] class1TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-                    double[] class2TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-                    double[] class3TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-                    double[] class4TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
-                    double[] class5TempWeights = new double[NUMBER_OF_ITEMS]; //not used yet
+                    double[] class1TempWeights = new double[NUMBER_OF_ITEMS];
+                    double[] class2TempWeights = new double[NUMBER_OF_ITEMS];
+                    double[] class3TempWeights = new double[NUMBER_OF_ITEMS];
+                    double[] class4TempWeights = new double[NUMBER_OF_ITEMS];
+                    double[] class5TempWeights = new double[NUMBER_OF_ITEMS];
 
                     //Declaring variables needed for classes without weights
                     double pointsEarned = 0;
@@ -4421,7 +5001,6 @@ namespace MyGradeBook
 
                     Save_Class_CurrSel();
                     Totals();
-                    Statistics();
 
                     txtTargetGrade.Visible = false;
                     btnScenarioTarget.Text = "Target";

@@ -19,7 +19,7 @@ namespace MyGradeBook
 
         private void AboutUs_Load(object sender, EventArgs e)
         {
-            lblDevelopers.Text = "Developers From A-Z: \n" + 
+            lblDevelopers.Text = "Developers From A-Z: \n\n" + 
                                     "John Giblin \n" +
                                     "David Lee \n" + 
                                     "Sean Mottles \n" +
@@ -27,7 +27,7 @@ namespace MyGradeBook
 
             lblInfo.Text = "This program was created for a project in our ISDS309 class. \n" +
                             "We hoped to create something useful for a college student. \n" +
-                            "For any errors or bugs please email csufmygradebook@gmail.com \n";
+                            "Please report any bugs to csufmygradebook@gmail.com, thanks. \n";
         }
     }
 }

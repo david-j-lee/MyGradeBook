@@ -18,6 +18,16 @@ namespace MyGradeBook
             lblDescription.Text = ("Click an item to see a description.");
         }
 
+        private void btnGettingStarted_Click(object sender, EventArgs e)
+        {
+            lblDescription.Text = ("Try changing your color scheme by selecting a new one in the top left corner. \n\n" +
+                                    "View renaming classes. \n\n" +
+                                    "View weights for input . \n\n" +
+                                    "The locked checkbox is used to lock classes. \n\n" + 
+                                    "Now try running some scenarios, for more info look for the appropriate button. \n\n");
+        }
+
+
         private void btnUsingWeights_Click(object sender, EventArgs e)
         {
             lblDescription.Text = ("All weights must be in decimal form (30% weight is entered as '.30'). \n\n" +
@@ -37,11 +47,6 @@ namespace MyGradeBook
             lblDescription.Text = ("To pass calculates the grade you need on your remaining assignments to get a 70%. \n\n" +
                                     "Enter the assignment's (that are not completed) points possible and the weights (If available). \n\n" +
                                     "Marking the 'Lock' checkbox for each assignment tells the program to use all items after in its calculation. \n\n");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            lblDescription.Text = ("WIP");
         }
 
         private void button5_Click(object sender, EventArgs e)

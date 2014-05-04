@@ -1,6 +1,6 @@
 ﻿namespace MyGradeBook
 {
-    partial class Main
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.txtItemName1 = new System.Windows.Forms.TextBox();
             this.txtItemEarned1 = new System.Windows.Forms.TextBox();
             this.txtItemPossible1 = new System.Windows.Forms.TextBox();
@@ -40,18 +40,18 @@
             this.txtItemName3 = new System.Windows.Forms.TextBox();
             this.btnClass0 = new System.Windows.Forms.Button();
             this.btnClass1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblHdrItem = new System.Windows.Forms.Label();
+            this.lblHdrEarned = new System.Windows.Forms.Label();
+            this.lblHdrPossible = new System.Windows.Forms.Label();
             this.chkItemStatus1 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblHdrLock = new System.Windows.Forms.Label();
             this.chkItemStatus2 = new System.Windows.Forms.CheckBox();
             this.chkItemStatus3 = new System.Windows.Forms.CheckBox();
             this.txtItemGrade1 = new System.Windows.Forms.TextBox();
             this.txtItemWeight1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblHdrGrade = new System.Windows.Forms.Label();
+            this.lblHdrWeight = new System.Windows.Forms.Label();
+            this.lblHdrWGrade = new System.Windows.Forms.Label();
             this.txtItemWeightedGrade1 = new System.Windows.Forms.TextBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.txtClassName0 = new System.Windows.Forms.TextBox();
@@ -137,19 +137,19 @@
             this.pnlWhatIfs = new System.Windows.Forms.Panel();
             this.txtTargetGrade = new System.Windows.Forms.TextBox();
             this.btnScenarioTarget = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlReferences = new System.Windows.Forms.Panel();
             this.lblClass = new System.Windows.Forms.Label();
             this.prgGrade = new System.Windows.Forms.ProgressBar();
             this.prgWeightedGrade = new System.Windows.Forms.ProgressBar();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlTotals = new System.Windows.Forms.Panel();
             this.lblStatCompleted = new System.Windows.Forms.Label();
             this.lblStatRemaining = new System.Windows.Forms.Label();
             this.lblStatEarned = new System.Windows.Forms.Label();
             this.lblStatPossible = new System.Windows.Forms.Label();
             this.lblStatWeight = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblHdrStats = new System.Windows.Forms.Label();
             this.lblStatTotal = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlStats = new System.Windows.Forms.Panel();
             this.lblStatClassVal = new System.Windows.Forms.Label();
             this.lblStatWeightedGradeVal = new System.Windows.Forms.Label();
             this.lblStatGradeVal = new System.Windows.Forms.Label();
@@ -165,12 +165,13 @@
             this.lblAboutUs = new System.Windows.Forms.Label();
             this.lblHelp = new System.Windows.Forms.Label();
             this.lblTest = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlItems.SuspendLayout();
             this.pnlClassBtns.SuspendLayout();
             this.pnlWhatIfs.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlReferences.SuspendLayout();
+            this.pnlTotals.SuspendLayout();
+            this.pnlStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtItemName1
@@ -277,35 +278,35 @@
             this.btnClass1.UseVisualStyleBackColor = true;
             this.btnClass1.Click += new System.EventHandler(this.btnClass1_Click);
             // 
-            // label1
+            // lblHdrItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 101;
-            this.label1.Text = "Item";
+            this.lblHdrItem.AutoSize = true;
+            this.lblHdrItem.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrItem.Location = new System.Drawing.Point(69, 4);
+            this.lblHdrItem.Name = "lblHdrItem";
+            this.lblHdrItem.Size = new System.Drawing.Size(29, 13);
+            this.lblHdrItem.TabIndex = 101;
+            this.lblHdrItem.Text = "Item";
             // 
-            // label2
+            // lblHdrEarned
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(140, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 102;
-            this.label2.Text = "Earned";
+            this.lblHdrEarned.AutoSize = true;
+            this.lblHdrEarned.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrEarned.Location = new System.Drawing.Point(140, 4);
+            this.lblHdrEarned.Name = "lblHdrEarned";
+            this.lblHdrEarned.Size = new System.Drawing.Size(40, 13);
+            this.lblHdrEarned.TabIndex = 102;
+            this.lblHdrEarned.Text = "Earned";
             // 
-            // label3
+            // lblHdrPossible
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(187, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 103;
-            this.label3.Text = "Possible";
+            this.lblHdrPossible.AutoSize = true;
+            this.lblHdrPossible.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrPossible.Location = new System.Drawing.Point(187, 4);
+            this.lblHdrPossible.Name = "lblHdrPossible";
+            this.lblHdrPossible.Size = new System.Drawing.Size(47, 13);
+            this.lblHdrPossible.TabIndex = 103;
+            this.lblHdrPossible.Text = "Possible";
             // 
             // chkItemStatus1
             // 
@@ -317,15 +318,15 @@
             this.chkItemStatus1.UseVisualStyleBackColor = true;
             this.chkItemStatus1.CheckedChanged += new System.EventHandler(this.chkItemStatus1_CheckedChanged);
             // 
-            // label4
+            // lblHdrLock
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 100;
-            this.label4.Text = "Lock";
+            this.lblHdrLock.AutoSize = true;
+            this.lblHdrLock.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrLock.Location = new System.Drawing.Point(4, 4);
+            this.lblHdrLock.Name = "lblHdrLock";
+            this.lblHdrLock.Size = new System.Drawing.Size(28, 13);
+            this.lblHdrLock.TabIndex = 100;
+            this.lblHdrLock.Text = "Lock";
             // 
             // chkItemStatus2
             // 
@@ -366,35 +367,35 @@
             this.txtItemWeight1.Enter += new System.EventHandler(this.txtItemWeight1_Enter);
             this.txtItemWeight1.Leave += new System.EventHandler(this.txtItemWeight1_Leave);
             // 
-            // label5
+            // lblHdrGrade
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(242, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
-            this.label5.TabIndex = 104;
-            this.label5.Text = "Grade";
+            this.lblHdrGrade.AutoSize = true;
+            this.lblHdrGrade.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrGrade.Location = new System.Drawing.Point(242, 4);
+            this.lblHdrGrade.Name = "lblHdrGrade";
+            this.lblHdrGrade.Size = new System.Drawing.Size(36, 13);
+            this.lblHdrGrade.TabIndex = 104;
+            this.lblHdrGrade.Text = "Grade";
             // 
-            // label6
+            // lblHdrWeight
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(290, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 105;
-            this.label6.Text = "Weight";
+            this.lblHdrWeight.AutoSize = true;
+            this.lblHdrWeight.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrWeight.Location = new System.Drawing.Point(290, 4);
+            this.lblHdrWeight.Name = "lblHdrWeight";
+            this.lblHdrWeight.Size = new System.Drawing.Size(41, 13);
+            this.lblHdrWeight.TabIndex = 105;
+            this.lblHdrWeight.Text = "Weight";
             // 
-            // label7
+            // lblHdrWGrade
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(338, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 106;
-            this.label7.Text = "W Grade";
+            this.lblHdrWGrade.AutoSize = true;
+            this.lblHdrWGrade.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrWGrade.Location = new System.Drawing.Point(338, 4);
+            this.lblHdrWGrade.Name = "lblHdrWGrade";
+            this.lblHdrWGrade.Size = new System.Drawing.Size(48, 13);
+            this.lblHdrWGrade.TabIndex = 106;
+            this.lblHdrWGrade.Text = "W Grade";
             // 
             // txtItemWeightedGrade1
             // 
@@ -708,7 +709,7 @@
             "Cool",
             "Hello Kitty",
             "Midnight"});
-            this.cboColorScheme.Location = new System.Drawing.Point(2, 1);
+            this.cboColorScheme.Location = new System.Drawing.Point(2, 2);
             this.cboColorScheme.Name = "cboColorScheme";
             this.cboColorScheme.Size = new System.Drawing.Size(73, 21);
             this.cboColorScheme.TabIndex = 8;
@@ -1088,7 +1089,7 @@
             // 
             this.pnlItems.Controls.Add(this.txtItemWeightedGrade0);
             this.pnlItems.Controls.Add(this.txtItemName1);
-            this.pnlItems.Controls.Add(this.label4);
+            this.pnlItems.Controls.Add(this.lblHdrLock);
             this.pnlItems.Controls.Add(this.txtItemEarned1);
             this.pnlItems.Controls.Add(this.txtItemWeight0);
             this.pnlItems.Controls.Add(this.txtItemPossible1);
@@ -1105,13 +1106,13 @@
             this.pnlItems.Controls.Add(this.txtItemPossible0);
             this.pnlItems.Controls.Add(this.txtItemPossible3);
             this.pnlItems.Controls.Add(this.chkItemStatus9);
-            this.pnlItems.Controls.Add(this.label1);
+            this.pnlItems.Controls.Add(this.lblHdrItem);
             this.pnlItems.Controls.Add(this.txtItemEarned0);
             this.pnlItems.Controls.Add(this.txtItemPossible9);
-            this.pnlItems.Controls.Add(this.label2);
+            this.pnlItems.Controls.Add(this.lblHdrEarned);
             this.pnlItems.Controls.Add(this.txtItemEarned9);
             this.pnlItems.Controls.Add(this.txtItemName0);
-            this.pnlItems.Controls.Add(this.label3);
+            this.pnlItems.Controls.Add(this.lblHdrPossible);
             this.pnlItems.Controls.Add(this.txtItemName9);
             this.pnlItems.Controls.Add(this.chkItemStatus1);
             this.pnlItems.Controls.Add(this.txtItemWeightedGrade8);
@@ -1123,11 +1124,11 @@
             this.pnlItems.Controls.Add(this.chkItemStatus8);
             this.pnlItems.Controls.Add(this.txtItemWeight1);
             this.pnlItems.Controls.Add(this.txtItemPossible8);
-            this.pnlItems.Controls.Add(this.label5);
+            this.pnlItems.Controls.Add(this.lblHdrGrade);
             this.pnlItems.Controls.Add(this.txtItemEarned8);
-            this.pnlItems.Controls.Add(this.label6);
+            this.pnlItems.Controls.Add(this.lblHdrWeight);
             this.pnlItems.Controls.Add(this.txtItemName8);
-            this.pnlItems.Controls.Add(this.label7);
+            this.pnlItems.Controls.Add(this.lblHdrWGrade);
             this.pnlItems.Controls.Add(this.txtItemWeightedGrade7);
             this.pnlItems.Controls.Add(this.txtItemWeightedGrade1);
             this.pnlItems.Controls.Add(this.txtItemWeight7);
@@ -1206,7 +1207,7 @@
             // 
             // btnClearCurrent
             // 
-            this.btnClearCurrent.Location = new System.Drawing.Point(1, 270);
+            this.btnClearCurrent.Location = new System.Drawing.Point(1, 246);
             this.btnClearCurrent.Name = "btnClearCurrent";
             this.btnClearCurrent.Size = new System.Drawing.Size(75, 23);
             this.btnClearCurrent.TabIndex = 4;
@@ -1216,7 +1217,7 @@
             // 
             // btnClearAll
             // 
-            this.btnClearAll.Location = new System.Drawing.Point(1, 292);
+            this.btnClearAll.Location = new System.Drawing.Point(1, 268);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(75, 23);
             this.btnClearAll.TabIndex = 5;
@@ -1226,7 +1227,7 @@
             // 
             // btnScenarioMostLikely
             // 
-            this.btnScenarioMostLikely.Location = new System.Drawing.Point(1, 47);
+            this.btnScenarioMostLikely.Location = new System.Drawing.Point(1, 1);
             this.btnScenarioMostLikely.Name = "btnScenarioMostLikely";
             this.btnScenarioMostLikely.Size = new System.Drawing.Size(75, 23);
             this.btnScenarioMostLikely.TabIndex = 2;
@@ -1236,7 +1237,7 @@
             // 
             // btnScenarioA
             // 
-            this.btnScenarioA.Location = new System.Drawing.Point(1, 69);
+            this.btnScenarioA.Location = new System.Drawing.Point(1, 45);
             this.btnScenarioA.Name = "btnScenarioA";
             this.btnScenarioA.Size = new System.Drawing.Size(75, 23);
             this.btnScenarioA.TabIndex = 3;
@@ -1246,7 +1247,7 @@
             // 
             // btnScenarioToPass
             // 
-            this.btnScenarioToPass.Location = new System.Drawing.Point(1, 25);
+            this.btnScenarioToPass.Location = new System.Drawing.Point(1, 23);
             this.btnScenarioToPass.Name = "btnScenarioToPass";
             this.btnScenarioToPass.Size = new System.Drawing.Size(75, 23);
             this.btnScenarioToPass.TabIndex = 1;
@@ -1263,15 +1264,14 @@
             this.pnlWhatIfs.Controls.Add(this.btnScenarioToPass);
             this.pnlWhatIfs.Controls.Add(this.btnScenarioA);
             this.pnlWhatIfs.Controls.Add(this.btnScenarioMostLikely);
-            this.pnlWhatIfs.Controls.Add(this.cboColorScheme);
-            this.pnlWhatIfs.Location = new System.Drawing.Point(0, 1);
+            this.pnlWhatIfs.Location = new System.Drawing.Point(0, 26);
             this.pnlWhatIfs.Name = "pnlWhatIfs";
-            this.pnlWhatIfs.Size = new System.Drawing.Size(77, 316);
+            this.pnlWhatIfs.Size = new System.Drawing.Size(77, 293);
             this.pnlWhatIfs.TabIndex = 2;
             // 
             // txtTargetGrade
             // 
-            this.txtTargetGrade.Location = new System.Drawing.Point(2, 137);
+            this.txtTargetGrade.Location = new System.Drawing.Point(2, 90);
             this.txtTargetGrade.Name = "txtTargetGrade";
             this.txtTargetGrade.Size = new System.Drawing.Size(73, 20);
             this.txtTargetGrade.TabIndex = 10;
@@ -1280,7 +1280,7 @@
             // 
             // btnScenarioTarget
             // 
-            this.btnScenarioTarget.Location = new System.Drawing.Point(1, 114);
+            this.btnScenarioTarget.Location = new System.Drawing.Point(1, 67);
             this.btnScenarioTarget.Name = "btnScenarioTarget";
             this.btnScenarioTarget.Size = new System.Drawing.Size(75, 23);
             this.btnScenarioTarget.TabIndex = 9;
@@ -1288,16 +1288,16 @@
             this.btnScenarioTarget.UseVisualStyleBackColor = true;
             this.btnScenarioTarget.Click += new System.EventHandler(this.btnScenarioTarget_Click);
             // 
-            // panel1
+            // pnlReferences
             // 
-            this.panel1.Controls.Add(this.txtNotDone);
-            this.panel1.Controls.Add(this.txtDone);
-            this.panel1.Controls.Add(this.btnClassSelected);
-            this.panel1.Controls.Add(this.btnClassNotSelected);
-            this.panel1.Location = new System.Drawing.Point(496, 323);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 51);
-            this.panel1.TabIndex = 10;
+            this.pnlReferences.Controls.Add(this.txtNotDone);
+            this.pnlReferences.Controls.Add(this.txtDone);
+            this.pnlReferences.Controls.Add(this.btnClassSelected);
+            this.pnlReferences.Controls.Add(this.btnClassNotSelected);
+            this.pnlReferences.Location = new System.Drawing.Point(1, 456);
+            this.pnlReferences.Name = "pnlReferences";
+            this.pnlReferences.Size = new System.Drawing.Size(94, 51);
+            this.pnlReferences.TabIndex = 10;
             // 
             // lblClass
             // 
@@ -1328,17 +1328,17 @@
             this.prgWeightedGrade.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prgWeightedGrade.TabIndex = 104;
             // 
-            // panel2
+            // pnlTotals
             // 
-            this.panel2.Controls.Add(this.lblGrade);
-            this.panel2.Controls.Add(this.prgGrade);
-            this.panel2.Controls.Add(this.lblWeightedGrade);
-            this.panel2.Controls.Add(this.prgWeightedGrade);
-            this.panel2.Controls.Add(this.lblClass);
-            this.panel2.Location = new System.Drawing.Point(77, 318);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(391, 92);
-            this.panel2.TabIndex = 1001;
+            this.pnlTotals.Controls.Add(this.lblGrade);
+            this.pnlTotals.Controls.Add(this.prgGrade);
+            this.pnlTotals.Controls.Add(this.lblWeightedGrade);
+            this.pnlTotals.Controls.Add(this.prgWeightedGrade);
+            this.pnlTotals.Controls.Add(this.lblClass);
+            this.pnlTotals.Location = new System.Drawing.Point(77, 318);
+            this.pnlTotals.Name = "pnlTotals";
+            this.pnlTotals.Size = new System.Drawing.Size(391, 92);
+            this.pnlTotals.TabIndex = 1001;
             // 
             // lblStatCompleted
             // 
@@ -1395,15 +1395,15 @@
             this.lblStatWeight.Text = "Weight:  ";
             this.lblStatWeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label13
+            // lblHdrStats
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(17, 6);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 26);
-            this.label13.TabIndex = 1007;
-            this.label13.Text = "STATISTICS";
+            this.lblHdrStats.AutoSize = true;
+            this.lblHdrStats.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHdrStats.Location = new System.Drawing.Point(17, 6);
+            this.lblHdrStats.Name = "lblHdrStats";
+            this.lblHdrStats.Size = new System.Drawing.Size(104, 26);
+            this.lblHdrStats.TabIndex = 1007;
+            this.lblHdrStats.Text = "STATISTICS";
             // 
             // lblStatTotal
             // 
@@ -1416,31 +1416,31 @@
             this.lblStatTotal.Text = "Total:  ";
             this.lblStatTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel3
+            // pnlStats
             // 
-            this.panel3.Controls.Add(this.lblStatClassVal);
-            this.panel3.Controls.Add(this.lblStatWeightedGradeVal);
-            this.panel3.Controls.Add(this.lblStatGradeVal);
-            this.panel3.Controls.Add(this.lblStatTotalVal);
-            this.panel3.Controls.Add(this.lblStatCompletedVal);
-            this.panel3.Controls.Add(this.lblStatRemainingVal);
-            this.panel3.Controls.Add(this.lblStatWeightVal);
-            this.panel3.Controls.Add(this.lblStatEarnedVal);
-            this.panel3.Controls.Add(this.lblStatPossibleVal);
-            this.panel3.Controls.Add(this.lblStatClass);
-            this.panel3.Controls.Add(this.lblStatWeightedGrade);
-            this.panel3.Controls.Add(this.lblStatGrade);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.lblStatTotal);
-            this.panel3.Controls.Add(this.lblStatCompleted);
-            this.panel3.Controls.Add(this.lblStatRemaining);
-            this.panel3.Controls.Add(this.lblStatWeight);
-            this.panel3.Controls.Add(this.lblStatEarned);
-            this.panel3.Controls.Add(this.lblStatPossible);
-            this.panel3.Location = new System.Drawing.Point(469, 27);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(137, 290);
-            this.panel3.TabIndex = 1009;
+            this.pnlStats.Controls.Add(this.lblStatClassVal);
+            this.pnlStats.Controls.Add(this.lblStatWeightedGradeVal);
+            this.pnlStats.Controls.Add(this.lblStatGradeVal);
+            this.pnlStats.Controls.Add(this.lblStatTotalVal);
+            this.pnlStats.Controls.Add(this.lblStatCompletedVal);
+            this.pnlStats.Controls.Add(this.lblStatRemainingVal);
+            this.pnlStats.Controls.Add(this.lblStatWeightVal);
+            this.pnlStats.Controls.Add(this.lblStatEarnedVal);
+            this.pnlStats.Controls.Add(this.lblStatPossibleVal);
+            this.pnlStats.Controls.Add(this.lblStatClass);
+            this.pnlStats.Controls.Add(this.lblStatWeightedGrade);
+            this.pnlStats.Controls.Add(this.lblStatGrade);
+            this.pnlStats.Controls.Add(this.lblHdrStats);
+            this.pnlStats.Controls.Add(this.lblStatTotal);
+            this.pnlStats.Controls.Add(this.lblStatCompleted);
+            this.pnlStats.Controls.Add(this.lblStatRemaining);
+            this.pnlStats.Controls.Add(this.lblStatWeight);
+            this.pnlStats.Controls.Add(this.lblStatEarned);
+            this.pnlStats.Controls.Add(this.lblStatPossible);
+            this.pnlStats.Location = new System.Drawing.Point(469, 27);
+            this.pnlStats.Name = "pnlStats";
+            this.pnlStats.Size = new System.Drawing.Size(137, 290);
+            this.pnlStats.TabIndex = 1009;
             // 
             // lblStatClassVal
             // 
@@ -1588,13 +1588,23 @@
             // lblTest
             // 
             this.lblTest.AutoSize = true;
-            this.lblTest.Location = new System.Drawing.Point(257, 446);
+            this.lblTest.Location = new System.Drawing.Point(243, 446);
             this.lblTest.Name = "lblTest";
             this.lblTest.Size = new System.Drawing.Size(44, 13);
             this.lblTest.TabIndex = 1012;
             this.lblTest.Text = "To Test";
             // 
-            // Main
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(140, 100);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(299, 73);
+            this.lblWelcome.TabIndex = 1013;
+            this.lblWelcome.Text = "Welcome";
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1603,17 +1613,19 @@
             this.Controls.Add(this.lblTest);
             this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblAboutUs);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlStats);
+            this.Controls.Add(this.pnlTotals);
+            this.Controls.Add(this.pnlReferences);
             this.Controls.Add(this.pnlWhatIfs);
+            this.Controls.Add(this.cboColorScheme);
             this.Controls.Add(this.pnlClassBtns);
             this.Controls.Add(this.lblSysMsg);
             this.Controls.Add(this.pnlItems);
+            this.Controls.Add(this.lblWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Main";
+            this.Name = "frmMain";
             this.Text = " MyGradeBook";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
@@ -1623,11 +1635,11 @@
             this.pnlClassBtns.PerformLayout();
             this.pnlWhatIfs.ResumeLayout(false);
             this.pnlWhatIfs.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlReferences.ResumeLayout(false);
+            this.pnlReferences.PerformLayout();
+            this.pnlTotals.ResumeLayout(false);
+            this.pnlStats.ResumeLayout(false);
+            this.pnlStats.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1646,18 +1658,18 @@
         private System.Windows.Forms.TextBox txtItemName3;
         private System.Windows.Forms.Button btnClass0;
         private System.Windows.Forms.Button btnClass1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblHdrItem;
+        private System.Windows.Forms.Label lblHdrEarned;
+        private System.Windows.Forms.Label lblHdrPossible;
         private System.Windows.Forms.CheckBox chkItemStatus1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblHdrLock;
         private System.Windows.Forms.CheckBox chkItemStatus2;
         private System.Windows.Forms.CheckBox chkItemStatus3;
         private System.Windows.Forms.TextBox txtItemGrade1;
         private System.Windows.Forms.TextBox txtItemWeight1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblHdrGrade;
+        private System.Windows.Forms.Label lblHdrWeight;
+        private System.Windows.Forms.Label lblHdrWGrade;
         private System.Windows.Forms.TextBox txtItemWeightedGrade1;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.TextBox txtClassName0;
@@ -1741,19 +1753,19 @@
         private System.Windows.Forms.Button btnScenarioA;
         private System.Windows.Forms.Button btnScenarioToPass;
         private System.Windows.Forms.Panel pnlWhatIfs;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlReferences;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.ProgressBar prgGrade;
         private System.Windows.Forms.ProgressBar prgWeightedGrade;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlTotals;
         private System.Windows.Forms.Label lblStatCompleted;
         private System.Windows.Forms.Label lblStatRemaining;
         private System.Windows.Forms.Label lblStatEarned;
         private System.Windows.Forms.Label lblStatPossible;
         private System.Windows.Forms.Label lblStatWeight;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblHdrStats;
         private System.Windows.Forms.Label lblStatTotal;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlStats;
         private System.Windows.Forms.Label lblStatWeightedGrade;
         private System.Windows.Forms.Label lblStatGrade;
         private System.Windows.Forms.Label lblStatClass;
@@ -1771,6 +1783,7 @@
         private System.Windows.Forms.Label lblTest;
         private System.Windows.Forms.Button btnScenarioTarget;
         private System.Windows.Forms.TextBox txtTargetGrade;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }
 
