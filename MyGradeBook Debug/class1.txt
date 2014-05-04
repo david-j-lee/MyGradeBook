@@ -1,0 +1,10 @@
+yes,testsc,340,400,0
+yes,testscresult,150,200,0
+yes,both work to pass,140,200,0
+no,class1,78.75,100,0
+no,,39.38,50,0
+no,,39.38,50,0
+no,,0,0,0
+no,,0,0,0
+no,,0,0,0
+no,,0,0,0

@@ -1,0 +1,10 @@
+yes,testsc,80,100,0.5
+no,testscresult,120,150,0.5
+no,both work,0,0,0
+no,class3,0,0,0
+no,,0,0,0
+no,,0,0,0
+no,,0,0,0
+no,,0,0,0
+no,,0,0,0
+no,,0,0,0

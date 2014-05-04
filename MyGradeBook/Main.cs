@@ -2730,14 +2730,14 @@ namespace MyGradeBook
         /* Help */
         private void lblHelp_Click(object sender, EventArgs e)
         {
-            Help help = new Help();
+            frmHelp help = new frmHelp();
             help.Show();
         }
 
         /* About */
         private void lblAboutUs_Click(object sender, EventArgs e)
         {
-            AboutUs aboutUs = new AboutUs();
+            frmAboutUs aboutUs = new frmAboutUs();
             aboutUs.Show();
 
         }

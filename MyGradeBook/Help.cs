@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyGradeBook
 {
-    public partial class Help : Form
+    public partial class frmHelp : Form
     {
-        public Help()
+        public frmHelp()
         {
             InitializeComponent();
             lblDescription.Text = ("Click an item to see a description.");
@@ -21,10 +21,10 @@ namespace MyGradeBook
         private void btnGettingStarted_Click(object sender, EventArgs e)
         {
             lblDescription.Text = ("Try changing your color scheme by selecting a new one in the top left corner. \n\n" +
-                                    "View renaming classes. \n\n" +
-                                    "View weights for input . \n\n" +
-                                    "The locked checkbox is used to lock classes. \n\n" + 
-                                    "Now try running some scenarios, for more info look for the appropriate button. \n\n");
+                                    "Rename your classes and select one. \n\n" +
+                                    "Begin inputting items. \n\n" +
+                                    "Now try running some scenarios. \n\n" +
+                                    "For more information, select other topics to the left. \n\n");
         }
 
 
@@ -32,7 +32,8 @@ namespace MyGradeBook
         {
             lblDescription.Text = ("All weights must be in decimal form (30% weight is entered as '.30'). \n\n" +
                                     "Using weights can give you a more accurate result when trying to calculate the grade you need to pass. \n\n" +
-                                    "Weights are not necessary for the program to run. \n\n");
+                                    "Weights are not necessary for the program to run. \n\n" +
+                                    "If your class does not have weights input 0.  \n\n");
         }
 
         private void btnRenamingClasses_Click(object sender, EventArgs e)
@@ -51,7 +52,8 @@ namespace MyGradeBook
 
         private void button5_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("WIP");
+            lblDescription.Text = ("This program will take your locked items and calculate a grade based on the weights or points.  \n\n" +
+                                    "The items that are not locked will be changed to make the cacluated grade");
         }
     }
 }
